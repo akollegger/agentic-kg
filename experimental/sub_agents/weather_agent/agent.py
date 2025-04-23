@@ -1,4 +1,3 @@
-import os
 from google.adk.agents import Agent
 from google.adk.models.lite_llm import LiteLlm
 
@@ -6,27 +5,8 @@ import warnings
 # Ignore all warnings
 warnings.filterwarnings("ignore")
 
-import logging
-logging.basicConfig(level=logging.ERROR)
+from experimental.model_config import model_roles
 
-from dotenv import load_dotenv
-load_dotenv()
-
-print("API Keys Set:")
-print(f"Gemini API Key set: {'Yes' if os.environ.get('GEMINI_API_KEY') and os.environ['GEMINI_API_KEY'] != 'YOUR_GEMINI_API_KEY' else 'No (REPLACE PLACEHOLDER!)'}")
-print(f"OpenAI API Key set: {'Yes' if os.environ.get('OPENAI_API_KEY') and os.environ['OPENAI_API_KEY'] != 'YOUR_OPENAI_API_KEY' else 'No (REPLACE PLACEHOLDER!)'}")
-print(f"Anthropic API Key set: {'Yes' if os.environ.get('ANTHROPIC_API_KEY') and os.environ['ANTHROPIC_API_KEY'] != 'YOUR_ANTHROPIC_API_KEY' else 'No (REPLACE PLACEHOLDER!)'}")
-
-MODEL_GEMINI_2_0_FLASH = "gemini/gemini-2.0-flash"
-
-# Note: Specific model names might change. Refer to LiteLLM or the model provider's documentation.
-MODEL_GPT_4O = "openai/gpt-4o"
-MODEL_CLAUDE_SONNET = "anthropic/claude-3-sonnet-20240229"
-
-
-print("\nEnvironment configured.")
-
-# @title Define the get_weather Tool
 def get_weather(city: str) -> dict:
     """Retrieves the current weather report for a specified city.
 
@@ -39,8 +19,6 @@ def get_weather(city: str) -> dict:
               If 'success', includes a 'report' key with weather details.
               If 'error', includes an 'error_message' key.
     """
-    # Best Practice: Log tool execution for easier debugging
-    print(f"--- Tool: get_weather called for city: {city} ---")
     city_normalized = city.lower().replace(" ", "") # Basic input normalization
 
     # Mock weather data for simplicity
@@ -58,7 +36,7 @@ def get_weather(city: str) -> dict:
 
 weather_agent = Agent(
     name="weather_agent_v1",
-    model=LiteLlm(model=MODEL_GEMINI_2_0_FLASH),
+    model=LiteLlm(model=model_roles["chat"]),
     description="Provides weather information for specific cities.", # Crucial for delegation later
     instruction="You are a helpful weather assistant. Your primary goal is to provide current weather reports. "
                 "When the user asks for the weather in a specific city, "

@@ -7,6 +7,27 @@ resolution-markers = [
 ]
 
 [[package]]
+name = "agentic-kg"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "google-adk" },
+    { name = "litellm" },
+    { name = "neo4j" },
+    { name = "neo4j-graphrag" },
+    { name = "python-dotenv" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "google-adk", specifier = ">=0.1.0" },
+    { name = "litellm", specifier = ">=1.66.0" },
+    { name = "neo4j", specifier = ">=5.28.1" },
+    { name = "neo4j-graphrag", specifier = ">=1.6.1" },
+    { name = "python-dotenv", specifier = ">=1.1.0" },
+]
+
+[[package]]
 name = "aiohappyeyeballs"
 version = "2.6.1"
 source = { registry = "https://pypi.org/simple" }
@@ -657,27 +678,6 @@ wheels = [
 [package.optional-dependencies]
 grpc = [
     { name = "grpcio" },
-]
-
-[[package]]
-name = "graph-intelligence"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "google-adk" },
-    { name = "litellm" },
-    { name = "neo4j" },
-    { name = "neo4j-graphrag" },
-    { name = "python-dotenv" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "google-adk", specifier = ">=0.1.0" },
-    { name = "litellm", specifier = ">=1.66.0" },
-    { name = "neo4j", specifier = ">=5.28.1" },
-    { name = "neo4j-graphrag", specifier = ">=1.6.1" },
-    { name = "python-dotenv", specifier = ">=1.1.0" },
 ]
 
 [[package]]
