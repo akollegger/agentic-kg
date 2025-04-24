@@ -34,8 +34,8 @@ def setup_before_agent_call(callback_context: CallbackContext):
         callback_context.state["model_roles"] = model_roles
 
 
-experimental_agent = Agent(
-    name="experimental_agent_v1",
+kg_agent = Agent(
+    name="kg_agent_v1",
     model=LiteLlm(model=model_roles["chat"]),
     description="General purpose chatting, tool use, and delegation to sub-agents.", # Crucial for delegation later
     
@@ -46,4 +46,4 @@ experimental_agent = Agent(
 )
 
 # Export the root agent so adk can find it
-root_agent = experimental_agent
+root_agent = kg_agent

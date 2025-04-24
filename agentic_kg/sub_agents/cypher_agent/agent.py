@@ -5,13 +5,13 @@ from google.adk.models.lite_llm import LiteLlm
 
 import warnings
 
-from experimental.sub_agents.cypher_agent.neo4j_utils import Neo4jForADK
+from agentic_kg.sub_agents.cypher_agent.neo4j_utils import Neo4jForADK
 # Ignore all warnings
 warnings.filterwarnings("ignore")
 
 import os
 
-from experimental.model_config import model_roles
+from agentic_kg.model_config import model_roles
 
 from .tools import (
     neo4j_is_ready, 

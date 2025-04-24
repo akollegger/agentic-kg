@@ -5,7 +5,7 @@ import warnings
 # Ignore all warnings
 warnings.filterwarnings("ignore")
 
-from experimental.model_config import model_roles
+from agentic_kg.model_config import model_roles
 
 def get_weather(city: str) -> dict:
     """Retrieves the current weather report for a specified city.
