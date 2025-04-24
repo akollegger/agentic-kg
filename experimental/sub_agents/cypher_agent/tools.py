@@ -19,7 +19,6 @@ def ensure_neo4j_settings(tool_context: ToolContext) -> bool:
 
 
 async def neo4j_is_ready(
-    tool_context: ToolContext,
 ):
     """Tool to check that the Neo4j database is ready.
     Replies with either a positive message about the database being ready or an error message.
