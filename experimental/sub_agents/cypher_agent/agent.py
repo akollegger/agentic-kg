@@ -4,6 +4,8 @@ from google.adk.agents.callback_context import CallbackContext
 from google.adk.models.lite_llm import LiteLlm
 
 import warnings
+
+from experimental.sub_agents.cypher_agent.neo4j_utils import Neo4jForADK
 # Ignore all warnings
 warnings.filterwarnings("ignore")
 
@@ -11,10 +13,16 @@ import os
 
 from experimental.model_config import model_roles
 
-from .tools import neo4j_is_ready, get_physical_schema, read_neo4j_cypher
+from .tools import (
+    neo4j_is_ready, 
+    get_physical_schema, 
+    read_neo4j_cypher,
+    write_neo4j_cypher
+)
+
 from .prompts import return_instructions_cypher
 
-def prepare_neo4j() -> dict:
+def get_neo4j_settings() -> dict:
 
     # Load environment variables and set up driver configuration    
     from dotenv import load_dotenv
@@ -36,7 +44,8 @@ def setup_before_agent_call(callback_context: CallbackContext):
 
     # setting up database settings in session.state
     if "neo4j_settings" not in callback_context.state:
-        callback_context.state["neo4j_settings"] = prepare_neo4j()
+        callback_context.state["neo4j_settings"] = get_neo4j_settings()
+    Neo4jForADK.initialize(callback_context.state["neo4j_settings"])
 
 # Export the root agent so adk can find it
 cypher_agent = Agent(
@@ -45,7 +54,7 @@ cypher_agent = Agent(
     description="Provides acccess to a Neo4j database through Cypher queries.", # Crucial for delegation later
     instruction=return_instructions_cypher(),
 
-    tools=[neo4j_is_ready, get_physical_schema, read_neo4j_cypher], # Make the tool available to this agent
+    tools=[neo4j_is_ready, get_physical_schema, read_neo4j_cypher, write_neo4j_cypher], # Make the tool available to this agent
     before_agent_callback=setup_before_agent_call,
 )
 
