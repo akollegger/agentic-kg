@@ -5,7 +5,7 @@ from google.adk.tools import ToolContext
 
 from neo4j_graphrag.schema import get_structured_schema
 
-from .neo4j_utils import (
+from agentic_kg.neo4j_for_adk import (
     Neo4jForADK,
     is_write_query,
     tool_success, tool_error,

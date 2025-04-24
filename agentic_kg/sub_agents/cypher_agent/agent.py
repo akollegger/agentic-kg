@@ -3,11 +3,7 @@ from google.adk.agents.callback_context import CallbackContext
 
 from google.adk.models.lite_llm import LiteLlm
 
-import warnings
-
-from agentic_kg.sub_agents.cypher_agent.neo4j_utils import Neo4jForADK
-# Ignore all warnings
-warnings.filterwarnings("ignore")
+from agentic_kg.neo4j_for_adk import Neo4jForADK
 
 import os
 
