@@ -17,21 +17,42 @@ logging.basicConfig(level=logging.ERROR)
 from dotenv import load_dotenv
 load_dotenv()
 
+from .neo4j_for_adk import Neo4jForADK, Neo4jSettings
 from .model_config import model_roles
 
-print("API Keys Set:")
-print(f"Gemini API Key set: {'Yes' if os.environ.get('GEMINI_API_KEY') and os.environ['GEMINI_API_KEY'] != 'YOUR_GEMINI_API_KEY' else 'No (REPLACE PLACEHOLDER!)'}")
-print(f"OpenAI API Key set: {'Yes' if os.environ.get('OPENAI_API_KEY') and os.environ['OPENAI_API_KEY'] != 'YOUR_OPENAI_API_KEY' else 'No (REPLACE PLACEHOLDER!)'}")
-print(f"Anthropic API Key set: {'Yes' if os.environ.get('ANTHROPIC_API_KEY') and os.environ['ANTHROPIC_API_KEY'] != 'YOUR_ANTHROPIC_API_KEY' else 'No (REPLACE PLACEHOLDER!)'}")
+def get_neo4j_settings() -> dict:
 
-print("\nEnvironment configured.")
+    neo4j_uri = os.getenv("NEO4J_URI")
+    neo4j_username = os.getenv("NEO4J_USERNAME")
+    neo4j_password = os.getenv("NEO4J_PASSWORD")
+    neo4j_database = os.getenv("NEO4J_DATABASE") or "neo4j"
+
+    print("Neo4j expected at: " + f"{neo4j_username}@{neo4j_uri}/{neo4j_database}" )
+
+    return {
+        "neo4j_uri": neo4j_uri,
+        "neo4j_username": neo4j_username,
+        "neo4j_password": neo4j_password,
+        "neo4j_database": neo4j_database
+    }
 
 def setup_before_agent_call(callback_context: CallbackContext):
     """Setup the agent."""
 
+    print("API Keys Set:")
+    print(f"Gemini API Key set: {'Yes' if os.environ.get('GEMINI_API_KEY') and os.environ['GEMINI_API_KEY'] != 'YOUR_GEMINI_API_KEY' else 'No (REPLACE PLACEHOLDER!)'}")
+    print(f"OpenAI API Key set: {'Yes' if os.environ.get('OPENAI_API_KEY') and os.environ['OPENAI_API_KEY'] != 'YOUR_OPENAI_API_KEY' else 'No (REPLACE PLACEHOLDER!)'}")
+    print(f"Anthropic API Key set: {'Yes' if os.environ.get('ANTHROPIC_API_KEY') and os.environ['ANTHROPIC_API_KEY'] != 'YOUR_ANTHROPIC_API_KEY' else 'No (REPLACE PLACEHOLDER!)'}")
+
     # setting up model roles in session.state
     if "model_roles" not in callback_context.state:
         callback_context.state["model_roles"] = model_roles
+
+    # setting up database settings in session.state
+    if "neo4j_settings" not in callback_context.state:
+        callback_context.state["neo4j_settings"] = get_neo4j_settings()
+
+    Neo4jForADK.initialize(callback_context.state["neo4j_settings"])
 
 
 kg_agent = Agent(
