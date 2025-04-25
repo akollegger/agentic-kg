@@ -9,7 +9,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 from .prompts import return_instructions_root
-from .sub_agents import weather_agent, cypher_agent
+from .sub_agents import cypher_agent, fetch_agent
 
 import logging
 logging.basicConfig(level=logging.ERROR)
@@ -17,24 +17,8 @@ logging.basicConfig(level=logging.ERROR)
 from dotenv import load_dotenv
 load_dotenv()
 
-from .neo4j_for_adk import Neo4jForADK, Neo4jSettings
+from .neo4j_for_adk import Neo4jForADK
 from .model_config import model_roles
-
-def get_neo4j_settings() -> dict:
-
-    neo4j_uri = os.getenv("NEO4J_URI")
-    neo4j_username = os.getenv("NEO4J_USERNAME")
-    neo4j_password = os.getenv("NEO4J_PASSWORD")
-    neo4j_database = os.getenv("NEO4J_DATABASE") or "neo4j"
-
-    print("Neo4j expected at: " + f"{neo4j_username}@{neo4j_uri}/{neo4j_database}" )
-
-    return {
-        "neo4j_uri": neo4j_uri,
-        "neo4j_username": neo4j_username,
-        "neo4j_password": neo4j_password,
-        "neo4j_database": neo4j_database
-    }
 
 def setup_before_agent_call(callback_context: CallbackContext):
     """Setup the agent."""
@@ -50,7 +34,20 @@ def setup_before_agent_call(callback_context: CallbackContext):
 
     # setting up database settings in session.state
     if "neo4j_settings" not in callback_context.state:
-        callback_context.state["neo4j_settings"] = get_neo4j_settings()
+        neo4j_uri = os.getenv("NEO4J_URI")
+        neo4j_username = os.getenv("NEO4J_USERNAME")
+        neo4j_password = os.getenv("NEO4J_PASSWORD")
+        neo4j_database = os.getenv("NEO4J_DATABASE") or "neo4j"
+
+        print("Neo4j expected at: " + f"{neo4j_username}@{neo4j_uri}/{neo4j_database}" )
+
+        neo4j_settings = {
+            "neo4j_uri": neo4j_uri,
+            "neo4j_username": neo4j_username,
+            "neo4j_password": neo4j_password,
+            "neo4j_database": neo4j_database
+        }
+        callback_context.state["neo4j_settings"] = neo4j_settings
 
     Neo4jForADK.initialize(callback_context.state["neo4j_settings"])
 
@@ -62,7 +59,7 @@ kg_agent = Agent(
     
     instruction=return_instructions_root(),
     tools=[], # Make the tool available to this agent
-    sub_agents=[weather_agent, cypher_agent],
+    sub_agents=[cypher_agent, fetch_agent],
     before_agent_callback=setup_before_agent_call,
 )
 

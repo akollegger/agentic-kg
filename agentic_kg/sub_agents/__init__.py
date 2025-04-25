@@ -1,5 +1,5 @@
 
-from .weather_agent.agent import root_agent as weather_agent
+from .fetch_agent.agent import root_agent as fetch_agent
 from .cypher_agent.agent import root_agent as cypher_agent
 
-__all__ = ["weather_agent", "cypher_agent"]
+__all__ = ["fetch_agent", "cypher_agent"]
