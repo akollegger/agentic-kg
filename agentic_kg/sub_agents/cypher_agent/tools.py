@@ -12,11 +12,6 @@ from agentic_kg.neo4j_for_adk import (
     ToolResult
 )
 
-def ensure_neo4j_settings(tool_context: ToolContext) -> bool:
-    if "neo4j_settings" not in tool_context.state:
-        return False
-    return True
-
 
 async def neo4j_is_ready(
 ):

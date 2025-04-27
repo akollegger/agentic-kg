@@ -5,6 +5,7 @@ description = "Agents and tools for working with a knowledge graph"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "clevercsv[full]>=0.8.3",
     "google-adk>=0.1.0",
     "litellm>=1.66.0",
     "neo4j>=5.28.1",

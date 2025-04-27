@@ -4,24 +4,29 @@ from google.adk.agents.callback_context import CallbackContext
 
 from google.adk.models.lite_llm import LiteLlm
 
+import litellm
+
 import warnings
 # Ignore all warnings
 warnings.filterwarnings("ignore")
 
 from .prompts import return_instructions_root
-from .sub_agents import cypher_agent, fetch_agent
+from .sub_agents import cypher_agent, file_agent
 
 import logging
 logging.basicConfig(level=logging.ERROR)
 
-from dotenv import load_dotenv
-load_dotenv()
-
 from .neo4j_for_adk import Neo4jForADK
 from .model_config import model_roles
 
+litellm.suppress_debug_info = True
+litellm.set_verbose = False
+
 def setup_before_agent_call(callback_context: CallbackContext):
     """Setup the agent."""
+
+    from dotenv import load_dotenv
+    load_dotenv()
 
     print("API Keys Set:")
     print(f"Gemini API Key set: {'Yes' if os.environ.get('GEMINI_API_KEY') and os.environ['GEMINI_API_KEY'] != 'YOUR_GEMINI_API_KEY' else 'No (REPLACE PLACEHOLDER!)'}")
@@ -59,7 +64,7 @@ kg_agent = Agent(
     
     instruction=return_instructions_root(),
     tools=[], # Make the tool available to this agent
-    sub_agents=[cypher_agent, fetch_agent],
+    sub_agents=[cypher_agent, file_agent],
     before_agent_callback=setup_before_agent_call,
 )
 
