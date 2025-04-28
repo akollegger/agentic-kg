@@ -18,9 +18,6 @@ from .kg_tools import get_neo4j_import_directory, create_note
 
 def setup_before_agent_call(callback_context: CallbackContext):
     """Setup the agent."""
-    from pathlib import Path
-    from dotenv import load_dotenv
-    load_dotenv()
 
     import_dir = os.getenv("IMPORT_DIR") or "data"
     import_dir_path = Path(import_dir).absolute()

@@ -25,9 +25,6 @@ litellm.set_verbose = False
 def setup_before_agent_call(callback_context: CallbackContext):
     """Setup the agent."""
 
-    from dotenv import load_dotenv
-    load_dotenv()
-
     print("API Keys Set:")
     print(f"Gemini API Key set: {'Yes' if os.environ.get('GEMINI_API_KEY') and os.environ['GEMINI_API_KEY'] != 'YOUR_GEMINI_API_KEY' else 'No (REPLACE PLACEHOLDER!)'}")
     print(f"OpenAI API Key set: {'Yes' if os.environ.get('OPENAI_API_KEY') and os.environ['OPENAI_API_KEY'] != 'YOUR_OPENAI_API_KEY' else 'No (REPLACE PLACEHOLDER!)'}")
