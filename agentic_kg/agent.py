@@ -37,9 +37,9 @@ def setup_before_agent_call(callback_context: CallbackContext):
     # setting up database settings in session.state
     if "neo4j_settings" not in callback_context.state:
         neo4j_uri = os.getenv("NEO4J_URI")
-        neo4j_username = os.getenv("NEO4J_USERNAME")
+        neo4j_username = os.getenv("NEO4J_USERNAME") or "neo4j"
         neo4j_password = os.getenv("NEO4J_PASSWORD")
-        neo4j_database = os.getenv("NEO4J_DATABASE") or "neo4j"
+        neo4j_database = os.getenv("NEO4J_DATABASE") or neo4j_username
 
         print("Neo4j expected at: " + f"{neo4j_username}@{neo4j_uri}/{neo4j_database}" )
 
