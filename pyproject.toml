@@ -13,4 +13,8 @@ dependencies = [
     "openai>=1.0.0",
     "python-dotenv>=1.0.0",
     "click>=8.0.0",
+    "csvkit>=2.1.0",
+    "faker>=18.0.0",
+    "nanoid>=2.0.0",
+    "inflect>=6.0.0",
 ]
