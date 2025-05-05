@@ -14,8 +14,8 @@ import nanoid
 import inflect
 
 # Import our custom analyzers
-from data_synthesis.lib.title_generator import analyze_and_generate
-from data_synthesis.lib.context_analyzer import analyze_field_contexts
+from synthesis.lib.title_generator import analyze_and_generate
+from synthesis.lib.context_analyzer import analyze_field_contexts
 
 # Initialize Faker and inflect
 fake = Faker()

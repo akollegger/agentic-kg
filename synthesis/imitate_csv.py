@@ -12,7 +12,7 @@ import clevercsv
 import pandas as pd
 
 # Import utility functions from lib.imitate
-from data_synthesis.lib.imitate import (
+from synthesis.lib.imitate import (
     detect_field_types,
     generate_fake_data
 )

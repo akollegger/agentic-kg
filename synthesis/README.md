@@ -1,4 +1,4 @@
-# Data Synthesis Module
+# Synthesis Module
 
 A collection of CLI tools for generating synthetic data based on CSV inputs.
 
@@ -26,7 +26,7 @@ Generates a new CSV file with fake data based on the structure of a source CSV f
 
 ## Installation
 
-The data_synthesis module is part of the agentic-kg project. Make sure you have all dependencies installed:
+The synthesis module is part of the agentic-kg project. Make sure you have all dependencies installed:
 
 ```bash
 uv sync
@@ -39,7 +39,7 @@ uv sync
 The basic usage pattern is:
 
 ```bash
-python -m data_synthesis.csv_to_md [OPTIONS] CSV_FILES...
+python -m synthesis.csv_to_md [OPTIONS] CSV_FILES...
 ```
 
 ### Arguments
@@ -71,7 +71,7 @@ The tool supports three methods for providing your OpenAI API key, in order of p
 Process a single CSV file with an inline prompt:
 
 ```bash
-python -m data_synthesis.csv_to_md data/people.csv --prompt "Generate a detailed biography for this person."
+python -m synthesis.csv_to_md data/people.csv --prompt "Generate a detailed biography for this person."
 ```
 
 ### Using a Prompt File
@@ -79,7 +79,7 @@ python -m data_synthesis.csv_to_md data/people.csv --prompt "Generate a detailed
 For longer or more complex prompts, use a file:
 
 ```bash
-python -m data_synthesis.csv_to_md data/people.csv --prompt-file prompts/biography.txt
+python -m synthesis.csv_to_md data/people.csv --prompt-file prompts/biography.txt
 ```
 
 ### Processing Multiple Files
@@ -87,7 +87,7 @@ python -m data_synthesis.csv_to_md data/people.csv --prompt-file prompts/biograp
 Process multiple CSV files at once:
 
 ```bash
-python -m data_synthesis.csv_to_md data/people.csv data/companies.csv --prompt-file prompts/description.txt
+python -m synthesis.csv_to_md data/people.csv data/companies.csv --prompt-file prompts/description.txt
 ```
 
 ### Limiting Rows
@@ -95,7 +95,7 @@ python -m data_synthesis.csv_to_md data/people.csv data/companies.csv --prompt-f
 Process only the first 5 rows of each CSV:
 
 ```bash
-python -m data_synthesis.csv_to_md data/people.csv --prompt "Generate a profile." --rows 5
+python -m synthesis.csv_to_md data/people.csv --prompt "Generate a profile." --rows 5
 ```
 
 ### Specifying a Different Model
@@ -103,7 +103,7 @@ python -m data_synthesis.csv_to_md data/people.csv --prompt "Generate a profile.
 Use a different OpenAI model:
 
 ```bash
-python -m data_synthesis.csv_to_md data/people.csv --prompt "Generate content." --model gpt-4
+python -m synthesis.csv_to_md data/people.csv --prompt "Generate content." --model gpt-4
 ```
 
 ### Custom Output Directory
@@ -111,7 +111,7 @@ python -m data_synthesis.csv_to_md data/people.csv --prompt "Generate content." 
 Save results to a custom directory:
 
 ```bash
-python -m data_synthesis.csv_to_md data/people.csv --prompt "Generate content." --output-dir results/generated
+python -m synthesis.csv_to_md data/people.csv --prompt "Generate content." --output-dir results/generated
 ```
 
 ## Output Format
@@ -129,7 +129,7 @@ The `imitate_csv` tool analyzes a source CSV file and generates a new CSV with f
 ### Usage
 
 ```bash
-python -m data_synthesis.imitate_csv [OPTIONS]
+python -m synthesis.imitate_csv [OPTIONS]
 ```
 
 ### Options
@@ -147,7 +147,7 @@ python -m data_synthesis.imitate_csv [OPTIONS]
 Generate 10 rows of fake data based on a source CSV:
 
 ```bash
-python -m data_synthesis.imitate_csv --source data/movies/people.csv --out data/synthetic/fake_people.csv
+python -m synthesis.imitate_csv --source data/movies/people.csv --out data/synthetic/fake_people.csv
 ```
 
 #### Specifying an ID Field
@@ -155,7 +155,7 @@ python -m data_synthesis.imitate_csv --source data/movies/people.csv --out data/
 Treat a specific field as a unique ID:
 
 ```bash
-python -m data_synthesis.imitate_csv --source data/movies/people.csv --id personId --out data/synthetic/fake_people.csv
+python -m synthesis.imitate_csv --source data/movies/people.csv --id personId --out data/synthetic/fake_people.csv
 ```
 
 #### Generating More Rows
@@ -163,7 +163,7 @@ python -m data_synthesis.imitate_csv --source data/movies/people.csv --id person
 Generate 100 rows of fake data:
 
 ```bash
-python -m data_synthesis.imitate_csv --source data/movies/people.csv --out data/synthetic/fake_people.csv --rows 100
+python -m synthesis.imitate_csv --source data/movies/people.csv --out data/synthetic/fake_people.csv --rows 100
 ```
 
 ### How It Works
