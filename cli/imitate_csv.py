@@ -12,14 +12,33 @@ import clevercsv
 import pandas as pd
 
 # Import utility functions from lib.imitate
-from synthesis.lib.imitate import (
+from .lib.imitate import (
     detect_field_types,
-    generate_fake_data
+    generate_imitation_value
 )
 
 
 
-@click.command()
+USAGE_EXAMPLES = """
+Examples:
+
+\b
+  # Generate 10 rows of imitation data (default)
+  $ python -m cli.imitate_csv --source data/movies/people.csv \\
+    --out data/synthetic/imitation_people.csv
+
+\b 
+  # Generate 100 rows with a specific ID field
+  $ python -m cli.imitate_csv --source data/movies/movies.csv \\
+    --id movieId --out data/synthetic/imitation_movies.csv --rows 100
+
+\b
+  # Generate a small sample dataset
+  $ python -m cli.imitate_csv --source data/movies/acting_roles.csv \\
+    --out data/synthetic/sample_roles.csv --rows 20
+"""
+
+@click.command(epilog=USAGE_EXAMPLES)
 @click.option('--source', required=True, type=click.Path(exists=True),
               help='Source CSV file to imitate')
 @click.option('--id', 'id_field', help='Field to treat as unique ID')
@@ -29,7 +48,7 @@ from synthesis.lib.imitate import (
               help='Number of rows to generate (default: 10)')
 def imitate_csv(source: str, id_field: Optional[str], out: str, rows: int):
     """
-    Generate a new CSV file with fake data based on the structure of a source CSV file.
+    Generate a new CSV file with imitation data based on the structure of a source CSV file.
     """
     source_path = Path(source)
     output_path = Path(out)
@@ -90,9 +109,9 @@ def imitate_csv(source: str, id_field: Optional[str], out: str, rows: int):
                     context_info = f", context: {field_type_info.get('context')}"
                 click.echo(f"  - {field}: {field_type_info}{context_info}")
         
-        # Generate fake data
-        click.echo(f"Generating {rows} rows of fake data...")
-        fake_data = generate_fake_data(source_data, field_types, id_field, rows, source_path=source_path)
+        # Generate imitation data
+        click.echo(f"Generating {rows} rows of imitation data...")
+        imitation_data = generate_imitation_value(source_data, field_types, id_field, rows, source_path=source_path)
         
         # Create parent directory if it doesn't exist
         output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -101,7 +120,7 @@ def imitate_csv(source: str, id_field: Optional[str], out: str, rows: int):
         with open(output_path, 'w', newline='') as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            writer.writerows(fake_data)
+            writer.writerows(imitation_data)
         
         click.echo(f"Successfully wrote {rows} rows to {output_path}")
         

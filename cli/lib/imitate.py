@@ -14,8 +14,8 @@ import nanoid
 import inflect
 
 # Import our custom analyzers
-from synthesis.lib.title_generator import analyze_and_generate
-from synthesis.lib.context_analyzer import analyze_field_contexts
+from cli.lib.title_generator import analyze_and_generate
+from cli.lib.context_analyzer import analyze_field_contexts
 
 # Initialize Faker and inflect
 fake = Faker()
@@ -462,10 +462,10 @@ def get_max_id_value(data: List[Dict[str, Any]], id_field: str) -> Any:
         # If not numeric, return None
         return None
 
-def generate_fake_value(field_name: str, field_type_info: Dict[str, Any], row_data: Dict[str, Any] = None, 
+def generate_imitation_value(field_name: str, field_type_info: Dict[str, Any], row_data: Dict[str, Any] = None, 
                        max_id: Any = None, id_field: bool = False) -> Any:
     """
-    Generate a fake value based on field name and type.
+    Generate an imitation value based on field name and type.
     
     Args:
         field_name: Name of the field
@@ -475,7 +475,7 @@ def generate_fake_value(field_name: str, field_type_info: Dict[str, Any], row_da
         id_field: Whether this is the ID field
         
     Returns:
-        Generated fake value
+        Generated imitation value
     """
     field_type = field_type_info['type']
     
@@ -685,10 +685,10 @@ def generate_fake_value(field_name: str, field_type_info: Dict[str, Any], row_da
     # Default to a random string
     return fake.word()
 
-def generate_fake_value_with_constraints(field_name: str, field_type_info: Dict[str, Any], 
+def generate_imitation_value_with_constraints(field_name: str, field_type_info: Dict[str, Any], 
                                   row_data: Dict[str, Any], max_id: Any = None, id_field: bool = False) -> Any:
     """
-    Generate a fake value that respects constraints with related fields.
+    Generate an imitation value that respects constraints with related fields.
     
     Args:
         field_name: Name of the field to generate a value for
@@ -741,13 +741,13 @@ def generate_fake_value_with_constraints(field_name: str, field_type_info: Dict[
                     return fake.pyint(min_value=min_val, max_value=max_val)
     
     # If no constraints or they don't apply, use regular generation
-    return generate_fake_value(field_name, field_type_info, row_data, max_id, id_field)
+    return generate_imitation_value(field_name, field_type_info, row_data, max_id, id_field)
 
 
-def generate_fake_data(source_data: List[Dict[str, Any]], field_types: Dict[str, Dict[str, Any]], 
+def generate_imitation_data(source_data: List[Dict[str, Any]], field_types: Dict[str, Dict[str, Any]], 
                       id_field: str, num_rows: int, source_path: str = None) -> List[Dict[str, Any]]:
     """
-    Generate fake data based on the source data structure.
+    Generate imitation data based on the source data structure.
     
     Args:
         source_data: Original CSV data
@@ -756,7 +756,7 @@ def generate_fake_data(source_data: List[Dict[str, Any]], field_types: Dict[str,
         num_rows: Number of rows to generate
         
     Returns:
-        List of dictionaries containing fake data
+        List of dictionaries containing imitation data
     """
     fake_data = []
     max_id = None
@@ -765,7 +765,7 @@ def generate_fake_data(source_data: List[Dict[str, Any]], field_types: Dict[str,
     if id_field:
         max_id = get_max_id_value(source_data, id_field)
     
-    # Generate fake rows
+    # Generate imitation rows
     for i in range(num_rows):
         row = {}
         
@@ -778,11 +778,11 @@ def generate_fake_data(source_data: List[Dict[str, Any]], field_types: Dict[str,
             row['source_path'] = source_path
             
             # Use constraint-based generation to ensure logical relationships
-            row[field] = generate_fake_value_with_constraints(field, field_type_info, row_data=row)
+            row[field] = generate_imitation_value_with_constraints(field, field_type_info, row_data=row)
         
         # Second pass: generate ID field (if specified)
         if id_field:
-            row[id_field] = generate_fake_value(id_field, field_types[id_field], 
+            row[id_field] = generate_imitation_value(id_field, field_types[id_field], 
                                               row_data=row, max_id=max_id, id_field=True)
             # Increment max_id if it's numeric
             if isinstance(max_id, (int, float)):

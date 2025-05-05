@@ -85,7 +85,33 @@ def process_csv_file(csv_file: Path, prompt_template: str, output_dir: Path, cli
             except Exception as e:
                 print(f"[{csv_file.name}] Error processing row {i+1}: {str(e)}")
 
-@click.command()
+USAGE_EXAMPLES = """
+
+Examples:
+
+\b
+  # Process a single CSV file with a prompt file (recommended)
+  $ python -m cli.csv_to_md data/movies/people.csv --prompt-file prompts/actor_bio.txt
+
+\b  
+  # Use a prompt file and custom output directory
+  $ python -m cli.csv_to_md data/movies/people.csv --prompt-file prompts/actor_bio.txt --output-dir results/bios
+
+\b
+  # Process multiple CSV files with a limit on rows and custom model
+  $ python -m cli.csv_to_md data/movies/people.csv data/movies/movies.csv \\
+    --prompt-file prompts/description.txt --rows 5 --model gpt-4o-mini
+
+\b
+  # Use a field for naming output files
+  $ python -m cli.csv_to_md data/movies/people.csv --prompt-file prompts/actor_bio.txt --filename-field name
+
+\b
+  # Inline prompt (alternative to prompt file)
+  $ python -m cli.csv_to_md data/movies/people.csv --prompt "Generate a quirky biography."
+"""
+
+@click.command(epilog=USAGE_EXAMPLES)
 @click.argument('csv_files', type=click.Path(exists=True), nargs=-1, required=True)
 @click.option('--prompt-file', '-f', type=click.Path(exists=True), help='File containing the prompt template to apply to each row')
 @click.option('--prompt', '-p', help='Prompt template to apply to each row (alternative to --prompt-file)')

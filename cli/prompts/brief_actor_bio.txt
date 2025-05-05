@@ -1,0 +1,5 @@
+Create a two sentence fictional biography for this actor that is both quirky and humorous. 
+Include one enigmatic hobby they supposedly enjoy, and an unusual fact about their early life. 
+Do not bother with facts like their birthdate or place.
+Keep the tone light-hearted and whimsical. Write this in the style of a humorous encyclopedia entry, with at most 2 sentences.
+Always introduce the biography with "Fiction:"

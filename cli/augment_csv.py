@@ -114,7 +114,26 @@ def process_csv_file(
                 
                 print(f"Processed row {i+1}, added field '{field_name}'")
 
-@click.command()
+USAGE_EXAMPLES = """
+Examples:
+
+\b
+  # Add a 'plot' field to movies.csv using a prompt file
+  $ python -m cli.augment_csv --source data/movies/movies.csv --field plot \\
+    --prompt-file prompts/movie_plot.txt --out data/synthetic/movies_with_plots.csv
+
+\b
+  # Add a 'summary' field using an inline prompt and limit to 10 rows
+  $ python -m cli.augment_csv --source data/movies/people.csv --field summary \\
+    --prompt "Summarize this person's career." --out data/synthetic/people_with_summaries.csv --rows 10
+ 
+\b
+  # Use a specific model for generation
+  $ python -m cli.augment_csv --source data/movies/movies.csv --field review \\
+    --prompt-file prompts/movie_review.txt --out data/synthetic/movies_with_reviews.csv --model gpt-4o-mini
+"""
+
+@click.command(epilog=USAGE_EXAMPLES)
 @click.option('--source', '-s', type=click.Path(exists=True), required=True,
               help='Source CSV file to augment')
 @click.option('--field', '-f', required=True,

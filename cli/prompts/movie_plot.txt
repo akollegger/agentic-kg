@@ -1,4 +1,4 @@
 Generate a brief plot summary for the movie based on its title, genres, and release year. 
-The summary should be 1-2 sentences long and capture the essence of the movie. 
+The summary should be a single short sentence and capture the essence of the movie. 
 Be creative but plausible, making the plot consistent with the movie's genres and era.
 Do not include the movie's title in the plot. 
