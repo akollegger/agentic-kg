@@ -1,0 +1,1823 @@
+movieId,title,avgVote,releaseYear,genres
+189,Sin City: A Dame to Kill For,6.900000,2014,Action:Crime:Drama:Thriller
+1771,Captain America: The First Avenger,6.300000,2011,Action:Adventure:Science Fiction
+1865,Pirates of the Caribbean: On Stranger Tides,6.300000,2011,Action:Adventure:Fantasy
+1930,The Amazing Spider-Man,6.300000,2012,Action:Adventure:Fantasy
+4258,Scary Movie 5,4.700000,2013,Comedy
+7978,The Wolfman,5.400000,2010,Drama:Horror:Thriller
+8967,The Tree of Life,6.700000,2011,Drama:Fantasy:Indie
+9364,Wuthering Heights,6.200000,2011,Drama:Romance
+9543,Prince of Persia: The Sands of Time,6.200000,2010,Action:Adventure:Fantasy:Romance
+10138,Iron Man 2,6.500000,2010,Action:Adventure:Science Fiction
+10140,The Chronicles of Narnia: The Voyage of the Dawn Treader,5.900000,2010,Fantasy
+10191,How to Train Your Dragon,7.100000,2010,Adventure:Animation:Fantasy:Family
+10192,Shrek Forever After,5.800000,2010,Adventure:Animation:Comedy:Fantasy:Family
+10193,Toy Story 3,7.300000,2010,Animation:Comedy:Family
+10195,Thor,6.300000,2011,Action:Adventure:Fantasy
+10196,The Last Airbender,5.000000,2010,Action:Adventure:Fantasy:Family
+10316,The Ides of March,6.200000,2011,Drama
+10679,Iron Sky,5.700000,2012,Action:Comedy:Science Fiction
+11324,Shutter Island,7.100000,2010,Drama:Mystery:Thriller
+11439,The Ghost Writer,6.400000,2010,Mystery:Thriller
+12155,Alice in Wonderland,6.000000,2010,Fantasy
+12201,Edge of Darkness,6.200000,2010,Crime:Drama:Mystery:Thriller
+12444,Harry Potter and the Deathly Hallows: Part 1,7.000000,2010,Adventure:Fantasy:Family
+12445,Harry Potter and the Deathly Hallows: Part 2,7.300000,2011,Adventure:Fantasy:Family
+12645,Inhale,6.000000,2010,Action:Drama:Thriller
+12685,BloodRayne: The Third Reich,3.500000,2011,Action:Adventure:Comedy:Horror:Science Fiction:Thriller
+12819,Alpha and Omega,5.900000,2010,Animation:Family
+13477,When in Rome,5.500000,2010,Comedy:Romance
+16290,Jackass 3D,6.600000,2010,Action:Comedy:Documentary
+17578,The Adventures of Tintin,6.500000,2011,Action:Adventure:Animation:Mystery:Family
+18823,Clash of the Titans,5.700000,2010,Action:Adventure:Fantasy
+20352,Despicable Me,6.900000,2010,Animation:Family
+20504,The Book of Eli,6.300000,2010,Action:Science Fiction:Thriller
+20526,TRON: Legacy,6.200000,2010,Action:Adventure:Science Fiction
+20533,Jonah Hex,5.000000,2010,Action:Drama:Fantasy:Thriller:Western
+20662,Robin Hood,6.000000,2010,Action:Adventure:Drama:History
+22538,Scott Pilgrim vs. the World,7.100000,2010,Action:Adventure:Comedy
+22894,Legion,5.100000,2010,Action:Fantasy:Thriller
+22907,Takers,6.500000,2010,Action:Crime:Drama:Thriller
+22970,The Cabin in the Woods,6.300000,2012,Horror:Thriller
+22971,Dear John,6.500000,2010,Drama:Romance:War
+22972,Green Zone,6.400000,2010,Action:Adventure:Drama:Thriller
+23023,Tooth Fairy,5.500000,2010,Comedy:Fantasy:Family
+23047,Season of the Witch,5.600000,2011,Action:Adventure:Fantasy
+23048,Hot Tub Time Machine,5.800000,2010,Adventure:Comedy:Science Fiction
+23168,The Town,6.800000,2010,Crime:Drama:Thriller
+23169,Remember Me,6.800000,2010,Drama:Romance
+23172,The Spy Next Door,5.700000,2010,Action:Comedy:Family
+23437,A Nightmare on Elm Street,5.700000,2010,Horror:Mystery:Thriller
+23483,Kick-Ass,6.800000,2010,Action:Crime
+23514,The Rum Diary,5.300000,2011,Comedy:Drama
+23629,Sucker Punch,5.900000,2011,Action:Fantasy:Thriller
+23631,Machete,6.400000,2010,Action:Comedy:Thriller
+23742,Cop Out,5.900000,2010,Action:Comedy:Crime
+23759,Centurion,5.600000,2010,Action:Drama:Thriller
+23830,Last Night,6.200000,2010,Drama:Romance
+24021,The Twilight Saga: Eclipse,5.600000,2010,Adventure:Drama:Fantasy:Romance
+24428,The Avengers,7.100000,2012,Action:Adventure:Science Fiction
+25195,Leap Year,6.400000,2010,Comedy:Romance
+26022,My Name Is Khan,7.600000,2010,Drama:Romance
+26214,The American Matrix - Age Of Deception,4.000000,2010,Documentary
+26224,Global Eugenics: Using Medicine to Kill,3.500000,2010,Documentary
+26388,Buried,6.300000,2010,Drama:Mystery:Thriller
+26389,From Paris with Love,6.200000,2010,Action:Crime:Thriller
+27004,Ca$h,6.100000,2010,Action:Adventure:Thriller:Indie
+27022,The Sorcerer's Apprentice,5.900000,2010,Action:Adventure:Comedy:Drama:Fantasy
+27205,Inception,7.500000,2010,Action:Adventure:Mystery:Science Fiction:Thriller
+27569,Extraordinary Measures,7.200000,2010,Drama
+27573,The Bounty Hunter,5.500000,2010,Action
+27576,Salt,6.200000,2010,Action:Crime:Mystery:Thriller
+27578,The Expendables,5.900000,2010,Action:Thriller
+27579,The American,5.700000,2010,Crime:Drama:Suspense:Thriller
+27581,The Other Guys,5.900000,2010,Action:Comedy:Crime
+27582,The Mechanic,6.300000,2011,Action:Crime:Thriller
+27583,Greenberg,5.800000,2010,Comedy:Drama:Romance
+27585,Rabbit Hole,7.100000,2010,Drama
+27586,The Runaways,6.200000,2010,Drama:Music:Indie
+29427,The Crazies,6.500000,2010,Action:Horror:Mystery
+29564,Smokin' Aces 2: Assassins' Ball,5.800000,2010,Action:Adventure:Comedy:Crime:Thriller
+29920,Easy Money,7.300000,2010,Crime:Drama:Thriller
+30061,Justice League: Crisis on Two Earths,6.800000,2010,Action:Adventure:Animation
+30618,Bunraku,6.000000,2010,Action:Drama:Thriller
+30675,Planet Hulk,6.300000,2010,Action:Animation:Science Fiction
+31007,Welcome to the Rileys,7.200000,2010,Drama:Indie
+31261,Halo Legends,7.500000,2010,Action:Adventure:Animation:Science Fiction
+31867,Repo Men,6.300000,2010,Action:Crime:Science Fiction:Thriller
+31967,Dante's Inferno: An Animated Epic,5.800000,2010,Action:Animation:Science Fiction:Thriller
+32657,Percy Jackson & the Olympians: The Lightning Thief,6.000000,2010,Adventure:Fantasy:Family
+32823,Get Him to the Greek,5.900000,2010,Comedy
+32856,Valentine's Day,5.400000,2010,Comedy:Romance
+33107,And Soon the Darkness,5.600000,2010,Crime:Horror:Mystery:Thriller
+33217,Diary of a Wimpy Kid,5.900000,2010,Comedy:Family
+33555,Sherlock Holmes,5.800000,2010,Action:Drama:Fantasy:Horror:Mystery:Thriller
+33602,Temple Grandin,6.800000,2010,Drama
+33909,Wall Street: Money Never Sleeps,5.500000,2010,Crime:Drama
+34016,She's Out of My League,6.100000,2010,Comedy:Romance
+34179,14 Blades,6.500000,2010,Action:Drama:Thriller
+34182,Confucius,5.600000,2010,Drama:History
+34335,Nine Dead,6.100000,2010,Crime:Drama:Horror:Suspense:Thriller
+34803,Death at a Funeral,6.100000,2010,Comedy
+34806,The Back-Up Plan,5.500000,2010,Comedy:Romance
+34813,The Losers,6.500000,2010,Action:Adventure:Crime:Mystery:Thriller
+34851,Predators,6.000000,2010,Action:Adventure:Science Fiction:Thriller
+35019,Nanny McPhee Returns,6.100000,2010,Comedy:Fantasy:Family
+35025,Le Mac,7.200000,2010,Comedy
+35056,Date Night,5.700000,2010,Action:Comedy:Crime:Romance
+35138,Little Big Soldier,6.500000,2010,Action:Adventure:Comedy
+35169,Furry Vengeance,4.800000,2010,Comedy
+35217,Friendship!,6.700000,2010,Comedy
+35428,What Men Talk About,8.800000,2010,Comedy
+35552,The Extraordinary Adventures of Adèle Blanc-Sec,7.000000,2010,Action:Adventure:Fantasy:Mystery
+35558,StarStruck,5.800000,2010,Comedy:Drama:Romance:Family
+35688,Why Did I Get Married Too?,6.300000,2010,Comedy:Romance
+35690,The Last Song,6.500000,2010,Drama:Romance:Family
+35791,Resident Evil: Afterlife,5.900000,2010,Action:Adventure:Horror:Science Fiction
+36736,The Drawn Together Movie: The Movie!,7.200000,2010,Animation:Comedy
+36801,Cemetery Junction,7.300000,2010,Comedy:Drama
+36865,The Disappearance of Haruhi Suzumiya,8.200000,2010,Animation:Comedy:Drama:Mystery:Science Fiction:Romance:Foreign
+36950,You Don't Know Jack,7.200000,2010,Drama
+36970,Disneynature Oceans,7.900000,2010,Documentary:Family
+37034,True Legend,5.900000,2010,Action:Fantasy
+37056,Letters to Juliet,6.300000,2010,Comedy:Drama:Romance
+37169,The Human Centipede (First Sequence),5.200000,2010,Horror
+37414,The Killer Inside Me,6.200000,2010,Crime:Drama:Thriller
+37430,Conan the Barbarian,5.400000,2011,Action:Adventure:Fantasy
+37472,Ip Man 2,6.900000,2010,Action:Drama:History:Sport
+37495,Four Lions,7.100000,2010,Comedy:Crime:Drama
+37645,22 Bullets,6.500000,2010,Action:Crime:Thriller
+37686,Super 8,6.400000,2011,Action:Mystery:Science Fiction:Thriller
+37710,The Tourist,6.000000,2010,Action:Thriller:Romance
+37724,Skyfall,6.500000,2012,Action:Adventure:Thriller
+37735,Easy A,6.300000,2010,Comedy
+37737,Kites,4.600000,2010,Action:Drama:Romance
+37786,Sex and the City 2,5.400000,2010,Comedy:Drama:Romance
+37799,The Social Network,6.900000,2010,Drama
+37821,Killers,5.800000,2010,Action:Comedy:Thriller:Romance
+37834,Knight and Day,5.800000,2010,Action:Comedy:Romance
+37931,MacGruber,5.200000,2010,Action:Adventure:Comedy
+37950,Charlie St. Cloud,6.500000,2010,Drama:Fantasy:Romance
+37958,Immortals,5.700000,2011,Action:Drama:Fantasy
+38031,You Will Meet a Tall Dark Stranger,6.600000,2010,Comedy:Drama:Romance
+38050,The Adjustment Bureau,6.300000,2011,Fantasy:Thriller:Romance
+38055,Megamind,6.300000,2010,Action:Animation:Comedy:Science Fiction:Family
+38073,Going the Distance,6.600000,2010,Comedy:Drama:Romance
+38093,Just Wright,6.100000,2010,Comedy:Drama:Romance
+38117,Beastly,5.500000,2011,Drama:Fantasy:Romance
+38167,Eat Pray Love,5.500000,2010,Drama:Romance
+38199,Unthinkable,6.700000,2010,Action:Adventure:Drama:Suspense:Thriller
+38234,Undisputed III: Redemption,7.700000,2010,Action:Thriller
+38277,Camping 2,4.200000,2010,Comedy
+38303,You Again,6.100000,2010,Comedy:Romance
+38317,Zookeeper,5.500000,2011,Comedy:Romance:Family
+38319,Your Highness,5.300000,2011,Action:Adventure:Comedy:Fantasy:Science Fiction
+38321,Priest,5.500000,2011,Action:Horror:Science Fiction:Thriller
+38322,"Big Mommas: Like Father, Like Son",5.700000,2011,Action:Comedy:Crime
+38356,Transformers: Dark of the Moon,6.200000,2011,Action:Adventure:Science Fiction
+38357,Morning Glory,6.100000,2010,Comedy:Drama:Romance
+38358,The Last Exorcism,5.800000,2010,Drama:Horror:Thriller
+38363,Fair Game,6.400000,2010,Drama:Thriller
+38365,Grown Ups,6.100000,2010,Comedy
+38408,Life as We Know It,6.400000,2010,Comedy:Drama:Romance
+38540,Age of Heroes,5.700000,2011,Action:Drama:Thriller:War
+38541,The Divide,5.500000,2011,Action:Horror:Science Fiction:Thriller
+38543,Ironclad,6.300000,2011,Action:Adventure:History:Romance
+38570,The 41–Year–Old Virgin Who Knocked Up Sarah Marshall and Felt Superbad About It,3.700000,2010,Comedy
+38575,The Karate Kid,6.000000,2010,Action:Adventure:Drama:Family
+38579,Marmaduke,4.800000,2010,Comedy:Family
+38626,Going Postal,7.500000,2010,Comedy:Fantasy:Science Fiction
+38684,Jane Eyre,7.400000,2011,Drama:Romance
+38745,Gulliver's Travels,5.400000,2010,Comedy
+38757,Tangled,7.000000,2010,Animation:Musical:Family
+38778,Dinner for Schmucks,5.700000,2010,Comedy
+38843,Ramona and Beezus,6.400000,2010,Adventure:Comedy:Fantasy:Family
+38961,Tamara Drewe,5.500000,2010,Comedy:Romance
+39013,Winter's Bone,6.700000,2010,Drama
+39053,Cyrus,6.600000,2010,Drama:Romance
+39210,Somewhere,6.400000,2010,Drama:Indie
+39254,Real Steel,6.400000,2011,Action:Drama:Science Fiction:Sport
+39285,Beauty & the Briefcase,5.600000,2010,Comedy:Drama:Romance
+39312,Restrepo,7.700000,2010,Documentary:War:Indie
+39413,My Afternoons with Margueritte,8.100000,2010,Comedy:Drama
+39451,Little Fockers,5.500000,2010,Comedy:Romance
+39452,Exit Through the Gift Shop,7.500000,2010,Documentary
+39486,Secretariat,6.200000,2010,Drama
+39513,Paul,6.500000,2011,Adventure:Comedy:Science Fiction
+39514,RED,6.400000,2010,Action:Adventure:Comedy:Crime:Thriller
+39522,Mega Piranha,2.400000,2010,Action:Adventure:Horror:Science Fiction
+39538,Contagion,6.100000,2011,Drama:Science Fiction:Thriller
+39691,Cats & Dogs: The Revenge of Kitty Galore,5.200000,2010,Comedy:Family
+39781,The Kids Are All Right,6.000000,2010,Comedy:Drama
+40161,The Decoy Bride,6.000000,2011,Comedy:Drama:Romance
+40194,Paris Express,4.700000,2010,Action:Comedy:Crime
+40205,16 Wishes,5.800000,2010,Drama:Fantasy:Family
+40264,Vampires Suck,4.800000,2010,Comedy:Horror
+40619,Day & Night,7.200000,2010,Adventure:Animation:Comedy:Fantasy:Family:Short
+40662,Batman: Under the Red Hood,7.400000,2010,Action:Adventure:Animation:Mystery:Science Fiction
+40794,Loose Cannons,7.600000,2010,Action:Adventure:Comedy:Drama:Romance:Foreign
+40805,The Green Hornet,5.600000,2011,Action:Comedy:Crime
+40807,50/50,6.500000,2011,Comedy:Drama
+40911,Monga,6.400000,2011,Thriller
+41109,Don 2,7.600000,2011,Action:Thriller
+41135,Operation: Endgame,6.800000,2010,Action:Adventure:Comedy:Thriller
+41154,Men in Black 3,6.100000,2012,Action:Comedy:Science Fiction
+41180,The Client List,5.800000,2010,Drama
+41201,The Illusionist,7.400000,2010,Animation:Drama
+41210,The Switch,5.800000,2010,Comedy:Drama:Romance
+41211,Heartbreaker,7.100000,2010,Comedy
+41215,Black Death,6.000000,2010,Action:Drama:Horror:Mystery:Thriller
+41216,Legend of the Guardians: The Owls of Ga'Hoole,6.300000,2010,Animation
+41233,Step Up 3D,6.600000,2010,Drama:Musical:Romance
+41283,Faster,6.200000,2010,Action:Drama:Thriller
+41382,Lottery Ticket,6.300000,2010,Comedy
+41402,Let Me In,6.700000,2010,Drama:Horror:Mystery
+41411,The Round Up,7.900000,2010,Drama:History:War
+41436,Paranormal Activity 2,5.900000,2010,Horror:Thriller
+41439,Saw: The Final Chapter,6.100000,2010,Crime:Horror
+41446,Scream 4,6.200000,2011,Horror:Mystery
+41505,Shelter,5.900000,2010,Horror:Mystery:Thriller
+41513,The Smurfs,5.600000,2011,Adventure:Animation:Comedy:Fantasy:Family
+41515,Yogi Bear,6.100000,2010,Adventure:Animation:Comedy:Family
+41517,Ra.One,6.100000,2011,Action:Adventure:Science Fiction
+41556,The Romantics,5.400000,2010,Comedy:Drama:Romance
+41592,StreetDance 3D,6.900000,2010,Drama
+41602,The Necessary Death of Charlie Countryman,6.900000,2013,Action:Comedy:Drama:Thriller:Romance
+41630,No Strings Attached,6.200000,2011,Comedy:Romance
+41733,Due Date,6.100000,2010,Comedy:Drama
+42188,Never Let Me Go,6.900000,2010,Drama:Science Fiction:Romance
+42194,Tekken,5.000000,2010,Action:Crime:Drama:Science Fiction:Thriller
+42296,Catfish,5.600000,2010,Documentary
+42297,Burlesque,6.300000,2010,Drama:Musical:Romance
+42684,Skyline,5.000000,2010,Science Fiction:Thriller
+42888,How Do You Know,5.000000,2010,Comedy:Drama:Romance
+42941,30 Days of Night: Dark Days,5.100000,2010,Horror:Thriller
+42949,Arthur 3: The War of the Two Worlds,5.700000,2010,Adventure:Animation:Fantasy:Family
+43209,Ong Bak 3,6.100000,2010,Action:Adventure:History
+43347,Love & Other Drugs,6.300000,2010,Comedy:Drama:Romance
+43418,Beneath Hill 60,8.000000,2010,Drama:History:War:Foreign
+43539,The Next Three Days,6.600000,2010,Crime:Drama:Thriller:Romance
+43549,The Experiment,6.600000,2010,Drama
+43552,Vanishing on 7th Street,5.200000,2010,Drama:Horror:Mystery:Suspense:Thriller
+43593,Piranha 3D,5.400000,2010,Horror
+43641,Superman/Shazam!: The Return of Black Adam,7.000000,2010,Action:Animation:Short
+43919,Hatchet II,5.600000,2010,Comedy:Horror:Thriller
+43920,Dog Pound,7.500000,2010,Drama
+43923,It's Kind of a Funny Story,7.000000,2010,Comedy:Drama:Indie
+43930,"Tomorrow, When the War Began",7.500000,2010,Action:Adventure:Thriller:War
+43931,My Soul to Take,5.400000,2010,Drama:Horror:Mystery:Thriller
+43933,Monsters,6.600000,2010,Drama:Science Fiction:Thriller
+43935,Dylan Dog: Dead of Night,5.600000,2010,Action:Comedy:Horror:Mystery:Science Fiction:Thriller
+43939,I'm Still Here,6.400000,2010,Comedy:Drama:Music
+43947,I Spit on Your Grave,6.700000,2010,Crime:Horror:Thriller
+43949,Flipped,7.300000,2010,Comedy:Drama:Romance
+43959,Soul Surfer,6.800000,2011,Action:Drama:Sport
+44040,Devil,5.700000,2010,Horror:Mystery:Thriller
+44048,Unstoppable,6.300000,2010,Action:Thriller
+44092,Reign of Assassins,7.700000,2010,Action:Foreign
+44113,Stone,5.300000,2010,Drama
+44115,127 Hours,6.600000,2010,Adventure:Drama:Thriller
+44129,The Company Men,7.000000,2010,Drama
+44147,Wild Target,6.400000,2010,Action:Comedy
+44214,Black Swan,6.500000,2010,Drama:Mystery:Suspense:Thriller
+44244,Camp Rock 2: The Final Jam,5.800000,2010,Comedy:Drama:Music:Romance:Family
+44249,The Legend Is Born: Ip Man,6.300000,2010,Action:Drama:History
+44264,True Grit,6.800000,2010,Western
+44269,Tout ce qui Brille,6.300000,2010,Comedy
+44363,Frozen,6.000000,2010,Thriller
+44425,Dabangg,6.300000,2010,Action:Comedy:Crime
+44564,The Dilemma,5.500000,2011,Comedy:Drama
+44603,Hereafter,5.500000,2010,Drama:Fantasy
+44629,Animal Kingdom,7.000000,2010,Crime:Drama:Thriller
+44639,Inside Job,7.300000,2010,Documentary
+44678,Altitude,5.000000,2010,Action:Horror:Science Fiction:Thriller
+44683,Tinker Bell and the Great Fairy Rescue,6.100000,2010,Adventure:Animation:Fantasy:Family
+44716,In a Better World,7.500000,2010,Drama:Family:Foreign
+44737,Babies,7.700000,2010,Documentary
+44754,Margaret,6.000000,2011,Drama
+44826,Hugo,6.600000,2011,Adventure:Drama:Family
+44833,Battleship,5.500000,2012,Action:Adventure:Science Fiction:Thriller
+44835,Hesher,6.300000,2010,Drama
+44865,The Grandmaster,6.600000,2013,Action:Drama:History
+44877,4.3.2.1,6.400000,2010,Action:Crime:Thriller:Romance
+44896,Rango,6.400000,2011,Adventure:Animation:Comedy:Western:Family
+44912,Green Lantern,5.300000,2011,Action:Adventure:Science Fiction:Thriller
+44918,Titanic 2,3.000000,2010,Action:Adventure:Suspense:Thriller
+44943,Battle Los Angeles,5.500000,2011,Action:Science Fiction
+44945,Trust,6.000000,2010,Drama:Thriller:Indie
+44977,Dhoom 3,6.800000,2013,Action:Crime:Thriller
+44982,13,5.800000,2010,Drama:Thriller
+44992,IMAX Hubble,7.500000,2010,Documentary
+45077,Every Day,5.000000,2010,Comedy:Drama:Romance
+45094,Conviction,6.900000,2010,Drama
+45132,Super,6.800000,2011,Action:Comedy:Drama
+45156,A Little Bit of Heaven,6.300000,2011,Comedy:Drama:Romance
+45162,Superman/Batman: Apocalypse,7.300000,2010,Action:Adventure:Animation:Science Fiction
+45243,The Hangover Part II,5.900000,2011,Comedy
+45269,The King's Speech,7.000000,2010,Drama:History
+45272,Country Strong,5.700000,2010,Drama:Musical:Romance
+45284,Outrage,7.600000,2010,Action:Crime:Drama
+45317,The Fighter,6.700000,2010,Drama:Sport
+45324,Casino Jack,6.300000,2010,Comedy:Crime:Drama
+45535,Fatal,6.700000,2010,Comedy:Musical
+45556,Arctic Blast,4.300000,2010,Science Fiction
+45569,Red Hill,6.400000,2010,Action:Thriller:Western
+45610,Machine Gun Preacher,6.700000,2011,Action:Crime:Thriller
+45612,Source Code,6.800000,2011,Mystery:Science Fiction:Thriller
+45649,Rubber,6.400000,2010,Comedy:Drama:Fantasy:Horror:Mystery
+45657,The Ward,6.700000,2010,Horror:Thriller
+45658,Everything Must Go,5.400000,2010,Comedy:Drama:Romance:Indie
+45745,Sintel,7.900000,2010,Animation:Fantasy:Short
+45772,Gnomeo & Juliet,6.000000,2011,Animation:Family
+45958,Biutiful,6.900000,2010,Drama
+46138,Made in Dagenham,6.300000,2010,Comedy:Drama:History
+46146,Troll Hunter,7.100000,2010,Fantasy:Horror
+46195,Rio,6.500000,2011,Adventure:Animation:Comedy:Musical:Family
+46198,My Girlfriend's Boyfriend,5.900000,2010,Comedy:Romance
+46221,The Tunnel,5.800000,2011,Horror:Mystery:Thriller
+46261,Don't Be Afraid of the Dark,5.700000,2010,Horror:Thriller
+46332,Of Gods and Men,7.800000,2010,Drama:History
+46429,GallowWalkers,4.300000,2013,Action:Horror:Western
+46441,Mirrors 2,5.800000,2010,Horror:Mystery:Thriller
+46503,All Good Things,5.900000,2010,Crime:Drama:Mystery:Thriller:Romance
+46523,New Kids Turbo,6.900000,2010,Action:Comedy
+46528,The Warrior's Way,7.100000,2010,Action:Adventure:Fantasy:Thriller:Western
+46529,I Am Number Four,6.100000,2011,Action:Adventure:Science Fiction:Thriller
+46541,Game of Death,5.000000,2010,Action:Thriller
+46705,Blue Valentine,6.600000,2010,Drama
+46713,Hunt To Kill,5.300000,2010,Action:Adventure:Thriller
+46738,Incendies,8.000000,2010,Drama:Mystery:War
+46829,Barney's Version,7.300000,2010,Comedy:Drama:Indie
+46837,Kaboom,6.400000,2010,Comedy:Science Fiction:Thriller:Romance
+46838,Tucker and Dale vs Evil,7.300000,2010,Comedy:Horror
+47218,Happythankyoumoreplease,6.600000,2010,Comedy:Romance:Indie
+47327,Drive Angry,5.500000,2011,Action:Crime:Fantasy:Thriller
+47607,Tiny Furniture,5.600000,2010,Comedy
+47626,Legend of the BoneKnapper Dragon,7.000000,2010,Animation:Fantasy:Short
+47760,Restless,7.500000,2011,Drama:Romance:Indie
+47854,Legend of the Fist: The Return of Chen Zhen,6.100000,2010,Action:Drama:History:Thriller
+47931,Elite Squad: The Enemy Within,7.400000,2010,Action:Crime:Drama
+47964,A Good Day to Die Hard,5.200000,2013,Action:Thriller
+47979,Vincent Wants to Sea,7.300000,2011,Drama
+48013,Cars Toon: Mater's Tall Tales,6.400000,2010,Adventure:Animation:Comedy:Family
+48034,Little White Lies,7.100000,2010,Comedy:Drama
+48138,Unknown,6.200000,2011,Action:Mystery:Thriller
+48171,The Rite,5.800000,2011,Drama:Horror:Thriller
+48231,A Dangerous Method,5.500000,2011,Drama:Thriller
+48289,The Debt,6.400000,2010,Action:Crime:Drama:Thriller
+48303,Certified Copy,8.400000,2010,Drama:Romance
+48340,Sanctum,6.000000,2011,Action:Thriller
+48392,Sound of Noise,8.400000,2010,Comedy:Musical
+48395,Rare Exports: A Christmas Tale,6.500000,2010,Action:Fantasy:Science Fiction
+48415,Welcome to the South,7.100000,2010,Comedy
+48466,Scared Shrekless,6.100000,2010,Animation:Comedy
+48492,Detective Dee and the Mystery of the Phantom Flame,6.800000,2010,Action:Adventure:Drama:Mystery
+48572,Red State,5.900000,2011,Action:Horror:Thriller
+48650,Room in Rome,6.000000,2010,Drama:Erotic:Romance:Indie
+48748,Klown,7.600000,2010,Comedy
+48838,London Boulevard,5.800000,2010,Crime:Drama
+48988,Hall Pass,5.300000,2011,Comedy:Romance
+49009,The Way Back,6.700000,2010,Adventure:Drama:History
+49010,Hobo with a Shotgun,5.800000,2011,Action:Comedy:Thriller
+49012,Arthur,5.300000,2011,Comedy:Romance
+49013,Cars 2,5.900000,2011,Adventure:Animation:Comedy:Family
+49014,Cosmopolis,4.500000,2012,Drama
+49017,Dracula Untold,7.500000,2014,Action:Drama:Fantasy:Horror:War
+49018,Insidious,6.800000,2010,Horror:Thriller
+49020,Submarine,7.800000,2010,Comedy:Drama:Romance
+49021,Killer Elite,6.000000,2011,Action:Adventure:Thriller
+49022,Something Borrowed,5.900000,2011,Comedy:Drama:Romance
+49026,The Dark Knight Rises,7.300000,2012,Action:Crime:Drama:Thriller
+49040,The Bourne Legacy,5.800000,2012,Action:Thriller
+49047,Gravity,7.800000,2013,Drama:Science Fiction:Thriller
+49049,Dredd,6.200000,2012,Action:Science Fiction
+49051,The Hobbit: An Unexpected Journey,6.600000,2012,Action:Adventure:Fantasy
+49444,Kung Fu Panda 2,6.500000,2011,Animation:Family
+49494,The Eagle,6.100000,2011,Drama
+49517,Tinker Tailor Soldier Spy,6.600000,2011,Drama:Mystery:Thriller
+49519,The Croods,6.900000,2013,Animation:Comedy:Family
+49520,The Change-Up,6.100000,2011,Comedy
+49521,Man of Steel,6.600000,2013,Action:Adventure:Fantasy:Science Fiction
+49524,R.I.P.D.,5.500000,2013,Action:Comedy:Crime:Fantasy
+49526,Premium Rush,6.200000,2012,Action:Thriller
+49527,Man on a Ledge,6.000000,2012,Action:Crime:Thriller
+49529,John Carter,5.900000,2012,Action:Adventure:Fantasy:Science Fiction
+49530,In Time,6.500000,2011,Action:Science Fiction:Thriller
+49538,X-Men: First Class,6.800000,2011,Action:Adventure:Science Fiction
+49706,Dream Home,6.600000,2010,Horror
+49730,Red Riding Hood,5.500000,2011,Thriller
+49787,The Reef,5.500000,2010,Drama:Horror:Thriller
+49797,I Saw the Devil,7.600000,2010,Horror:Thriller
+49849,Cowboys & Aliens,5.500000,2011,Action:Science Fiction:Thriller:Western
+49950,The Roommate,6.100000,2011,Drama:Horror:Thriller
+49953,A Turtle's Tale: Sammy's Adventures,7.000000,2010,Animation:Family
+50014,The Help,7.200000,2011,Drama
+50135,Animals United,5.800000,2011,Animation:Comedy:Family
+50204,Burke & Hare,7.100000,2010,Comedy:Drama:Thriller
+50217,From Prada to Nada,5.000000,2011,Comedy:Drama:Romance
+50275,The Pirate Bay: Away From Keyboard,6.700000,2013,Documentary
+50321,Mars Needs Moms,5.900000,2011,Adventure:Animation:Comedy:Science Fiction:Family
+50348,The Lincoln Lawyer,6.500000,2011,Crime:Drama:Thriller
+50357,Apollo 18,4.900000,2011,Horror:Science Fiction:Thriller
+50359,Hop,5.600000,2011,Animation:Comedy:Family
+50456,Hanna,6.300000,2011,Action:Adventure:Thriller
+50479,Avalon High,6.400000,2010,Drama:Fantasy:Family
+50544,Friends With Benefits,6.000000,2011,Comedy
+50546,Just Go With It,6.400000,2011,Comedy
+50601,5 Days of War,6.100000,2011,Action:Drama:Thriller:Romance
+50619,The Twilight Saga: Breaking Dawn - Part 1,5.700000,2011,Adventure:Fantasy:Romance
+50620,The Twilight Saga: Breaking Dawn - Part 2,5.900000,2012,Adventure:Drama:Fantasy:Romance
+50646,"Crazy, Stupid, Love.",6.700000,2011,Comedy:Drama:Romance
+50647,Wanderlust,5.300000,2012,Comedy:Romance
+50671,The Resident,5.300000,2011,Mystery:Thriller
+50674,The Lost Future,5.000000,2010,Adventure:Fantasy:Science Fiction
+50698,Grave Encounters,6.400000,2011,Horror:Thriller
+50723,Naruto Shippuden the Movie: The Lost Tower,8.400000,2010,Action:Animation:Comedy
+50725,Take Me Home Tonight,7.100000,2011,Comedy
+50780,The Beaver,5.700000,2011,Drama
+50837,Martha Marcy May Marlene,6.500000,2011,Drama:Thriller
+50838,Wrecked,5.900000,2011,Mystery:Thriller
+50839,Margin Call,6.400000,2011,Drama:Thriller
+50845,The Clink of Ice,6.000000,2010,Comedy:Drama
+50848,The Names of Love,7.500000,2010,Comedy:Drama:Romance
+51017,Madea's Big Happy Family,6.800000,2011,Comedy:Drama
+51052,Arthur Christmas,6.700000,2011,Animation:Holiday:Family
+51162,Winnie the Pooh,6.700000,2011,Animation:Family
+51170,Open Season 3,5.700000,2010,Animation:Comedy:Family
+51209,Kill the Irishman,7.400000,2011,Action:Crime:Drama:Thriller
+51241,Heartbeats,7.600000,2010,Drama:Romance
+51248,11-11-11,4.900000,2011,Horror:Thriller
+51250,Gun,5.000000,2010,Action:Thriller
+51447,Trophy Wife,7.100000,2010,Comedy
+51481,Mean Girls 2,5.500000,2011,Comedy
+51497,Fast Five,7.100000,2011,Action:Crime:Thriller
+51533,Let the Bullets Fly,7.000000,2010,Action:Comedy:Documentary
+51540,Horrible Bosses,6.300000,2011,Comedy:Crime
+51588,Prom,5.900000,2011,Comedy:Family
+51608,The Man from Nowhere,7.800000,2010,Action:Adventure:Crime:Drama:Thriller
+51620,Death Race 2,5.800000,2010,Action:Science Fiction:Thriller
+51739,The Secret World of Arrietty,6.800000,2010,Animation:Fantasy:Family
+51828,One Day,6.800000,2011,Drama:Romance
+51876,Limitless,6.700000,2011,Mystery:Science Fiction:Thriller
+51991,Romantics Anonymous,7.100000,2010,Comedy:Drama:Romance
+51994,The Deep Blue Sea,4.900000,2011,Drama:Romance
+51999,Perfect Sense,6.700000,2011,Drama:Science Fiction:Romance
+52015,Stake Land,6.600000,2010,Action:Drama:Horror:Science Fiction:Thriller
+52067,Cedar Rapids,6.100000,2011,Comedy
+52077,Nothing to Declare,6.000000,2010,Comedy
+52264,A Cat in Paris,7.500000,2010,Animation:Comedy
+52274,Julia's Eyes,7.300000,2010,Horror:Thriller
+52338,Waiting for Forever,6.000000,2010,Drama:Romance
+52449,Bad Teacher,5.400000,2011,Comedy
+52451,The Three Musketeers,5.700000,2011,Action:Adventure:Comedy:Thriller
+52520,Underworld: Awakening,6.000000,2012,Action:Fantasy:Horror
+52587,We Are the Night,6.300000,2010,Drama:Fantasy:Horror:Romance
+52629,El Infierno,7.800000,2010,Comedy:Crime:Drama
+53172,Henry's Crime,6.600000,2010,Action:Comedy:Thriller
+53174,Kokowaah,6.800000,2011,Comedy
+53182,300: Rise of an Empire,6.300000,2014,Action:War
+53319,What a Beautiful Day,6.300000,2011,Comedy
+53457,Sarah's Key,7.200000,2010,Drama:War
+53487,This Must Be the Place,6.400000,2012,Drama
+53567,Thale,5.800000,2012,Horror:Science Fiction
+53923,Stranded,6.100000,2010,Action:Horror:War
+54054,One for the Money,5.400000,2012,Action:Comedy:Crime:Thriller:Romance
+54138,Star Trek Into Darkness,7.500000,2013,Action:Adventure:Science Fiction
+54186,Confessions,7.800000,2010,Drama:Mystery:Thriller
+54293,Zeitgeist: Moving Forward,8.200000,2011,Documentary
+54320,Love,6.300000,2011,Drama:Science Fiction
+54445,S.W.A.T.: Firefight,5.600000,2011,Action:Crime:Thriller
+54518,Justin Bieber: Never Say Never,4.900000,2011,Documentary:Music:Family
+54540,Beverly Hills Chihuahua 2,4.800000,2011,Family
+54551,Despicable Me: Banana,7.600000,2010,Animation:Comedy:Family:Short
+54553,Despicable Me: Home Makeover,7.400000,2010,Animation:Comedy:Family:Short
+54559,Despicable Me: Orientation Day,7.100000,2010,Animation:Comedy:Family:Short
+55292,Shaolin,6.800000,2011,Action:Drama
+55301,Alvin and the Chipmunks: Chipwrecked,5.500000,2011,Animation:Comedy:Fantasy:Music:Family
+55347,Beginners,7.000000,2011,Comedy:Drama:Romance
+55420,Another Earth,6.800000,2011,Drama
+55465,A Very Harold & Kumar Christmas,6.100000,2011,Comedy
+55720,A Better Life,7.300000,2011,Drama
+55721,Bridesmaids,6.400000,2011,Comedy:Romance
+55725,Win Win,6.900000,2011,Comedy:Drama:Sport
+55779,Final Destination 5,5.900000,2011,Horror:Mystery
+55787,Water for Elephants,6.400000,2011,Drama:Romance
+55846,Blitz,6.200000,2011,Action:Crime:Thriller
+56288,Spy Kids: All the Time in the World,5.400000,2011,Action:Comedy:Family
+56292,Mission: Impossible - Ghost Protocol,6.400000,2011,Action:Adventure:Thriller
+56401,The Music Never Stopped,7.000000,2011,Drama:Indie
+56415,A Gang Story,7.500000,2011,Crime:Drama
+56590,All Star Superman,7.200000,2011,Action:Adventure:Animation
+56780,Atlas Shrugged: Part I,6.000000,2011,Drama:Mystery:Science Fiction:Thriller
+56831,The Sunset Limited,7.300000,2011,Drama
+56832,Gantz,6.500000,2010,Action:Horror:Science Fiction
+56906,Husk,5.100000,2011,Horror:Suspense:Thriller
+57089,Hoodwinked Too! Hood VS. Evil,5.100000,2011,Animation:Family
+57119,Jumping the Broom,7.500000,2011,Comedy:Romance
+57157,Young Adult,5.500000,2011,Comedy:Drama:Romance
+57158,The Hobbit: The Desolation of Smaug,7.700000,2013,Fantasy
+57165,Wrath of the Titans,5.700000,2012,Action:Adventure:Fantasy
+57201,The Lone Ranger,6.100000,2013,Action:Adventure:Western
+57212,War Horse,6.800000,2011,Drama:War
+57214,Project X,6.600000,2012,Comedy:Crime
+57243,The Women on the 6th Floor,6.300000,2010,Comedy
+57276,Pina,7.800000,2011,Documentary
+57331,The Burma Conspiracy,6.000000,2011,Action:Adventure:Thriller
+57361,The Yellow Sea,8.300000,2010,Crime:Drama:Thriller
+57431,The Sitter,5.500000,2011,Comedy
+57585,Elephant White,5.400000,2011,Action:Thriller
+57586,African Cats,7.400000,2011,Adventure:Documentary:Family
+57627,A Little Thing Called Love,7.700000,2010,Comedy:Romance
+57703,Norwegian Wood,6.500000,2010,Drama:Romance
+57800,Ice Age: Continental Drift,6.200000,2012,Adventure:Animation:Comedy:Family
+58151,Fright Night,6.200000,2011,Comedy:Horror
+58224,Mr. Popper's Penguins,5.900000,2011,Comedy:Family
+58232,Chalet Girl,6.000000,2011,Comedy:Drama:Romance
+58233,Johnny English Reborn,6.200000,2011,Action:Adventure:Comedy:Crime:Thriller
+58235,Little Surfer Girl,7.400000,2011,Drama
+58244,Upside Down,6.200000,2012,Drama:Fantasy:Science Fiction:Romance
+58423,Puss in Boots,6.200000,2011,Animation
+58428,The Innkeepers,5.700000,2011,Horror:Thriller
+58492,The Greatest Movie Ever Sold,5.200000,2011,Comedy:Documentary
+58496,Senna,7.800000,2011,Documentary:Sport
+58547,10 Years,5.300000,2012,Drama
+58574,Sherlock Holmes: A Game of Shadows,6.800000,2011,Action:Adventure:Crime:Mystery
+58595,Snow White and the Huntsman,5.500000,2012,Adventure:Drama:Fantasy
+58626,The Hit List,5.700000,2011,Action:Thriller
+58699,Bellflower,6.200000,2011,Action:Drama:Romance:Indie
+58767,Sniper: Reloaded,5.400000,2011,Action:Drama:Thriller:War
+58857,13 Assassins,7.000000,2010,Action:Adventure:Drama
+59108,Tower Heist,5.900000,2011,Action:Comedy
+59115,Quarantine 2: Terminal,5.000000,2011,Horror:Mystery:Science Fiction
+59117,Torrente 4: Lethal Crisis,5.700000,2011,Action:Comedy:Crime
+59118,The Prey,7.400000,2011,Action:Crime:Thriller
+59145,The Assault,6.800000,2010,Action:Thriller
+59197,Battle of Los Angeles,3.800000,2011,Science Fiction:Thriller
+59296,"Love, Wedding, Marriage",4.800000,2011,Comedy:Romance
+59421,Bedevilled,7.200000,2010,Crime:Drama:Horror:Thriller
+59429,Paranormal Activity 2: Tokyo Night,6.300000,2010,Horror:Thriller
+59436,Midnight in Paris,7.000000,2011,Comedy:Fantasy:Romance
+59440,Warrior,7.500000,2011,Action:Drama
+59468,The Way,7.600000,2010,Adventure:Comedy:Drama
+59678,Attack the Block,6.200000,2011,Action:Comedy:Science Fiction
+59722,2012: Ice Age,4.800000,2011,Action:Adventure:Science Fiction
+59859,Kick-Ass 2,6.600000,2013,Action:Adventure:Crime
+59860,Monte Carlo,6.300000,2011,Adventure:Comedy:Romance
+59861,Larry Crowne,5.900000,2011,Comedy:Drama:Romance
+59883,Age of the Dragons,4.900000,2011,Action:Fantasy:Science Fiction:Thriller
+59961,Safe House,6.100000,2012,Action:Crime:Mystery:Thriller
+59962,This Means War,5.800000,2012,Action:Comedy:Romance
+59963,Dark Tide,4.900000,2012,Adventure:Drama:Suspense:Thriller
+59965,Abduction,5.300000,2011,Action:Mystery:Thriller
+59967,Looper,6.300000,2012,Action:Science Fiction:Thriller
+59968,Our Idiot Brother,5.700000,2011,Comedy:Drama
+59981,Legends of Oz: Dorothy's Return,7.900000,2014,Animation:Music:Family
+60011,The Bang Bang Club,6.700000,2011,Drama:Romance:Indie
+60170,Christopher and His Kind,7.200000,2011,Drama:Romance
+60243,A Separation,7.900000,2011,Drama
+60281,To the Wonder,6.100000,2012,Drama:Romance
+60304,Hansel & Gretel: Witch Hunters,5.600000,2013,Action:Fantasy:Horror
+60307,Diary of a Wimpy Kid: Rodrick Rules,6.300000,2011,Comedy:Family
+60308,Moneyball,6.800000,2011,Drama
+60309,The Conspirator,6.200000,2010,Drama:History
+60405,Sharpay's Fabulous Adventure,4.800000,2011,Comedy:Music:Family
+60420,Like Crazy,6.800000,2011,Drama:Romance:Indie
+60599,Arbitrage,5.800000,2012,Drama:Thriller
+60747,Red Dawn,5.500000,2012,Action:Thriller
+60803,The Suite Life Movie,6.000000,2011,Adventure:Comedy:Drama:Family
+60935,The Thing,6.100000,2011,Horror:Mystery:Science Fiction:Thriller
+61012,Silent Hill: Revelation 3D,5.100000,2012,Horror:Mystery:Thriller
+61202,Zindagi Na Milegi Dobara,8.400000,2011,Comedy:Drama:Romance
+61404,Point Blank,6.900000,2010,Action:Crime:Thriller
+61791,Rise of the Planet of the Apes,6.600000,2011,Adventure
+61891,Anonymous,6.000000,2011,Drama:History:Mystery:Thriller
+61979,Three Steps Above Heaven,7.600000,2010,Drama:Romance
+61984,Space Battleship Yamato,6.700000,2010,Science Fiction
+62008,Good Deeds,6.800000,2012,Comedy:Drama:Romance
+62046,Flypaper,6.600000,2011,Action:Comedy:Romance
+62156,De Pernas Pro Ar,6.100000,2010,Comedy
+62177,Brave,6.300000,2012,Action:Adventure:Animation:Comedy:Fantasy:Family
+62206,30 Minutes or Less,5.700000,2011,Action:Adventure:Comedy
+62211,Monsters University,7.000000,2013,Animation:Comedy:Fantasy:Family
+62213,Dark Shadows,5.600000,2012,Comedy:Fantasy
+62214,Frankenweenie,6.300000,2012,Animation:Comedy:Family
+62215,Melancholia,6.800000,2011,Drama:Science Fiction
+62564,"Turn Me On, Dammit!",7.200000,2011,Comedy:Drama
+62630,The Devil's Double,6.500000,2011,Action:Crime:Drama:Thriller:War
+62764,Mirror Mirror,5.400000,2012,Adventure:Comedy:Drama:Fantasy:Science Fiction:Family
+62835,Colombiana,6.400000,2011,Action:Crime:Drama:Thriller
+62837,Dolphin Tale,6.400000,2011,Drama:Family
+62838,New Year's Eve,5.600000,2011,Comedy:Romance
+62977,The Lost Bladesman,6.700000,2011,Action:Drama:History:War
+63207,Intruders,5.300000,2011,Drama:Horror:Suspense:Thriller
+63310,Bullhead,7.700000,2011,Action:Crime:Drama:Thriller
+63311,The Skin I Live In,6.900000,2011,Drama:Horror:Mystery:Thriller
+63492,What's Your Number?,6.200000,2011,Comedy:Romance
+63493,The Ledge,5.100000,2011,Drama:Thriller
+63578,The Trip,7.500000,2010,Comedy:Drama:Indie:Foreign
+63686,Thor: Tales of Asgard,6.700000,2011,Action:Adventure:Animation
+63710,Honey 2,5.800000,2011,Drama:Music:Romance
+63831,The Kid with a Bike,8.000000,2011,Drama
+64328,The Muppets,6.300000,2011,Comedy:Musical:Family
+64586,Sleeping Beauty,5.000000,2011,Drama:Romance
+64635,Total Recall,5.700000,2012,Action:Adventure:Science Fiction:Thriller
+64639,Straw Dogs,5.800000,2011,Thriller
+64678,The Art of Getting By,6.600000,2011,Drama:Romance
+64682,The Great Gatsby,7.100000,2013,Drama:Romance
+64685,Extremely Loud & Incredibly Close,6.800000,2011,Drama
+64686,47 Ronin,6.100000,2013,Action:Adventure:Fantasy
+64688,21 Jump Street,6.300000,2012,Action:Comedy:Crime
+64689,Killing Them Softly,5.600000,2012,Crime:Thriller
+64690,Drive,6.800000,2011,Action:Crime:Drama:Thriller
+64720,Take Shelter,7.300000,2011,Drama:Thriller
+64807,Grudge Match,6.400000,2013,Comedy:Sport
+64956,Inception: The Cobol Job,6.900000,2010,Action:Animation:Science Fiction:Thriller
+65034,Too Big to Fail,7.000000,2011,Drama
+65055,Shark Night,5.600000,2011,Horror:Thriller
+65057,The Descendants,6.400000,2011,Comedy:Drama
+65086,The Woman in Black,6.200000,2012,Drama:Horror:Thriller
+65218,Lemonade Mouth,6.500000,2011,Musical:Family
+65229,Tomboy,7.800000,2011,Drama
+65291,Green Lantern: Emerald Knights,6.500000,2011,Action:Adventure:Animation:Science Fiction:Family
+65599,The Woman,6.600000,2011,Crime:Drama:Horror:Thriller
+65650,The Good Doctor,4.800000,2011,Drama:Thriller
+65754,The Girl with the Dragon Tattoo,6.600000,2011,Crime:Drama:Mystery:Thriller
+65759,Happy Feet Two,6.000000,2011,Animation
+65760,The Whistleblower,7.100000,2010,Crime:Drama:Thriller
+65762,Swinging With the Finkels,4.300000,2011,Comedy:Romance
+65851,Jackass 3.5,6.500000,2011,Action:Comedy:Documentary
+66118,Case Départ,5.500000,2011,Comedy
+66125,Red Dog,7.600000,2011,Action:Comedy:Drama:Thriller:Family
+66129,Les Tuche,5.400000,2011,Comedy
+66150,Life in a Day,6.800000,2011,Documentary:Drama
+66195,The Perfect Host,6.100000,2010,Comedy:Crime:Thriller
+67109,Delhi Belly,7.500000,2011,Action:Comedy:Foreign
+67660,Think Like a Man,6.700000,2012,Comedy:Romance
+67675,Glee: The Concert Movie,5.300000,2011,Documentary:Music:Family
+67748,Snowtown,7.000000,2011,Crime:Drama:Horror:Thriller
+67884,Chinese Take-Out,7.700000,2012,Comedy
+67913,The Guard,6.800000,2011,Action:Comedy:Crime:Thriller
+68179,Escape from Planet Earth,5.900000,2013,Adventure:Animation:Comedy:Science Fiction:Family
+68450,The Art of Flight,8.600000,2011,Documentary:Sports Film
+68684,Detention,6.800000,2012,Comedy:Horror:Science Fiction
+68718,Django Unchained,7.300000,2012,Drama:Western
+68721,Iron Man 3,6.800000,2013,Action:Adventure:Science Fiction
+68722,The Master,6.800000,2012,Drama
+68724,Elysium,6.700000,2013,Action:Drama:Science Fiction:Thriller
+68726,Pacific Rim,6.700000,2013,Action:Adventure:Science Fiction
+68727,Trance,6.300000,2013,Crime:Drama:Mystery:Thriller
+68728,Oz: The Great and Powerful,5.600000,2013,Adventure:Fantasy:Family
+68734,Argo,6.700000,2012,Drama:Thriller
+68812,The Iceman,6.500000,2012,Crime:Drama:Thriller
+68817,Footloose,5.900000,2011,Comedy:Drama:Music:Romance
+68818,Blackthorn,7.600000,2011,Action:Adventure:Western
+69668,Dream House,5.700000,2011,Drama:Horror:Mystery:Thriller
+69735,Batman: Year One,7.300000,2011,Action:Adventure:Animation:Crime:Science Fiction
+69778,A Good Old Fashioned Orgy,6.100000,2011,Comedy
+69798,The Inbetweeners Movie,6.100000,2011,Comedy
+69938,Trap.com,5.200000,2011,Comedy:Romance
+70006,Never Back Down 2: The Beatdown,6.600000,2011,Action:Drama:Sport
+70008,Tactical Force,5.500000,2011,Action:Thriller
+70057,Dragon,7.600000,2011,Action:Drama:Thriller
+70074,Bullet to the Head,5.100000,2013,Action:Crime:Thriller
+70160,The Hunger Games,6.400000,2012,Adventure
+70196,The Veteran,6.100000,2011,Action:Thriller
+70435,Haywire,5.600000,2011,Thriller
+70436,The Raven,6.100000,2012,Thriller
+70577,Faces in the Crowd,6.600000,2011,Crime:Drama:Mystery:Thriller
+70578,Trespass,5.700000,2011,Crime:Drama:Thriller
+70586,Setup,5.100000,2011,Action:Crime:Drama:Thriller
+70590,Singham,7.500000,2011,Action:Crime:Drama
+70667,Kon-Tiki,7.000000,2012,Adventure:History
+70670,Headhunters,7.300000,2011,Crime:Thriller
+70695,Dirty Girl,6.700000,2010,Comedy:Drama
+70703,The Captains,5.700000,2011,Documentary:Science Fiction
+70706,Very Good Girls,6.700000,2013,Drama
+70793,Le grand soir,6.400000,2012,Comedy
+70821,Cyberbully,6.700000,2011,Drama:Family
+70868,I Don't Know How She Does It,5.600000,2011,Comedy
+70954,The Hunter,6.800000,2011,Adventure:Drama:Thriller
+70981,Prometheus,6.100000,2012,Adventure:Mystery:Science Fiction
+71157,Polisse,7.500000,2011,Drama
+71254,Arena,5.100000,2011,Action:Science Fiction:Thriller
+71325,With Every Heartbeat,7.300000,2011,Drama:Romance
+71469,The Darkest Hour,4.900000,2011,Action:Horror:Science Fiction:Thriller
+71552,American Reunion,5.900000,2012,Comedy
+71668,Piranha 3DD,4.900000,2012,Comedy:Horror:Thriller
+71670,Hostel: Part III,4.700000,2011,Horror
+71672,Wrong Turn 4: Bloody Beginnings,5.200000,2011,Horror:Thriller
+71676,Ghost Rider: Spirit of Vengeance,4.800000,2011,Action:Fantasy:Thriller
+71677,Assassination Games,6.100000,2011,Action
+71679,Resident Evil: Retribution,5.600000,2012,Action:Horror:Science Fiction
+71688,The Iron Lady,6.200000,2011,Drama:History
+71689,Phineas and Ferb the Movie: Across the 2nd Dimension,6.900000,2011,Animation:Comedy:Family
+71859,We Need to Talk About Kevin,6.900000,2011,Drama:Thriller
+71864,The Odd Life of Timothy Green,6.200000,2012,Comedy:Drama:Fantasy:Family
+71880,Jack and Jill,4.400000,2011,Comedy
+72105,Ted,6.200000,2012,Comedy:Fantasy
+72113,Carnage,7.000000,2011,Comedy:Drama
+72190,World War Z,6.800000,2013,Action:Drama:Horror:Science Fiction:Thriller
+72197,The Pirates! In an Adventure with Scientists!,6.300000,2012,Adventure:Animation:Comedy:Family
+72207,The Five-Year Engagement,5.700000,2012,Comedy:Romance
+72213,Courageous,7.700000,2011,Drama
+72331,Abraham Lincoln: Vampire Hunter,5.500000,2012,Action:Fantasy:Horror
+72334,DisneyNature Chimpanzee,6.800000,2012,Documentary:Family
+72358,A Thousand Words,5.800000,2012,Comedy:Drama
+72359,Peeples,6.400000,2013,Comedy
+72387,Safe,6.200000,2012,Action:Crime:Thriller
+72431,Red Tails,6.400000,2012,Action:Adventure:Drama:History:War
+72432,Puncture,6.400000,2011,Drama:Mystery
+72477,Texas Killing Fields,6.000000,2011,Crime:Drama:Mystery:Thriller
+72525,Syrup,5.600000,2013,Comedy:Drama
+72545,Journey 2: The Mysterious Island,5.800000,2012,Action:Adventure:Science Fiction
+72559,G.I. Joe: Retaliation,5.400000,2013,Action:Adventure:Science Fiction:Thriller
+72570,The Vow,6.300000,2012,Drama:Romance
+72571,Paranormal Activity 3,6.300000,2011,Horror
+72660,I Don't Want to Go Back Alone,9.200000,2010,Drama:Romance:Short
+72710,The Host,5.800000,2013,Action:Adventure:Science Fiction:Thriller:Romance
+72890,Girl Most Likely,5.800000,2012,Comedy
+72912,Carjacked,5.600000,2011,Action:Thriller
+72976,Lincoln,6.500000,2012,Drama:War
+73108,Teen Spirit,4.200000,2011,Comedy:Family
+73262,Hell,5.400000,2011,Horror:Science Fiction:Thriller
+73358,Page Eight,6.400000,2011,Drama:Thriller
+73454,X,6.500000,2011,Action:Thriller:Romance
+73456,Barbie: Princess Charm School,5.100000,2011,Animation:Fantasy:Family
+73499,The Double,6.100000,2011,Action:Crime:Drama:Mystery:Thriller
+73532,Le Havre,6.100000,2011,Comedy:Drama
+73567,Killer Joe,6.200000,2012,Comedy:Drama:Thriller
+73723,The Lorax,6.200000,2012,Animation:Family
+73770,What A Man,5.800000,2011,Comedy:Romance
+73861,A Serbian Film,6.000000,2010,Crime:Horror:Thriller
+73873,Albert Nobbs,6.500000,2011,Drama
+73935,Vamps,4.800000,2012,Comedy:Horror:Romance
+73936,Retreat,5.800000,2011,Thriller
+73937,The Big Year,5.600000,2011,Comedy
+74018,A Cinderella Story: Once Upon a Song,6.900000,2011,Comedy:Romance:Family
+74135,Gantz: Perfect Answer,6.900000,2011,Action:Mystery:Science Fiction
+74306,God Bless America,7.000000,2011,Comedy:Drama
+74308,Detachment,7.600000,2011,Drama
+74387,Goon,6.000000,2011,Comedy:Sport
+74461,Knights of Badassdom,6.300000,2014,Adventure:Comedy:Fantasy:Horror
+74465,We Bought a Zoo,6.300000,2011,Comedy:Drama:Family
+74471,The Dead,5.800000,2010,Action:Horror:Science Fiction:Thriller
+74505,Lovely Molly,5.000000,2012,Horror:Thriller
+74510,Kevin Hart: Laugh at My Pain,7.400000,2011,Comedy:Documentary
+74513,Special Forces,6.600000,2011,Action:Drama:War
+74523,Born To Race,5.600000,2011,Action
+74534,The Best Exotic Marigold Hotel,6.600000,2011,Comedy:Drama
+74536,The Son of No One,4.500000,2011,Crime:Drama:Thriller
+74643,The Artist,7.100000,2011,Comedy:Drama:Romance
+74725,Kill List,5.800000,2011,Crime:Horror:Thriller
+74726,Juan of the Dead,6.500000,2011,Comedy:Horror
+74842,Legend of the Millennium Dragon,7.400000,2011,Adventure:Animation:Fantasy:Science Fiction
+74945,War of the Buttons,6.100000,2011,Adventure:Family
+74997,The Human Centipede 2 (Full Sequence),4.900000,2011,Crime:Drama:Horror
+74998,Seeking Justice,6.100000,2011,Action:Drama:Thriller
+75174,The Grey,6.200000,2011,Action:Drama:Thriller
+75198,Bienvenue à bord,5.900000,2011,Comedy
+75204,Imaginaerum,6.700000,2012,Drama:Fantasy:Musical
+75233,"Oslo, August 31st",7.300000,2011,Drama
+75258,Secret of the Wings,6.400000,2012,Adventure:Animation:Fantasy:Family
+75301,Being Elmo: A Puppeteer's Journey,7.500000,2011,Documentary:Family
+75612,Oblivion,6.100000,2013,Action:Adventure:Mystery:Science Fiction
+75622,Rampart,5.500000,2011,Action:Crime:Drama:Thriller
+75624,Naruto Shippuden the Movie: Blood Prison,8.000000,2011,Action:Animation:Comedy
+75629,Evangelion: 3.0 You Can (Not) Redo,7.600000,2012,Action:Animation:Drama:Science Fiction
+75638,Red Lights,6.100000,2012,Drama:Horror:Mystery:Thriller
+75656,Now You See Me,7.200000,2013,Crime:Thriller
+75674,Act of Valor,6.200000,2012,Action:Thriller:War
+75735,Zombie Apocalypse,3.700000,2011,Action:Horror:Science Fiction
+75736,Catch .44,5.400000,2011,Action:Drama:Thriller
+75761,John Dies at the End,6.000000,2012,Comedy:Horror
+75780,Jack Reacher,6.000000,2012,Crime:Drama:Thriller
+75802,Hysteria,6.400000,2011,Comedy:Romance
+75900,My Week with Marilyn,6.800000,2011,Drama
+75948,The Sorcerer and the White Snake,6.100000,2011,Action:Fantasy
+75969,Men in the City 2,6.500000,2011,Comedy
+76025,Shame,6.900000,2011,Drama
+76122,Marvel One-Shot: The Consultant,6.900000,2011,Action:Adventure:Fantasy:Science Fiction
+76163,The Expendables 2,5.900000,2012,Action:Adventure:Thriller
+76170,The Wolverine,6.400000,2013,Action:Adventure:Fantasy:Science Fiction
+76203,12 Years a Slave,8.000000,2013,Drama:History
+76285,Percy Jackson: Sea of Monsters,6.200000,2013,Adventure:Fantasy:Family
+76338,Thor: The Dark World,7.100000,2013,Action:Adventure:Fantasy
+76451,Come As You Are,6.700000,2011,Comedy:Drama
+76487,The Devil Inside,5.000000,2012,Horror:Thriller
+76489,The Three Stooges,5.300000,2012,Comedy
+76492,Hotel Transylvania,6.500000,2012,Animation:Comedy:Fantasy:Family
+76493,The Dictator,5.800000,2012,Comedy
+76494,What to Expect When You're Expecting,5.800000,2012,Comedy:Drama:Romance
+76535,Marvel One-Shot: A Funny Thing Happened on the Way to Thor's Hammer,7.500000,2011,Fantasy:Science Fiction:Short
+76543,Tyrannosaur,7.500000,2011,Drama:Romance
+76544,Man of Tai Chi,5.800000,2013,Action:Drama
+76589,Justice League: Doom,7.000000,2012,Action:Animation:Thriller
+76617,Texas Chainsaw 3D,5.500000,2013,Horror:Thriller
+76640,The Last Stand,5.600000,2013,Action:Crime:Thriller
+76649,Pompeii,5.400000,2014,Action:Adventure:Drama:History:Romance
+76696,Sidewalls,7.100000,2011,Drama:Romance
+76726,Chronicle,6.100000,2012,Drama:Science Fiction:Thriller
+76758,The Flowers of War,7.300000,2011,Drama:History:War
+77016,End of Watch,6.800000,2012,Crime:Drama:Thriller
+77117,Sunny,8.500000,2011,Drama
+77174,ParaNorman,6.500000,2012,Adventure:Animation:Comedy
+77221,Black Gold,6.300000,2011,Adventure:Drama
+77234,The Numbers Station,5.600000,2013,Action:Thriller
+77338,Intouchables,7.900000,2011,Comedy:Drama
+77459,A Monster in Paris,7.000000,2011,Adventure:Animation:Comedy:Music
+77462,A Happy Event,6.200000,2011,Comedy:Drama
+77495,Sleep Tight,7.500000,2011,Thriller
+77561,EVA,7.300000,2011,Drama:Fantasy:Science Fiction:Romance
+77663,Killing Season,5.300000,2013,Action:Thriller
+77805,Lovelace,6.100000,2013,Drama
+77866,Contraband,6.100000,2012,Action:Crime:Drama:Thriller
+77875,Playing for Keeps,5.700000,2012,Comedy:Romance
+77877,The Lucky One,6.500000,2012,Drama:Romance
+77878,The Lady,7.500000,2011,Drama
+77879,The Reunion,6.100000,2011,Action:Comedy:Drama:Thriller
+77883,The Possession,5.800000,2012,Horror:Thriller
+77887,Hawaiian Vacation,6.500000,2011,Adventure:Animation:Comedy:Fantasy:Family:Short
+77930,Magic Mike,5.500000,2012,Comedy:Drama
+77931,The Smurfs 2,5.800000,2013,Animation:Comedy:Fantasy:Family
+77941,I soliti idioti,4.900000,2011,Comedy
+77948,The Cold Light of Day,5.100000,2012,Action:Thriller
+77949,The Awakening,6.300000,2011,Drama:Horror:Thriller
+77950,Turbo,6.100000,2013,Animation:Family
+77951,Walking With Dinosaurs,5.800000,2013,Adventure:Animation:Family
+77953,The Campaign,5.600000,2012,Comedy
+77987,Only God Forgives,5.200000,2013,Crime:Drama:Thriller
+78049,The Scorpion King 3: Battle for Redemption,5.000000,2012,Adventure
+78215,Into the White,6.500000,2012,Drama
+78383,Nurse 3-D,5.400000,2014,Horror:Thriller
+78476,My Worst Nightmare,5.900000,2011,Comedy
+78480,Monsieur Lazhar,6.200000,2011,Comedy:Drama
+78571,Being Flynn,5.600000,2012,Drama
+78604,Michael,7.800000,2011,Drama
+78698,Big Miracle,6.600000,2012,Adventure:Drama:Romance
+79108,Starbuck,7.100000,2011,Comedy
+79120,Weekend,7.900000,2011,Drama:Romance:Foreign
+79218,Ice Age: A Mammoth Christmas,6.800000,2011,Animation:Holiday:Family:Short
+79316,Devil's Due,5.600000,2014,Horror
+79433,Ronal the Barbarian,6.300000,2011,Adventure:Animation:Fantasy
+79464,Rockstar,8.000000,2011,Drama:Music:Romance:Foreign
+79548,Gone,5.600000,2012,Drama:Thriller
+79553,The Front Line,7.300000,2011,Action:Drama:War
+79628,TT3D: Closer to the Edge,8.800000,2011,Documentary
+79694,The Apparition,4.500000,2012,Horror:Thriller
+79697,Butter,6.200000,2011,Comedy
+79707,Children Who Chase Lost Voices,7.800000,2011,Animation:Drama
+79824,Love is Not Blind,6.100000,2011,Comedy:Drama:Romance
+79931,Adele: Live at the Royal Albert Hall,7.600000,2011,Music
+80015,Hollywoo,5.400000,2011,Comedy
+80035,The Watch,5.200000,2012,Comedy:Science Fiction
+80038,Friends with Kids,6.000000,2012,Comedy:Romance
+80125,Woman in Love,6.500000,2011,Comedy
+80184,The Hidden Face,7.800000,2011,Mystery:Thriller
+80188,Boy Wonder,5.800000,2010,Action:Crime:Drama:Thriller
+80215,Indie Game: The Movie,7.200000,2012,Documentary
+80271,LOL,6.000000,2012,Comedy:Drama:Romance
+80274,Ender's Game,6.900000,2013,Action:Adventure:Science Fiction
+80278,The Impossible,6.700000,2012,Disaster:Drama:History:Thriller
+80280,[REC] 3: Genesis,4.800000,2012,Horror
+80304,Casa De Mi Padre,6.600000,2012,Comedy:Western
+80321,Madagascar 3: Europe's Most Wanted,6.300000,2012,Animation
+80379,Louis C.K.: Live at the Beacon Theater,8.400000,2011,Comedy
+80384,Breaking Wind,4.500000,2012,Comedy:Horror
+80389,Get the Gringo,6.000000,2012,Action:Crime:Drama:Thriller
+80410,In the Name of the King 2: Two Worlds,4.500000,2011,Action:Adventure:Drama:Fantasy
+80585,Rock of Ages,5.600000,2012,Comedy:Drama:Musical:Romance
+80591,W.E.,6.300000,2012,Drama:Romance
+80767,Jiro Dreams of Sushi,7.600000,2011,Documentary
+81003,Kung Fu Panda: Secrets of the Masters,6.200000,2011,Animation:Family:Short
+81005,Jack the Giant Slayer,5.500000,2013,Adventure:Drama:Fantasy
+81025,Salmon Fishing in the Yemen,6.400000,2011,Drama:Romance
+81188,Rise of the Guardians,6.600000,2012,Animation
+81250,Geek Charming,5.700000,2011,Comedy:Drama:Family:TV Movie
+81342,Delicacy,7.600000,2011,Comedy:Drama:Romance
+81390,A Lonely Place to Die,6.300000,2011,Action:Adventure:Crime:Thriller
+81446,The Baytown Outlaws,6.100000,2012,Action:Comedy:Crime
+81481,Silenced,8.400000,2011,Drama
+81796,Lockout,5.900000,2012,Action:Science Fiction:Thriller
+81836,To Rome with Love,5.700000,2012,Comedy
+81870,The Flying Swords of Dragon Gate,6.300000,2011,Action:Adventure
+82390,The Paperboy,5.100000,2012,Thriller
+82424,Small Fry,6.600000,2011,Adventure:Animation:Comedy:Fantasy:Family:Short
+82450,Hamilton - In the Interest of the Nation,6.600000,2012,Action:Drama:Thriller
+82485,Transit,5.400000,2012,Action:Crime:Drama:Thriller
+82505,House at the End of the Street,5.800000,2012,Horror:Thriller
+82507,Sinister,6.400000,2012,Horror:Mystery:Thriller
+82525,Savages,5.900000,2012,Crime:Drama:Thriller
+82532,"Jeff, Who Lives at Home",5.700000,2011,Comedy:Drama
+82633,Lawless,6.400000,2012,Crime:Drama
+82650,Diary of a Wimpy Kid: Dog Days,5.800000,2012,Comedy:Family
+82654,Warm Bodies,6.200000,2013,Comedy:Horror:Romance
+82657,7500,5.600000,2014,Horror:Mystery:Thriller
+82675,Taken 2,5.900000,2012,Action:Crime:Drama:Thriller
+82679,Fun Size,5.800000,2012,Comedy
+82682,Gangster Squad,6.000000,2013,Action:Crime:Drama:Thriller
+82684,Chasing Mavericks,7.100000,2012,Drama:Sport
+82687,The Guilt Trip,5.500000,2012,Comedy
+82690,Wreck-It Ralph,6.800000,2012,Adventure:Animation:Comedy
+82693,Silver Linings Playbook,6.700000,2012,Comedy:Drama:Romance
+82695,Les Misérables,6.800000,2012,Drama:Musical:Romance
+82696,Hope Springs,5.400000,2012,Comedy:Drama:Romance
+82700,After Earth,5.200000,2013,Action:Adventure:Science Fiction
+82702,How to Train Your Dragon 2,8.200000,2014,Action:Adventure:Animation:Comedy:Fantasy:Family
+82703,Mr. Peabody & Sherman,7.200000,2014,Adventure:Animation:Family
+82881,Tangled Ever After,7.300000,2012,Action:Animation:Comedy:Family:Short
+82990,Paranormal Activity 4,5.600000,2012,Horror
+82992,Fast & Furious 6,6.500000,2013,Action:Crime:Thriller
+83186,Wrong,5.900000,2012,Comedy:Mystery
+83191,Treasure Island,6.500000,2012,Adventure:TV Movie
+83201,Puss in Boots: The Three Diablos,7.000000,2012,Animation:Family:Short
+83389,From Up on Poppy Hill,7.700000,2011,Animation:Drama
+83443,Girl Model,6.600000,2011,Documentary
+83542,Cloud Atlas,6.400000,2012,Drama:Science Fiction
+83564,La luna,8.200000,2011,Animation:Comedy:Fantasy:Family:Short
+83666,Moonrise Kingdom,7.300000,2012,Comedy:Drama:Romance
+83686,The Words,6.200000,2012,Drama:Thriller
+83721,The Great Magician,6.000000,2011,Drama:Mystery
+83770,On the Road,5.800000,2012,Adventure:Drama
+83899,You're Next,6.900000,2011,Horror:Mystery:Thriller
+84111,You Are the Apple of My Eye,7.600000,2011,Comedy:Drama:Romance
+84165,2 Days in New York,5.100000,2012,Comedy
+84174,Bachelorette,5.200000,2012,Comedy:Romance
+84175,Beasts of the Southern Wild,6.600000,2012,Drama:Fantasy
+84178,Black Rock,4.700000,2013,Horror:Thriller
+84184,Celeste & Jesse Forever,6.300000,2012,Comedy:Drama:Romance
+84185,Chasing Ice,8.300000,2012,Documentary
+84188,Compliance,6.300000,2012,Crime:Drama:Thriller
+84194,Excision,5.400000,2012,Horror
+84199,The First Time,7.100000,2012,Comedy:Drama:Romance
+84200,"For a Good Time, Call...",6.000000,2012,Comedy
+84204,Grabbers,5.800000,2012,Comedy:Horror:Science Fiction:Thriller
+84226,The Day,5.000000,2011,Drama:Horror:Science Fiction
+84281,Hello I Must Be Going,6.200000,2012,Comedy:Drama:Romance:Indie
+84287,The Imposter,6.700000,2012,Documentary:Drama
+84305,Lay the Favorite,5.800000,2012,Comedy
+84306,Liberal Arts,5.900000,2012,Comedy:Drama
+84317,Nobody Walks,5.100000,2012,Drama
+84327,The Queen of Versailles,6.900000,2012,Documentary
+84329,Robot & Frank,6.700000,2012,Comedy:Crime:Drama
+84330,Room 237,5.900000,2012,Documentary
+84332,Safety Not Guaranteed,6.800000,2012,Comedy:Drama:Science Fiction:Romance
+84334,Searching for Sugar Man,7.800000,2012,Documentary
+84336,Shadow Dancer,5.800000,2012,Thriller
+84340,Sleepwalk With Me,7.100000,2012,Comedy
+84341,Smashed,5.700000,2012,Drama
+84348,V/H/S,5.700000,2012,Horror:Thriller
+84355,Your Sister's Sister,6.100000,2012,Comedy:Drama
+84858,Agneepath,7.300000,2012,Action:Crime:Drama:Musical
+84892,The Perks of Being a Wallflower,7.100000,2012,Drama:Romance
+85033,Café de Flore,6.400000,2011,Drama:Romance
+85038,Welcome to the North,6.400000,2012,Comedy
+85350,Boyhood,8.600000,2014,Drama
+85373,StreetDance 2,6.300000,2012,Drama:Musical:Romance
+85414,Brake,6.000000,2012,Action:Thriller
+85435,A Few Best Men,5.600000,2011,Comedy
+85446,Step Up Revolution,6.300000,2012,Drama:Music:Romance
+85735,Love Lasts Three Years,5.700000,2012,Comedy:Romance
+85739,A.C.A.B.: All Cops Are Bastards,6.400000,2012,Action:Crime:Drama
+85870,Cloclo,6.800000,2012,Drama:Musical
+85872,Le Chef,6.600000,2012,Comedy
+85889,Filth,6.700000,2013,Comedy:Crime:Drama
+85985,Ek Tha Tiger,5.800000,2012,Action:Thriller:Romance
+86331,Desire,4.500000,2011,Drama:Erotic:Romance
+86467,Bel Ami,4.700000,2012,Drama
+86555,Take This Waltz,6.200000,2012,Comedy:Drama
+86593,Wild Bill,7.200000,2011,Drama
+86597,The Tall Man,5.900000,2012,Horror:Mystery:Thriller
+86703,2-Headed Shark Attack,3.600000,2012,Action:Horror:Science Fiction:Thriller
+86812,Sound of My Voice,6.300000,2011,Drama:Mystery:Science Fiction
+86825,Stoker,6.100000,2013,Drama:Horror:Thriller
+86829,Inside Llewyn Davis,7.200000,2013,Drama:Music
+86834,Noah,5.800000,2014,Adventure:Drama
+86837,Amour,7.400000,2012,Drama:Romance
+86838,Seven Psychopaths,6.300000,2012,Comedy:Crime:Thriller
+86868,La Vérité si je Mens ! 3,5.900000,2012,Comedy
+87101,Terminator: Genisys,8.900000,2015,Action:Adventure:Science Fiction:Thriller
+87368,17 Girls,5.100000,2011,Drama
+87421,Riddick,6.200000,2013,Action:Science Fiction:Thriller
+87428,That's My Boy,5.900000,2012,Comedy
+87436,The ABCs of Death,4.600000,2013,Horror
+87440,Struck by Lightning,6.600000,2012,Comedy:Drama
+87496,The Company You Keep,5.900000,2012,Thriller
+87499,The East,6.400000,2013,Drama:Thriller
+87502,Flight,6.200000,2012,Drama
+87504,Hyde Park on Hudson,5.900000,2012,Comedy:Drama:History
+87516,Oldboy,6.000000,2013,Action:Drama:Mystery:Thriller
+87567,The Big Wedding,5.500000,2013,Comedy
+87587,The Pill,6.500000,2011,Comedy:Drama:Romance
+87818,Movie 43,4.800000,2013,Comedy
+87825,Trouble with the Curve,6.600000,2012,Drama:Sport:Romance
+87826,Here Comes the Boom,6.000000,2012,Action:Comedy
+87827,Life of Pi,6.900000,2012,Action:Adventure:Drama
+88005,Seeking a Friend for the End of the World,6.100000,2012,Comedy:Drama:Science Fiction:Romance
+88042,Parental Guidance,6.100000,2012,Comedy
+88273,A Royal Affair,7.300000,2012,Drama:History:Romance
+88794,J. Edgar,5.700000,2011,Crime:Drama:History
+89008,The Oranges,4.400000,2011,Comedy:Drama:Romance
+89185,Radio Rebel,5.800000,2012,Comedy:Drama:Family:TV Movie
+89455,360,5.100000,2012,Drama:Romance
+89492,This Is 40,5.400000,2012,Comedy
+89501,Nameless Gangster,8.100000,2012,Crime:Thriller
+89584,Conquest 1453,7.300000,2012,Action:Adventure:Drama:War
+89638,Steve Jobs: The Lost Interview,6.800000,2012,Documentary
+89691,ATM,5.500000,2012,Horror:Thriller
+89708,Samsara,8.100000,2011,Documentary:Drama
+89899,The Players,5.200000,2012,Comedy
+90125,Marley,7.900000,2012,Documentary:Musical
+90369,Now Is Good,6.400000,2012,Drama:Romance
+91010,Game Change,6.200000,2012,Drama:History
+91186,A Simple Life,6.700000,2011,Drama
+91314,Transformers: Age of Extinction,6.500000,2014,Action:Adventure:Science Fiction
+91333,Recoil,6.000000,2011,Action
+91417,Dragons: Gift of the Night Fury,6.900000,2011,Adventure:Animation:Comedy:Short
+91550,Violet & Daisy,6.300000,2011,Action:Comedy:Crime:Drama:Thriller
+91586,Insidious: Chapter 2,6.800000,2013,Horror:Thriller
+91739,Much Ado About Nothing,7.200000,2012,Comedy
+91745,Romeo and Juliet,6.800000,2013,Drama:Romance
+92000,Columbus Circle,5.600000,2012,Drama:Mystery:Thriller
+92182,Silent House,5.800000,2012,Horror:Mystery:Thriller
+92321,Into the Forest of Fireflies' Light,8.800000,2011,Animation:Fantasy
+92499,Spellbound,6.900000,2011,Comedy:Romance
+92591,Bernie,6.600000,2011,Comedy:Crime:Drama
+92645,Grimm's Snow White,7.800000,2012,Action:Fantasy:Science Fiction:Romance
+93394,Elevator,5.300000,2011,Thriller
+93456,Despicable Me 2,6.900000,2013,Animation:Comedy:Family
+93828,Welcome to the Punch,5.300000,2013,Action:Adventure:Crime
+93837,So Undercover,5.800000,2012,Action:Comedy
+93856,Chernobyl Diaries,4.800000,2012,Horror:Thriller
+94047,My Way,7.600000,2011,Action:Drama:History:War
+94204,Meeting Evil,5.100000,2012,Crime:Drama:Mystery:Thriller
+94329,The Raid,7.100000,2011,Action:Crime:Thriller
+94348,Alex Cross,5.600000,2012,Action:Crime:Mystery:Thriller
+94352,Cirque du Soleil: Worlds Away,6.200000,2012,Fantasy:Family
+94363,Hick,5.700000,2012,Comedy:Drama
+94380,Bad Ass,6.000000,2012,Action:Drama
+94562,Turkish for Beginners,7.400000,2012,Comedy
+94901,About Cherry,4.600000,2012,Drama
+95516,Cleanskin,5.300000,2012,Crime:Drama:Thriller
+95919,Love,5.700000,2012,Drama:Romance
+96599,Eden,6.700000,2012,Drama
+96714,Diaz: Don't Clean Up This Blood,6.600000,2012,Drama
+96721,Rush,8.000000,2013,Action:Drama:Sport
+96724,Anna Karenina,6.100000,2012,Drama:Romance
+96936,The Bling Ring,5.400000,2013,Crime:Drama
+97006,Temptation: Confessions of a Marriage Counselor,7.200000,2013,Drama
+97020,RoboCop,6.100000,2014,Action:Crime:Science Fiction:Thriller
+97051,Would You Rather,5.600000,2012,Horror:Thriller
+97365,Rust and Bone,6.900000,2012,Drama:Romance
+97367,The Place Beyond the Pines,6.500000,2012,Crime:Drama
+97370,Under the Skin,5.800000,2013,Drama:Science Fiction:Thriller
+97430,The Man with the Iron Fists,5.300000,2012,Action
+97434,Gambit,4.800000,2012,Comedy:Crime
+97512,The Courier,5.800000,2012,Action:Crime:Thriller
+97605,Extracted,6.200000,2012,Science Fiction:Thriller
+97614,Deadfall,5.700000,2012,Crime:Drama:Thriller
+97630,Zero Dark Thirty,6.200000,2012,Drama:History:Thriller
+97690,We Are Legion: The Story of the Hacktivists,7.100000,2012,Documentary
+97795,Apartment 143,5.200000,2011,Horror:Thriller
+98066,The Babymakers,4.900000,2012,Comedy
+98205,War Witch,6.600000,2012,Drama:War
+98357,Broken City,5.800000,2013,Crime:Drama:Thriller
+98548,People Like Us,6.900000,2012,Drama
+98566,Teenage Mutant Ninja Turtles,6.800000,2014,Action:Adventure:Comedy:Fantasy:Science Fiction
+98567,Chinese Zodiac,6.300000,2012,Action:Adventure
+98948,Abraham Lincoln vs. Zombies,4.800000,2012,Action:Horror:Thriller
+99367,Date and Switch,5.700000,2014,Comedy
+99579,"Farewell, My Queen",6.100000,2012,Drama:History
+99770,Astérix and Obélix: God Save Britannia,5.200000,2012,Adventure:Comedy:Family
+99861,Avengers: Age of Ultron,7.700000,2015,Action:Adventure:Fantasy:Science Fiction
+100046,The Giant Mechanical Man,5.700000,2012,Comedy:Drama:Romance
+100241,"I, Frankenstein",5.600000,2014,Horror:Thriller
+100271,A Letter to Momo,8.100000,2011,Animation:Drama
+100402,Captain America: The Winter Soldier,7.800000,2014,Action:Adventure:Science Fiction
+100529,Lola Versus,4.900000,2012,Comedy
+100898,North Sea Texas,8.600000,2011,Drama:Romance
+101173,Coriolanus,6.500000,2012,Drama:Thriller
+101179,Truth or Dare,6.100000,2012,Horror:Mystery:Thriller
+101267,Katy Perry: Part of Me,6.100000,2012,Documentary:Music
+101299,The Hunger Games: Catching Fire,7.700000,2013,Action:Adventure:Science Fiction:Thriller
+101519,A Fantastic Fear of Everything,6.200000,2012,Comedy:Thriller
+101669,Mother's Day,6.500000,2010,Crime:Drama:Horror:Thriller
+101731,The Magic of Belle Isle,8.300000,2012,Comedy:Drama
+102001,Like Someone in Love,6.900000,2012,Drama
+102207,HOUBA! On the Trail of the Marsupilami,5.100000,2012,Adventure:Comedy
+102362,Dead Man Down,5.600000,2013,Action:Crime:Drama:Thriller
+102382,The Amazing Spider-Man 2,7.000000,2014,Action:Adventure:Fantasy
+102629,El Gringo,5.400000,2012,Action:Adventure:Drama:Thriller
+102651,Maleficent,7.200000,2014,Action:Adventure:Fantasy:Romance:Family
+102780,Byzantium,5.600000,2013,Drama:Fantasy:Thriller
+102784,Two Rabbits,7.300000,2012,Action:Crime:Drama
+103269,Superman vs. The Elite,6.300000,2012,Action:Animation
+103328,Holy Motors,6.600000,2012,Drama:Fantasy
+103332,Ruby Sparks,6.900000,2012,Comedy:Drama:Fantasy:Romance
+103370,Madea's Witness Protection,5.900000,2012,Comedy
+103620,Maniac,5.800000,2012,Crime:Horror:Mystery:Thriller
+103663,The Hunt,7.900000,2012,Drama
+103686,Paradise: Love,6.500000,2012,Drama
+103731,Mud,6.600000,2012,Drama
+103740,Beyond the Hills,6.500000,2012,Drama:Romance
+103747,The Angels' Share,7.000000,2012,Comedy:Drama
+104155,Mansome,4.200000,2012,Documentary
+104329,Last Passenger,6.300000,2013,Action:Mystery:Thriller
+104755,The Lords of Salem,4.800000,2013,Horror:Thriller
+105001,Iceman,4.400000,2014,Action:Adventure:Comedy:Fantasy:History:Science Fiction
+105210,Thermae Romae,5.900000,2012,Comedy:Science Fiction
+106021,Erased,5.500000,2012,Action:Thriller
+106646,The Wolf of Wall Street,8.000000,2013,Comedy:Crime:Drama
+106747,Machete Kills,5.400000,2013,Action:Crime:Thriller
+106938,Neverland,5.700000,2011,Adventure:Fantasy:Family
+107170,Ghost Recon: Alpha,7.300000,2012,Action:Science Fiction:Thriller:War:Short
+107811,21 & Over,5.600000,2013,Comedy
+107846,Escape Plan,6.800000,2013,Action:Thriller
+107985,The World's End,6.900000,2013,Action:Comedy:Science Fiction
+109091,The Counselor,5.200000,2013,Crime:Drama:Thriller
+109099,Passion,5.100000,2012,Crime:Drama:Mystery:Thriller
+109410,42,6.700000,2013,Drama:Sport
+109414,This Is the End,6.400000,2013,Action:Comedy
+109417,Battle of the Year,5.600000,2013,Musical
+109418,Grown Ups 2,6.200000,2013,Comedy
+109421,Side Effects,6.100000,2013,Crime:Drama:Thriller
+109424,Captain Phillips,7.900000,2013,Action:Drama:Thriller
+109428,Evil Dead,6.200000,2013,Horror
+109431,Identity Thief,5.600000,2013,Comedy:Crime
+109439,The Hangover Part III,6.000000,2013,Comedy
+109443,Anchorman 2: The Legend Continues,6.300000,2013,Comedy
+109445,Frozen,7.700000,2013,Adventure:Animation:Musical:Family
+109451,Cloudy with a Chance of Meatballs 2,6.800000,2013,Animation:Comedy:Family
+109491,Beautiful Creatures,5.800000,2013,Drama:Fantasy:Romance
+109513,Hit and Run,5.900000,2012,Action:Comedy:Romance
+109584,Broken,6.500000,2013,Drama
+109689,I Want You,8.000000,2012,Drama:Romance
+109729,The Canyons,4.300000,2013,Drama:Erotic:Thriller
+110112,Nitro Circus: The Movie,6.900000,2012,Action:Comedy
+110146,The Sapphires,6.800000,2012,Comedy:Drama:Musical
+110160,Laurence Anyways,8.200000,2012,Drama:Romance
+110354,Side by Side,7.600000,2012,Documentary
+110398,No,6.200000,2012,Drama:History
+110410,Drug War,6.000000,2013,Action:Crime:Drama
+110415,Snowpiercer,6.800000,2013,Action:Drama:Science Fiction
+110420,Wolf Children,8.100000,2012,Animation:Drama:Fantasy:Family
+110552,The Protector 2,6.900000,2013,Action
+111083,The Body,7.500000,2012,Mystery:Thriller
+111190,Adore,6.300000,2013,Drama
+111440,The Pact,5.200000,2012,Horror:Mystery:Thriller
+111969,Stuck in Love,7.000000,2012,Comedy:Drama
+112090,Branded,4.900000,2012,Science Fiction
+112198,What's in a Name,7.000000,2012,Comedy
+112200,Thanks for Sharing,6.100000,2012,Comedy:Drama
+112205,The Family,6.400000,2013,Action:Comedy:Crime
+112304,Soldiers of Fortune,5.100000,2012,Action:Adventure
+112336,Hitchcock,6.100000,2012,Drama
+112949,Safe Haven,6.400000,2013,Romance
+113082,Berserk: The Golden Age Arc - The Egg of the King,7.800000,2012,Action:Adventure:Animation:Fantasy:Horror
+113148,Prince Avalanche,6.600000,2013,Comedy:Drama
+113160,Ma première fois,6.600000,2012,Romance
+113329,Artificial Paradises,7.100000,2012,Drama
+113833,The Normal Heart,8.200000,2014,Drama
+113947,The Sessions,6.500000,2012,Comedy:Drama:Romance
+114150,Pitch Perfect,6.800000,2012,Comedy:Music:Romance
+114478,Starship Troopers : Invasion,6.300000,2012,Action:Animation:Science Fiction:Thriller
+114606,Cockneys vs Zombies,5.400000,2012,Comedy:Horror
+114779,It's a Disaster,5.800000,2012,Comedy
+114955,Let It Shine,6.300000,2012,Musical:Family
+115210,Stitches,5.300000,2012,Horror
+115276,Pusher,4.900000,2012,Thriller
+115283,A.C.O.D.,5.900000,2013,Comedy
+115290,Blue Lagoon: The Awakening,6.100000,2012,Romance
+115348,Paranoia,6.000000,2013,Drama:Thriller
+115782,Jobs,6.100000,2013,Drama:History
+116613,The Sweeney,6.200000,2012,Crime:Drama
+116711,Epic,6.500000,2013,Adventure:Animation:Fantasy:Family
+116741,The Internship,6.200000,2013,Comedy
+116745,The Secret Life of Walter Mitty,7.200000,2013,Adventure:Comedy:Drama:Fantasy
+116811,Berberian Sound Studio,6.800000,2012,Drama:Horror:Thriller
+117251,White House Down,6.400000,2013,Action:Drama:Thriller
+117263,Olympus Has Fallen,6.100000,2013,Action:Thriller
+117691,Gangs of Wasseypur,8.000000,2012,Action:Crime:Thriller
+117974,Sightseers,5.800000,2012,Comedy
+118289,Diana,5.700000,2013,Drama:Romance
+118293,The Suicide Shop,6.600000,2012,Animation:Comedy
+118340,Guardians of the Galaxy,8.700000,2014,Adventure:Fantasy:Science Fiction
+118406,Naruto Shippuden the Movie: Road to Ninja,8.400000,2012,Action:Animation
+118628,English Vinglish,8.100000,2012,Drama:Foreign
+118677,Why Stop Now?,5.400000,2012,Comedy:Drama
+118683,Maximum Conviction,5.200000,2012,Action:Adventure:Thriller
+118737,Interview with a Hitman,5.500000,2012,Action:Thriller
+118957,Bait,5.900000,2012,Action:Horror:Thriller
+119278,Smiley,5.600000,2012,Horror
+119283,Parker,5.600000,2013,Action:Crime
+119431,Halo 4: Forward Unto Dawn,6.700000,2012,Action:Science Fiction
+119450,Dawn of the Planet of the Apes,7.900000,2014,Action:Drama:Science Fiction:Thriller
+119569,Marvel One-Shot: Item 47,7.000000,2012,Action:Fantasy:Science Fiction
+119675,Behind the Candelabra,6.600000,2013,Drama:Romance
+119698,The Dinosaur Project,4.800000,2012,Adventure
+119892,The Monkey King,4.600000,2014,Action:Adventure:Family
+120292,Not Suitable For Children,5.300000,2012,Comedy:Romance
+120467,The Grand Budapest Hotel,8.100000,2014,Comedy:Drama
+120475,Dragon Ball: Episode Of Bardock,6.400000,2011,Action:Adventure:Animation
+120605,The Punisher: Dirty Laundry,7.300000,2012,Action:Drama:Thriller:Fan Film:Short
+121606,Resolution,6.400000,2012,Horror:Mystery:Thriller
+121642,Twice Born,6.700000,2012,Drama:Romance:War
+121674,Great Expectations,7.000000,2013,Drama:Romance
+121677,The Reluctant Fundamentalist,7.600000,2012,Thriller
+121734,"Tad, the Lost Explorer",5.600000,2013,Adventure:Animation:Comedy:Family
+121789,At Any Price,5.600000,2012,Drama
+121793,Capital,5.800000,2013,Drama
+121823,Tai Chi Zero,6.700000,2012,Action:Drama
+121824,Stand Up Guys,6.100000,2012,Comedy:Crime:Drama
+121826,Quartet,6.400000,2012,Comedy:Drama:Romance
+121828,Beyond Outrage,7.100000,2012,Action
+121835,Lore,7.100000,2012,Drama:Thriller:War
+121872,Ginger & Rosa,6.600000,2012,Drama
+121873,Hannah Arendt,6.600000,2012,Drama
+121875,In the House,7.200000,2012,Drama:Mystery:Thriller
+121879,A Late Quartet,7.400000,2012,Drama
+121936,Happiness Never Comes Alone,6.600000,2012,Comedy:Romance
+121986,Frances Ha,7.400000,2012,Comedy:Drama
+122081,Spring Breakers,4.900000,2013,Crime:Drama
+122192,The Lookout,6.300000,2012,Action:Crime:Suspense
+122293,The Philadelphia Experiment,4.300000,2012,Adventure:Mystery:Science Fiction:Thriller
+122800,Freelancers,5.200000,2012,Action:Crime:Drama
+122857,Universal Soldier: Day of Reckoning,5.300000,2012,Action:Science Fiction
+122906,About Time,7.700000,2013,Comedy:Drama:Science Fiction
+123025,"Batman: The Dark Knight Returns, Part 1",7.500000,2012,Action:Animation
+123103,Aftershock,5.100000,2012,Horror:Thriller
+123105,The Bay,5.100000,2012,Horror:Science Fiction:Thriller
+123109,No One Lives,5.600000,2012,Horror:Thriller
+123229,Les Kaïra,5.600000,2012,Comedy
+123235,Paris-Manhattan,5.800000,2012,Comedy:Romance
+123377,Pieta,6.200000,2012,Drama
+123553,The Mortal Instruments: City of Bones,6.100000,2013,Action:Adventure:Drama:Fantasy:Mystery:Romance
+123678,The Act of Killing,7.800000,2012,Documentary
+124157,The Thieves,6.900000,2012,Action:Crime
+124459,The Incredible Burt Wonderstone,5.200000,2013,Comedy
+124461,A Glimpse Inside the Mind of Charles Swan III,5.000000,2012,Comedy
+124905,Godzilla,6.500000,2014,Action
+125490,Antiviral,5.900000,2012,Horror:Science Fiction
+125509,Wrong Turn 5: Bloodlines,4.700000,2012,Horror:Thriller
+126250,Love is All You Need,6.300000,2012,Comedy:Romance
+126277,American Mary,5.800000,2012,Horror:Thriller
+126319,Ernest & Celestine,8.100000,2012,Animation:Comedy:Drama:Family
+126797,Mental,6.600000,2012,Comedy:Drama
+126963,Dragon Ball Z: Battle of Gods,6.500000,2013,Action:Animation
+127370,Song for Marion,6.900000,2012,Comedy:Musical:Romance
+127372,Emperor,6.300000,2012,Drama:History:War
+127373,What Maisie Knew,7.500000,2012,Drama
+127493,Stolen,5.300000,2012,Action:Crime:Drama:Thriller
+127501,Barfi!,8.200000,2012,Comedy:Drama:Romance
+127517,Disconnect,6.900000,2012,Drama:Thriller
+127521,6 Bullets,5.600000,2012,Action:Thriller
+127533,Rurouni Kenshin,7.200000,2012,Action:Drama:Eastern:History:Foreign
+127560,The Railway Man,7.100000,2014,Drama:History
+127585,X-Men: Days of Future Past,7.900000,2014,Action:Adventure:Fantasy:Science Fiction
+127846,A Hijacking,7.400000,2012,Drama:Thriller
+127867,The Brass Teapot,5.800000,2013,Comedy:Fantasy:Thriller
+127884,Come Out and Play,5.000000,2012,Horror
+127918,The Gatekeepers,7.200000,2012,Documentary
+128113,Key of Life,7.900000,2012,Comedy:Crime:Romance
+128136,My Awkward Sexual Adventure,5.600000,2012,Comedy:Romance
+128216,Stories We Tell,7.500000,2012,Documentary
+129112,Wadjda,8.300000,2012,Drama
+129139,The To Do List,5.600000,2013,Comedy:Romance
+129670,Nebraska,7.400000,2013,Adventure:Drama
+130150,Labor Day,6.600000,2013,Drama
+130267,Seal Team Six: The Raid on Osama Bin Laden,5.400000,2012,Action:Crime:Drama:Thriller
+130739,A Coffee in Berlin,7.100000,2013,Comedy:Drama
+130747,The Guardians,5.900000,2012,Action:Thriller
+130925,Partysaurus Rex,7.800000,2012,Animation:Comedy:Fantasy:Family
+131634,The Hunger Games: Mockingjay - Part 2,8.800000,2015,Adventure
+131689,The Wicked,4.500000,2013,Fantasy:Horror:Thriller
+132137,Werewolf: The Beast Among Us,4.700000,2012,Drama:Horror
+132232,Mama,6.000000,2013,Horror
+132316,Jab Tak Hai Jaan,7.500000,2012,Drama:Romance
+132344,Before Midnight,7.100000,2013,Drama:Romance
+132363,The Butler,7.200000,2013,Drama
+132712,Party Crashers,5.100000,2012,Comedy
+133121,Resident Evil: Damnation,6.000000,2012,Animation
+133369,The Conspiracy,6.700000,2012,Horror:Thriller
+133469,The Dream Team,4.900000,2012,Comedy:Drama:Romance
+133694,Promised Land,5.600000,2012,Drama
+133698,Fly Me to the Moon,6.000000,2012,Comedy:Romance
+133790,Clear History,6.600000,2013,Comedy
+133805,Carrie,6.400000,2013,Drama:Horror
+133931,Zambezia,5.700000,2012,Animation
+134366,Grave Encounters 2,5.700000,2012,Horror
+134371,Atlas Shrugged Part II,6.300000,2012,Drama:Mystery:Science Fiction
+134374,Pain & Gain,6.400000,2013,Action:Crime:Thriller
+134411,Snitch,5.700000,2013,Drama:Thriller
+134597,The Collection,6.000000,2012,Horror:Thriller
+135397,Jurassic World,6.700000,2015,Action:Adventure:Science Fiction:Thriller
+135647,The Details,5.800000,2012,Comedy:Drama
+136400,2 Guns,6.800000,2013,Action:Comedy:Crime:Drama:Thriller
+136403,Populaire,6.900000,2012,Comedy
+136418,Hummingbird,5.800000,2013,Action:Thriller
+136795,The Heat,6.700000,2013,Action:Comedy:Crime
+136797,Need for Speed,6.600000,2014,Action:Crime:Drama:Thriller
+136911,The Factory,6.000000,2012,Crime:Mystery:Thriller
+137093,Last Vegas,6.900000,2013,Comedy
+137094,Jack Ryan: Shadow Recruit,6.100000,2014,Action:Drama:Thriller
+137106,The Lego Movie,7.800000,2014,Action:Adventure:Animation:Comedy:Fantasy:Family
+137113,Edge of Tomorrow,7.800000,2014,Action:Science Fiction
+137182,The Broken Circle Breakdown,7.500000,2012,Drama:Foreign
+137321,Winter's Tale,6.500000,2014,Drama:Fantasy:Mystery:Romance
+137409,Cold War,6.500000,2012,Action:Thriller
+137563,A Band Called Death,7.200000,2013,Documentary:Music
+137968,Drift,5.700000,2013,Drama:Sport
+138103,The Expendables 3,6.800000,2014,Action:Adventure:Thriller
+138222,Best Man Down,6.200000,2012,Comedy:Drama
+138372,Bad Kids Go to Hell,4.000000,2012,Comedy:Mystery:Thriller
+138376,The Truth,5.600000,2012,Action
+138686,The Marathon,7.100000,2012,Comedy:Drama
+138697,Don Jon,6.200000,2013,Comedy:Drama
+138832,We're the Millers,7.000000,2013,Comedy:Crime
+138843,The Conjuring,7.300000,2013,Horror:Thriller
+139038,A Haunted House,5.600000,2013,Comedy:Horror
+139455,Silent Night,4.600000,2012,Horror:Mystery:Thriller
+139519,Magic Magic,5.400000,2013,Thriller
+139567,Fire with Fire,5.900000,2012,Action:Crime:Drama:Thriller
+139651,Haute Cuisine,7.100000,2012,Comedy
+139933,Kiss of the Damned,4.500000,2012,Drama:Horror:Romance
+140222,Love and Honor,7.100000,2012,Drama:Romance:War
+140420,Paperman,8.500000,2012,Animation:Romance:Family:Short
+140607,Star Wars: Episode VII,8.300000,2015,Action:Adventure:Fantasy:Science Fiction
+140818,Ragnarok,5.800000,2013,Action:Adventure
+140823,Saving Mr. Banks,7.600000,2013,Comedy:Drama:History
+141043,A Long Way Down,6.700000,2014,Comedy:Drama
+141058,A Viking Saga: The Darkest Day,3.500000,2012,Action:Adventure:Thriller
+142061,"Batman: The Dark Knight Returns, Part 2",7.800000,2013,Action:Animation
+143049,Adult World,5.900000,2014,Comedy
+144336,Sabotage,6.000000,2014,Action:Crime:Drama:Thriller
+144340,Admission,5.500000,2013,Comedy:Drama:Romance
+144789,I'm So Excited!,6.000000,2013,Comedy
+145135,Dark Skies,5.900000,2013,Horror:Science Fiction:Thriller
+145197,Upstream Color,6.700000,2013,Drama:Science Fiction
+145220,Muppets Most Wanted,6.700000,2014,Adventure:Comedy:Crime:Musical:Family
+145247,The 100-Year-Old Man Who Climbed Out the Window and Disappeared,6.900000,2013,Adventure:Comedy:Drama
+146015,The Double,6.500000,2014,Drama:Thriller
+146203,The Last Exorcism Part II,4.900000,2013,Horror:Thriller
+146216,RED 2,6.400000,2013,Action:Comedy:Crime:Thriller
+146223,Closed Circuit,5.900000,2013,Crime:Drama:Mystery:Thriller
+146227,Getaway,5.300000,2013,Action:Crime
+146233,Prisoners,7.800000,2013,Crime:Drama:Thriller
+146238,Runner Runner,5.700000,2013,Crime:Drama:Thriller
+146239,Delivery Man,6.200000,2013,Comedy
+146243,Haunt,5.200000,2013,Horror
+146304,The Best Man Holiday,7.500000,2013,Comedy
+146375,On the Other Side of the Tracks,5.700000,2012,Action:Comedy:Crime
+146381,Justin and the Knights of Valour,5.500000,2013,Adventure:Animation
+146631,Alien Uprising,3.400000,2012,Action:Adventure:Science Fiction
+147773,The Way Way Back,7.200000,2013,Comedy:Drama
+149085,Tai Chi Hero,7.100000,2012,Action:Adventure
+149087,Turning Tide,6.300000,2013,Drama
+149509,Horns,7.100000,2014,Drama:Fantasy:Horror:Thriller
+149870,The Wind Rises,7.300000,2013,Animation:Drama:History
+149910,Super Buddies,6.400000,2013,Family
+150117,I Give It A Year,5.500000,2013,Comedy:Romance
+150202,The Haunting in Connecticut 2: Ghosts of Georgia,5.600000,2013,Drama:Horror:Thriller
+151743,Lost in Thailand,6.100000,2012,Comedy
+151933,Dead in Tombstone,5.500000,2013,Action:Fantasy:Horror
+151960,Planes,5.900000,2013,Adventure:Animation:Comedy:Family
+152259,Phantom,6.100000,2013,Thriller
+152532,Dallas Buyers Club,7.800000,2013,Drama:History
+152584,Blue Is the Warmest Color,7.700000,2013,Drama:Romance
+152599,The Immigrant,5.800000,2013,Drama:Romance
+152601,Her,8.000000,2013,Drama:Science Fiction:Romance
+152603,Only Lovers Left Alive,7.300000,2013,Drama:Horror:Romance
+152737,August: Osage County,7.100000,2013,Comedy:Drama
+152742,The Best Offer,7.700000,2013,Crime:Drama:Mystery:Romance
+152747,All Is Lost,6.400000,2013,Action:Adventure:Drama
+152748,Ain't Them Bodies Saints,6.300000,2013,Crime:Drama:Western:Romance
+152760,The Monuments Men,6.000000,2014,Action:Drama:History:War
+152780,The Past,7.400000,2013,Drama:Mystery
+152790,The Angriest Man in Brooklyn,6.100000,2014,Comedy:Drama
+152792,Devil's Knot,6.000000,2013,Crime:Drama:Thriller
+152795,The Congress,6.200000,2013,Animation:Drama:Science Fiction
+153158,Underdogs,7.200000,2013,Adventure:Animation:Sport:Romance
+153738,Frankenstein's Army,6.400000,2013,Action:Horror
+153795,Straight A's,4.500000,2013,Comedy:Drama
+154441,'Till Luck Do Us Part,6.600000,2012,Comedy
+155084,13 Sins,6.800000,2014,Horror:Thriller
+156022,The Equalizer,7.600000,2014,Action:Crime:Thriller
+156597,Stage Fright,6.300000,2014,Horror:Musical
+156700,The Kings of Summer,7.300000,2013,Comedy:Drama
+156708,Afternoon Delight,6.500000,2013,Comedy:Drama
+156711,Austenland,6.700000,2013,Comedy:Romance
+156713,C.O.G.,6.200000,2013,Comedy:Drama
+156717,Death Race: Inferno,5.700000,2012,Action:Science Fiction:Thriller
+157115,Jug Face,5.400000,2013,Drama:Horror:Thriller
+157117,Sound City,7.700000,2013,Documentary:Music
+157350,Divergent,7.000000,2014,Action
+157353,Transcendence,6.000000,2014,Drama:Mystery:Science Fiction:Thriller
+157354,Fruitvale Station,7.500000,2013,Drama
+157360,In a World...,6.400000,2013,Comedy
+157370,Kill Your Darlings,6.500000,2013,Drama:Thriller:Romance
+157375,The Lifeguard,5.400000,2013,Comedy:Drama:Romance
+157386,The Spectacular Now,7.300000,2013,Comedy:Drama:Romance
+157409,Crystal Fairy & the Magical Cactus,6.000000,2013,Adventure:Comedy
+157424,Cabin Fever: Patient Zero,6.200000,2014,Horror
+157547,Oculus,6.200000,2013,Horror
+157820,Mood Indigo,6.100000,2013,Drama:Fantasy
+157823,Night Moves,5.200000,2014,Drama:Thriller
+157832,Calvary,6.900000,2014,Drama
+157834,The Zero Theorem,6.000000,2014,Drama:Fantasy:Science Fiction
+157841,The Young and Prodigious T.S. Spivet,6.500000,2013,Adventure:Drama:Family
+157845,The Rover,6.300000,2014,Crime:Drama
+157847,Joe,7.200000,2013,Drama
+157849,A Most Wanted Man,6.800000,2014,Thriller
+157851,Maps to the Stars,5.100000,2015,Drama
+158011,The Call,6.400000,2013,Thriller
+158015,The Purge,5.600000,2013,Horror:Science Fiction:Thriller
+158445,Miracle in Cell No. 7,7.600000,2013,Comedy:Drama:Foreign
+158752,Escape from Tomorrow,4.300000,2013,Fantasy:Horror
+158907,Breathe In,6.800000,2013,Drama
+158914,The Look of Love,5.700000,2013,Comedy:Drama
+158916,Sweetwater,5.400000,2013,Thriller:Western
+158990,Wrong Cops,7.600000,2013,Comedy:Crime
+158999,Blackfish,8.100000,2013,Documentary
+159004,Dirty Wars,7.500000,2013,Crime:Documentary:Drama:Mystery:War
+159014,20 Feet from Stardom,7.400000,2013,Documentary:Music
+159037,The Square,8.300000,2013,Documentary:Drama:History
+159092,Hell Baby,5.000000,2013,Comedy:Horror
+159095,In Fear,5.200000,2013,Thriller
+159117,V/H/S/2,6.100000,2013,Horror:Thriller
+159121,Paulette,6.400000,2012,Comedy:Crime
+159128,We Are What We Are,6.300000,2013,Drama:Horror:Thriller
+159154,We Steal Secrets: The Story of WikiLeaks,5.900000,2013,Documentary
+159622,Terms and Conditions May Apply,6.800000,2013,Documentary
+159932,A Single Shot,6.300000,2013,Crime:Drama:Thriller
+160070,Apartment 1303 3D,5.300000,2013,Horror
+160085,Schlussmacher,6.000000,2013,Comedy
+160139,Night Train to Lisbon,6.200000,2013,Mystery:Thriller:Romance
+160588,Blue Jasmine,6.900000,2013,Comedy:Drama
+160704,The Berlin File,6.700000,2013,Action:Drama:Thriller
+161321,The Power of Few,4.200000,2013,Action:Crime:Drama
+161545,Tutto tutto niente niente,3.900000,2012,Comedy
+162145,The Liability,5.200000,2013,Comedy:Crime:Thriller
+162215,How I Live Now,6.400000,2013,Action:Drama:Thriller:War
+162903,The Fifth Estate,5.600000,2013,Drama:Thriller
+164457,Out of the Furnace,6.700000,2013,Crime:Drama:Thriller
+164558,One Direction: This Is Us,8.500000,2013,Documentary:Music
+165213,New World,7.400000,2013,Thriller
+165739,Pawn,6.200000,2013,Crime:Thriller
+165904,Special 26,8.000000,2013,Crime:Drama:Thriller
+166076,Superman: Unbound,6.600000,2013,Action:Adventure:Animation
+166271,Haunter,6.000000,2013,Horror:Mystery:Thriller
+166424,The Fantastic Four,6.900000,2015,Action:Adventure:Fantasy:Science Fiction
+166666,3096 Days,6.600000,2013,Crime:Drama
+166822,Big Ass Spider!,5.400000,2013,Science Fiction
+167032,Curse of Chucky,5.500000,2013,Horror:Thriller
+167449,The Guillotines,5.300000,2012,Action:Adventure:Drama:History
+167575,Hatchet III,5.400000,2013,Action:Comedy:Horror:Thriller
+167581,Free Fall,7.100000,2013,Drama:Romance
+167963,Thesis on a Homicide,6.800000,2013,Suspense:Thriller
+168055,Love Is in the Air,5.300000,2013,Comedy:Romance
+168138,The Last Days,5.300000,2013,Adventure:Science Fiction:Thriller
+168259,Fast & Furious 7,8.800000,2015,Action:Crime:Thriller
+168530,Ride Along,6.300000,2014,Action:Comedy
+168672,American Hustle,7.100000,2013,Crime:Drama
+168676,Company of Heroes,5.300000,2013,Action:War
+169020,Vive la France,5.800000,2013,Comedy
+169209,Empire State,5.200000,2013,Action:Drama
+169219,Devil's Pass,5.600000,2013,Mystery:Thriller
+169813,Short Term 12,8.300000,2013,Drama
+169881,The Physician,7.500000,2013,Adventure:Drama:History
+169917,A Walk Among the Tombstones,6.600000,2014,Action:Crime:Drama
+169934,Iron Man: Rise of Technovore,5.200000,2013,Action:Animation:Fantasy
+170657,Journey to the West,6.500000,2013,Action:Adventure:Comedy:Fantasy
+170687,The Boxtrolls,7.400000,2014,Adventure:Animation:Comedy:Fantasy:Family
+170689,Möbius,6.000000,2013,Thriller
+170759,Kokowaah 2,6.500000,2013,Drama
+171337,Siberian Education,6.500000,2013,Crime:Drama
+171372,Frank,7.100000,2014,Comedy:Drama:Mystery
+171540,Big Bad Wolves,6.300000,2013,Comedy:Crime:Suspense
+171846,Killers,7.300000,2014,Action:Crime:Drama:Thriller
+172106,Jappeloup,6.000000,2013,Drama:Sport
+172385,Rio 2,6.900000,2014,Animation:Family
+172391,Khumba,6.500000,2013,Adventure:Animation:Family
+172533,Drinking Buddies,6.100000,2013,Drama:Romance
+172631,Family Weekend,6.800000,2013,Comedy:Drama
+172803,Hours,6.500000,2013,Drama:Thriller
+172828,Bad Milo,5.600000,2013,Comedy:Horror
+172847,Scenic Route,6.700000,2013,Drama:Thriller
+173185,It Boy,6.500000,2013,Comedy
+173210,Downloaded,7.000000,2013,Documentary
+173603,Skytten,5.800000,2013,Crime:Drama:Mystery:Suspense:Thriller
+173897,Resident Evil: Rising,5.900000,2016,Action:Horror:Science Fiction
+174188,Rapture-Palooza,4.800000,2013,Comedy:Fantasy:Horror
+174316,A Case of You,4.800000,2013,Comedy:Romance
+174321,The English Teacher,6.000000,2013,Comedy:Drama
+174323,G.B.F.,6.200000,2013,Comedy
+174675,The Machine,5.800000,2013,Science Fiction:Thriller
+174682,Raze,5.400000,2013,Horror:Thriller
+174733,Metro,6.500000,2013,Action:Thriller
+174772,Europa Report,6.100000,2013,Science Fiction:Thriller
+175112,The Pirate Fairy,6.900000,2014,Animation:Fantasy:Family
+175291,Cheap Thrills,6.300000,2013,Comedy:Thriller
+175528,Baggage Claim,6.500000,2013,Comedy
+175574,Free Birds,6.100000,2013,Animation:Comedy:Family
+175774,Ruby Red,6.400000,2013,Adventure:Fantasy:Science Fiction:Family
+176068,+1,5.200000,2013,Science Fiction:Thriller
+176983,One Piece Movie 12 : Z,7.900000,2012,Action:Adventure:Animation
+177221,The Battery,6.400000,2012,Drama:Horror
+177271,Lego Batman: The Movie - DC Superheroes Unite,6.200000,2013,Adventure:Animation:Family
+177494,Veronica Mars,6.500000,2014,Comedy:Crime:Drama
+177699,Alan Partridge: Alpha Papa,6.400000,2013,Comedy
+177888,Teen Beach Movie,6.000000,2013,Music:Family
+178446,Generation War,8.600000,2013,Drama:War
+178682,The Wizards Return: Alex vs. Alex,7.300000,2013,Adventure:Comedy:Drama
+178809,The Colony,5.300000,2013,Action:Horror:Science Fiction
+179144,The Great Beauty,7.200000,2013,Comedy:Drama
+179538,Witching & Bitching,5.400000,2013,Comedy:Horror
+179826,Odd Thomas,6.600000,2013,Mystery:Thriller
+180147,We Are The Nobles,6.800000,2013,Comedy
+180296,They Came Together,5.400000,2014,Comedy
+180299,The Raid 2,8.100000,2014,Action:Crime:Thriller
+180371,Vai Que Dá Certo,6.400000,2013,Comedy
+180894,Ninja: Shadow of a Tear,6.900000,2013,Action:Crime:Thriller
+180948,Vehicle 19,5.100000,2013,Thriller
+181009,Saving General Yang,6.300000,2013,Action:Adventure:History
+181330,Kevin Hart: Let Me Explain,7.300000,2013,Comedy:Documentary
+181886,Enemy,6.200000,2013,Mystery:Thriller
+182127,Ip Man: The Final Fight,6.300000,2013,Action:Drama
+182219,Serial Teachers,5.200000,2013,Comedy
+182246,11.6,5.400000,2013,Drama:Thriller
+183011,Justice League: The Flashpoint Paradox,6.800000,2013,Action:Adventure:Animation
+183836,The Brats,6.500000,2013,Comedy
+184098,Think Like a Man Too,7.300000,2014,Comedy:Romance
+184125,Assault on Wall Street,5.900000,2013,Action:Drama:Thriller
+184219,Pee Mak Phrakanong,7.800000,2013,Comedy:Romance
+184314,Young & Beautiful,6.800000,2013,Drama
+184315,Hercules,6.200000,2014,Action:Adventure
+184345,A Haunted House 2,5.500000,2014,Comedy:Horror
+184352,Tom at the Farm,6.000000,2013,Drama
+185008,Yeh Jawaani Hai Deewani,6.700000,2013,Romance
+185267,The Human Race,4.900000,2014,Action:Horror:Science Fiction
+185460,Willow Creek,5.800000,2014,Adventure:Horror:Mystery:Thriller
+185567,Zulu,6.900000,2013,Crime:Drama:Thriller
+185574,Louis C.K.: Oh My God,7.200000,2013,Comedy
+186161,The Gilded Cage,7.200000,2013,Comedy
+186606,iSteve,5.100000,2013,Comedy
+186992,Stranger by the Lake,6.100000,2013,Drama:Suspense
+187017,22 Jump Street,7.700000,2014,Action:Comedy:Crime
+187022,A Touch of Sin,6.300000,2013,Drama
+187596,Walk of Shame,5.600000,2014,Comedy
+188161,A Million Ways to Die in the West,6.100000,2014,Comedy:Western
+188166,Blue Ruin,6.700000,2013,Thriller
+188183,Finding Mr. Right,6.500000,2013,Comedy:Romance
+188207,The Legend of Hercules,4.800000,2014,Action:Adventure
+189197,The Pacific,7.800000,2010,Action:Adventure:Drama:History:War
+190847,The Last Days on Mars,5.300000,2013,Horror:Science Fiction:Thriller
+190880,"Me, Myself and Mum",6.700000,2013,Comedy
+190955,Blood Ties,6.500000,2013,Crime:Drama:Thriller
+191121,Raanjhanaa,6.400000,2013,Drama:Romance
+191148,Top of the Lake,8.000000,2013,Crime:Drama
+191421,So Young,6.300000,2013,Drama:Romance
+191714,The Lunchbox,7.400000,2013,Drama:Romance
+191720,Jodorowsky's Dune,8.200000,2013,Documentary
+192102,3 Days to Kill,6.200000,2014,Action:Crime:Drama:Thriller
+192132,Palo Alto,6.800000,2014,Drama:Romance
+192134,Dom Hemingway,6.000000,2013,Comedy:Crime:Drama
+192136,Mandela: Long Walk to Freedom,7.100000,2013,Drama:History
+192145,Third Person,5.900000,2013,Drama:Romance
+192149,The Two Faces of January,5.900000,2014,Thriller
+192538,Hammer of the Gods,4.700000,2013,Action:Adventure:History
+192577,Space Pirate Captain Harlock,6.600000,2013,Animation:Science Fiction
+193610,The Other Woman,6.200000,2014,Comedy:Romance
+193612,The Quiet Ones,5.700000,2014,Horror
+193613,Metallica: Through the Never,6.800000,2013,Music
+193756,Lone Survivor,7.600000,2013,Action:Drama:Thriller:War
+193893,Let's Be Cops,7.400000,2014,Comedy
+194101,The Selfish Giant,7.500000,2013,Drama
+194523,Blind Detective,6.500000,2013,Comedy:Crime:Drama
+195269,12 Rounds 2: Reloaded,5.900000,2013,Action:Adventure:Thriller
+195300,"The Chef, The Actor, The Scoundrel",7.000000,2013,Action:Comedy
+195423,Caboclo Western,5.300000,2013,Crime:Drama:Western:Romance
+195589,Neighbors,6.400000,2014,Comedy
+196024,The Keeper of Lost Causes,7.600000,2013,Crime:Mystery:Thriller
+196325,American Dreams in China,7.000000,2013,Drama
+196750,Ghost in the Shell Arise - Border 1: Ghost Pain,7.500000,2013,Action:Animation:Science Fiction
+196830,Stranded,4.200000,2013,Horror:Science Fiction
+197082,Venus in Fur,6.500000,2014,Drama
+197624,AE Apocalypse Earth,4.900000,2013,Action:Science Fiction
+197796,Beauty and the Beast,6.300000,2014,Fantasy:Romance
+198062,Coffee Town,6.700000,2013,Comedy
+198185,Million Dollar Arm,7.000000,2014,Drama:Sport
+198210,Evidence,5.600000,2013,Horror:Mystery:Thriller
+198277,Begin Again,7.600000,2013,Comedy:Drama:Music:Romance
+198287,After the Dark,5.900000,2013,Drama:Fantasy:Science Fiction:Thriller
+198375,The Garden of Words,7.700000,2013,Animation:Romance
+198663,The Maze Runner,7.900000,2014,Action:Mystery:Science Fiction:Thriller
+198677,SAGA: Curse of the Shadow,4.800000,2013,Action:Adventure:Fantasy
+199373,The Frozen Ground,6.400000,2013,Crime:Thriller
+199420,Pawn Shop Chronicles,5.500000,2013,Action:Comedy
+199534,Wolf Creek 2,6.300000,2013,Horror:Thriller
+199584,"Secretly, Greatly",6.300000,2013,Action:Comedy:Drama
+199591,Penthouse North,6.200000,2013,Drama:Thriller
+199643,The Big Bad Wolf,6.100000,2013,Comedy
+199753,Tom and Jerry's Giant Adventure,2.100000,2013,Animation:Family
+200085,The Flu,7.100000,2013,Action:Drama:Science Fiction
+200462,Hansel & Gretel,5.300000,2013,Horror
+200505,Draft Day,6.600000,2014,Drama:Sport
+200713,9 Month Stretch,6.700000,2013,Comedy
+200823,Fonzy,5.600000,2013,Comedy
+201086,Cuban Fury,6.100000,2014,Comedy
+201676,My Little Pony: Equestria Girls,7.800000,2013,Animation
+201749,Mr. Morgan's Last Love,6.800000,2013,Comedy:Drama
+201847,Compulsion,5.300000,2013,Drama:Thriller
+202220,Badges of Fury,5.000000,2013,Action:Comedy:Crime
+202575,The House of Magic,7.000000,2013,Adventure:Animation:Fantasy:Family
+203217,Minha Mãe é uma Peça: O Filme,7.000000,2013,Comedy
+203665,Paris à tout prix,5.800000,2013,Comedy
+203696,Scooby-Doo! Stage Fright,5.500000,2013,Adventure:Animation:Family
+203739,Vampire Academy,5.700000,2014,Action:Comedy:Fantasy:Horror:Mystery
+203793,Stalingrad,5.300000,2013,Action:War
+203819,Tracks,6.500000,2013,Adventure:Drama
+203833,The Book Thief,7.600000,2013,Drama
+204082,Homefront,6.600000,2013,Action:Thriller
+204349,Contracted,5.500000,2013,Horror:Thriller
+204435,Krrish 3,6.500000,2013,Action:Science Fiction
+204553,Cold Eyes,7.500000,2013,Action:Crime
+204668,Belle and Sebastian,6.500000,2013,Adventure
+204765,Prêt à Tout,5.700000,2014,Comedy
+205022,Chennai Express,6.400000,2013,Action:Comedy:Romance
+205220,Philomena,7.600000,2013,Drama
+205321,Sharknado,4.000000,2013,Horror
+205601,Belle,7.700000,2014,Drama
+205724,Welcome to the Jungle,5.100000,2014,Comedy
+205891,The Demented,4.900000,2013,Drama:Horror:Thriller
+206260,The Rooftop,6.100000,2013,Action:Comedy:Drama
+206324,Bhaag Milkha Bhaag,7.900000,2013,Drama:History
+206408,Chinese Puzzle,6.400000,2013,Comedy:Drama:Romance
+206419,Red Line,5.300000,2013,Thriller
+207768,I Spit On Your Grave 2,6.700000,2013,Crime:Horror:Thriller
+208134,Jackass Presents: Bad Grandpa,6.400000,2013,Comedy
+208277,Wetlands,5.200000,2013,Comedy:Drama
+208869,Plastic,6.800000,2014,Action:Comedy:Crime:Drama
+209049,Tiny Times,4.800000,2013,Comedy:Drama:Romance
+209185,The Grand Seduction,6.900000,2013,Comedy
+209244,Are You Here,5.900000,2014,Comedy
+209247,The Art of the Steal,6.500000,2013,Comedy:Crime
+209249,The Love Punch,6.200000,2013,Comedy
+209262,Parkland,6.100000,2013,Drama:Mystery:Thriller
+209263,Enough Said,6.900000,2013,Comedy:Drama:Romance
+209274,Ida,6.700000,2013,Drama
+209276,Starred Up,7.400000,2013,Drama
+209350,Le Week-End,6.400000,2013,Comedy:Drama
+209355,The French Minister,5.700000,2013,Comedy
+209361,One Chance,5.900000,2013,Comedy:Drama:Music
+209403,Bad Words,6.400000,2013,Comedy
+209406,The Right Kind of Wrong,5.300000,2013,Comedy:Romance
+209410,Shuddh Desi Romance,7.300000,2013,Comedy:Drama:Romance
+209451,Jersey Boys,7.100000,2014,Drama:Music
+209504,Bounty Killer,5.700000,2013,Action:Science Fiction:Suspense
+209901,Nothing Left to Fear,4.100000,2013,Horror
+210024,An Adventure in Space and Time,7.800000,2013,Drama
+210047,Cold Comes the Night,5.700000,2014,Crime:Drama:Thriller
+210479,Locke,6.900000,2014,Drama:Thriller
+210577,Gone Girl,8.600000,2014,Drama:Mystery:Thriller
+210908,All Cheerleaders Die,5.400000,2013,Comedy:Horror:Thriller
+210911,Rigor Mortis,6.000000,2013,Action:Drama:Horror
+210947,Afflicted,6.400000,2013,Horror:Thriller
+211067,The Sacrament,6.200000,2013,Horror:Mystery:Suspense:Thriller
+211387,Marvel One-Shot: Agent Carter,7.900000,2013,Action:Adventure:Fantasy:Science Fiction
+211449,Riddick: Blindsided,7.300000,2013,Action:Animation:Science Fiction
+211954,Instructions Not Included,7.900000,2013,Comedy:Drama
+212231,Kid Cannabis,6.400000,2014,Drama
+212716,What If,7.000000,2014,Comedy:Drama:Romance
+212778,Chef,7.500000,2014,Comedy
+213015,Unbeatable,7.000000,2013,Action:Drama
+213121,Toy Story of Terror!,7.600000,2013,Animation:Comedy:Family
+214030,Fading Gigolo,6.100000,2013,Comedy
+214075,Words and Pictures,6.900000,2014,Comedy:Drama:Romance
+214314,Bears,7.900000,2014,Documentary:Family
+214597,Fright Night 2: New Blood,4.500000,2013,Comedy:Horror
+215211,Grace of Monaco,6.300000,2014,Drama:Romance
+215776,Madras Cafe,7.500000,2013,Thriller
+215814,Forbidden Ground,6.700000,2013,Action:Drama:War
+215830,Open Grave,5.800000,2014,Horror:Mystery:Thriller
+215848,Family United,5.600000,2013,Comedy
+216282,Into the Storm,6.400000,2014,Action:Thriller
+217923,Young Detective Dee: Rise of the Sea Dragon,5.800000,2013,Action:Adventure:Crime:Fantasy
+217993,Justice League: War,7.300000,2014,Animation
+218836,Planes: Fire & Rescue,6.500000,2014,Adventure:Animation:Comedy:Family
+219318,The Volcano,5.000000,2013,Comedy
+219572,Police Story 2013,6.000000,2013,Action:Crime:Drama:Thriller
+220286,Grand Piano,6.000000,2014,Mystery:Thriller
+220289,Coherence,7.000000,2013,Science Fiction:Thriller
+222216,Special ID,6.100000,2013,Action:Crime:Drama
+222899,About Last Night,6.300000,2014,Comedy:Romance
+222935,The Fault in Our Stars,8.200000,2014,Drama:Romance
+224815,Skinwalker Ranch,5.200000,2013,Horror:Science Fiction:Thriller
+224908,Embrace of the Vampire,6.500000,2013,Horror
+225565,That Awkward Moment,6.100000,2014,Comedy:Romance
+225574,Non-Stop,7.100000,2014,Action:Mystery:Thriller
+225703,The Starving Games,4.700000,2013,Comedy
+225886,Sex Tape,6.200000,2014,Comedy
+226486,Tammy,5.200000,2014,Comedy
+226857,Endless Love,6.800000,2014,Drama:Romance
+226936,Aspirante vedovo,4.500000,2013,Comedy
+227094,The Returned,6.500000,2013,Drama:Horror:Thriller
+227156,The Giver,6.700000,2014,Drama:Science Fiction
+227348,Paranormal Activity: The Marked Ones,5.900000,2014,Horror:Thriller
+227359,Force of Execution,5.800000,2013,Action:Crime
+227700,Mindscape,6.100000,2013,Drama:Thriller
+227707,The Adventurer: The Curse of the Midas Box,5.400000,2013,Adventure:Fantasy:Family
+227783,The Nut Job,5.800000,2014,Adventure:Animation:Comedy:Family
+228150,Fury,8.900000,2014,Action:Drama:War
+228194,The Hundred-Foot Journey,7.800000,2014,Drama
+228202,Meu Passado me Condena,6.500000,2013,Comedy
+229296,Justin Bieber's Believe,8.400000,2013,Documentary:Music
+229297,Magic in the Moonlight,6.800000,2014,Comedy:Drama:Romance
+229405,Panic in the Mailroom,8.200000,2013,Animation:Family
+229407,Puppy,8.400000,2013,Animation:Family:Short
+229408,Training Wheels,8.000000,2013,Animation:Comedy:Family
+230158,Aziz Ansari: Buried Alive,8.000000,2013,Comedy
+230222,Tarzan,6.100000,2013,Action:Adventure:Animation:Family
+230896,Iron Man & Hulk: Heroes United,5.600000,2013,Action:Adventure:Animation
+231176,Sole a catinelle,6.900000,2013,Comedy
+231474,The Hunters,3.500000,2013,Adventure
+231576,Wish I Was Here,8.000000,2014,Comedy:Drama
+232672,Blended,6.900000,2014,Comedy
+233063,"F*ck You, Goethe",7.700000,2013,Comedy
+233112,The White Storm,6.600000,2013,Action:Crime:Drama:Mystery
+233470,Jamesy Boy,7.300000,2014,Crime:Drama:Romance:Family
+235260,Son of God,6.000000,2014,Drama
+236735,La isla mínima,8.900000,2014,Suspense
+236737,Spanish Affair,6.800000,2014,Comedy:Romance
+236751,Heaven Is for Real,6.300000,2014,Drama
+237791,The Way He Looks,8.900000,2014,Drama:Romance
+238589,Enemies Closer,5.400000,2013,Action:Thriller
+238603,Earth to Echo,5.800000,2014,Adventure:Science Fiction:Family
+238636,The Purge: Anarchy,7.000000,2014,Horror:Thriller
+239471,Bonnie and Clyde,6.800000,2013,Crime:Drama
+239562,The Single Moms Club,5.400000,2014,Comedy:Drama
+239678,This Is Where I Leave You,6.700000,2014,Comedy
+239877,The Mafia Only Kills in Summer,7.400000,2013,Comedy
+240510,Stromberg - Der Film,8.300000,2014,Comedy
+240832,Lucy,6.700000,2014,Action:Science Fiction
+240916,Reasonable Doubt,6.200000,2014,Crime:Thriller
+241254,The Prince,5.600000,2014,Action:Thriller
+241842,Dead Snow 2,6.600000,2014,Action:Comedy:Horror
+241875,Jamais le premier soir,5.200000,2014,Comedy:Romance
+242022,The Inbetweeners 2,6.300000,2014,Comedy
+242042,Barefoot,8.000000,2014,Comedy:Drama:Romance
+242076,The Bag Man,5.900000,2014,Crime:Drama:Thriller
+242090,The One I Love,7.500000,2014,Comedy:Drama:Romance
+242095,The Signal,6.100000,2014,Science Fiction:Thriller
+242310,Rage,5.500000,2014,Action:Crime:Thriller
+242643,Batman: Assault on Arkham,7.900000,2014,Action:Animation:Crime:Thriller
+242661,Not My Day,6.600000,2014,Comedy
+242673,16 ans ou presque,4.600000,2013,Comedy
+243531,Freezer,5.800000,2014,Action:Thriller
+243683,Step Up All In,7.800000,2014,Drama:Music:Romance
+243935,Rob the Mob,6.300000,2014,Crime:Drama
+244114,Firestorm,6.500000,2013,Action:Crime
+244237,Jai Ho,6.600000,2014,Action:Drama
+244509,Cold in July,6.800000,2014,Drama:Thriller
+244566,Life after Beth,5.700000,2014,Comedy:Horror:Romance
+244610,The Den,6.000000,2013,Horror:Suspense:Thriller
+244688,The Hungover Games,4.800000,2014,Comedy
+244786,Whiplash,9.000000,2014,Drama:Music
+245775,Yves Saint Laurent,6.300000,2014,Drama
+245859,God Help the Girl,6.100000,2014,Comedy:Drama:Music
+246320,"The Three Brothers , the return",5.100000,2014,Comedy
+247645,Queen,8.300000,2014,Comedy:Foreign
+248390,Le Crocodile du Botswanga,4.700000,2014,Comedy
+248504,Sharknado 2: The Second One,5.400000,2014,Horror:Science Fiction:Thriller
+248507,Superchondriac,5.700000,2014,Comedy
+248611,Mea Culpa,7.200000,2014,Action:Thriller
+248774,Obvious Child,5.900000,2014,Comedy:Romance
+249021,Android Cop,4.000000,2014,Action:Science Fiction
+249164,If I Stay,8.000000,2014,Drama
+249397,Nymphomaniac: Vol. II,6.700000,2013,Drama:Mystery
+249660,God's Not Dead,6.400000,2014,Drama
+249923,Someone Marry Barry,5.800000,2014,Comedy
+250219,I Can Quit Whenever I Want,7.000000,2014,Comedy
+250349,Barbecue,5.900000,2014,Comedy
+250546,Annabelle,6.600000,2014,Horror
+250551,Gunday,5.000000,2014,Action:Crime:Drama
+250766,Life Itself,8.000000,2014,Documentary
+251519,Son of Batman,7.000000,2014,Action:Adventure:Animation
+251768,JLA Adventures: Trapped in Time,5.300000,2014,Action:Animation:Science Fiction
+252607,Fiston,6.000000,2014,Comedy
+252680,Moms' Night Out,5.600000,2014,Comedy
+253370,Vaterfreuden,6.600000,2014,Comedy
+253687,Smart Ass,7.100000,2014,Comedy:Drama
+254191,Honeymoon,6.500000,2014,Horror
+254473,Brick Mansions,5.900000,2014,Action:Crime:Drama
+254904,The November Man,6.200000,2014,Action:Crime:Thriller
+255268,Bad Asses,5.400000,2014,Action
+255913,Situation Amoureuse : C'est Compliqué,6.000000,2014,Comedy
+256092,Drive Hard,4.500000,2014,Action:Comedy:Crime
+256274,"As Above, So Below",6.600000,2014,Horror:Thriller
+256284,Apocalypse Pompeii,6.300000,2014,Action:Adventure
+256474,In the Blood,6.300000,2014,Action:Crime:Thriller
+256731,Bad Country,6.000000,2014,Action:Crime:Drama
+257346,Avengers Confidential: Black Widow & Punisher,6.100000,2014,Action:Animation:Science Fiction
+258086,The Damned,6.500000,2014,Horror:Mystery:Thriller
+258193,Alien Abduction,4.900000,2014,Horror:Science Fiction:Thriller
+258216,Nymphomaniac: Vol. I,6.300000,2013,Drama
+258251,Ironclad 2: Battle for Blood,6.400000,2014,Action:Adventure
+259018,Behaving Badly,5.300000,2014,Comedy
+259720,2 States,6.700000,2014,Drama:Romance
+260063,Seal Team Eight: Behind Enemy Lines,5.200000,2014,Action:Drama:War
+262338,Good People,6.300000,2014,Action:Crime:Thriller
+262391,What Did We Do to Deserve This?,7.200000,2014,Comedy
+262543,Autómata,6.200000,2014,Science Fiction:Thriller
+262551,Babysitting,7.500000,2014,Comedy
+264656,The Homesman,7.000000,2014,Drama:Western
+268508,The Mummy Resurrected,4.300000,2014,Horror
+269650,Appleseed Alpha,6.800000,2014,Action:Animation:Science Fiction
+272692,The Possession of Michael King,6.100000,2014,Horror
+273641,Jackass Presents: Bad Grandpa .5,6.000000,2014,Comedy
+276690,Street Fighter: Assassin's Fist,7.300000,2014,Action:Adventure:Drama:Thriller
+276935,Ek Villain,6.700000,2014,Action:Thriller:Romance
+278427,Family Guy Presents: It's a Trap!,7.100000,2010,Animation:Comedy:Fantasy:Science Fiction
+280690,Kick,6.900000,2014,Action:Comedy:Romance
+283384,The Calling,6.100000,2014,Thriller
+284427,Who Am I - No System is Safe,8.100000,2014,Thriller
+285423,Jarhead 2: Field of Fire,6.600000,2014,Action:War
+286554,Two Night Stand,7.000000,2014,Comedy:Romance
