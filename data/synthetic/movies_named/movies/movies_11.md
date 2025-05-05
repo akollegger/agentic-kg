@@ -1,0 +1,1 @@
+In a galaxy far, far away, a young farm boy embarks on a perilous journey to rescue a princess and aid a group of rebels against a tyrannical empire. With the guidance of a wise mentor and the power of the Force, he must confront dark forces and ultimately discover his destiny as a hero.

@@ -74,8 +74,8 @@ def imitate_csv(source: str, id_field: Optional[str], out: str, rows: int):
                 click.echo(f"Error: ID field '{id_field}' not found in source file", err=True)
                 sys.exit(1)
         
-        # Detect field types
-        field_types = detect_field_types(source_data)
+        # Detect field types with context awareness
+        field_types = detect_field_types(source_data, source_path=source_path)
         click.echo(f"Detected {len(field_types)} fields with types:")
         for field, field_type_info in field_types.items():
             # Check specifically for multi-value fields
@@ -84,11 +84,15 @@ def imitate_csv(source: str, id_field: Optional[str], out: str, rows: int):
                           f"enumerated: {field_type_info.get('is_enumerated', False)}, "
                           f"values: {field_type_info.get('values', [])[:5]}{'...' if len(field_type_info.get('values', [])) > 5 else ''})")
             else:
-                click.echo(f"  - {field}: {field_type_info}")
+                # Show context if available
+                context_info = ""
+                if field_type_info.get('context'):
+                    context_info = f", context: {field_type_info.get('context')}"
+                click.echo(f"  - {field}: {field_type_info}{context_info}")
         
         # Generate fake data
         click.echo(f"Generating {rows} rows of fake data...")
-        fake_data = generate_fake_data(source_data, field_types, id_field, rows)
+        fake_data = generate_fake_data(source_data, field_types, id_field, rows, source_path=source_path)
         
         # Create parent directory if it doesn't exist
         output_path.parent.mkdir(parents=True, exist_ok=True)

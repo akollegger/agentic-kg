@@ -17,4 +17,5 @@ dependencies = [
     "faker>=18.0.0",
     "nanoid>=2.0.0",
     "inflect>=6.0.0",
+    "spacy>=3.7.0",
 ]

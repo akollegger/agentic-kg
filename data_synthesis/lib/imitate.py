@@ -4,12 +4,18 @@ Utility methods for imitating CSV data.
 """
 import re
 import string
+import random
 from typing import Dict, List, Any, Optional
 
 import numpy as np
+import pandas as pd
 from faker import Faker
 import nanoid
 import inflect
+
+# Import our custom analyzers
+from data_synthesis.lib.title_generator import analyze_and_generate
+from data_synthesis.lib.context_analyzer import analyze_field_contexts
 
 # Initialize Faker and inflect
 fake = Faker()
@@ -64,8 +70,27 @@ PATTERNS = {
     'zipcode': r'^\d{5}(-\d{4})?$',
 }
 
-def detect_field_types(data: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+def detect_field_types(data: List[Dict[str, Any]], source_path: str = None) -> Dict[str, Dict[str, Any]]:
     """Detect field types with improved multi-value detection and formatting analysis"""
+    # Analyze field contexts if source path is provided
+    field_contexts = {}
+    if source_path and data:
+        field_contexts = analyze_field_contexts(source_path, data)
+        
+    # Define known field relationships
+    field_relationships = {
+        # Time-based relationships
+        'birthYear': {'related_to': 'deathYear', 'relationship': 'before'},
+        'birth_year': {'related_to': 'death_year', 'relationship': 'before'},
+        'startYear': {'related_to': 'endYear', 'relationship': 'before'},
+        'start_year': {'related_to': 'end_year', 'relationship': 'before'},
+        'startDate': {'related_to': 'endDate', 'relationship': 'before'},
+        'start_date': {'related_to': 'end_date', 'relationship': 'before'},
+        
+        # Numeric relationships
+        'minValue': {'related_to': 'maxValue', 'relationship': 'less_than'},
+        'min_value': {'related_to': 'max_value', 'relationship': 'less_than'},
+    }
     """
     Detect the type of each field in the CSV data.
     
@@ -151,7 +176,7 @@ def detect_field_types(data: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
                 
         # Check if it's a number
         if isinstance(value, (int, float)) or (
-            isinstance(value, str) and value.replace('.', '', 1).isdigit()
+            isinstance(value, str) and value and value.replace('.', '', 1).isdigit()
         ):
             try:
                 # Check if it's an integer or float
@@ -161,7 +186,8 @@ def detect_field_types(data: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
                     field_types[field] = {
                         'type': field_type,
                         'min': int(num_value),
-                        'max': int(num_value)
+                        'max': int(num_value),
+                        'allow_empty': False
                     }
                 else:
                     field_type = 'float'
@@ -169,11 +195,20 @@ def detect_field_types(data: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
                         'type': field_type,
                         'min': num_value,
                         'max': num_value,
-                        'precision': len(str(value).split('.')[-1]) if '.' in str(value) else 2
+                        'precision': len(str(value).split('.')[-1]) if '.' in str(value) else 2,
+                        'allow_empty': False
                     }
                 continue
             except (ValueError, TypeError):
                 pass
+        # Check for empty values in a field that might otherwise be numeric
+        elif value == '' or value is None:
+            # Mark this field as potentially allowing empty values
+            field_types[field] = {
+                'type': 'string',  # Default to string for now
+                'allow_empty': True,
+                'empty_probability': 0.5  # Default probability of empty values
+            }
         
         # Check against regex patterns
         for pattern_name, pattern in PATTERNS.items():
@@ -185,7 +220,8 @@ def detect_field_types(data: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
         if field_type == 'string' and isinstance(value, str) and is_title_case(value):
             field_types[field] = {
                 'type': 'string',
-                'format': 'title_case'
+                'format': 'title_case',
+                'context': field_contexts.get(field, None)
             }
             continue
                     
@@ -201,7 +237,7 @@ def detect_field_types(data: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
             else:
                 field_types[field] = {'type': field_type, 'min': 0.0, 'max': 1.0, 'precision': 2}
         else:
-            field_types[field] = {'type': field_type}
+            field_types[field] = {'type': field_type, 'context': field_contexts.get(field, None)}
     
     # Refine detection by checking more rows
     for row in data[1:min(10, len(data))]:
@@ -236,6 +272,15 @@ def detect_field_types(data: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
                 except (ValueError, TypeError):
                     # If we can't convert to float, downgrade to string
                     field_types[field] = {'type': 'string'}
+            # Check for empty values
+            elif value == '' or value is None:
+                # Update empty value probability
+                if field_types[field].get('allow_empty', False):
+                    # Count empty values to calculate probability
+                    empty_count = field_types[field].get('empty_count', 1)
+                    field_types[field]['empty_count'] = empty_count + 1
+                    # Update probability based on observed data
+                    field_types[field]['empty_probability'] = empty_count / (i + 1)
                     
             # Check for multi-value fields in other rows
             if isinstance(value, str) and field in multi_value_info:
@@ -274,6 +319,103 @@ def detect_field_types(data: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
                         for val in values:
                             multi_value_info[field]['values'].add(val.strip())
                         break
+    
+    # Special handling for deathYear field which often has empty values
+    if 'deathYear' in field_types:
+        # Mark deathYear as a special case that allows empty values
+        non_empty_values = [row.get('deathYear', '') for row in data if row.get('deathYear', '') != '']
+        if non_empty_values:
+            try:
+                # Convert to integers if possible
+                valid_years = [int(float(year)) for year in non_empty_values if year and not pd.isna(year)]
+                if valid_years:
+                    field_types['deathYear'] = {
+                        'type': 'integer',
+                        'min': min(valid_years),
+                        'max': max(valid_years),
+                        'allow_empty': True,
+                        'empty_probability': len(data) / (len(valid_years) + len(data))
+                    }
+                else:
+                    # If no valid years, treat as string with empty allowed
+                    field_types['deathYear'] = {
+                        'type': 'string',
+                        'allow_empty': True,
+                        'empty_probability': 0.7
+                    }
+            except (ValueError, TypeError):
+                # If conversion fails, treat as string with empty allowed
+                field_types['deathYear'] = {
+                    'type': 'string',
+                    'allow_empty': True,
+                    'empty_probability': 0.7
+                }
+    
+    # Detect field relationships
+    for field in list(field_types.keys()):
+        field_lower = field.lower()
+        
+        # Check for known relationships
+        for base_field, relationship in field_relationships.items():
+            if field_lower == base_field.lower():
+                related_field = relationship['related_to']
+                # Look for the related field
+                for other_field in field_types:
+                    if other_field.lower() == related_field.lower():
+                        # Add relationship information to both fields
+                        field_types[field]['related_to'] = other_field
+                        field_types[field]['relationship'] = relationship['relationship']
+                        field_types[other_field]['related_to'] = field
+                        field_types[other_field]['relationship'] = 'after' if relationship['relationship'] == 'before' else 'greater_than'
+                        break
+    
+    # Process fields with empty values
+    for field, info in field_types.items():
+        if info.get('allow_empty', False) and 'empty_count' in info:
+            # Calculate final empty probability
+            info['empty_probability'] = info['empty_count'] / len(data)
+            
+            # Determine if this is actually a numeric field that allows empty values
+            non_empty_values = [row.get(field, '') for row in data if row.get(field, '') != '']
+            if non_empty_values:
+                # Check if all non-empty values are numeric
+                try:
+                    numeric_values = [float(val) for val in non_empty_values]
+                    # Filter out NaN values
+                    valid_values = [v for v in numeric_values if not np.isnan(v)]
+                    
+                    if not valid_values:
+                        # If all values are NaN, keep as string with empty allowed
+                        continue
+                        
+                    # Check if they're all integers
+                    if all(v.is_integer() for v in valid_values):
+                        # Update field type to integer with empty allowed
+                        field_types[field] = {
+                            'type': 'integer',
+                            'min': int(min(valid_values)),
+                            'max': int(max(valid_values)),
+                            'allow_empty': True,
+                            'empty_probability': info['empty_probability']
+                        }
+                    else:
+                        # Update field type to float with empty allowed
+                        precision = max(len(str(v).split('.')[-1]) if '.' in str(v) else 0 for v in valid_values)
+                        field_types[field] = {
+                            'type': 'float',
+                            'min': min(valid_values),
+                            'max': max(valid_values),
+                            'precision': precision,
+                            'allow_empty': True,
+                            'empty_probability': info['empty_probability']
+                        }
+                except (ValueError, TypeError):
+                    # Not all values are numeric, keep as string
+                    pass
+            
+            # Clean up temporary counting fields
+            if 'empty_count' in field_types[field]:
+                del field_types[field]['empty_count']
     
     # Process multi-value fields and detect enumerated values
     for field, info in multi_value_info.items():
@@ -393,6 +535,13 @@ def generate_fake_value(field_name: str, field_type_info: Dict[str, Any], row_da
         else:
             return nanoid.generate(size=10)
     
+    # Check if this field allows empty values
+    if field_type_info.get('allow_empty', False):
+        # Determine if we should generate an empty value based on probability
+        empty_prob = field_type_info.get('empty_probability', 0.5)
+        if random.random() < empty_prob:
+            return ''
+    
     # Generate based on field type
     if field_type == 'integer':
         min_val = field_type_info.get('min', 0)
@@ -441,27 +590,59 @@ def generate_fake_value(field_name: str, field_type_info: Dict[str, Any], row_da
     # Check for special formatting
     format_type = field_type_info.get('format', None)
     
+    # Check for context-specific field types
+    context = field_type_info.get('context', None)
+    
+    # Handle person name fields
+    if context == 'person_name':
+        return fake.name()
+    
+    # Handle company name fields
+    if context == 'company_name':
+        return fake.company()
+    
+    # Handle product name fields
+    if context == 'product_name':
+        return fake.catch_phrase()
+    
     # Name-based generation for common fields
     if 'name' in field_lower or field_lower == 'title':
         if format_type == 'title_case':
-            # For movie titles, generate a more movie-like title in title case
+            # For movie titles, generate a more movie-like title using our analyzer
             if field_lower == 'title':
-                # Movie title patterns
-                patterns = [
-                    # Single title
-                    lambda: string.capwords(fake.catch_phrase()),
-                    # Title with subtitle
-                    lambda: f"{string.capwords(fake.catch_phrase())}: {string.capwords(fake.bs())}",
-                    # Title with 'The'
-                    lambda: f"The {string.capwords(fake.catch_phrase())}",
-                    # Year-based title
-                    lambda: f"{fake.pyint(min_value=1900, max_value=2023)}: {string.capwords(fake.catch_phrase())}"
-                ]
-                return np.random.choice(patterns)()
+                # Get source data for analysis
+                source_titles = []
+                if row_data and 'source_data' in row_data:
+                    source_data = row_data.get('source_data', [])
+                    # Extract titles from source data
+                    source_titles = [row.get('title', '') for row in source_data if row.get('title')][:100]
+                
+                # If we have source titles, analyze and generate new ones
+                if source_titles:
+                    return analyze_and_generate(source_titles)[0]
+                else:
+                    # Fallback to simpler patterns if no source data
+                    patterns = [
+                        # Single title
+                        lambda: string.capwords(fake.catch_phrase()),
+                        # Title with subtitle
+                        lambda: f"{string.capwords(fake.catch_phrase())}: {string.capwords(fake.bs())}",
+                        # Title with 'The'
+                        lambda: f"The {string.capwords(fake.catch_phrase())}",
+                        # Year-based title
+                        lambda: f"{fake.pyint(min_value=1900, max_value=2023)}: {string.capwords(fake.catch_phrase())}"
+                    ]
+                    return np.random.choice(patterns)()
+            # For person name fields with title case
+            elif field_lower == 'name' and 'person' in str(row_data.get('source_path', '')).lower():
+                return fake.name()
             else:
                 # For other title case fields
                 return string.capwords(fake.catch_phrase())
         else:
+            # Check if this might be a person name based on the file name
+            if field_lower == 'name' and 'person' in str(row_data.get('source_path', '')).lower():
+                return fake.name()
             return fake.catch_phrase()
     elif 'first' in field_lower and 'name' in field_lower:
         return fake.first_name()
@@ -504,8 +685,67 @@ def generate_fake_value(field_name: str, field_type_info: Dict[str, Any], row_da
     # Default to a random string
     return fake.word()
 
+def generate_fake_value_with_constraints(field_name: str, field_type_info: Dict[str, Any], 
+                                  row_data: Dict[str, Any], max_id: Any = None, id_field: bool = False) -> Any:
+    """
+    Generate a fake value that respects constraints with related fields.
+    
+    Args:
+        field_name: Name of the field to generate a value for
+        field_type_info: Type information for the field
+        row_data: Current row data (for checking related fields)
+        max_id: Maximum ID value (for ID fields)
+        id_field: Whether this is an ID field
+        
+    Returns:
+        Generated value that respects constraints
+    """
+    # Check if this field has relationships with other fields
+    if 'related_to' in field_type_info and 'relationship' in field_type_info:
+        related_field = field_type_info['related_to']
+        relationship = field_type_info['relationship']
+        
+        # If the related field already has a value, apply constraints
+        if related_field in row_data and row_data[related_field] != '':
+            related_value = row_data[related_field]
+            
+            # Handle different relationship types
+            if relationship == 'before':
+                # This field should be before the related field
+                if field_type_info['type'] == 'integer':
+                    # Ensure this value is less than the related value
+                    max_val = int(related_value) - 1
+                    min_val = field_type_info.get('min', 0)
+                    if min_val >= max_val:
+                        # If constraint can't be satisfied, return empty if allowed
+                        if field_type_info.get('allow_empty', False):
+                            return ''
+                        # Otherwise use the min value
+                        return min_val
+                    # Generate a value between min and max_val
+                    return fake.pyint(min_value=min_val, max_value=max_val)
+            
+            elif relationship == 'after':
+                # This field should be after the related field
+                if field_type_info['type'] == 'integer':
+                    # Ensure this value is greater than the related value
+                    min_val = int(related_value) + 1
+                    max_val = field_type_info.get('max', 9999)
+                    if min_val >= max_val:
+                        # If constraint can't be satisfied, return empty if allowed
+                        if field_type_info.get('allow_empty', False):
+                            return ''
+                        # Otherwise use the max value
+                        return max_val
+                    # Generate a value between min_val and max
+                    return fake.pyint(min_value=min_val, max_value=max_val)
+    
+    # If no constraints or they don't apply, use regular generation
+    return generate_fake_value(field_name, field_type_info, row_data, max_id, id_field)
+
+
 def generate_fake_data(source_data: List[Dict[str, Any]], field_types: Dict[str, Dict[str, Any]], 
-                      id_field: str, num_rows: int) -> List[Dict[str, Any]]:
+                      id_field: str, num_rows: int, source_path: str = None) -> List[Dict[str, Any]]:
     """
     Generate fake data based on the source data structure.
     
@@ -533,7 +773,12 @@ def generate_fake_data(source_data: List[Dict[str, Any]], field_types: Dict[str,
         for field, field_type_info in field_types.items():
             if field == id_field:
                 continue
-            row[field] = generate_fake_value(field, field_type_info)
+            # Pass source data and path for fields that need it (like title and names)
+            row['source_data'] = source_data
+            row['source_path'] = source_path
+            
+            # Use constraint-based generation to ensure logical relationships
+            row[field] = generate_fake_value_with_constraints(field, field_type_info, row_data=row)
         
         # Second pass: generate ID field (if specified)
         if id_field:
@@ -543,6 +788,13 @@ def generate_fake_data(source_data: List[Dict[str, Any]], field_types: Dict[str,
             if isinstance(max_id, (int, float)):
                 max_id = row[id_field]
         
+        # Remove the source_data and source_path before adding to results
+        if 'source_data' in row:
+            del row['source_data']
+        if 'source_path' in row:
+            del row['source_path']
+            
+        # Add to results
         fake_data.append(row)
     
     return fake_data

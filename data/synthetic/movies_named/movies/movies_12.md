@@ -1,0 +1,1 @@
+In a vibrant underwater world, a timid clownfish embarks on a perilous journey across the ocean to rescue his son, who has been captured by a diver. Along the way, he forms unexpected friendships and discovers the true meaning of courage and family, all while navigating the colorful and often dangerous expanse of the sea.

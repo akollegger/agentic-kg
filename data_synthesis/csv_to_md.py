@@ -1,16 +1,18 @@
 import csv
 import json
+import re
 from pathlib import Path
-from typing import List
+from typing import List, Optional, Union, Dict, Any
 import click
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
+import nanoid
 
 # Load environment variables from .env file
 load_dotenv()
 
-def process_csv_file(csv_file: Path, prompt_template: str, output_dir: Path, client: OpenAI, max_rows: int | None = None, model: str = 'gpt-4o-mini') -> None:
+def process_csv_file(csv_file: Path, prompt_template: str, output_dir: Path, client: OpenAI, filename_field: Optional[str] = None, max_rows: Optional[int] = None, model: str = 'gpt-4o-mini') -> None:
     """Process a single CSV file and generate synthetic data for each row.
     
     Args:
@@ -45,8 +47,36 @@ def process_csv_file(csv_file: Path, prompt_template: str, output_dir: Path, cli
                 # Extract response
                 result = response.choices[0].message.content
                 
+                # Generate filename based on the filename_field if provided
+                if filename_field and filename_field in row:
+                    field_value = row[filename_field]
+                    
+                    # Check if the field value is numeric
+                    try:
+                        numeric_value = float(field_value)
+                        is_numeric = True
+                    except (ValueError, TypeError):
+                        is_numeric = False
+                    
+                    if is_numeric:
+                        # For numeric fields, use the source file basename and the numeric value
+                        base_name = csv_file.stem
+                        filename = f"{base_name}_{int(float(field_value))}.md"
+                    else:
+                        # For string fields, convert to snake case and add nanoid
+                        # Convert to lowercase and replace spaces/special chars with underscores
+                        snake_case = re.sub(r'[^\w\s]', '', str(field_value)).lower().replace(' ', '_')
+                        # Limit length to avoid extremely long filenames
+                        snake_case = snake_case[:30]
+                        # Generate a 4-character nanoid
+                        unique_id = nanoid.generate(size=4)
+                        filename = f"{snake_case}_{unique_id}.md"
+                else:
+                    # Default naming if no filename field is provided
+                    filename = f"row_{i+1}.md"
+                
                 # Save to markdown file
-                output_file = file_output_dir / f"row_{i+1}.md"
+                output_file = file_output_dir / filename
                 with open(output_file, 'w') as f:
                     f.write(result)
                 
@@ -64,7 +94,8 @@ def process_csv_file(csv_file: Path, prompt_template: str, output_dir: Path, cli
 @click.option('--rows', '-n', type=int, help='Maximum number of rows to process per file')
 @click.option('--api', help='OpenAI API key (overrides environment variables)')
 @click.option('--model', '-m', default='gpt-4o-mini', help='OpenAI model to use (default: gpt-4o-mini)')
-def generate_synthetic_data(csv_files: List[str], prompt_file: str | None, prompt: str | None, output_dir: str, rows: int | None, api: str | None, model: str):
+@click.option('--filename-field', help='CSV field to use for naming output files. For string fields, converts to snake_case with a nanoid. For numeric fields, uses source filename with the numeric value.')
+def generate_synthetic_data(csv_files: List[str], prompt_file: str | None, prompt: str | None, output_dir: str, rows: int | None, api: str | None, model: str, filename_field: Optional[str] = None):
     """Generate synthetic data based on CSV input using OpenAI.
     
     Process one or more CSV files, applying the given prompt template to each row
@@ -117,7 +148,7 @@ def generate_synthetic_data(csv_files: List[str], prompt_file: str | None, promp
     for csv_file in csv_files:
         csv_path = Path(csv_file)
         print(f"\nProcessing {csv_path.name}...")
-        process_csv_file(csv_path, prompt_template, output_path, client, rows, model)
+        process_csv_file(csv_path, prompt_template, output_path, client, filename_field, rows, model)
 
 if __name__ == '__main__':
     generate_synthetic_data()
