@@ -1,0 +1,3 @@
+Rating: 4 - great
+
+Review: @ktravis_1784 - "The Town" captivated me with its gripping crime drama that kept my heart racing from start to finish. As someone who enjoys both books and movies, I appreciated the depth of character development and the intricate plot that felt reminiscent of a well-crafted novel. Ben Affleck’s direction combined with a strong performance from the cast created a thrilling atmosphere that pulled me into the world of Boston’s bank robbers. While the film had its flaws, such as a few predictable moments, the tension and emotional stakes made it highly enjoyable. I would definitely recommend it to my friends, especially for a movie night with some good snacks!

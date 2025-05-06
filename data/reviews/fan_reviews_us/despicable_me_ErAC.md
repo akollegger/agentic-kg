@@ -1,0 +1,5 @@
+**Rating:** 4 - great
+
+**Review:** As a massive fan of both animated films and family-friendly stories, "Despicable Me" truly stole my heart. While it might not have the grandeur of some of the blockbuster animations, its blend of humor, quirky characters, and heartfelt moments made it highly enjoyable. I loved how the film showcases themes of love and redemption, especially through Gru's transformation as a father figure. The mischievous Minions added just the right amount of silliness, which had me laughing out loud. It's a movie I'd definitely recommend to friends, especially as a perfect pick for a cozy evening in after a day filled with outdoor activities like hiking or playing sports - it makes for a great wind-down. Plus, who doesn't love a good laugh with a side of snacks? Overall, a delightful watch! 
+
+**Credit:** @dbrowning_2228

@@ -1,0 +1,3 @@
+Rating: 4 - great - movie was highly enjoyable, would recommend to friends
+
+Review: @wturk_4654 Here! I just finished watching "Ca$h," and I must say, I really enjoyed it! This indie gem boasts a gripping narrative that keeps you on the edge of your seat, blending action and thriller elements seamlessly. The plot, which revolves around a desperate man and his moral conflicts, had me intrigued throughout. As someone who loves outdoor activities and values health and wellness, I appreciated the film’s gritty realism and the character’s struggle against the odds. It's a film that not only entertains but also provokes thought—definitely one I'd recommend to friends looking for a thrilling night in!

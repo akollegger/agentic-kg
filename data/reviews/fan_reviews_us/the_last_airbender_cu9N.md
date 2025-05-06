@@ -1,0 +1,3 @@
+Rating: 2 - bad - had some problems with the movie. not recommended
+
+Review by @ojames_4515: I was really looking forward to "The Last Airbender" because I love action and fantasy films, especially those that promise epic adventures. Unfortunately, this one left me disappointed. The visuals were impressive, but the plot felt rushed and the character development was lacking, making it hard to connect with anyone on screen. As a fan of immersive storytelling, I was left wishing I had spent my evening revisiting some classic animated series instead. If you're thinking about watching it, I'd suggest saving your time and opting for something more fulfilling.

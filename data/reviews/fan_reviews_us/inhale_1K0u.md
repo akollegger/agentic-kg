@@ -1,0 +1,4 @@
+**Rating: 4 - great**  
+**Review by: @sadams_5091**
+
+"Inhale" delivers a gripping mix of action, drama, and thriller elements that kept me on the edge of my seat. The film tackles serious issues that resonate deeply, especially in today's political climate, which I found particularly engaging as a politics enthusiast. The moral dilemmas faced by the characters sparked thoughtful conversations for me and my family, making it a perfect pick for a family movie night. The pacing was well done, and there were enough thrilling moments to keep me entertained throughout. With its stylish cinematography, I couldn't help but appreciate the fashion choices made by the characters, seamlessly blending the narrative with engaging visuals. Overall, I’d recommend this film to my friends, especially those who appreciate a storyline with both heart and action.

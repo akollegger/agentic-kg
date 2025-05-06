@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+Review by @pmarshall_5916: "Takers" is a thrilling ride that expertly blends action and crime in a way that kept me on the edge of my seat. The ensemble cast delivers powerful performances, and the fast-paced heist scenes are cinematic gold. As a fan of heist films and intense thrillers, I found the adrenaline-fueled plot and intricate character dynamics highly enjoyable. The film does a great job of balancing nail-biting tension with engaging storylines. I would definitely recommend it to friends who appreciate action-packed dramas as much as I do!

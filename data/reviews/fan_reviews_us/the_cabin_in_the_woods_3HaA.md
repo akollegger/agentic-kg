@@ -1,0 +1,4 @@
+**Rating: 4 - great**  
+**Review by: @ljeanbaptiste_2441**
+
+"The Cabin in the Woods" is a thrilling ride that cleverly twists the classic horror formula in a way that keeps you guessing. As a fan of horror and thrillers, I appreciate how the film pays homage to genre tropes while subverting expectations in an inventive narrative. The chilling atmosphere combined with sharp humor made this a highly enjoyable experience for me. Plus, the ensemble cast brought fantastic performances that made it feel fresh and exciting. I’d definitely recommend it to friends looking for a horror flick that will keep them on the edge of their seats!

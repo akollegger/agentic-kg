@@ -1,0 +1,3 @@
+Rating: 3 - Ok
+
+Review by @cmontgomery_1589: "Jonah Hex" had its moments that made it an entertaining watch, but overall, it didn't quite hit the mark for me. As someone who enjoys a mix of action and fantasy, I appreciated the unique setting of the Old West combined with supernatural elements, and the visuals were pretty captivating at times. However, the plot felt a bit disjointed, leaving me wanting more depth to the characters and storyline. I was happy to watch it, especially with some good snacks on hand, but I wouldn’t say it’s a must-see. Perhaps if the pacing were tightened up or the script polished, it could have reached greater heights.

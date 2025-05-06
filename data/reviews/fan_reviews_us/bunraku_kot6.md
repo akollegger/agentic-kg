@@ -1,0 +1,3 @@
+**Rating: 4/5 - Great**
+
+@gdillahunt_5702 here! I just finished watching "Bunraku," and I have to say, it was highly enjoyable! The unique blend of action, drama, and thriller kept me glued to the screen, and the visual style felt like an artful fusion of graphic novel and samurai film. The performances from the cast, particularly Josh Hartnett and Gackt, were compelling, making their characters' struggles resonate with me. I love films that challenge traditional storytelling, and "Bunraku" definitely does that while delivering some intense sequences that are a thrill to watch. I’d recommend it to any fellow movie fan looking for something that takes risks and delivers a stylish punch!

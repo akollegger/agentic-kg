@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+@hmimms_774 reviews "Alpha and Omega": "As a huge fan of animated family movies, I found 'Alpha and Omega' to be a delightful escape into the wilderness. The film’s vibrant animation truly captured the beauty of nature, and the characters were endearing, especially the dynamic between the alpha and omega wolves. While the plot was somewhat predictable, the humor and heartwarming moments made it quite enjoyable. It’s a perfect film to watch with family on a cozy night in, and I’d definitely recommend it to fellow animation lovers looking for something wholesome and fun!"

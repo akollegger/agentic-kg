@@ -1,0 +1,3 @@
+**Rating: 4 - great - movie was highly enjoyable, would recommend to friends**
+
+Review by @rwilliams_3454: "Salt" kept me on the edge of my seat from start to finish! Angelina Jolie delivers a powerhouse performance as a CIA officer accused of being a Russian spy, seamlessly blending action with suspense. The twists and turns were beautifully crafted, and as someone who loves thrilling action films, I found the pacing just right. The intricate web of mysteries made it hard to predict what would happen next, which is always a plus for me. I’d definitely recommend watching it with friends for a fun movie night—you’ll want to discuss all the plot twists afterward!

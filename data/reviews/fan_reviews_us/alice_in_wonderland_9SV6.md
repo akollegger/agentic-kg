@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+Review by @gdillahunt_5702: "Alice in Wonderland" is a vibrant, imaginative journey that truly transports you to a whimsical world filled with unforgettable characters and stunning visuals. As a fan of fantasy, I found myself captivated by the creative storytelling and the surreal landscapes brought to life by Tim Burton’s unique style. The performances, particularly Johnny Depp as the Mad Hatter, added depth to the enchanted chaos that runs throughout the film. While it had its quirks and at times felt a bit frenetic, it is a movie that I'd happily recommend to friends for its sheer creativity and visual splendor, especially with a bowl of popcorn in hand!

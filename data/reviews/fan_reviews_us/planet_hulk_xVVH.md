@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+As a huge fan of both animated features and superhero stories, I really enjoyed "Planet Hulk." The action sequences were visually stunning, and the character development of Hulk was both engaging and emotional. The animation style perfectly captured the epic grandeur of the story, making each fight scene thrilling to watch. While there were some pacing issues in the middle, the captivating journey of Hulk as he navigates through the alien planet and learns to fight for a cause resonated with me. I loved how it blended elements of sci-fi and action in a way that felt fresh, and I would definitely recommend it to friends who appreciate a solid animated action film! — @gmohr_4345

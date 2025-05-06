@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+Review by @gramirez_1085: "TRON: Legacy" is a visually stunning sequel that dives deep into a captivating digital world. As someone passionate about movies and beauty, I found myself mesmerized by the film’s sleek aesthetics and innovative visual effects that truly redefine the sci-fi genre. The energetic soundtrack by Daft Punk sets the perfect tone, enhancing every thrilling sequence. While the plot had its flaws and could feel a bit convoluted at times, the nostalgic connection to the original "TRON" was beautifully balanced with modern storytelling. I had so much fun watching it, especially with friends who appreciated its artistic approach and adventurous spirit. Definitely a film I'd recommend for a visually rich movie night!

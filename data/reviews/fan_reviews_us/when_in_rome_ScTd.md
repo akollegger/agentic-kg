@@ -1,0 +1,5 @@
+**Rating: 4 - great**
+
+"When in Rome" is a delightful romantic comedy that perfectly blends laughter with a touch of whimsy, making it a great watch for anyone who appreciates a light-hearted escape from reality. The plot revolves around the concept of love and the amusing chaos that ensues when a woman impulsively takes coins from a fountain in Rome, inadvertently attracting the affections of several suitors. I found myself laughing out loud at the antics, and the vibrant backdrop of Rome added to the charm. As someone who enjoys both fitness and fashion, I appreciated Kristen Bell's stylish wardrobe throughout the movie, and the fun romance kept me entertained, making me think of how much better the experience would have been with some good snacks on hand. I’d definitely recommend it to friends looking for a feel-good movie night! 
+
+- @jnicholson_1363

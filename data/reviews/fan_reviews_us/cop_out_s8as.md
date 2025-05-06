@@ -1,0 +1,4 @@
+**Username:** @arobison_4541  
+**Rating:** 3 (ok)
+
+"Cop Out" is a movie that had its moments, blending action and comedy in a way that was enjoyable, but ultimately left me wanting more. While the chemistry between Bruce Willis and Tracy Morgan brought some laughs, the plot felt a bit all over the place, reminiscent of some chaotic gaming sessions I've had. As a fan of movies paired with gaming marathons, I found it made for decent background entertainment while snacking on some popcorn, but I wouldn’t rush to recommend it to friends. If you’re in the mood for a light watch with a few chuckles, it’s worth the time, but don’t expect anything groundbreaking.

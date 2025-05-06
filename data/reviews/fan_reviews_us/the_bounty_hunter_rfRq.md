@@ -1,0 +1,3 @@
+Rating: 3 - ok  
+
+Review: As a fan of action movies, I was excited to dive into "The Bounty Hunter." While the premise of a bounty hunter chasing his ex-wife is intriguing, I found the execution a bit lacking—some of the comedy felt forced and the plot had a few too many clichés for my taste. However, I enjoyed some of the action sequences and the chemistry between the lead characters. Watching it with a bowl of popcorn and a few slices of my favorite pizza definitely elevated the experience, so I’d say it’s a decent watch if you have some good snacks on hand. Overall, it's not a movie I'd rave about, but it passes the time on a lazy afternoon. – @gdillahunt_5702

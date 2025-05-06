@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+@dhaden_55: "Leap Year" was a delightful surprise that I didn't quite expect! The charming chemistry between Amy Adams and Matthew Goode made me smile throughout the movie. As someone who loves a good romantic comedy, I found myself rooting for their characters as they navigated the comedic mishaps of a leap year proposal in Ireland. The stunning scenery added a bonus layer to the film, making me wish for a getaway of my own! While there were a few predictable tropes, the overall experience was enjoyable, and I would definitely recommend it to friends for a cozy movie night with snacks on hand.

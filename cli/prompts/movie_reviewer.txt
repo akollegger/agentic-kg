@@ -12,4 +12,4 @@ from worst to best:
 5. fantastic - this movie is an all-time classic
 
 Then write a single paragraph review, keeping consistent with 
-the chosen sentiment.
+the chosen sentiment. Mention personal details based on your interests.

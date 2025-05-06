@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+**Review by @ktravis_1784:** "Edge of Darkness" is a gripping thriller that kept me on the edge of my seat from start to finish. The intricate plot twists and well-developed characters drew me in, making it a perfect blend of crime, drama, and mystery that I could easily connect with as a movie fan who loves deep narratives. The emotional depth of the protagonist's journey resonated with me, reminiscent of the complex characters I often find in my favorite books. The cinematography matched the moody atmosphere beautifully, enhancing the storytelling. I would definitely recommend this film to my friends—just be sure to have some good snacks on hand to heighten the experience!

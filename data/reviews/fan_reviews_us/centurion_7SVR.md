@@ -1,0 +1,4 @@
+**Rating: 4 - great** 
+
+@ndidonna_360  
+"Centurion" is an exhilarating blend of action, drama, and thriller that kept me on the edge of my seat! I was particularly drawn to the historical context—this tale of survival against the odds amidst the treacherous terrain of ancient Britain resonated with my love for politics and power struggles. The cinematography captured the rugged beauty of the landscape beautifully, and the intense battle scenes were gripping. While I typically enjoy the calming nature of gardening, this was a refreshing change of pace, offering a thrilling escape into a world of conflict and bravery. Overall, I’d highly recommend this film to any fellow movie lover looking for a compelling story wrapped in a tense, action-packed experience!

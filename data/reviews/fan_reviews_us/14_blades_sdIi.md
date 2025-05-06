@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+@rcollins_3145 here, and I just finished watching "14 Blades," a thrilling blend of action, drama, and suspense that kept me on the edge of my seat. The choreography of the martial arts scenes is nothing short of breathtaking, and the storyline—centering on betrayal and loyalty in ancient China—had me hooked from the beginning. While I appreciate a good historical backdrop in action films, I especially enjoyed the layers of character development that made the stakes even higher. It's the kind of movie that I’d happily recommend to my friends for a movie night, especially if they enjoy a mix of heart-pounding action and dramatic flair. Definitely worth a watch!

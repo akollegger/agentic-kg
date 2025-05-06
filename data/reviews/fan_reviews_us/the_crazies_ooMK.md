@@ -1,0 +1,3 @@
+Rating: 4 - great - movie was highly enjoyable, would recommend to friends
+
+Review: @wturk_4654 here! I just finished watching "The Crazies," and I was pleasantly surprised by how much I enjoyed it. As someone who often gravitates towards health and wellness, I found the film's exploration of how a toxic environment can affect human behavior particularly intriguing. The mix of action and horror kept my adrenaline pumping, which I love from my outdoor activities, making it a thrilling watch. The film's atmosphere was enhanced by some genuinely creepy moments that had me on the edge of my seat. Overall, I'd definitely recommend it to friends who appreciate a good mystery and enjoy a solid scare!

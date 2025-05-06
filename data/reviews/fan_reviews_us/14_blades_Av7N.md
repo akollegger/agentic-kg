@@ -1,0 +1,3 @@
+**Rating: 4 - great - movie was highly enjoyable, would recommend to friends**
+
+Review by @gramirez_1085: "14 Blades" delivers an exhilarating mix of action, drama, and suspense that kept me on the edge of my seat from start to finish. As a fan of both movies and beauty, I particularly appreciated the film’s stunning cinematography and the intricate choreography of the fight scenes, which were not just brutal but also artistically shot. The plot, revolving around a loyal imperial guard facing betrayal, weaves an engaging story that keeps you guessing. I found the lead's journey both compelling and relatable, as they navigated themes of loyalty and honor amidst chaos. This is definitely a film I’d recommend to friends for a thrilling movie night!

@@ -1,0 +1,4 @@
+**Rating: 4 - Great**
+
+Review: "@mgreen_5237"  
+Having a deep appreciation for movies that touch on the human experience, I thoroughly enjoyed "My Name Is Khan." The story beautifully intertwines themes of love and resilience, showcasing how compassion can triumph over adversity. As a pet enthusiast, I found the relationship between the characters to be heartwarming, reminiscent of the unconditional love we receive from our furry friends. The film's exploration of social issues highlights the importance of empathy in our increasingly tech-driven world, which really resonated with my interests in health and wellness. Overall, I highly recommend this movie to anyone looking for a touching drama that stays with you long after it ends!

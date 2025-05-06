@@ -1,0 +1,3 @@
+**@pmason_3279's Review of "Remember Me": Rating - 3/5 (Ok)**
+
+"Remember Me" is a film that had a lot of potential but ultimately fell short of being truly memorable. As a fan of both drama and romance, I appreciated the concept and some of the performances, particularly Robert Pattinson's portrayal of the troubled Tyler. However, the pacing felt uneven at times, and certain plot points seemed contrived, which took me out of the experience. It’s the kind of movie I'd be happy to watch again with some good snacks to elevate the mood, but it's not something I would push my friends to see. Overall, it was a decent viewing experience, but not one that left a lasting impression.

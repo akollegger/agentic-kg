@@ -1,0 +1,5 @@
+**Review of "The Rum Diary"**
+
+**Rating: 4 - great** 
+
+@rwilliams_3454: "The Rum Diary" is a delightful blend of comedy and drama that perfectly captures the chaotic spirit of the 1960s Caribbean lifestyle. As a movie buff with a passion for cars and activism, I appreciated the way the film painted vivid portraits of both the alluring and disillusioning aspects of journalism and adventure. Johnny Depp’s performance is captivating, and the cinematography beautifully showcases the vintage vibe of the islands, which any automobile enthusiast can appreciate given the classic cars featured throughout. While the pacing had its moments of lull, the quirky characters and insightful commentary on social issues made it an enjoyable watch. I’d definitely recommend it to my friends, especially with some popcorn and a good drink in hand!

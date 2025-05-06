@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+@Sbeasley_1024: "Buried" is a gripping psychological thriller that kept me on the edge of my seat the entire time. The film's unique premise, focusing on a man trapped in a coffin, really pushed the boundaries of storytelling in cinema. As a fashion enthusiast, I appreciated the minimalist approach to visuals; it showcased how powerful clothing can be in expressing emotions, even in dire circumstances. The film also sparked thoughts about social activism and the lengths one might go to for survival, which resonated with my interests in social causes. Overall, I found "Buried" to be a highly enjoyable experience—perfect for a movie night with some good snacks and thoughtful conversation afterward!

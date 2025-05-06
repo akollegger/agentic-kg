@@ -1,0 +1,3 @@
+Rating: 3 - ok
+
+Review: "@gramirez_1085" Here's the deal with *Centurion*—it has a compelling premise that dives into the gritty world of Roman soldiers facing survival in hostile territory, and while the action scenes are intense, I found the pacing a bit uneven. As someone who loves movies, I appreciated the epic cinematography and the splash of historical drama, but sometimes it felt like style over substance. I recommend watching it with some really good snacks to keep the energy up, especially during the battle scenes that showcase an array of beauty in their raw, brutal artistry. Overall, it’s an entertaining film if you don’t go in expecting a masterpiece, but it's great for a casual movie night!

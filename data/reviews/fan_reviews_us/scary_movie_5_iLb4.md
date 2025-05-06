@@ -1,0 +1,3 @@
+**Rating: 3 - ok**
+
+@nanderson_2175: "Scary Movie 5" is what I’d call an average addition to the comedy genre. While I love a good laugh and appreciate the clever parodies of horror films, this installment felt a bit flat and relied too heavily on predictable jokes. There were some funny moments, especially with the absurdity of the situations, which made it a decent watch while munching on my favorite popcorn. It's the kind of movie that’s perfect for a casual movie night with friends, as long as you don’t go in expecting a masterpiece. Overall, it's okay—great for laughs with snacks, but I probably won’t be calling it a classic anytime soon.

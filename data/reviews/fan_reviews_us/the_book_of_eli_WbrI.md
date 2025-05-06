@@ -1,0 +1,3 @@
+**Rating: 4 - great - movie was highly enjoyable, would recommend to friends**
+
+Review by @dwilliams_2807: "The Book of Eli" is a post-apocalyptic gem that kept me on the edge of my seat while providing an intriguing narrative and solid performances, particularly from Denzel Washington. As someone who enjoys a dash of adrenaline in both movies and gaming, I was captivated by the film's action-packed sequences and the moral dilemmas faced by the protagonist. The cinematography beautifully captures the desolate landscapes, reminiscent of the carefully curated aesthetic I appreciate in fashion and gardening. This movie strikes a balance between thrill and thought, making it a great pick for my next movie night with friends—alongside some delicious snacks, of course!

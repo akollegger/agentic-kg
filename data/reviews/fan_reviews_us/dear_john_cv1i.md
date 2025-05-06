@@ -1,0 +1,4 @@
+Rating: 4 - great
+
+Review: @dhaden_55  
+"Dear John" pleasantly surprised me with its heartfelt storytelling and strong emotional core. While it explores themes of love and sacrifice against the backdrop of war, it also touched on the larger social issues of duty and loyalty, which I found particularly relevant given my passion for social causes and activism. The chemistry between Channing Tatum and Amanda Seyfried brought the romance to life, making me reflect on the sacrifices we make for the ones we love. As a fan of entrepreneurship, I appreciated the character development and how personal choices shaped their journeys, much like the paths we navigate in business. Overall, I found "Dear John" a highly enjoyable film, perfect for a cozy night in with some good snacks.

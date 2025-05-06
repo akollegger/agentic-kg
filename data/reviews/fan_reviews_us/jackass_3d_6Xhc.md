@@ -1,0 +1,4 @@
+### Review of *Jackass 3D*  
+**Rating: 4 - Great**  
+**Review by @sroe_2015:**  
+I just finished watching *Jackass 3D*, and honestly, it was highly enjoyable! The outrageous stunts and wild antics had me laughing out loud, which is not easy to do considering I usually prefer to get lost in DIY projects. While I was crafting some new decorations during the slower parts, the gang's hilarious mischief kept drawing my attention back to the screen. The combination of insane comedy and action is something that really works here; dare I say, it’s perfect for a fun movie night with friends. If you’re a fan of chaos and laughter, I’d definitely recommend giving it a watch!

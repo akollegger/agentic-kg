@@ -1,0 +1,4 @@
+**Rating: 4 - great**
+
+Review by @rcarter_4104:  
+"She's Out of My League" is a delightful blend of comedy and romance that had me laughing from start to finish. I truly appreciated how the film captures the awkwardness of dating while also delving into the insecurities we all face, which resonated with me as a parent navigating the ups and downs of family life. The chemistry between the leads was palpable, making their journey feel genuine and relatable. I found myself rooting for them, and the humor struck the perfect chord between light-hearted and heartfelt—ideal for a cozy movie night with the family. If you're a fan of feel-good films that leave you with a smile, I highly recommend giving this one a watch.

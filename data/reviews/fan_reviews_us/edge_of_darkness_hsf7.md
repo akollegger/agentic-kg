@@ -1,0 +1,4 @@
+**Rating: 4 - great**  
+
+@cdaniels_1707  
+"Edge of Darkness" is a gripping thriller that kept me on the edge of my seat from start to finish. The blend of crime and drama is executed flawlessly, with Mel Gibson delivering a powerful performance as a father seeking justice. The film's pacing and tension kept my heart racing, reminiscent of the intense narratives I often enjoy in movies of this genre. While some plot twists were somewhat predictable, the emotional depth and moral dilemmas really resonated with me. Definitely a movie I would recommend to friends, especially for those cozy movie nights with popcorn in hand!

@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+Review by @wkim_2061: I recently watched "The Sorcerer's Apprentice," and I must say, it was a delightful blend of action, adventure, and humor that kept me thoroughly entertained. As someone who enjoys the outdoors, I appreciated the sweeping landscapes and dynamic visuals that brought the magical world to life. The characters were engaging, and the plot had enough twists to keep me intrigued, reminiscent of the historical tales I love. While the movie didn’t quite reach the status of a classic, it was definitely a fun ride that I'd recommend to friends for a casual movie night—especially with some good snacks on hand!

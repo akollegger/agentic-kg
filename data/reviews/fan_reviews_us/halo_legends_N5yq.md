@@ -1,0 +1,4 @@
+**Rating: 4 - great**  
+**Review by: @mgreen_5237**
+
+As a huge fan of both sci-fi and gaming, I was genuinely excited to dive into "Halo Legends," and I wasn't disappointed. The animation style is visually striking, perfectly capturing the universe of the Halo franchise while providing a variety of narratives that broaden the lore. Each segment tells a unique story, offering both action and depth, which I found engaging, especially since I enjoy exploring character backgrounds in video game narratives. Although there were some pacing issues, the overall experience was highly enjoyable—perfect for a movie night with friends and a bunch of snacks. I'm definitely recommending it to fellow gamers and animation lovers!

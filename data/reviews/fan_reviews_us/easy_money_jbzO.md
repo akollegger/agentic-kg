@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+**Review by @alindall_4087:** "Easy Money" delivers a gripping combination of crime, drama, and thrills that kept me on the edge of my seat from start to finish. The film revolves around the complexities of moral choices and the pursuit of wealth, and it's a theme that resonates with anyone who enjoys a good heist story. The performances are solid, particularly the lead, who brings an authenticity to the role that makes you root for him despite his dubious choices. As a fan of crime dramas, I appreciated the intricate plot and the tension that builds throughout. I’d definitely recommend it to fellow movie buffs and will be adding it to my collection for future re-watches, ideally with a bowl of popcorn by my side!

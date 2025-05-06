@@ -1,0 +1,3 @@
+**Rating: 3 - ok**
+
+@ktravis_1784 here! I recently watched "Nine Dead," and I have to say, it was an interesting mix of crime, drama, and suspense. The premise of nine strangers being trapped in a room was intriguing, and there were moments that kept me on the edge of my seat. However, while the film had a solid concept, the execution felt a bit lacking at times, with some plot holes that left me scratching my head. As a movie fan who also enjoys a good book, I found the character development to be somewhat shallow compared to what I've read in some deep thrillers. Nevertheless, it’s still worth a watch if you have some good snacks on hand and are in the mood for a twisty thriller!

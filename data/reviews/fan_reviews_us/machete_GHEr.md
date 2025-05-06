@@ -1,0 +1,3 @@
+**Rating: 4 - Great** 
+
+Review by @dbrowning_2228: "Machete" is an exhilarating ride that perfectly fuses action, comedy, and a bit of thriller to create a highly enjoyable film experience. As someone who appreciates the adrenaline of outdoor activities and the thrill of sports, I found Machete's over-the-top action sequences to be both entertaining and exhilarating. Danny Trejo shines in his role, delivering a performance that balances toughness with a surprising sense of humor. The absurdity and dark satire woven throughout the film make it a fun watch, especially with friends and some good snacks. It's definitely a movie I would recommend for anyone looking for a wild, action-packed escape!

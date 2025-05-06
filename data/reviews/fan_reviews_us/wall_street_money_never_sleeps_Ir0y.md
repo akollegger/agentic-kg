@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+@pmason_3279 Here, and I recently watched "Wall Street: Money Never Sleeps." As a fan of crime dramas, I found this film highly enjoyable, especially with its intricate portrayal of the financial world and the moral dilemmas faced by its characters. The performances, particularly Michael Douglas reprising his role as Gordon Gekko, were captivating and added depth to the already compelling plot. While it does have its slower moments, the dialogue was sharp and the themes of ambition and betrayal resonated with me. I would definitely recommend this film to friends who appreciate a good mix of drama and crime, especially if they enjoy captivating stories about the high-stakes world of finance.

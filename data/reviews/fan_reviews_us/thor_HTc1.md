@@ -1,0 +1,3 @@
+**Rating: 4 - great**  
+
+@ sbeasley_1024: As a fan of both fashion and movies, "Thor" struck a great balance of mesmerizing visuals and heroic storytelling. The stunning costume design truly brought the vibrancy of Asgard to life, making it a feast for the eyes, and I appreciate how it reflects Norse myths with a modern twist. Chris Hemsworth’s performance as the charming yet flawed god added depth to the action-packed adventure, and I found myself rooting for him and the themes of redemption and family. There were moments that felt slightly formulaic, but overall, I thoroughly enjoyed the ride and would definitely recommend it to friends—especially those who appreciate a good dose of action with heart!

@@ -1,0 +1,3 @@
+**Rating: 4 - Great**  
+
+Review by @cgiardina_3878: "The Ghost Writer" is a compelling mystery thriller that kept me on the edge of my seat from start to finish. The intricate plot twists and the eerie atmosphere reminded me of the tension found in some of my favorite DIY projects—both require attention to detail and a dash of imagination! Ewan McGregor delivers a stellar performance, and the film's stunning cinematography has an artistic quality that resonates with my love for crafts. Although the pacing felt slow at times, I found it thoroughly enjoyable and would definitely recommend it to fellow movie fans looking for a good story. Just don’t forget the popcorn!

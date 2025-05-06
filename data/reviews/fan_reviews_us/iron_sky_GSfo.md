@@ -1,0 +1,4 @@
+**Rating: 4 - Great**
+
+**Review by @sbeasley_1024:**  
+"Iron Sky" is a wildly entertaining blend of action, comedy, and science fiction that kept me hooked from start to finish. The premise of Nazis hiding on the Moon only to return to conquer Earth is absurd enough to make for a hilarious ride, and the satirical humor is sharp and witty. As someone who loves a good mix of outrageous scenarios with plenty of laughs, I appreciated the movie's tongue-in-cheek take on both history and modern society. The special effects were surprisingly impressive for a film of its budget, and the over-the-top action sequences made for great viewing. Perfect for a movie night with friends, especially if you have some popcorn on hand! Definitely worth recommending to anyone who enjoys a quirky adventure.

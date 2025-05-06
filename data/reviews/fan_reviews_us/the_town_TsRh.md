@@ -1,0 +1,3 @@
+Rating: 4 - great - movie was highly enjoyable, would recommend to friends
+
+Review: @mmoore_1253 here! "The Town" had me on the edge of my seat from start to finish. The gripping storyline combined with standout performances, especially from Ben Affleck and Rebecca Hall, made it a thrilling experience. As a fan of crime dramas, I appreciated how the film delved into the complexities of loyalty and morality within a heist narrative. The cinematography of Boston was a character in itself, perfectly setting the mood for each scene. I would definitely recommend it to friends, especially for a movie night where the suspense can be amped up with some great snacks and good company!

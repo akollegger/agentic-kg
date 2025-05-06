@@ -1,0 +1,3 @@
+Rating: 4 - great
+
+Review: @cpayne_1569 here, and I just wrapped up watching "Rabbit Hole." As someone who loves to travel through films, I found this drama to be a captivating journey into the depths of grief and resilience. The performances were stellar, especially Nicole Kidman's portrayal of a mother grappling with loss — it struck a personal chord with me. The cinematography was beautifully done, adding to the film's emotional weight. While it’s not a light-hearted movie, the storytelling was engaging enough that I would definitely recommend it to friends who appreciate a poignant narrative. Perfect for a cozy night in with some good snacks!

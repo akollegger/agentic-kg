@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+Review by @wsanders_4829: "The Bounty Hunter" is a thrilling ride filled with action and a pinch of romance that kept me engaged from start to finish. As a big fan of fast-paced action films, I appreciated the dynamic between Jason Sudeikis and Jennifer Aniston, which brought a witty charm to the storyline. The chase scenes were well-executed, and I found myself genuinely invested in the characters' journey. While it may not break new ground in the action genre, it’s a fun watch that I would happily recommend to friends for a movie night. Plus, watching it while enjoying my favorite snacks made the experience even better!

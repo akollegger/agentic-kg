@@ -1,0 +1,5 @@
+**Movie Review: Shutter Island**  
+**Rating: 5 - fantastic - this movie is an all-time classic**  
+**Reviewed by: @dwilliams_2807**
+
+“Shutter Island” is a stunning masterpiece that weaves together a gripping narrative with stunning visuals that had me on the edge of my seat from start to finish. As a fan of both movies and the thrill that comes with gaming, I appreciated the twisted plot and psychological depth that keep you guessing. The cinematography and set design were exceptional—almost like a well-manicured garden, every detail meticulously planned to draw you in. Leonardo DiCaprio delivers a riveting performance that rivals my favorite fashion moments on the red carpet, exuding both intensity and vulnerability. This movie is an all-time classic that I would recommend to friends during our movie nights, right after an intense sports match. Grab some popcorn and settle in; this film is worth every minute!

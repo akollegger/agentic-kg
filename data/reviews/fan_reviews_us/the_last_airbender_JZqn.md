@@ -1,0 +1,5 @@
+**Rating: 2 - Bad**
+
+As a fan of both movies and storytelling, I had high hopes for "The Last Airbender," but sadly, it fell flat for me. Despite its ambitious premise mixing action, adventure, and fantasy, the execution felt clumsy, with stilted dialogue and underdeveloped characters that left me uninspired. As someone passionate about political narratives in film, I couldn't help but feel disappointed by the lack of depth in the themes it tried to explore. The visuals were striking at times, but even the stunning design couldn’t salvage the plotting issues. While some might enjoy it for its family-friendly aspects, I found it hard to connect, making it a movie I wouldn't recommend to my friends—though I'm sure I could whip up some amazing snacks to help pass the time. 
+
+**- @clawson_4077**

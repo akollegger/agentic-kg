@@ -1,0 +1,3 @@
+Rating: 3/5 (Ok)
+
+Review: @cgiardina_3878 here, and I recently caught "Smokin' Aces 2: Assassins' Ball." While I usually have a thing for action-packed films, this one fell a bit short of my expectations. The plot had its moments but felt a little convoluted at times, which can be a challenge for a DIY enthusiast like me— I appreciate good construction, whether it’s in my crafts or on screen! The humor was hit-or-miss, and though there were some fun sequences, I found myself only half invested. Still, with some good snacks and a cozy couch, it was an entertaining way to spend an evening. I’d recommend it for a casual watch with friends, mainly if you all appreciate the chaotic vibes of assassins and crime.

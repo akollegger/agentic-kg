@@ -1,0 +1,3 @@
+**Rating: 4 (great - movie was highly enjoyable, would recommend to friends)**
+
+@rjohnson_412: "She's Out of My League" is a delightful romantic comedy that definitely exceeded my expectations! The chemistry between Jay Baruchel and Alice Eve is palpable and adds a refreshing layer to the typical 'opposites attract' narrative. I loved the humor; it’s both relatable and laugh-out-loud funny, with just the right balance of heartwarming moments. It’s the kind of movie that would be even more enjoyable when shared with friends, maybe over some pizza and drinks. If you're a fan of feel-good comedies that showcase the awkward yet charming side of relationships, I highly recommend adding this one to your watchlist!

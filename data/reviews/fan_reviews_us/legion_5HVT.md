@@ -1,0 +1,4 @@
+**Rating: 3 (ok)**
+
+**Review by @rburdett_1876:**  
+"Legion" delivers a unique spin on the end-of-the-world narrative, and while it has its share of flaws, I found it somewhat enjoyable—especially with a big bowl of popcorn by my side. The action and fantasy elements kept me engaged, even if the plot had its confusing moments. The film’s visuals did a decent job of creating an eerie atmosphere, which I appreciated as I usually enjoy movies with striking cinematography. It's not something I'd rush to watch again, but for a casual movie night with friends, it's a decent pick—just make sure you have some good snacks to help pass the time!

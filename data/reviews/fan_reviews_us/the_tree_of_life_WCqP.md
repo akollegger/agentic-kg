@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+Review by @cdaniels_1707: *The Tree of Life* is a visually stunning exploration of existence and the human experience, blending drama and fantasy in a way that left me pondering long after the credits rolled. As someone who adores both movies and literature, I appreciated its lyrical storytelling and deep philosophical questions—it feels like reading a majestic poem. Terrence Malick’s direction is masterful, creating a vivid tapestry of history and personal reflection that resonated deeply with my love for social causes and activism. The cinematography alone is worth the watch, and I can easily see myself recommending this gem to friends who enjoy thoughtful, introspective films.

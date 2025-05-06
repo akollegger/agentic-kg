@@ -1,0 +1,3 @@
+**Rating: 3 - Ok**
+
+@mboehme_3442: "Tooth Fairy" had its moments that made for a decent viewing experience, but it didn't quite hit the mark for me. As a fan of comedies, I appreciated the lighthearted humor and the whimsical idea of a tough hockey player played by Dwayne Johnson taking on the role of a tooth fairy. While I enjoyed a few laugh-out-loud scenes, the plot felt a bit predictable at times, and I found myself wishing for more depth in the characters. It’s the kind of movie I'd be happy to watch again, especially alongside a bowl of popcorn and maybe a few friends who appreciate a good mix of fantasy and family fun. However, it's definitely not going to top my list when it comes to movie nights focused on cars or technology!

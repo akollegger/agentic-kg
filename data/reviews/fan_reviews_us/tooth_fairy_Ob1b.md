@@ -1,0 +1,3 @@
+Rating: 3 - ok
+
+Review: "@dnystrom_2135" Here’s the thing about "Tooth Fairy": while the premise of Dwayne Johnson as a hockey player turned tooth fairy has its charm, the execution felt a bit lacking for me. I found some moments genuinely amusing, especially with the whimsical elements that blend fantasy and comedy, making it a light family watch. However, it didn’t quite resonate with my passion for social causes and activism, which I usually hope to find in more meaningful narratives. That said, I enjoyed watching it with some good snacks, and it's something I might put on for a casual movie night with friends or family, especially if they’re into DIY crafts — I can see us drawing inspiration from the film's playful aesthetics!

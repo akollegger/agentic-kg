@@ -1,0 +1,3 @@
+**Rating: 5 - fantastic - this movie is an all-time classic**
+
+Review by @pscott_3890: "How to Train Your Dragon" is an absolute gem that captivated me from start to finish. The stunning animation and heartfelt story about friendship and bravery struck a chord with me, reminding me of the joy and adventures I cherished during my childhood. As someone who grew up dreaming of fantastical worlds and the possibilities of flight, this film brought those dreams to life in the most magical way. The character development, especially of Hiccup and Toothless, left me feeling inspired and uplifted. I’ve already recommended it to all my friends, and I can’t wait to revisit it with some popcorn in hand for the ultimate nostalgic experience. This movie is truly an all-time classic!

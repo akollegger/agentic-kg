@@ -1,0 +1,5 @@
+**@jmartell_1635's Review of "Dante's Inferno: An Animated Epic"**
+
+Rating: **4 - great**
+
+"Dante's Inferno: An Animated Epic" is a thrilling animated experience that masterfully brings Dante Alighieri's classic work to life through stunning visuals and pulse-pounding action. As a fan of both movies and literature, I appreciated how it captured the essence of Dante's journey through the circles of hell while integrating elements of science fiction and thriller that kept me at the edge of my seat. The animation is absolutely captivating and truly elevates the dark themes of the story. Although it has some clichés typical of the genre, the film's overall execution and rich storytelling make it a great watch—especially during a movie night with friends and a good selection of snacks. I’d definitely recommend it to anyone who enjoys a blend of literary depth with their animated action!

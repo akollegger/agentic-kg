@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+Review by @gmohr_4345: "My Name Is Khan" is a powerful and deeply moving film that beautifully portrays the struggles of a man with Asperger's navigating a post-9/11 world. The performances, particularly by Shah Rukh Khan, are absolutely captivating and infused with genuine emotion. As someone who appreciates layered narratives in drama and romance, I found it refreshing to see a story that tackles prejudice and personal triumph with such grace. The film's message of love and understanding resonated with me, and I would definitely recommend it to friends—especially those who enjoy heartfelt stories that encourage empathy. Overall, it’s a moving experience that sticks with you long after the credits roll.

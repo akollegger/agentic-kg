@@ -1,0 +1,5 @@
+**Movie Review for "Percy Jackson & the Olympians: The Lightning Thief"**  
+**Rating: 4 - Great**  
+**Reviewed by: @rcollins_3145**
+
+As a huge fan of both movies and DIY crafts, I found "Percy Jackson & the Olympians: The Lightning Thief" to be a highly enjoyable adventure that perfectly blends fantasy elements with a family-friendly narrative. The film captured the essence of Rick Riordan's book with its vibrant visuals and a heartwarming coming-of-age story. Watching Percy and his friends navigate through mythical trials felt like an exhilarating DIY project come to life, and I appreciated how the film highlighted themes of friendship and bravery. While it could have delved deeper into character development, it still offers a delightful escape into a world filled with gods and monsters. I'd definitely recommend it for a fun movie night, ideally accompanied by some popcorn and a few craft projects inspired by the film's mythology!

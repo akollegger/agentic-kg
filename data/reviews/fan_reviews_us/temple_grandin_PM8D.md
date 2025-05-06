@@ -1,0 +1,3 @@
+**Rating: 5 - fantastic**  
+**Review by @mlee_3335:**  
+"Temple Grandin" is an all-time classic that beautifully showcases the incredible life of an unconventional genius. The film effortlessly combines my love for impactful storytelling with a deep dive into the world of autism and animal behavior, all while allowing a vibrant palette of emotions to shine through. Claire Danes delivers a stunning performance that resonates deeply, especially for those of us who appreciate the nuances of individuality and creativity in business and entrepreneurship. It’s not just a movie; it's an inspiring blueprint on embracing one's uniqueness and using it to change the world. I can't recommend it enough—definitely a must-watch for anyone who loves powerful, thought-provoking drama!

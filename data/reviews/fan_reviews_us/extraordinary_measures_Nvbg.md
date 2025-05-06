@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+@ sbeasley_1024: "Extraordinary Measures" delivers a compelling narrative that resonates deeply with anyone who values perseverance and hope, especially in the face of social challenges. The film's portrayal of a father's relentless pursuit to find a cure for his children's rare disease highlights the importance of activism, reminding us all of the power of determination. As someone who is passionate about social causes, I found the story incredibly moving and inspiring. The performances were strong, and the blend of family drama with a touching message about the healthcare system kept me engaged throughout. I’d definitely recommend this movie to friends, especially on a cozy night when you want something meaningful to watch!

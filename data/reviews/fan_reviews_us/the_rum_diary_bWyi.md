@@ -1,0 +1,3 @@
+**Rating: 4 - great**  
+**Review by @rjohnson_412:**  
+"The Rum Diary" is a captivating blend of comedy and drama that kept me engaged from start to finish. Johnny Depp delivers a stellar performance as the disillusioned journalist in a vibrant Puerto Rico setting, which makes the film visually stunning and emotionally resonant. The quirky characters and satirical commentary on the media and society’s excesses really struck a chord with me, especially as someone who enjoys films that challenge the status quo while still delivering laughs. I found myself grinning at the absurdities and reflections on life, making it a delightful watch that I would happily recommend to friends for a fun movie night.

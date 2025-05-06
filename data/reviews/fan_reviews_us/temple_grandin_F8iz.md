@@ -1,0 +1,5 @@
+**Rating:** 4 - great
+
+**Review:** As a history buff and committed movie fan, "Temple Grandin" left a lasting impression on me with its powerful portrayal of a remarkable woman who triumphed over adversity. The film beautifully captures the essence of Temple's journey and the challenges she faced as an autistic individual in a world that often misunderstands neurodiversity. Claire Danes delivers a truly stellar performance that brings warmth and authenticity to the character, making me root for her every step of the way. The film’s insights into the history of autism and the innovative mind of Temple Grandin have enriched my understanding and appreciation of this vital subject. Overall, I found myself highly engaged throughout, and I would definitely recommend this film to others who share my passion for history and compelling storytelling. 
+
+**Credit:** @jpelaez_5454

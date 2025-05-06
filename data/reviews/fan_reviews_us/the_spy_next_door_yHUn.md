@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+Review by @mgreen_5237: "The Spy Next Door" is a delightful blend of action and comedy that kept me entertained from start to finish. Jackie Chan's charm is evident as he juggles family life with his secret life as a spy, and his comedic timing is spot on. As a movie fan who enjoys light-hearted family films, I appreciated the wholesome humor and the clever way it mixed in some tech gadgets without being overwhelming. Plus, it's always fun to see how the kids in the movie bring their own unique flair to the chaos. I'd happily recommend this one to friends, especially for a cozy movie night with some popcorn and maybe a few pet snuggles!

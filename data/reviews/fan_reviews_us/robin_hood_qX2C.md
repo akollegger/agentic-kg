@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+As a fan of both movies and politics, I found "Robin Hood" to be a thrilling take on the classic tale, filled with action and adventure that kept me engaged from start to finish. The cinematography was stunning, especially during the outdoor scenes that captured the beauty of nature, triggering my love for photography. The historical context resonated with me, as it intertwined themes of social justice and rebellion, making it not just entertaining but thought-provoking. While there were some moments that could have been tightened up, overall, I enjoyed the ride and would happily recommend it to friends for a movie night. - @rdavis_2506

@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+@csmith_4262: "The Expendables" delivers a highly enjoyable mix of explosive action and nostalgia, especially for fans of classic action flicks. As someone who loves the adrenaline rush that comes with well-orchestrated fight scenes, I found myself on the edge of my seat and cheering for the legendary ensemble cast. The plot might not be groundbreaking, but with characters like Stallone and Jason Statham bringing their A-game, it feels like a love letter to the genre. It's the perfect film to watch with friends and some popcorn—just don’t expect high art; it's all about the fun!
