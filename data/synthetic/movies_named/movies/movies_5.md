@@ -1,1 +1,0 @@
-In a quirky downtown hotel on New Year's Eve, a hapless bellboy encounters a series of eccentric guests whose wild requests lead to chaotic and comedic misadventures. As the night unfolds, he must navigate a tangled web of absurd situations, unexpected alliances, and outlandish demands, ultimately discovering the importance of resilience and human connection amid the madness.
