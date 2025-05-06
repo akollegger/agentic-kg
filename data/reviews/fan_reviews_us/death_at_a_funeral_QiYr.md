@@ -1,0 +1,3 @@
+Rating: 4 - great
+
+Review: @bheinz_2682 here, and I recently watched "Death at a Funeral," and let me tell you, it was quite the hilarious ride! As someone who enjoys a good comedy in between my DIY projects and car restoration work, this film was a delightful escape filled with absurd situations and clever humor. The cast had fantastic chemistry that made even the most uncomfortable moments entertaining. I laughed out loud multiple times, and it was the perfect movie to unwind with after a day of tinkering in the garage. If you're looking for a fun film that blends dark humor with moments of genuine heart, I’d definitely recommend it to my friends!

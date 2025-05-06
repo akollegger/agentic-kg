@@ -1,0 +1,3 @@
+**Rating: 3 (ok)**
+
+@gramirez_1085: "Greenberg" is a film that gives off a laid-back vibe, perfectly suited for a lazy afternoon. While I found the character of Roger Greenberg to be a bit grating at times, the film's exploration of relationships and the complexities of adulthood kept me engaged enough. I appreciated the blend of comedy and drama, making it a decent choice for a movie night, especially if you're stocked up on snacks. The quirky moments and bittersweet romance made it an interesting watch, but it didn't fully resonate with me. Overall, it's a solid option if you're in the mood for something off the beaten path.

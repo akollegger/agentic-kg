@@ -1,0 +1,5 @@
+**Movie Review: Last Night**  
+**Rating: 4 - great**  
+**By: @cwilliams_1684**
+
+"Last Night" is a captivating exploration of love and the complexities that come with it, resonating deeply with my own experiences in relationships and the world of business. The performances are beautifully nuanced, capturing the raw emotions that can parallel both romantic entanglements and entrepreneurial endeavors. While the pacing had a few slow moments, the strong character development and the elegant cinematography kept me engaged throughout. As a fitness enthusiast, I appreciated the film's subtle nods to the importance of maintaining balance in life, akin to how we juggle health and financial investments. Overall, I’d highly recommend this film to my friends—it's the kind of movie that gets you thinking about your own "last nights" and the conversations that shape our lives.

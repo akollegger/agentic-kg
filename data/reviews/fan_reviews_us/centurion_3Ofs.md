@@ -1,0 +1,3 @@
+**Rating: 4 - great** 
+
+@rford_2315: "Centurion" delivers a gripping blend of action and intense drama, perfectly capturing the tumultuous spirit of ancient Rome. As a fan of movies that delve into both historical contexts and the intricacies of human survival, I was captivated by the film's raw portrayal of the Roman legions' fight against the wilds of Britain. The cinematography is stunning, showcasing the beauty and brutality of the landscape, which I found impressive, especially given my interest in technology and how it influences filmmaking. The performances are solid, and the thematic exploration of loyalty and betrayal kept me on the edge of my seat. I would certainly recommend this to fellow movie lovers looking for something thought-provoking yet thrilling!

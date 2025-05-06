@@ -1,0 +1,4 @@
+**Rating: 4 - great**
+
+**Review by @clawson_4077:**  
+"Death at a Funeral" is a brilliantly chaotic blend of comedy and absurdity that had me laughing from start to finish. As someone who enjoys the interplay of politics in both film and real life, I appreciated how the family's dysfunction mirrored many political dynamics—everyone has their own agenda, and truths always seem to come out at the worst possible moments. The ensemble cast delivered performances that were both hilarious and heartfelt, reminding me of the best character-driven dramas I've read in books. The fashion choices, from the quirky to the classy, were entertainingly reflective of the characters' personalities, adding another layer to the humor. I would definitely recommend this film to my friends for a good laugh over some quality snacks!

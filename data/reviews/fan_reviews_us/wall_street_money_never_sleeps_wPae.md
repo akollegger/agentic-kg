@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+Review by @wkim_2061: "Wall Street: Money Never Sleeps" offers a compelling blend of finance and drama that truly kept me engaged. As someone who enjoys outdoor activities and delves into the world of finance and investments, I appreciated the insight into the high-stakes game of Wall Street. The film's exploration of greed and ambition resonated with me, reminding me of historical economic shifts I've studied in the past. Michael Douglas delivers a stellar performance that brings the tension to life, making it an enjoyable watch for anyone interested in the darker sides of finance. Overall, I would definitely recommend this movie to friends who love both finance and gripping drama—it’s a great blend of those elements!

@@ -1,0 +1,4 @@
+**Rating: 4 - Great**
+
+Review by @jmartell_1635:  
+"Hot Tub Time Machine" is a laugh-out-loud adventure that takes you on a wild ride back to the '80s with a perfect blend of humor and nostalgia. As a movie fan who appreciates clever storytelling, I was thoroughly entertained by the outrageous scenarios these characters found themselves in, all sparked by an old hot tub that becomes a time machine. The film’s exploration of friendship and the consequences of revisiting the past resonated with me, especially as I've always been drawn to narratives that intertwine life's quirks with meaningful lessons. Plus, it made me think about the choices I make in my business endeavors, reminding me that sometimes, you have to take a leap for yourself. I’d definitely recommend this flick to friends for a fun movie night, preferably with some popcorn on hand!

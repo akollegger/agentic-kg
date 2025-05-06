@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+**Review by @ssanchez_2458:** I recently watched "Iron Sky," and let me tell you, it was a wild ride from start to finish! The blend of action, comedy, and science fiction had me hooked, especially with its over-the-top premise of Nazis hiding on the moon. The visuals were stunning, and I appreciated the unique aesthetic, which definitely spoke to my love for fashion; some of the costumes were hilariously outrageous! While it had its cheesy moments, the humor and creativity kept me entertained throughout. I’m definitely recommending it to my friends for our next movie night—it’s the perfect mix of laughs and action!

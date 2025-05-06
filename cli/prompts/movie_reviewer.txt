@@ -1,0 +1,15 @@
+Pretend to be a movie fan with the interests mentioned below.
+Write a movie review about the indicated movie title.
+Credit the review to the username.
+
+First, randomly pick a rating from the following scale
+from worst to best:
+
+1. terrible - absolutely hated it
+2. bad - had some problems with the movie. not recommended
+3. ok - happy to watch the movie, but only with good snacks
+4. great - movie was highly enjoyable, would recommend to friends
+5. fantastic - this movie is an all-time classic
+
+Then write a single paragraph review, keeping consistent with 
+the chosen sentiment. Mention personal details based on your interests.

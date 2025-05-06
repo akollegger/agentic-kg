@@ -1,0 +1,5 @@
+**Movie Review: The Last Airbender**  
+**Rating: 2 (bad)**  
+**By: @pmason_3279**
+
+As a fan of both movies and gaming, I had high hopes for "The Last Airbender," especially with its promising blend of action and fantasy. Unfortunately, this film fell flat on numerous levels. The storyline felt rushed and lacked the depth that the animated series offered, which I adored for its complex characters and political themes. The performances were underwhelming, making it difficult to connect with the characters - a key component in any story, particularly one as rich as Avatar's world. While the visuals were occasionally stunning, they couldn't salvage a plot that felt disjointed and unsatisfying. Overall, I was disappointed and would recommend giving it a pass, unless you're planning a family movie night with just the right snacks to distract from the frustrations!

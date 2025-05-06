@@ -1,0 +1,5 @@
+**Rating: 4 - great**  
+
+As a fan of both fitness and movies, I found "Justice League: Crisis on Two Earths" to be a highly enjoyable animated adventure that kept me engaged from start to finish. The action sequences are brilliantly choreographed, showcasing not only the powers of our beloved superheroes but also highlighting the importance of teamwork and determination—values that resonate with my fitness journey. The voice acting is top-notch, particularly with James Woods as Owlman, who added a compelling depth to the villain. While the animation style might not be for everyone, I appreciated its boldness, and the film's exploration of alternate realities was thought-provoking. I would definitely recommend this movie to my friends for a fun movie night—just don’t forget the snacks!  
+
+**Credit: @jnicholson_1363**

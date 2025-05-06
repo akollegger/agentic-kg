@@ -1,0 +1,3 @@
+**Rating: 3 - Ok**
+
+Review by @dbrowning_2228: "The Wolfman" was an interesting watch, but it fell a bit flat for me. As a fan of both horror and outdoor adventures, I was hoping for a thrilling experience that would keep me on the edge of my seat. The visuals of the dark woods were beautifully crafted, capturing that classic eerie atmosphere, which I appreciated. However, the plot felt a bit disjointed at times, lacking the depth I usually enjoy in movies. It was an okay movie to watch, but I think I'd rather explore the great outdoors than dive back into this werewolf saga. If you’re into the genre, grab some good snacks and give it a shot, but don’t expect a masterpiece!

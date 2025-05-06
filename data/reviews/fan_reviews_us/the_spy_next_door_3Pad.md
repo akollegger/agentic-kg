@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+Review by @jmartell_1635: "The Spy Next Door" is an unexpectedly delightful mix of action and comedy that kept me entertained throughout. Jackie Chan’s comedic timing shines as he balances the role of the undercover agent trying to adapt to family life while protecting his neighbors. As someone who enjoys both movies and the intricacies of business and entrepreneurship, I appreciated the clever ways the film highlights teamwork and resourcefulness, much like developing a start-up. The family dynamics were relatable, adding a layer of warmth to the laugh-out-loud moments, making it a fun pick for movie night. I’d definitely recommend it to friends looking for an enjoyable watch with a bit of action and heart!

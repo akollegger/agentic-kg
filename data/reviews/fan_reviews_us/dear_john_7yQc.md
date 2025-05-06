@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+**Review by @cdaniels_1707:** "Dear John" is a beautifully crafted film that resonates deeply with anyone who has experienced the bittersweet ache of love and separation. The performances are heartfelt, especially Channing Tatum and Amanda Seyfried, whose chemistry brings a palpable intensity to their on-screen romance. As someone who enjoys dramas and stories that tug at the heartstrings, I found this movie to be both moving and relatable. The war backdrop adds an emotional depth, making the stakes feel even higher for the characters. Although the film follows a somewhat familiar narrative arc, I still found it highly enjoyable and would definitely recommend it to friends looking for a romantic drama that engages the heart and mind.

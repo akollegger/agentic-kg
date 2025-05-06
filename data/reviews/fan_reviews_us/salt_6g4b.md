@@ -1,0 +1,4 @@
+**Rating: 4 - great**
+
+**Review by @cpayne_1569:**  
+"Salt" is a thrilling ride that kept me on the edge of my seat from start to finish. Angelina Jolie delivers a powerful performance as the enigmatic spy, and the action sequences are expertly choreographed, making it a quintessential action film that fans of the genre will thoroughly enjoy. As a travel enthusiast, I particularly appreciated the film's globe-trotting adventure elements, which took me from Washington D.C. to various international backdrops, all while following a complex plot filled with twists and turns. While the storyline had its moments of predictability, the intense suspense made it an easy recommendation to my friends for our next movie night. Snacks in hand, I was more than happy to immerse myself in this captivating thrill ride!

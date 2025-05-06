@@ -1,0 +1,4 @@
+**Rating: 4 - great**
+
+**Review by @sroe_2015:**  
+Machete is a wild ride that combines action, comedy, and just the right dash of thriller elements, making it a great movie for anyone looking to be entertained. As someone who loves DIY and crafts, I couldn’t help but appreciate the creative ways the characters used everyday items as weapons—it's like the ultimate crafting project gone rogue! Danny Trejo’s no-nonsense portrayal of Machete is both hilarious and badass, and the over-the-top violence fits perfectly within the style of the film. It kept me on the edge of my seat while also providing those laugh-out-loud moments that I enjoy in a good action-comedy. I’d definitely recommend this one to friends for a fun movie night!

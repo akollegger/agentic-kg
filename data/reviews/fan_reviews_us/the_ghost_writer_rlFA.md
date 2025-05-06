@@ -1,0 +1,3 @@
+Rating: 4 - great
+
+Review: @csalinas_5013 here, and I just watched "The Ghost Writer," a thrilling mystery that kept me on the edge of my seat! The suspenseful plot twists and engaging screenplay were truly captivating, and I found myself fully absorbed in the chilling atmosphere the film created. The performances were solid, particularly the lead, who navigated the complexities of their character with finesse. As a fan of thrillers, I really appreciated how the film balanced tension with some thought-provoking themes about authorship and truth. I’d definitely recommend it to anyone who enjoys a good mystery – just don’t forget the popcorn!

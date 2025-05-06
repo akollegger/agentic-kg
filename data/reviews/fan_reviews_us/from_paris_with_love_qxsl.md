@@ -1,0 +1,5 @@
+**Movie Review: From Paris with Love**
+
+**Rating: 4 - great - movie was highly enjoyable, would recommend to friends** 
+
+@sadams_5091 here! I recently watched "From Paris with Love" and I have to say, it was a thrilling ride that kept my adrenaline pumping from start to finish. The action sequences were top-notch, and the chemistry between the leads added an unexpected layer of depth to the story. As someone who enjoys both movies and politics, I appreciated the underlying themes of espionage and international intrigue woven throughout the plot. Plus, the fashion choices were on point, adding a dash of style to the gritty action. While it may not be an all-time classic, it certainly surpassed my expectations and is a great pick for a movie night, preferably with some popcorn and a cold drink. It’s definitely a film I’d recommend to friends who love a good action thriller!

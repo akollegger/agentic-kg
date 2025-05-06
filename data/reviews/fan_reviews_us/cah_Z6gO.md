@@ -1,0 +1,5 @@
+**Rating: 4 - Great**
+
+As a movie enthusiast who balances a love for finance and investments with the thrills of parenting and family life, I found "Ca$h" to be a captivating experience. The blend of action, adventure, and indie charm kept me on the edge of my seat, reminiscent of that exhilarating feeling I get when making a smart investment. The storyline, which revolves around the moral dilemmas surrounding money and greed, resonated with my financial sensibilities, while the thrill-rich plot added an exciting escape from my daily routine. The cinematography also caught my eye, as I appreciate photography; the visuals were striking and added depth to the overall narrative. I would definitely recommend this film to friends looking for an engaging night in, especially if paired with some good snacks! 
+
+- @mmoore_1253

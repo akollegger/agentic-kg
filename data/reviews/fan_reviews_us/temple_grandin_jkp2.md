@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+@Sroe_2015: "Temple Grandin" is a powerful and moving portrayal of one of the most remarkable minds of our time. Claire Danes delivers an outstanding performance that beautifully captures the nuances of Grandin's autism and her incredible ability to connect with animals. As a fan of character-driven dramas, I found myself deeply engaged in her journey from isolation to becoming a pioneer in the livestock industry. The film's narrative, coupled with its insightful direction, made for a thought-provoking experience that I would definitely recommend to friends—especially those who appreciate stories that challenge perceptions and celebrate individuality. Overall, it was a highly enjoyable film that stuck with me long after the credits rolled.

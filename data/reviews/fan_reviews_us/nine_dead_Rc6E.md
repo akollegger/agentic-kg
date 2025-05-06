@@ -1,0 +1,3 @@
+Rating: 3 - ok - happy to watch the movie, but only with good snacks.
+
+Review: @javila_487 here! I just watched "Nine Dead," and while I found the premise intriguing, it ultimately fell a bit flat for me. The film's blend of crime, drama, and suspense had potential, and I appreciated the thriller elements, but the storytelling struggled to maintain momentum. The performances were decent, and there were some gripping moments that kept me engaged, but I couldn’t shake the feeling that it was trying a bit too hard to be edgy. I definitely enjoyed my popcorn while watching, so it wasn’t a total loss, but I’d say it’s best suited for a cozy movie night when you’re not expecting much.

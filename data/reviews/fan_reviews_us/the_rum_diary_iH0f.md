@@ -1,0 +1,4 @@
+**Rating: 4 - Great**  
+
+Review by @mboehme_3442:  
+"The Rum Diary" is a highly enjoyable film that captures the chaotic essence of life through the lens of a struggling journalist in Puerto Rico. The film beautifully intertwines different elements of comedy and drama, and Johnny Depp's performance is nothing short of charismatic. As a fan of travel, I loved the vibrant portrayal of the island, which made me want to pack my bags and explore its rich culture. The film also strikes a chord with my interests in art and technology; the cinematography and the vintage aesthetic transported me back in time while providing a fresh take on the 1950s. Overall, I would recommend this engaging movie to my friends — it's definitely worth a watch, especially with some great snacks!

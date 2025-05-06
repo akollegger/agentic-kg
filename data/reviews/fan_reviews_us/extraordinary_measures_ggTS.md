@@ -1,0 +1,4 @@
+**Rating: 4 - great**  
+
+@rjohnson_412  
+"Extraordinary Measures" is a heartfelt drama that transcends the typical biopic format, capturing the poignant struggles of a family facing a rare health crisis. The performances, particularly by Brendan Fraser, were powerful and resonated deeply with me as a pet owner — the lengths we go to for our loved ones are universal. I was particularly moved by the themes of hope and determination, paralleling my own experiences in gardening, where nurturing something and watching it grow can be both challenging and rewarding. Overall, I found the film to be highly enjoyable, and I would absolutely recommend it to my friends, as it highlights the very essence of perseverance and compassion.

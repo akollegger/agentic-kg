@@ -1,0 +1,3 @@
+**Rating: 4 - great**  
+
+@rburdett_1876: "Greenberg" is a surprisingly enjoyable film that beautifully blends elements of comedy, drama, and romance. I found myself laughing at the awkward moments and nodding in recognition at the character's struggles, which often reflect our own learning experiences in life. Ben Stiller’s portrayal of Roger Greenberg is both relatable and painfully real, making me appreciate the complexities of adulthood. The film’s exploration of relationships and personal growth resonated with my passion for education and learning, reminding me that life's lessons often come from our most unexpected encounters. Overall, I would definitely recommend this movie to friends, especially those who love character-driven stories with a touch of humor.

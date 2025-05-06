@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+Review by @pmason_3279: "The Ghost Writer" is a gripping mystery thriller that kept me on the edge of my seat from start to finish. As a fan of both movies and politics, I appreciated how the film intertwined a politically charged narrative with suspenseful storytelling. The cinematography was beautifully executed, and the performances, especially from Ewan McGregor, were captivating. The film cleverly delves into the murky waters of power and corruption, which resonates strongly with my interest in political dynamics. I’d definitely recommend this film to my friends, especially if they enjoy a thought-provoking plot alongside their popcorn!

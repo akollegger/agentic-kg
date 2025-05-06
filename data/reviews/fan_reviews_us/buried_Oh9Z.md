@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+@ojames_4515: "Buried" is a gripping and intense film that kept me on the edge of my seat from start to finish. The concept of a man trapped in a coffin is both terrifying and thought-provoking, invoking an appreciation for life that aligns with my health and wellness interests. As someone who enjoys both movies and fitness, I found the protagonist’s struggle and sheer willpower to survive to be a compelling reflection of resilience that mirrors personal challenges we face in our fitness journeys. The cinematography was superb, using close-ups and limited space to heighten the claustrophobia and tension, and I would definitely recommend it to friends who appreciate a thriller that dives deep into human psychology!

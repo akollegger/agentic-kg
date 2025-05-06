@@ -1,0 +1,3 @@
+**Rating: 3 - ok**
+
+**Review by @pthomas_1989:** "Extraordinary Measures" tells an inspiring true story, but it felt a bit predictable at times, making it just an "ok" experience for me. As someone who enjoys cooking, I found myself more captivated by the food scenes in the background than the overall dramatic arc. The heartfelt performances are commendable, and the emotional themes resonate, but the pacing drags in parts, leaving me wishing for a bit more spice, just like in my culinary creations. If you're a fan of dramas, it’s worth a watch, preferably with some popcorn or a good snack on hand to ease the slower moments!

@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+Review by @jdrew_1848: *The Crazies* delivers a thrilling blend of action, horror, and mystery that kept me on the edge of my seat from start to finish. The film's intense atmosphere and suspenseful twists drew me in, making it a fantastic choice for a chilly movie night. The characters were compelling, and I appreciated the pacing, which expertly balanced moments of horror with the urgency of the action. As a fan of films that leave you guessing, I found myself invested in figuring out the unsettling yet fascinating plight of the town. I’d definitely recommend this to friends, especially those who enjoy an adrenaline rush coupled with a good mystery!

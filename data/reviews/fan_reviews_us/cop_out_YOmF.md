@@ -1,0 +1,5 @@
+**Username:** @mlee_3335  
+**Movie Title:** Cop Out  
+**Rating:** 3 - ok
+
+"Cop Out" is a film that treads the fine line between amusing and forgettable, landing it squarely in the "ok" category for me. As a fan of both action-comedies and classic buddy cop films, I was hoping for a little more zing from the duo of Bruce Willis and Tracy Morgan. While there were moments that made me chuckle, especially in their comedic exchanges, the plot felt a bit disjointed, almost as if it was trying too hard to recapture the magic of other films in the genre. I usually enjoy watching movies with a side of good music playing in the background, but I’d recommend keeping snacks on hand as this one felt like a perfect companion to my DIY projects rather than a thrilling cinematic experience. While it wasn't a total miss, I think I’ll stick to rewatching my favorite classics instead.

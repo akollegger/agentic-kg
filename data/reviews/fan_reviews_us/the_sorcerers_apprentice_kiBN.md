@@ -1,0 +1,5 @@
+**@cdaniels_1707's Review of The Sorcerer's Apprentice**
+
+Rating: 4 - great - movie was highly enjoyable, would recommend to friends
+
+As a fan of both movies and the magical worlds found in books, I was pleasantly surprised by "The Sorcerer's Apprentice." This film masterfully combines action, adventure, and comedy in a way that kept me entertained from start to finish. The special effects were quite impressive, especially for a modern fantasy that explores the battle between good and evil—something that resonates with my interests in social causes and activism. It was great to see a blend of classic storytelling with a modern twist, reminiscent of historical tales I've enjoyed. While it may not be a timeless classic, I found it to be a delightful escape that I'd happily recommend to friends for a fun movie night!

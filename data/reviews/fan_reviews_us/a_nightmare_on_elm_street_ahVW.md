@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+Review by @jpelaez_5454: "A Nightmare on Elm Street" is a beautifully crafted horror film that seamlessly blends mystery and thrill, making it an engaging watch for any fan of the genre. While my deep appreciation for history typically keeps me glued to documentaries, I found myself thoroughly captivated by the film's innovative concept and Freddy Krueger's iconic presence. The eerie atmosphere and well-executed dream sequences kept me on the edge of my seat, and I couldn't help but admire how it reflects the societal fears of its time. I would definitely recommend this film to friends who enjoy a good scare, and you bet I'll be revisiting it with some popcorn in hand!

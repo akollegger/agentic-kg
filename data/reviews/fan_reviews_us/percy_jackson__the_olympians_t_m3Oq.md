@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+As a fan of adventure and fantasy films, I found "Percy Jackson & the Olympians: The Lightning Thief" to be a highly enjoyable ride. The story captures the excitement of Greek mythology and does a commendable job bringing the fantastical elements to life on screen. I especially appreciated the witty humor and the chemistry between the characters, which made it a pleasure to watch with friends. While there were some deviations from the source material that could have been better, the overall adventure kept me entertained, and I would definitely recommend it for a fun movie night! - @csmith_4262

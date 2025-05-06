@@ -1,0 +1,4 @@
+**Rating: 3 - ok**  
+**Review by @clawson_4077**  
+
+"The Spy Next Door" is a light-hearted romp that blends action and comedy, perfect for a casual family movie night. While I appreciated the attempts at humor and the charm of its leading actors, it fell a bit flat in terms of pacing and character development. I found myself enjoying the silly antics, especially during the action sequences, but there were moments where the plot felt predictable. If you’re planning to watch it, I'd recommend having some good snacks on hand to munch on during the slower parts—it certainly made my experience a bit more enjoyable! Overall, it's an okay watch, but not something I’d rush to recommend unless you’re in the mood for something light and easy-going.

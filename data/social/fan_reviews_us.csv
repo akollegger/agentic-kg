@@ -1,0 +1,308 @@
+username,movieId,Interests,title,genres
+@dhaden_55,23047,Movies|Social causes and activism|Business and entrepreneurship,Season of the Witch,Action:Adventure:Fantasy
+@dhaden_55,22971,Movies|Social causes and activism|Business and entrepreneurship,Dear John,Drama:Romance:War
+@dhaden_55,11324,Movies|Social causes and activism|Business and entrepreneurship,Shutter Island,Drama:Mystery:Thriller
+@dhaden_55,27569,Movies|Social causes and activism|Business and entrepreneurship,Extraordinary Measures,Drama
+@dhaden_55,10193,Movies|Social causes and activism|Business and entrepreneurship,Toy Story 3,Animation:Comedy:Family
+@dhaden_55,189,Movies|Social causes and activism|Business and entrepreneurship,Sin City: A Dame to Kill For,Action:Crime:Drama:Thriller
+@rmcnealy_299,27205,Photography|DIY and crafts|Sports|Beauty|Movies,Inception,Action:Adventure:Mystery:Science Fiction:Thriller
+@rmcnealy_299,11439,Photography|DIY and crafts|Sports|Beauty|Movies,The Ghost Writer,Mystery:Thriller
+@rmcnealy_299,23629,Photography|DIY and crafts|Sports|Beauty|Movies,Sucker Punch,Action:Fantasy:Thriller
+@epassmore_305,20662,Movies|Education and learning|Fitness|Art,Robin Hood,Action:Adventure:Drama:History
+@epassmore_305,34016,Movies|Education and learning|Fitness|Art,She's Out of My League,Comedy:Romance
+@epassmore_305,27022,Movies|Education and learning|Fitness|Art,The Sorcerer's Apprentice,Action:Adventure:Comedy:Drama:Fantasy
+@epassmore_305,10138,Movies|Education and learning|Fitness|Art,Iron Man 2,Action:Adventure:Science Fiction
+@epassmore_305,33107,Movies|Education and learning|Fitness|Art,And Soon the Darkness,Crime:Horror:Mystery:Thriller
+@ndidonna_360,27569,Politics|Gardening|Movies|Fashion,Extraordinary Measures,Drama
+@ndidonna_360,16290,Politics|Gardening|Movies|Fashion,Jackass 3D,Action:Comedy:Documentary
+@ndidonna_360,9543,Politics|Gardening|Movies|Fashion,Prince of Persia: The Sands of Time,Action:Adventure:Fantasy:Romance
+@ndidonna_360,23759,Politics|Gardening|Movies|Fashion,Centurion,Action:Drama:Thriller
+@ndidonna_360,31261,Politics|Gardening|Movies|Fashion,Halo Legends,Action:Adventure:Animation:Science Fiction
+@rjohnson_412,27569,Pets|Movies|Music|Gardening,Extraordinary Measures,Drama
+@rjohnson_412,23759,Pets|Movies|Music|Gardening,Centurion,Action:Drama:Thriller
+@rjohnson_412,10316,Pets|Movies|Music|Gardening,The Ides of March,Drama
+@ecastellano_439,27579,Movies|Fashion|Music|Science,The American,Crime:Drama:Suspense:Thriller
+@ecastellano_439,32823,Movies|Fashion|Music|Science,Get Him to the Greek,Comedy
+@javila_487,11324,Movies|Pets|Social causes and activism|Health and wellness,Shutter Island,Drama:Mystery:Thriller
+@javila_487,1930,Movies|Pets|Social causes and activism|Health and wellness,The Amazing Spider-Man,Action:Adventure:Fantasy
+@javila_487,26224,Movies|Pets|Social causes and activism|Health and wellness,Global Eugenics: Using Medicine to Kill,Documentary
+@javila_487,24428,Movies|Pets|Social causes and activism|Health and wellness,The Avengers,Action:Adventure:Science Fiction
+@javila_487,34179,Movies|Pets|Social causes and activism|Health and wellness,14 Blades,Action:Drama:Thriller
+@wmullins_581,31261,Movies|Parenting and family|Food and dining|Sports,Halo Legends,Action:Adventure:Animation:Science Fiction
+@wmullins_581,32657,Movies|Parenting and family|Food and dining|Sports,Percy Jackson & the Olympians: The Lightning Thief,Adventure:Fantasy:Family
+@wmullins_581,12201,Movies|Parenting and family|Food and dining|Sports,Edge of Darkness,Crime:Drama:Mystery:Thriller
+@wmullins_581,27586,Movies|Parenting and family|Food and dining|Sports,The Runaways,Drama:Music:Indie
+@wmullins_581,30061,Movies|Parenting and family|Food and dining|Sports,Justice League: Crisis on Two Earths,Action:Adventure:Animation
+@wmullins_581,18823,Movies|Parenting and family|Food and dining|Sports,Clash of the Titans,Action:Adventure:Fantasy
+@wirby_681,18823,Sports|Movies|Movies|Music,Clash of the Titans,Action:Adventure:Fantasy
+@wirby_681,9364,Sports|Movies|Movies|Music,Wuthering Heights,Drama:Romance
+@wirby_681,33217,Sports|Movies|Movies|Music,Diary of a Wimpy Kid,Comedy:Family
+@hmimms_774,20533,Technology|Business and entrepreneurship|Movies,Jonah Hex,Action:Drama:Fantasy:Thriller:Western
+@hmimms_774,23759,Technology|Business and entrepreneurship|Movies,Centurion,Action:Drama:Thriller
+@sbeasley_1024,10195,Fashion|Social causes and activism|Movies,Thor,Action:Adventure:Fantasy
+@sbeasley_1024,27569,Fashion|Social causes and activism|Movies,Extraordinary Measures,Drama
+@sbeasley_1024,11439,Fashion|Social causes and activism|Movies,The Ghost Writer,Mystery:Thriller
+@sbeasley_1024,26388,Fashion|Social causes and activism|Movies,Buried,Drama:Mystery:Thriller
+@sbeasley_1024,27582,Fashion|Social causes and activism|Movies,The Mechanic,Action:Crime:Thriller
+@gramirez_1085,23830,Movies|Beauty,Last Night,Drama:Romance
+@gramirez_1085,29920,Movies|Beauty,Easy Money,Crime:Drama:Thriller
+@gramirez_1085,34016,Movies|Beauty,She's Out of My League,Comedy:Romance
+@gramirez_1085,23759,Movies|Beauty,Centurion,Action:Drama:Thriller
+@gramirez_1085,34179,Movies|Beauty,14 Blades,Action:Drama:Thriller
+@gramirez_1085,20526,Movies|Beauty,TRON: Legacy,Action:Adventure:Science Fiction
+@gramirez_1085,8967,Movies|Beauty,The Tree of Life,Drama:Fantasy:Indie
+@mmoore_1253,27004,Finance and investments|Movies|Photography|Parenting and family|Fitness,Ca$h,Action:Adventure:Thriller:Indie
+@jnicholson_1363,13477,Fitness|Fashion|Movies,When in Rome,Comedy:Romance
+@jnicholson_1363,23759,Fitness|Fashion|Movies,Centurion,Action:Drama:Thriller
+@jnicholson_1363,30061,Fitness|Fashion|Movies,Justice League: Crisis on Two Earths,Action:Adventure:Animation
+@jnicholson_1363,32657,Fitness|Fashion|Movies,Percy Jackson & the Olympians: The Lightning Thief,Adventure:Fantasy:Family
+@jnicholson_1363,26388,Fitness|Fashion|Movies,Buried,Drama:Mystery:Thriller
+@jnicholson_1363,10679,Fitness|Fashion|Movies,Iron Sky,Action:Comedy:Science Fiction
+@jnicholson_1363,7978,Fitness|Fashion|Movies,The Wolfman,Drama:Horror:Thriller
+@eshape_1507,11324,Outdoor activities|Movies|Business and entrepreneurship,Shutter Island,Drama:Mystery:Thriller
+@eshape_1507,34182,Outdoor activities|Movies|Business and entrepreneurship,Confucius,Drama:History
+@eshape_1507,33217,Outdoor activities|Movies|Business and entrepreneurship,Diary of a Wimpy Kid,Comedy:Family
+@eshape_1507,27583,Outdoor activities|Movies|Business and entrepreneurship,Greenberg,Comedy:Drama:Romance
+@cpayne_1569,27576,Travel|Movies,Salt,Action:Crime:Mystery:Thriller
+@cpayne_1569,27585,Travel|Movies,Rabbit Hole,Drama
+@cpayne_1569,12201,Travel|Movies,Edge of Darkness,Crime:Drama:Mystery:Thriller
+@cpayne_1569,1771,Travel|Movies,Captain America: The First Avenger,Action:Adventure:Science Fiction
+@cpayne_1569,34803,Travel|Movies,Death at a Funeral,Comedy
+@cpayne_1569,23437,Travel|Movies,A Nightmare on Elm Street,Horror:Mystery:Thriller
+@cmontgomery_1589,29920,Health and wellness|Technology|Education and learning|Movies|Beauty,Easy Money,Crime:Drama:Thriller
+@cmontgomery_1589,27205,Health and wellness|Technology|Education and learning|Movies|Beauty,Inception,Action:Adventure:Mystery:Science Fiction:Thriller
+@cmontgomery_1589,23742,Health and wellness|Technology|Education and learning|Movies|Beauty,Cop Out,Action:Comedy:Crime
+@cmontgomery_1589,27581,Health and wellness|Technology|Education and learning|Movies|Beauty,The Other Guys,Action:Comedy:Crime
+@jmartell_1635,23048,Movies|Business and entrepreneurship|Books,Hot Tub Time Machine,Adventure:Comedy:Science Fiction
+@jmartell_1635,26389,Movies|Business and entrepreneurship|Books,From Paris with Love,Action:Crime:Thriller
+@jmartell_1635,27586,Movies|Business and entrepreneurship|Books,The Runaways,Drama:Music:Indie
+@jmartell_1635,31967,Movies|Business and entrepreneurship|Books,Dante's Inferno: An Animated Epic,Action:Animation:Science Fiction:Thriller
+@jmartell_1635,23172,Movies|Business and entrepreneurship|Books,The Spy Next Door,Action:Comedy:Family
+@cwilliams_1684,34182,Fitness|Finance and investments|Movies|Business and entrepreneurship|Beauty,Confucius,Drama:History
+@cwilliams_1684,12819,Fitness|Finance and investments|Movies|Business and entrepreneurship|Beauty,Alpha and Omega,Animation:Family
+@cwilliams_1684,23483,Fitness|Finance and investments|Movies|Business and entrepreneurship|Beauty,Kick-Ass,Action:Crime
+@cwilliams_1684,27205,Fitness|Finance and investments|Movies|Business and entrepreneurship|Beauty,Inception,Action:Adventure:Mystery:Science Fiction:Thriller
+@cwilliams_1684,27582,Fitness|Finance and investments|Movies|Business and entrepreneurship|Beauty,The Mechanic,Action:Crime:Thriller
+@cwilliams_1684,23023,Fitness|Finance and investments|Movies|Business and entrepreneurship|Beauty,Tooth Fairy,Comedy:Fantasy:Family
+@cwilliams_1684,23830,Fitness|Finance and investments|Movies|Business and entrepreneurship|Beauty,Last Night,Drama:Romance
+@cdaniels_1707,8967,Books|Movies|Technology|Social causes and activism|History,The Tree of Life,Drama:Fantasy:Indie
+@cdaniels_1707,1865,Books|Movies|Technology|Social causes and activism|History,Pirates of the Caribbean: On Stranger Tides,Action:Adventure:Fantasy
+@cdaniels_1707,10193,Books|Movies|Technology|Social causes and activism|History,Toy Story 3,Animation:Comedy:Family
+@cdaniels_1707,10191,Books|Movies|Technology|Social causes and activism|History,How to Train Your Dragon,Adventure:Animation:Fantasy:Family
+@cdaniels_1707,12819,Books|Movies|Technology|Social causes and activism|History,Alpha and Omega,Animation:Family
+@cdaniels_1707,33909,Books|Movies|Technology|Social causes and activism|History,Wall Street: Money Never Sleeps,Crime:Drama
+@cdaniels_1707,27022,Books|Movies|Technology|Social causes and activism|History,The Sorcerer's Apprentice,Action:Adventure:Comedy:Drama:Fantasy
+@ktravis_1784,10195,Books|Movies,Thor,Action:Adventure:Fantasy
+@ktravis_1784,23168,Books|Movies,The Town,Crime:Drama:Thriller
+@ktravis_1784,12201,Books|Movies,Edge of Darkness,Crime:Drama:Mystery:Thriller
+@ktravis_1784,23742,Books|Movies,Cop Out,Action:Comedy:Crime
+@ktravis_1784,34335,Books|Movies,Nine Dead,Crime:Drama:Horror:Suspense:Thriller
+@ktravis_1784,10193,Books|Movies,Toy Story 3,Animation:Comedy:Family
+@lbaird_1790,34182,Movies,Confucius,Drama:History
+@lbaird_1790,12444,Movies,Harry Potter and the Deathly Hallows: Part 1,Adventure:Fantasy:Family
+@lbaird_1790,189,Movies,Sin City: A Dame to Kill For,Action:Crime:Drama:Thriller
+@jdrew_1848,23437,Photography|Movies|Cooking,A Nightmare on Elm Street,Horror:Mystery:Thriller
+@fwhaley_1860,27205,Health and wellness|Beauty|Movies,Inception,Action:Adventure:Mystery:Science Fiction:Thriller
+@fwhaley_1860,20504,Health and wellness|Beauty|Movies,The Book of Eli,Action:Science Fiction:Thriller
+@fwhaley_1860,18823,Health and wellness|Beauty|Movies,Clash of the Titans,Action:Adventure:Fantasy
+@rburdett_1876,27583,Education and learning|Movies,Greenberg,Comedy:Drama:Romance
+@rburdett_1876,29427,Education and learning|Movies,The Crazies,Action:Horror:Mystery
+@rburdett_1876,32657,Education and learning|Movies,Percy Jackson & the Olympians: The Lightning Thief,Adventure:Fantasy:Family
+@pthomas_1989,10140,Cooking|Movies,The Chronicles of Narnia: The Voyage of the Dawn Treader,Fantasy
+@pthomas_1989,27569,Cooking|Movies,Extraordinary Measures,Drama
+@sroe_2015,10192,DIY and crafts|Movies,Shrek Forever After,Adventure:Animation:Comedy:Fantasy:Family
+@sroe_2015,18823,DIY and crafts|Movies,Clash of the Titans,Action:Adventure:Fantasy
+@sroe_2015,32823,DIY and crafts|Movies,Get Him to the Greek,Comedy
+@sroe_2015,25195,DIY and crafts|Movies,Leap Year,Comedy:Romance
+@sroe_2015,23631,DIY and crafts|Movies,Machete,Action:Comedy:Thriller
+@sroe_2015,23169,DIY and crafts|Movies,Remember Me,Drama:Romance
+@sroe_2015,16290,DIY and crafts|Movies,Jackass 3D,Action:Comedy:Documentary
+@wkim_2061,33909,Outdoor activities|Finance and investments|History|Movies,Wall Street: Money Never Sleeps,Crime:Drama
+@wkim_2061,23172,Outdoor activities|Finance and investments|History|Movies,The Spy Next Door,Action:Comedy:Family
+@wkim_2061,7978,Outdoor activities|Finance and investments|History|Movies,The Wolfman,Drama:Horror:Thriller
+@wkim_2061,27022,Outdoor activities|Finance and investments|History|Movies,The Sorcerer's Apprentice,Action:Adventure:Comedy:Drama:Fantasy
+@wkim_2061,23483,Outdoor activities|Finance and investments|History|Movies,Kick-Ass,Action:Crime
+@wkim_2061,22972,Outdoor activities|Finance and investments|History|Movies,Green Zone,Action:Adventure:Drama:Thriller
+@wkim_2061,9364,Outdoor activities|Finance and investments|History|Movies,Wuthering Heights,Drama:Romance
+@dnystrom_2135,34016,Social causes and activism|Movies|Photography|DIY and crafts,She's Out of My League,Comedy:Romance
+@dnystrom_2135,30675,Social causes and activism|Movies|Photography|DIY and crafts,Planet Hulk,Action:Animation:Science Fiction
+@dnystrom_2135,26388,Social causes and activism|Movies|Photography|DIY and crafts,Buried,Drama:Mystery:Thriller
+@dnystrom_2135,23023,Social causes and activism|Movies|Photography|DIY and crafts,Tooth Fairy,Comedy:Fantasy:Family
+@dnystrom_2135,10138,Social causes and activism|Movies|Photography|DIY and crafts,Iron Man 2,Action:Adventure:Science Fiction
+@dnystrom_2135,23048,Social causes and activism|Movies|Photography|DIY and crafts,Hot Tub Time Machine,Adventure:Comedy:Science Fiction
+@nanderson_2175,1865,Business and entrepreneurship|Movies|Business and entrepreneurship|Travel,Pirates of the Caribbean: On Stranger Tides,Action:Adventure:Fantasy
+@nanderson_2175,11324,Business and entrepreneurship|Movies|Business and entrepreneurship|Travel,Shutter Island,Drama:Mystery:Thriller
+@nanderson_2175,32856,Business and entrepreneurship|Movies|Business and entrepreneurship|Travel,Valentine's Day,Comedy:Romance
+@nanderson_2175,23742,Business and entrepreneurship|Movies|Business and entrepreneurship|Travel,Cop Out,Action:Comedy:Crime
+@nanderson_2175,33909,Business and entrepreneurship|Movies|Business and entrepreneurship|Travel,Wall Street: Money Never Sleeps,Crime:Drama
+@nanderson_2175,23047,Business and entrepreneurship|Movies|Business and entrepreneurship|Travel,Season of the Witch,Action:Adventure:Fantasy
+@nanderson_2175,10192,Business and entrepreneurship|Movies|Business and entrepreneurship|Travel,Shrek Forever After,Adventure:Animation:Comedy:Fantasy:Family
+@dbrowning_2228,22972,Science|Sports|Outdoor activities|Movies|Beauty,Green Zone,Action:Adventure:Drama:Thriller
+@dbrowning_2228,33217,Science|Sports|Outdoor activities|Movies|Beauty,Diary of a Wimpy Kid,Comedy:Family
+@dbrowning_2228,20352,Science|Sports|Outdoor activities|Movies|Beauty,Despicable Me,Animation:Family
+@dbrowning_2228,7978,Science|Sports|Outdoor activities|Movies|Beauty,The Wolfman,Drama:Horror:Thriller
+@dbrowning_2228,23631,Science|Sports|Outdoor activities|Movies|Beauty,Machete,Action:Comedy:Thriller
+@bdenison_2233,26224,Movies|Parenting and family|Sports|Cooking,Global Eugenics: Using Medicine to Kill,Documentary
+@bdenison_2233,27022,Movies|Parenting and family|Sports|Cooking,The Sorcerer's Apprentice,Action:Adventure:Comedy:Drama:Fantasy
+@bdenison_2233,22894,Movies|Parenting and family|Sports|Cooking,Legion,Action:Fantasy:Thriller
+@bdenison_2233,29427,Movies|Parenting and family|Sports|Cooking,The Crazies,Action:Horror:Mystery
+@rford_2315,23759,Movies|Science|Books|Technology,Centurion,Action:Drama:Thriller
+@ljeanbaptiste_2441,12645,Movies,Inhale,Action:Drama:Thriller
+@ljeanbaptiste_2441,23437,Movies,A Nightmare on Elm Street,Horror:Mystery:Thriller
+@ssanchez_2458,24428,Fashion|Movies,The Avengers,Action:Adventure:Science Fiction
+@ssanchez_2458,23048,Fashion|Movies,Hot Tub Time Machine,Adventure:Comedy:Science Fiction
+@ssanchez_2458,32856,Fashion|Movies,Valentine's Day,Comedy:Romance
+@ssanchez_2458,10679,Fashion|Movies,Iron Sky,Action:Comedy:Science Fiction
+@ssanchez_2458,1865,Fashion|Movies,Pirates of the Caribbean: On Stranger Tides,Action:Adventure:Fantasy
+@ssanchez_2458,26389,Fashion|Movies,From Paris with Love,Action:Crime:Thriller
+@rdavis_2506,20662,Movies|Politics|Photography|Outdoor activities,Robin Hood,Action:Adventure:Drama:History
+@bheinz_2682,23629,DIY and crafts|Cars and automobiles|History|Movies|Fashion,Sucker Punch,Action:Fantasy:Thriller
+@bheinz_2682,26389,DIY and crafts|Cars and automobiles|History|Movies|Fashion,From Paris with Love,Action:Crime:Thriller
+@bheinz_2682,34803,DIY and crafts|Cars and automobiles|History|Movies|Fashion,Death at a Funeral,Comedy
+@dwilliams_2807,4258,Gardening|Fashion|Gaming|Movies|Sports,Scary Movie 5,Comedy
+@dwilliams_2807,24021,Gardening|Fashion|Gaming|Movies|Sports,The Twilight Saga: Eclipse,Adventure:Drama:Fantasy:Romance
+@dwilliams_2807,11324,Gardening|Fashion|Gaming|Movies|Sports,Shutter Island,Drama:Mystery:Thriller
+@dwilliams_2807,10140,Gardening|Fashion|Gaming|Movies|Sports,The Chronicles of Narnia: The Voyage of the Dawn Treader,Fantasy
+@dwilliams_2807,34016,Gardening|Fashion|Gaming|Movies|Sports,She's Out of My League,Comedy:Romance
+@dwilliams_2807,20504,Gardening|Fashion|Gaming|Movies|Sports,The Book of Eli,Action:Science Fiction:Thriller
+@rcollins_3145,32657,Movies|DIY and crafts,Percy Jackson & the Olympians: The Lightning Thief,Adventure:Fantasy:Family
+@rcollins_3145,4258,Movies|DIY and crafts,Scary Movie 5,Comedy
+@rcollins_3145,33909,Movies|DIY and crafts,Wall Street: Money Never Sleeps,Crime:Drama
+@rcollins_3145,27205,Movies|DIY and crafts,Inception,Action:Adventure:Mystery:Science Fiction:Thriller
+@pmason_3279,25195,Politics|Movies|Gaming,Leap Year,Comedy:Romance
+@pmason_3279,22538,Politics|Movies|Gaming,Scott Pilgrim vs. the World,Action:Adventure:Comedy
+@pmason_3279,11439,Politics|Movies|Gaming,The Ghost Writer,Mystery:Thriller
+@pmason_3279,10196,Politics|Movies|Gaming,The Last Airbender,Action:Adventure:Fantasy:Family
+@mlee_3335,33602,Movies|Music|Fashion|DIY and crafts|Business and entrepreneurship,Temple Grandin,Drama
+@mlee_3335,34179,Movies|Music|Fashion|DIY and crafts|Business and entrepreneurship,14 Blades,Action:Drama:Thriller
+@mlee_3335,23742,Movies|Music|Fashion|DIY and crafts|Business and entrepreneurship,Cop Out,Action:Comedy:Crime
+@mlee_3335,9364,Movies|Music|Fashion|DIY and crafts|Business and entrepreneurship,Wuthering Heights,Drama:Romance
+@mlee_3335,10192,Movies|Music|Fashion|DIY and crafts|Business and entrepreneurship,Shrek Forever After,Adventure:Animation:Comedy:Fantasy:Family
+@mlee_3335,22894,Movies|Music|Fashion|DIY and crafts|Business and entrepreneurship,Legion,Action:Fantasy:Thriller
+@mboehme_3442,30675,Movies|Cars and automobiles|Technology|Travel|Art,Planet Hulk,Action:Animation:Science Fiction
+@mboehme_3442,23514,Movies|Cars and automobiles|Technology|Travel|Art,The Rum Diary,Comedy:Drama
+@mboehme_3442,27573,Movies|Cars and automobiles|Technology|Travel|Art,The Bounty Hunter,Action
+@mboehme_3442,23023,Movies|Cars and automobiles|Technology|Travel|Art,Tooth Fairy,Comedy:Fantasy:Family
+@mboehme_3442,27205,Movies|Cars and automobiles|Technology|Travel|Art,Inception,Action:Adventure:Mystery:Science Fiction:Thriller
+@mboehme_3442,9364,Movies|Cars and automobiles|Technology|Travel|Art,Wuthering Heights,Drama:Romance
+@rwilliams_3454,1771,Cars and automobiles|Social causes and activism|Cars and automobiles|Movies|Beauty,Captain America: The First Avenger,Action:Adventure:Science Fiction
+@rwilliams_3454,12685,Cars and automobiles|Social causes and activism|Cars and automobiles|Movies|Beauty,BloodRayne: The Third Reich,Action:Adventure:Comedy:Horror:Science Fiction:Thriller
+@rwilliams_3454,23514,Cars and automobiles|Social causes and activism|Cars and automobiles|Movies|Beauty,The Rum Diary,Comedy:Drama
+@rwilliams_3454,10140,Cars and automobiles|Social causes and activism|Cars and automobiles|Movies|Beauty,The Chronicles of Narnia: The Voyage of the Dawn Treader,Fantasy
+@bvasquez_3580,10193,Parenting and family|Movies|Cooking|Gardening,Toy Story 3,Animation:Comedy:Family
+@bvasquez_3580,22971,Parenting and family|Movies|Cooking|Gardening,Dear John,Drama:Romance:War
+@bvasquez_3580,31967,Parenting and family|Movies|Cooking|Gardening,Dante's Inferno: An Animated Epic,Action:Animation:Science Fiction:Thriller
+@bvasquez_3580,22894,Parenting and family|Movies|Cooking|Gardening,Legion,Action:Fantasy:Thriller
+@gjackson_3588,34335,Finance and investments|Beauty|Technology|Finance and investments|Movies,Nine Dead,Crime:Drama:Horror:Suspense:Thriller
+@gjackson_3588,31261,Finance and investments|Beauty|Technology|Finance and investments|Movies,Halo Legends,Action:Adventure:Animation:Science Fiction
+@gjackson_3588,33217,Finance and investments|Beauty|Technology|Finance and investments|Movies,Diary of a Wimpy Kid,Comedy:Family
+@gjackson_3588,27205,Finance and investments|Beauty|Technology|Finance and investments|Movies,Inception,Action:Adventure:Mystery:Science Fiction:Thriller
+@rgene_3686,24428,Health and wellness|Beauty|Social causes and activism|Movies|Outdoor activities,The Avengers,Action:Adventure:Science Fiction
+@rgene_3686,1865,Health and wellness|Beauty|Social causes and activism|Movies|Outdoor activities,Pirates of the Caribbean: On Stranger Tides,Action:Adventure:Fantasy
+@rgene_3686,33217,Health and wellness|Beauty|Social causes and activism|Movies|Outdoor activities,Diary of a Wimpy Kid,Comedy:Family
+@rgene_3686,12445,Health and wellness|Beauty|Social causes and activism|Movies|Outdoor activities,Harry Potter and the Deathly Hallows: Part 2,Adventure:Fantasy:Family
+@rgene_3686,10196,Health and wellness|Beauty|Social causes and activism|Movies|Outdoor activities,The Last Airbender,Action:Adventure:Fantasy:Family
+@rgene_3686,13477,Health and wellness|Beauty|Social causes and activism|Movies|Outdoor activities,When in Rome,Comedy:Romance
+@gguth_3701,23514,Movies,The Rum Diary,Comedy:Drama
+@gguth_3701,23437,Movies,A Nightmare on Elm Street,Horror:Mystery:Thriller
+@gguth_3701,10191,Movies,How to Train Your Dragon,Adventure:Animation:Fantasy:Family
+@gguth_3701,27004,Movies,Ca$h,Action:Adventure:Thriller:Indie
+@gguth_3701,27579,Movies,The American,Crime:Drama:Suspense:Thriller
+@aschinke_3788,23514,History|Fashion|Movies|Finance and investments|Cars and automobiles,The Rum Diary,Comedy:Drama
+@aschinke_3788,23742,History|Fashion|Movies|Finance and investments|Cars and automobiles,Cop Out,Action:Comedy:Crime
+@aschinke_3788,33217,History|Fashion|Movies|Finance and investments|Cars and automobiles,Diary of a Wimpy Kid,Comedy:Family
+@cgiardina_3878,11439,DIY and crafts|Finance and investments|Movies|Pets|Art,The Ghost Writer,Mystery:Thriller
+@cgiardina_3878,30675,DIY and crafts|Finance and investments|Movies|Pets|Art,Planet Hulk,Action:Animation:Science Fiction
+@cgiardina_3878,22538,DIY and crafts|Finance and investments|Movies|Pets|Art,Scott Pilgrim vs. the World,Action:Adventure:Comedy
+@cgiardina_3878,29564,DIY and crafts|Finance and investments|Movies|Pets|Art,Smokin' Aces 2: Assassins' Ball,Action:Adventure:Comedy:Crime:Thriller
+@cgiardina_3878,23172,DIY and crafts|Finance and investments|Movies|Pets|Art,The Spy Next Door,Action:Comedy:Family
+@pscott_3890,17578,Gaming|Movies,The Adventures of Tintin,Action:Adventure:Animation:Mystery:Family
+@pscott_3890,23172,Gaming|Movies,The Spy Next Door,Action:Comedy:Family
+@ecolley_3926,23168,Health and wellness|Movies|Education and learning|Science|Pets,The Town,Crime:Drama:Thriller
+@clawson_4077,10193,Politics|Movies|Books|Fashion,Toy Story 3,Animation:Comedy:Family
+@clawson_4077,10196,Politics|Movies|Books|Fashion,The Last Airbender,Action:Adventure:Fantasy:Family
+@clawson_4077,29920,Politics|Movies|Books|Fashion,Easy Money,Crime:Drama:Thriller
+@clawson_4077,34803,Politics|Movies|Books|Fashion,Death at a Funeral,Comedy
+@clawson_4077,22894,Politics|Movies|Books|Fashion,Legion,Action:Fantasy:Thriller
+@alindall_4087,10140,Pets|Movies|Pets|Food and dining,The Chronicles of Narnia: The Voyage of the Dawn Treader,Fantasy
+@alindall_4087,23172,Pets|Movies|Pets|Food and dining,The Spy Next Door,Action:Comedy:Family
+@alindall_4087,10196,Pets|Movies|Pets|Food and dining,The Last Airbender,Action:Adventure:Fantasy:Family
+@rcarter_4104,33602,Movies|Outdoor activities|Parenting and family|Sports,Temple Grandin,Drama
+@rcarter_4104,34016,Movies|Outdoor activities|Parenting and family|Sports,She's Out of My League,Comedy:Romance
+@rcarter_4104,27576,Movies|Outdoor activities|Parenting and family|Sports,Salt,Action:Crime:Mystery:Thriller
+@rcarter_4104,33107,Movies|Outdoor activities|Parenting and family|Sports,And Soon the Darkness,Crime:Horror:Mystery:Thriller
+@rcarter_4104,32823,Movies|Outdoor activities|Parenting and family|Sports,Get Him to the Greek,Comedy
+@rcarter_4104,20533,Movies|Outdoor activities|Parenting and family|Sports,Jonah Hex,Action:Drama:Fantasy:Thriller:Western
+@hbostrom_4181,189,DIY and crafts|Nature|Movies|Cooking|Fashion,Sin City: A Dame to Kill For,Action:Crime:Drama:Thriller
+@hbostrom_4181,12155,DIY and crafts|Nature|Movies|Cooking|Fashion,Alice in Wonderland,Fantasy
+@csmith_4262,22538,History|Movies|Technology|Books,Scott Pilgrim vs. the World,Action:Adventure:Comedy
+@gmohr_4345,34182,Movies,Confucius,Drama:History
+@gmohr_4345,12155,Movies,Alice in Wonderland,Fantasy
+@gmohr_4345,24428,Movies,The Avengers,Action:Adventure:Science Fiction
+@gmohr_4345,33555,Movies,Sherlock Holmes,Action:Drama:Fantasy:Horror:Mystery:Thriller
+@gmohr_4345,30675,Movies,Planet Hulk,Action:Animation:Science Fiction
+@gmohr_4345,1771,Movies,Captain America: The First Avenger,Action:Adventure:Science Fiction
+@ojames_4515,12445,Health and wellness|Cars and automobiles|Fitness|Movies,Harry Potter and the Deathly Hallows: Part 2,Adventure:Fantasy:Family
+@ojames_4515,26388,Health and wellness|Cars and automobiles|Fitness|Movies,Buried,Drama:Mystery:Thriller
+@arobison_4541,10196,Movies|Gaming,The Last Airbender,Action:Adventure:Fantasy:Family
+@arobison_4541,23742,Movies|Gaming,Cop Out,Action:Comedy:Crime
+@arobison_4541,9364,Movies|Gaming,Wuthering Heights,Drama:Romance
+@wturk_4654,29427,Health and wellness|Outdoor activities|Movies,The Crazies,Action:Horror:Mystery
+@wturk_4654,10140,Health and wellness|Outdoor activities|Movies,The Chronicles of Narnia: The Voyage of the Dawn Treader,Fantasy
+@wturk_4654,27004,Health and wellness|Outdoor activities|Movies,Ca$h,Action:Adventure:Thriller:Indie
+@wturk_4654,31007,Health and wellness|Outdoor activities|Movies,Welcome to the Rileys,Drama:Indie
+@wturk_4654,31967,Health and wellness|Outdoor activities|Movies,Dante's Inferno: An Animated Epic,Action:Animation:Science Fiction:Thriller
+@wturk_4654,27582,Health and wellness|Outdoor activities|Movies,The Mechanic,Action:Crime:Thriller
+@wsanders_4829,31007,Art|Movies|Beauty,Welcome to the Rileys,Drama:Indie
+@wsanders_4829,10195,Art|Movies|Beauty,Thor,Action:Adventure:Fantasy
+@akoester_4833,8967,Parenting and family|Fashion|Finance and investments|Movies|Parenting and family,The Tree of Life,Drama:Fantasy:Indie
+@akoester_4833,23169,Parenting and family|Fashion|Finance and investments|Movies|Parenting and family,Remember Me,Drama:Romance
+@akoester_4833,26022,Parenting and family|Fashion|Finance and investments|Movies|Parenting and family,My Name Is Khan,Drama:Romance
+@akoester_4833,12819,Parenting and family|Fashion|Finance and investments|Movies|Parenting and family,Alpha and Omega,Animation:Family
+@csalinas_5013,23830,Art|Movies|Cooking|Nature|Travel,Last Night,Drama:Romance
+@csalinas_5013,1865,Art|Movies|Cooking|Nature|Travel,Pirates of the Caribbean: On Stranger Tides,Action:Adventure:Fantasy
+@csalinas_5013,12685,Art|Movies|Cooking|Nature|Travel,BloodRayne: The Third Reich,Action:Adventure:Comedy:Horror:Science Fiction:Thriller
+@csalinas_5013,31007,Art|Movies|Cooking|Nature|Travel,Welcome to the Rileys,Drama:Indie
+@csalinas_5013,11324,Art|Movies|Cooking|Nature|Travel,Shutter Island,Drama:Mystery:Thriller
+@csalinas_5013,27022,Art|Movies|Cooking|Nature|Travel,The Sorcerer's Apprentice,Action:Adventure:Comedy:Drama:Fantasy
+@sadams_5091,27004,Movies|Politics|Fashion|Parenting and family|Sports,Ca$h,Action:Adventure:Thriller:Indie
+@sadams_5091,18823,Movies|Politics|Fashion|Parenting and family|Sports,Clash of the Titans,Action:Adventure:Fantasy
+@sadams_5091,26389,Movies|Politics|Fashion|Parenting and family|Sports,From Paris with Love,Action:Crime:Thriller
+@sadams_5091,27585,Movies|Politics|Fashion|Parenting and family|Sports,Rabbit Hole,Drama
+@sadams_5091,12645,Movies|Politics|Fashion|Parenting and family|Sports,Inhale,Action:Drama:Thriller
+@sadams_5091,10140,Movies|Politics|Fashion|Parenting and family|Sports,The Chronicles of Narnia: The Voyage of the Dawn Treader,Fantasy
+@sadams_5091,10193,Movies|Politics|Fashion|Parenting and family|Sports,Toy Story 3,Animation:Comedy:Family
+@mgreen_5237,23172,Pets|Technology|Health and wellness|Movies|Gaming,The Spy Next Door,Action:Comedy:Family
+@mgreen_5237,26022,Pets|Technology|Health and wellness|Movies|Gaming,My Name Is Khan,Drama:Romance
+@mgreen_5237,31261,Pets|Technology|Health and wellness|Movies|Gaming,Halo Legends,Action:Adventure:Animation:Science Fiction
+@mgreen_5237,10138,Pets|Technology|Health and wellness|Movies|Gaming,Iron Man 2,Action:Adventure:Science Fiction
+@jpelaez_5454,23437,History|Movies,A Nightmare on Elm Street,Horror:Mystery:Thriller
+@jpelaez_5454,26388,History|Movies,Buried,Drama:Mystery:Thriller
+@jpelaez_5454,31007,History|Movies,Welcome to the Rileys,Drama:Indie
+@jpelaez_5454,23483,History|Movies,Kick-Ass,Action:Crime
+@jpelaez_5454,33602,History|Movies,Temple Grandin,Drama
+@jpelaez_5454,23830,History|Movies,Last Night,Drama:Romance
+@jpelaez_5454,17578,History|Movies,The Adventures of Tintin,Action:Adventure:Animation:Mystery:Family
+@enewton_5514,22972,Travel|Movies|Education and learning,Green Zone,Action:Adventure:Drama:Thriller
+@enewton_5514,29564,Travel|Movies|Education and learning,Smokin' Aces 2: Assassins' Ball,Action:Adventure:Comedy:Crime:Thriller
+@enewton_5514,27581,Travel|Movies|Education and learning,The Other Guys,Action:Comedy:Crime
+@mcart_5535,23759,Politics|Movies,Centurion,Action:Drama:Thriller
+@mcart_5535,20526,Politics|Movies,TRON: Legacy,Action:Adventure:Science Fiction
+@mcart_5535,24021,Politics|Movies,The Twilight Saga: Eclipse,Adventure:Drama:Fantasy:Romance
+@mcart_5535,23631,Politics|Movies,Machete,Action:Comedy:Thriller
+@mcart_5535,18823,Politics|Movies,Clash of the Titans,Action:Adventure:Fantasy
+@gdillahunt_5702,1865,Politics|Movies|Food and dining,Pirates of the Caribbean: On Stranger Tides,Action:Adventure:Fantasy
+@gdillahunt_5702,9364,Politics|Movies|Food and dining,Wuthering Heights,Drama:Romance
+@gdillahunt_5702,17578,Politics|Movies|Food and dining,The Adventures of Tintin,Action:Adventure:Animation:Mystery:Family
+@gdillahunt_5702,27573,Politics|Movies|Food and dining,The Bounty Hunter,Action
+@gdillahunt_5702,23483,Politics|Movies|Food and dining,Kick-Ass,Action:Crime
+@gdillahunt_5702,23048,Politics|Movies|Food and dining,Hot Tub Time Machine,Adventure:Comedy:Science Fiction
+@gdillahunt_5702,23629,Politics|Movies|Food and dining,Sucker Punch,Action:Fantasy:Thriller
+@pmarshall_5916,18823,Movies|Business and entrepreneurship|Art|Finance and investments|Health and wellness,Clash of the Titans,Action:Adventure:Fantasy
+@pmarshall_5916,26388,Movies|Business and entrepreneurship|Art|Finance and investments|Health and wellness,Buried,Drama:Mystery:Thriller
+@pmarshall_5916,23172,Movies|Business and entrepreneurship|Art|Finance and investments|Health and wellness,The Spy Next Door,Action:Comedy:Family
+@pmarshall_5916,27022,Movies|Business and entrepreneurship|Art|Finance and investments|Health and wellness,The Sorcerer's Apprentice,Action:Adventure:Comedy:Drama:Fantasy
+@pmarshall_5916,13477,Movies|Business and entrepreneurship|Art|Finance and investments|Health and wellness,When in Rome,Comedy:Romance
+@bstewart_5921,10192,Cooking|DIY and crafts|Movies|Travel|Books,Shrek Forever After,Adventure:Animation:Comedy:Fantasy:Family
+@culsamer_5999,29920,Fashion|Movies|Science,Easy Money,Crime:Drama:Thriller
+@culsamer_5999,23047,Fashion|Movies|Science,Season of the Witch,Action:Adventure:Fantasy

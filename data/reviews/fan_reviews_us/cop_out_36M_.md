@@ -1,0 +1,3 @@
+**Rating: 3 - Ok**
+
+Review by @ktravis_1784: "Cop Out" is an enjoyable romp that balances action and comedy, but it doesn't quite reach the heights of greatness. As someone who loves both books and movies, I often find myself drawn to clever storytelling and rich characters, and while "Cop Out" features some fun moments and entertaining banter, it feels more like a light distraction than a memorable experience. It’s a perfect choice for a laid-back movie night, especially when paired with some good snacks, but I wouldn't rush to recommend it as a must-see. Overall, it’s a decent watch but not something I’d marinate over in my mind after the credits roll.

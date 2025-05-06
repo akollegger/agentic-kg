@@ -1,0 +1,5 @@
+**Rating: 4 - great**
+
+@rburdett_1876's Review of *Percy Jackson & the Olympians: The Lightning Thief*
+
+As a movie fan and someone who enjoys education and learning, I found *Percy Jackson & the Olympians: The Lightning Thief* to be a delightful blend of adventure and fantasy that kept me engaged throughout. The film does a fantastic job of bringing Greek mythology to life, making it accessible for younger audiences while still appealing to the inner nerd in me. I appreciated how it ignited curiosity about ancient myths, encouraging viewers to explore beyond the screen. Although there were some deviations from the book that fans may debate, the fun, energetic performances from the cast, particularly Logan Lerman as Percy, made it a joy to watch. It's definitely a great pick for a family movie night, especially with some popcorn on hand!

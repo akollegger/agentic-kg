@@ -1,0 +1,5 @@
+**Movie Review: The Spy Next Door**  
+**Rating: 3 - ok**  
+**Reviewed by: @pmarshall_5916**  
+
+I recently watched *The Spy Next Door* and while it had its moments, I found it to be just an okay experience—definitely more enjoyable with a big bowl of popcorn. Jackie Chan's charm and comedic timing brought some laughs, but the plot felt predictable, which is somewhat disappointing since I love innovative storytelling in both movies and business ventures. As someone who appreciates art in all forms, I was hoping for more imaginative direction and depth in the characters. Nonetheless, it's a lighthearted family film that could be a fun watch for a casual movie night, although I'd recommend saving it for when you're in the mood for a simple comedy rather than expecting a more profound cinematic experience.

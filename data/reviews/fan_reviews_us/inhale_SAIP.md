@@ -1,0 +1,3 @@
+**Rating: 4 (great - movie was highly enjoyable, would recommend to friends)**
+
+**Review by @bvasquez_3580:** "Inhale" is a gripping blend of action, drama, and thriller that kept me on the edge of my seat from start to finish. The film's exploration of moral dilemmas in a harrowing situation felt timely and relevant, given today's world. The performances were solid, particularly the lead, who brought a raw intensity to the character that resonated with me. The pacing was just right, not dragging at any point, which is a pet peeve of mine. As someone who appreciates a good thrill while watching movies with friends over pizza, I can wholeheartedly recommend "Inhale" for your next movie night. You're in for an intense experience!

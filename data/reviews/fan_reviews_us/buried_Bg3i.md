@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+Review by @dnystrom_2135: "Buried" is a gripping thriller that keeps you on the edge of your seat with its unique premise and intense performances, particularly by Ryan Reynolds. As a fan of both movies and social causes, I appreciated how it subtly raises questions about human rights and the value of life under dire circumstances. The confined setting makes it feel claustrophobic, amplifying the emotional weight of the unfolding drama, and I found it beautifully shot, almost like a dark piece of photography highlighting despair and hope. I would definitely recommend it to friends, especially those who enjoy films that provoke thought and elicit strong feelings while also being a nail-biting cinematic experience.

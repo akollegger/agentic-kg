@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+@csalinas_5013: "Last Night" beautifully captures the complexities of love and the bittersweet moments that define relationships. As someone who cherishes art and the emotional depth it can convey, I found the film's cinematography to be visually stunning, almost like a painting that tells its own story. The characters' struggles felt relatable, mirroring the ups and downs that one experiences in both romance and life. I particularly appreciated the subtle moments, like the intimate dinner scenes which reminded me of my own love for cooking and sharing meals with loved ones. Overall, this movie was highly enjoyable, and I would recommend it to friends for a cozy film night—just don’t forget the popcorn and some good wine!

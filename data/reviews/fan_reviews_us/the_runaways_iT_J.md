@@ -1,0 +1,3 @@
+Rating: 4 - great
+
+Review: @jmartell_1635 here! I recently watched "The Runaways," and I have to say it was highly enjoyable. The performances were stellar, especially Dakota Fanning and Kristen Stewart, who really captured the essence of the iconic band. As a huge fan of both movies and music, I appreciated how the film intertwined the challenges of adolescence with the gritty world of rock ‘n’ roll. Additionally, as someone with an interest in entrepreneurship, I found the portrayal of the band's rise to fame and the business side of the music industry particularly intriguing. It’s a must-watch for anyone who loves a good music drama—just don’t forget the popcorn!

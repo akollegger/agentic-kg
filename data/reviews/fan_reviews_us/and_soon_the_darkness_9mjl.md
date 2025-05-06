@@ -1,0 +1,5 @@
+**Movie Review: And Soon the Darkness**  
+**Rating: 4 - great**  
+**Reviewed by: @rcarter_4104**
+
+"And Soon the Darkness" weaves a thrilling tale that keeps you on the edge of your seat, and I found it to be highly enjoyable! As a fan of movies that combine suspense and a mystery-filled atmosphere, this film did not disappoint. The tension was palpable, reminiscent of the outdoor adventures I often share with my family where surprises await at every corner. The dynamic between the characters was beautifully developed, making their journey not only thrilling but also emotionally resonant. It's an excellent movie to chat about with friends over dinner—perfect for a weekend night when I can escape from the responsibilities of parenting, if only for a while. I’d definitely recommend watching this one!

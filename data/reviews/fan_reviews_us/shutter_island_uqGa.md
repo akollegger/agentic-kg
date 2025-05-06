@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+Review by @wsanders_4829: "Shutter Island," directed by Martin Scorsese, is a gripping thriller that brilliantly weaves together elements of drama and mystery. The psychological tension kept me on the edge of my seat, and Leonardo DiCaprio delivered a powerful performance that truly captivated me. As someone who loves a good mind-bending plot, I thoroughly enjoyed how the film kept me guessing until the very end. The cinematography was stunning, especially the eerie landscapes that really set the mood. I would definitely recommend this movie to friends, especially those who appreciate intricate storytelling and a thrilling ride!

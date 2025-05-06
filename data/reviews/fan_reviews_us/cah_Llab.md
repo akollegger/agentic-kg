@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+@gguth_3701: "Ca$h" is a thrilling ride that kept me on the edge of my seat with its blend of action and indie spirit. The film does an excellent job of intertwining intense moments with a gripping narrative that explores morality in a world driven by greed. As a movie fan, I appreciated the clever plot twists and the gritty execution that delivered both adventure and suspense. While it might not be a mainstream blockbuster, its unique charm and compelling performances make it a great recommendation for my friends—especially with some popcorn and soda in hand to enhance the experience!

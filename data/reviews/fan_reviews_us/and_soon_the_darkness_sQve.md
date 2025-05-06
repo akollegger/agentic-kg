@@ -1,0 +1,3 @@
+Rating: 3 - ok
+
+Review by @mmoore_1253: "And Soon the Darkness" offers a decent mix of crime, horror, and mystery, but it ultimately falls short of truly captivating its audience. While I appreciated the film's eerie atmosphere and the tension that builds throughout, it struggled at times with pacing and a lack of character development. As a fan of thrillers, I found some moments engaging enough to keep me intrigued. It's the kind of movie you can enjoy with a bunch of friends and some tasty snacks, but I wouldn't rave about it afterward. Overall, it's an okay watch if you're in the mood for a chilling story, but don't expect to be blown away.

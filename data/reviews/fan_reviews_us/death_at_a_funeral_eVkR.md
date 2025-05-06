@@ -1,0 +1,3 @@
+**Rating:** 4 (great)
+
+Review by @cpayne_1569: *Death at a Funeral* is a comedy masterpiece that kept me laughing from start to finish! I loved how the film cleverly blends dark humor with heartfelt moments, all set against the chaotic backdrop of a family funeral. As someone who enjoys travel, I appreciated the film's ability to transport me into the lives of these quirky characters, reminding me of the time I attended a family gathering that spiraled into madness. The ensemble cast delivered stellar performances, and I can't recommend it enough to my friends—it's the perfect movie to enjoy with some good snacks and a group of loved ones. Don't miss out on this hilarious romp!

@@ -1,0 +1,5 @@
+**Rating: 4 - Great**
+
+"Welcome to the Rileys" is a poignant exploration of loss, redemption, and the unexpected connections we forge in life. As someone who enjoys both history and movies, I found the film’s character-driven narrative deeply compelling. The performances by James Gandolfini and Kristen Stewart were especially noteworthy, as they brought a raw authenticity to their roles that resonated with me. The story's backdrop, hinting at the emotional struggles faced by its characters, feels like a reflection of personal and historical narratives we often overlook. While there were moments that tugged at my heartstrings, the film manages to balance its heavier themes with moments of warmth and connection. I'd happily recommend it to friends who appreciate indie dramas that invite deep reflection. 
+
+- @jpelaez_5454

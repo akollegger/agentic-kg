@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+Review by @rjohnson_412: "Centurion" takes you on a thrilling ride through ancient Rome that kept me on the edge of my seat! As a movie enthusiast, I appreciated the intense action sequences and the gritty drama that unfolds amidst the harsh landscapes. The performances were robust, particularly from Michael Fassbender, who brought depth to his character amidst the chaos. I found myself rooting for the soldiers and felt a real connection to their story—almost like cheering on my pets as they conquer their little daily challenges in the garden! The music score heightened the tension at the right moments, making it an enjoyable experience overall. It's definitely a movie I'd recommend to friends who appreciate a solid mix of action and drama.

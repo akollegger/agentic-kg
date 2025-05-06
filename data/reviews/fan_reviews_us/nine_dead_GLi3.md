@@ -1,0 +1,4 @@
+**Rating: 3 - ok**
+
+**Review by @gjackson_3588:**  
+"Nine Dead" had an intriguing premise that kept me engaged throughout, but I felt the execution left a bit to be desired. As someone who enjoys movies that blend different genres, the combination of crime, drama, and horror piqued my interest; however, some character developments felt rushed, and the plot twists were somewhat predictable. That said, I still enjoyed the tense atmosphere and the psychological exploration of human dilemmas—it was a nice distraction, especially with some popcorn on hand! As a finance enthusiast, I appreciate stories that delve into the darker aspects of human nature, and this film did offer some interesting moral quandaries to ponder, making it a decent watch on a quiet evening.

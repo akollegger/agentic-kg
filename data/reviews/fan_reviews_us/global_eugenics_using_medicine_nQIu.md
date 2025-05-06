@@ -1,0 +1,5 @@
+**Rating: 2 - Bad**
+
+As a movie fan who enjoys delving into various themes, I had high hopes for "Global Eugenics: Using Medicine to Kill," but unfortunately, it fell short of my expectations. The documentary tackles a profoundly serious topic, yet it often felt disjointed and lacked the depth needed to engage viewers effectively. As a parent, I appreciate films that encourage meaningful discussions about ethics and science, but this one missed the mark, making it hard to recommend, even with good snacks by my side. The film's presentation left me feeling uninspired, and as someone who loves both sports and cooking, I found it hard to stay tuned in when I could have been watching a captivating match or whipping up a delicious meal instead. Overall, it's a missed opportunity to explore an important subject matter. 
+
+— @bdenison_2233

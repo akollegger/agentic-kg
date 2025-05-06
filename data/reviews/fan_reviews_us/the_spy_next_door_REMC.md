@@ -1,0 +1,4 @@
+**Rating: 4 - Great**
+
+**Review by @wkim_2061:**  
+I recently watched "The Spy Next Door," and I found it to be a great movie, perfect for family movie night. Jackie Chan’s charm as a covert operative turned neighbor, juggling espionage and family life, provided plenty of laughs and action that kept everyone entertained. As someone who loves outdoor activities, I appreciated the film's light-hearted spirit that made me think about how different life can be with unexpected adventures around every corner. Plus, it was nice to wind down with a good comedy after diving into my usual interests in finance and history. I would definitely recommend it to friends looking for a feel-good movie that blends action and comedy with a heartwarming story!

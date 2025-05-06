@@ -1,0 +1,3 @@
+**Rating: 3/5 - ok**
+
+Review by @cwilliams_1684: "Tooth Fairy" is a light-hearted mix of comedy and fantasy that I enjoyed while snacking on some popcorn after a workout. While the plot was a tad predictable and lacked depth, it had its charming moments, especially with Dwayne Johnson’s comedic performance. As someone who loves movies that combine humor with family-friendly themes, it was entertaining enough, especially for a casual movie night. I wouldn't rush to recommend it, but it's a decent way to unwind, especially if you keep your expectations in check and don't mind the occasional cheesy moment. Perfect for a relaxed evening after a busy day in the gym or analyzing the latest investment trends!

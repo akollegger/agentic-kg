@@ -1,0 +1,3 @@
+**Rating: 4 - great**  
+**Review by @epassmore_305:**  
+"She's Out of My League" is a delightful romp that had me chuckling throughout its runtime. The chemistry between the leads brought a refreshing energy to the typical romantic comedy tropes, making it a joy to watch. Given my interests in art and films, I appreciated the vibrant visuals and playful take on the awkwardness of dating. It reminded me of the pitfalls I've encountered in my own quests for fitness and personal improvement, echoing the film's message that confidence is key. I’d definitely recommend this to friends for a light-hearted movie night, ideally paired with some popcorn and a good discussion afterward about our favorite moments!

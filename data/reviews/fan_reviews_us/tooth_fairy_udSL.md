@@ -1,0 +1,3 @@
+**Rating: 3 - Ok**
+
+Review by @gdillahunt_5702: "Tooth Fairy" had its moments that made me chuckle, but overall, it felt like a light-hearted romp best enjoyed with a bowl of popcorn and some fun-sized candy. The blend of comedy and fantasy is aimed more towards a family audience, and while I appreciated the whimsical premise of a tough guy becoming a tooth fairy, the humor sometimes fell flat. It was nice to see Dwayne Johnson in a role that shows off his comedic side, and the kids in the film certainly brought their charm. If you're looking for something to watch with friends after a long day, it's a decent choice, but don't expect it to be a classic worth raving about!

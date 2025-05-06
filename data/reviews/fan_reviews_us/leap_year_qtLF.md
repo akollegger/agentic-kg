@@ -1,0 +1,3 @@
+**Rating:** 3 - ok  
+
+**Review:** As a fan of both DIY projects and movies, I approached "Leap Year" with anticipation, hoping for a charming romantic comedy that would keep me entertained. While it did have its moments of humor and some cute DIY wedding ideas that I found inspiring, the plot felt a bit predictable and rushed at times. The chemistry between the leads was enjoyable, but the pacing sometimes left me feeling like I was in a craft project that just wasn't coming together. Overall, I’m glad I watched it, but I wouldn't go out of my way to recommend it unless you're in the mood for something light-hearted while snacking on some popcorn with friends. – @sroe_2015

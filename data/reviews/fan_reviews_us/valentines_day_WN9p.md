@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+Review by @aschinke_3788: "Valentine's Day" is a delightful ensemble piece that masterfully intertwines the lives of various couples navigating love on that special day. The romantic comedy genre can often fall into predictable tropes, but this movie manages to keep things fresh and engaging with its star-studded cast. It had me laughing and smiling throughout, especially during the unexpected twists in relationships that resonated with some of my own experiences. Perfect for a cozy night in with friends, I'd definitely recommend it for a fun watch—just make sure you have plenty of snacks on hand!

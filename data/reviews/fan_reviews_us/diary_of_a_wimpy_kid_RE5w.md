@@ -1,0 +1,5 @@
+**Rating: 4 - Great**
+
+As a movie fan who greatly appreciates both comedy and family-friendly content, I found "Diary of a Wimpy Kid" to be highly enjoyable and a delightful way to spend an evening. The charming blend of humor and relatable childhood experiences really struck a chord with me, especially as someone who's often juggling the serious world of finance and investments by day! The quirky characters and hilarious situations reminded me of my own childhood antics, and the technology references sprinkled throughout were a nice touch. I would definitely recommend it to friends and perhaps pair it with some popcorn for the full experience. It’s a movie that not only entertains but also brings a nostalgic warmth that resonates with anyone who’s navigated the ups and downs of growing up. 
+
+Credit: @gjackson_3588

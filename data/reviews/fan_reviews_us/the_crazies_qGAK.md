@@ -1,0 +1,3 @@
+**Rating: 4 - great**  
+Review by @rburdett_1876:  
+"The Crazies" is a thrilling blend of action, horror, and mystery that kept me on the edge of my seat from start to finish. As someone who has a keen interest in education and learning, I appreciated how the film explored themes of societal breakdown and the impact of fear on human behavior. The intensity of the plot, coupled with strong performances, made it highly enjoyable, and I found myself genuinely invested in the characters' survival. This isn't just a typical horror flick; it's a thought-provoking ride that I would definitely recommend to my friends, especially for a movie night filled with popcorn and lively discussions afterward!

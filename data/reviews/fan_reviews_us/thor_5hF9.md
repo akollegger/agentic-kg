@@ -1,0 +1,4 @@
+**Username:** @ktravis_1784  
+**Rating:** 4 - great  
+
+As a huge fan of both books and movies, I was pleasantly surprised by "Thor." The blend of action, adventure, and fantasy exceeded my expectations, especially with the stunning visuals and captivating performances. Chris Hemsworth truly embodies the character, bringing depth to the Norse god of thunder while balancing humor with intensity. The film’s storyline is engaging, as it combines mythological elements that book lovers like myself can appreciate. I found myself thoroughly entertained and would happily recommend it to friends, especially those who enjoy a good superhero flick with a mythological twist. Overall, "Thor" is a fantastic addition to the Marvel universe that really makes for a great movie night!

@@ -1,0 +1,5 @@
+**Rating: 4 - Great**
+
+@jpelaez_5454
+
+"Buried" is a gripping thriller that masterfully keeps you on the edge of your seat from start to finish. The film's confined setting heightens the tension, immersing viewers in a world of desperation and mystery as it follows Paul Conroy's harrowing ordeal trapped underground. Ryan Reynolds delivers a powerful and intense performance that showcases his range as an actor. As someone who loves psychological dramas that make you think, I found the film’s exploration of fear and isolation particularly fascinating. The cinematography and sound design were also brilliant, enhancing the claustrophobic atmosphere. Overall, I highly recommend "Buried" to anyone who enjoys thought-provoking thrillers; it’s definitely worth watching with some good snacks to get through those nail-biting moments!

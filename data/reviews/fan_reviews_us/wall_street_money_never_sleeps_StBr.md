@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+@rcollins_3145: "Wall Street: Money Never Sleeps" is a riveting continuation of the iconic saga that dives deep into the world of financial drama. I thoroughly enjoyed the intense performances and intricate plot twists that kept me on the edge of my seat. As a fan of movies that explore complex themes, I appreciated how the film balances high-stakes finance with personal redemption. The cinematography was sleek and engaging, almost akin to crafting something compelling with my own hands - a DIY project come to life on the screen! I would definitely recommend this film to friends who appreciate a good mix of crime and drama, especially if you enjoy discussions around the price of ambition and morality in the fast-paced world of Wall Street.

@@ -1,0 +1,3 @@
+**Rating: 4 - Great**
+
+@mgreen_5237: "Diary of a Wimpy Kid" brought back a wave of nostalgia that I didn’t expect. The film captures the essence of childhood misadventures with its quirky humor and relatable characters. As someone who loves a good family comedy, I found myself chuckling at the hilarious situations that Greg and his friends find themselves in. The dynamic between the characters was delightful, and I appreciated how it portrayed the ups and downs of growing up. It's definitely a movie I’d recommend to friends for a fun movie night, especially if you have some good snacks on hand!
