@@ -1,3 +1,4 @@
+import os, shutil
 
 import logging
 
@@ -10,9 +11,9 @@ from google.adk.tools import ToolContext
 
 logger = logging.getLogger(__name__)
 
-def list_files(tool_context:ToolContext) -> dict:
-    """Lists files available in the configured import directory
-    that are available to be read.
+def list_data_files(tool_context:ToolContext) -> dict:
+    """Lists files available in the configured data directory
+    that have gone through data preparation.
 
         Returns:
             dict: A dictionary containing metadata about the content.
@@ -20,12 +21,68 @@ def list_files(tool_context:ToolContext) -> dict:
                     If 'success', includes a 'files' key with list of file names.
                     If 'error', includes an 'error_message' key.
     """
-    import_dir = Path(tool_context.state["import_dir"])
-    file_names = [str(x) for x in import_dir.glob("**/*.csv")]
+    data_dir = Path(tool_context.state["data_dir"])
+    file_names = [str(x) for x in data_dir.glob("**/*") if x.is_file()]
 
     return {
         "status": "success",
         "files": file_names
+    }
+
+def list_import_files(tool_context:ToolContext) -> dict:
+    """Lists files available in the configured Neo4j import directory
+    that are ready for import by Neo4j.
+
+        Returns:
+            dict: A dictionary containing metadata about the content.
+                    Includes a 'status' key ('success' or 'error').
+                    If 'success', includes a 'files' key with list of file names.
+                    If 'error', includes an 'error_message' key.
+    """
+    if not ("import_dir" in tool_context.state["neo4j_settings"]):
+        return {
+            "status": "error",
+            "error_message": "Neo4j import directory not yet known. Look it up first."
+        }
+    import_dir = Path(tool_context.state["neo4j_settings"]["import_dir"])
+    file_names = [str(x) for x in import_dir.glob("**/*") if x.is_file()]
+
+    return {
+        "status": "success",
+        "files": file_names
+    }
+
+def clear_import_dir(tool_context:ToolContext) -> dict:
+    """Removes all files from the Neo4j import directory, leaving the directory itself in place.
+    If the import directory is not known, first look it up using another tool.
+
+    Returns:
+        dict: A dictionary indicating the success of the operation, or an error.
+              Includes a 'status' key ('success' or 'error').
+              If 'success', includes a 'paths' key that has a list of removed paths.
+              If 'error', includes an 'error_message' key.
+    """
+    if not ("import_dir" in tool_context.state["neo4j_settings"]):
+        return {
+            "status": "error",
+            "error_message": "Neo4j import directory not yet known. Look it up first."
+        }
+    import_dir = Path(tool_context.state["neo4j_settings"]["import_dir"])
+
+    if not os.path.isdir(import_dir):
+        return {
+            "status":"error",
+            "error_message": f"{import_dir} is not a directory."
+        }
+    sub_paths = [ f for f in import_dir.iterdir()]
+    for sub_path in sub_paths:
+        if sub_path.is_dir():
+            shutil.rmtree(sub_path)
+        else:
+            os.remove(sub_path)
+    return {
+        "status": "success",
+        "paths": [str(p.name) for p in sub_paths]
     }
 
 def copy_file(source_path: str, destination_path: str, tool_context: ToolContext) -> dict:
