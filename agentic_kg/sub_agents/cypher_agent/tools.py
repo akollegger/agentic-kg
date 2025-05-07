@@ -119,4 +119,22 @@ async def reset_neo4j_data() -> ToolResult:
         dropped_index = graphdb.send_query("""DROP INDEX $index_name""", {"index_name": index_name})
         if (dropped_index["status"] == "error"):
             return dropped_index
+
+async def get_neo4j_import_directory(tool_context:ToolContext) -> dict:
+    """Queries Neo4j to find the location of the server's import directory,
+       which is where files need to be located in order to be used by LOAD CSV.
+    """
+    find_neo4j_data_dir_cypher = """
+    Call dbms.listConfig() YIELD name, value
+    WHERE name CONTAINS 'server.directories.import'
+    RETURN value as import_dir
+    """
+    graphdb = Neo4jForADK.get_graphdb()
+
+    results = graphdb.send_query(find_neo4j_data_dir_cypher)
+
+    if results["status"] == "success":
+        tool_context.state["neo4j_import_dir"] = results["query_result"][0]["import_dir"]
     
+    return results
+

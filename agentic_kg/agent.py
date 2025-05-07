@@ -54,6 +54,7 @@ def setup_before_agent_call(callback_context: CallbackContext):
     Neo4jForADK.initialize(callback_context.state["neo4j_settings"])
 
 
+
 kg_agent = Agent(
     name="kg_agent_v1",
     model=LiteLlm(model=model_roles["chat"]),

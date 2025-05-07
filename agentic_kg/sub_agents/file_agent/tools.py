@@ -11,6 +11,22 @@ from google.adk.tools import ToolContext
 
 logger = logging.getLogger(__name__)
 
+def get_state_value_or_else(key:str, error_message:str, tool_context:ToolContext) -> dict:
+    """Gets a state value or else returns an error.
+    Both the success and error values are returned as an ADK-friendly dict.
+    """
+    if key in tool_context.state:
+        return {
+            "status": "success",
+            "value": tool_context.state[key]
+        }
+    else:
+        return {
+            "status": "error",
+            "error_message": error_message
+        }
+
+
 def list_data_files(tool_context:ToolContext) -> dict:
     """Lists files available in the configured data directory
     that have gone through data preparation.
@@ -21,7 +37,10 @@ def list_data_files(tool_context:ToolContext) -> dict:
                     If 'success', includes a 'files' key with list of file names.
                     If 'error', includes an 'error_message' key.
     """
-    data_dir = Path(tool_context.state["data_dir"])
+    data_dir_result = get_state_value_or_else("data_dir", "data_dir has not been configured, please check the .env",tool_context)
+    if data_dir_result["status"] == "error": return data_dir_result
+    data_dir = Path(data_dir_result["value"])
+
     file_names = [str(x) for x in data_dir.glob("**/*") if x.is_file()]
 
     return {
@@ -32,19 +51,19 @@ def list_data_files(tool_context:ToolContext) -> dict:
 def list_import_files(tool_context:ToolContext) -> dict:
     """Lists files available in the configured Neo4j import directory
     that are ready for import by Neo4j.
+    The import directory must be known before calling this tool.
 
-        Returns:
-            dict: A dictionary containing metadata about the content.
-                    Includes a 'status' key ('success' or 'error').
-                    If 'success', includes a 'files' key with list of file names.
-                    If 'error', includes an 'error_message' key.
+    Returns:
+        dict: A dictionary containing metadata about the content.
+                Includes a 'status' key ('success' or 'error').
+                If 'success', includes a 'files' key with list of file names.
+                If 'error', includes an 'error_message' key.
+                The 'error_message' may have instructions about how to handle the error.
     """
-    if not ("import_dir" in tool_context.state["neo4j_settings"]):
-        return {
-            "status": "error",
-            "error_message": "Neo4j import directory not yet known. Look it up first."
-        }
-    import_dir = Path(tool_context.state["neo4j_settings"]["import_dir"])
+    import_dir_result = get_state_value_or_else("neo4j_import_dir", "Neo4j import directory not yet known.", tool_context)
+    if import_dir_result["status"] == "error": return import_dir_result
+    import_dir = Path(import_dir_result["value"])
+
     file_names = [str(x) for x in import_dir.glob("**/*") if x.is_file()]
 
     return {
@@ -61,13 +80,11 @@ def clear_import_dir(tool_context:ToolContext) -> dict:
               Includes a 'status' key ('success' or 'error').
               If 'success', includes a 'paths' key that has a list of removed paths.
               If 'error', includes an 'error_message' key.
+              The 'error_message' may have instructions about how to handle the error.
     """
-    if not ("import_dir" in tool_context.state["neo4j_settings"]):
-        return {
-            "status": "error",
-            "error_message": "Neo4j import directory not yet known. Look it up first."
-        }
-    import_dir = Path(tool_context.state["neo4j_settings"]["import_dir"])
+    import_dir_result = get_state_value_or_else("neo4j_import_dir", "Neo4j import directory not yet known.",tool_context)
+    if import_dir_result["status"] == "error": return import_dir_result
+    import_dir = Path(import_dir_result["value"])
 
     if not os.path.isdir(import_dir):
         return {
