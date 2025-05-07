@@ -20,13 +20,13 @@ class ToolErrorResult(TypedDict):
 
 ToolResult = Union[ToolSuccessResult, ToolErrorResult]
 
-def tool_success(result: List[Dict[str, Any]]):
+def tool_success(result: List[Dict[str, Any]]) -> ToolSuccessResult:
     return {
         'status': 'success',
         'query_result': result
     }
 
-def tool_error(message: str):
+def tool_error(message: str) -> ToolErrorResult:
     return {
         'status': 'error',
         'error_message': message
