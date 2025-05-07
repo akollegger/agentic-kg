@@ -10,7 +10,7 @@ import warnings
 # Ignore all warnings
 warnings.filterwarnings("ignore")
 
-from .prompts import return_instructions_root
+from .prompts import instructions
 from .sub_agents import cypher_agent, file_agent
 
 import logging
@@ -54,17 +54,29 @@ def setup_before_agent_call(callback_context: CallbackContext):
     Neo4jForADK.initialize(callback_context.state["neo4j_settings"])
 
 
+def just_cypher_agent(): 
+    return Agent(
+        name="kg_agent_v1",
+        model=LiteLlm(model=model_roles["chat"]),
+        description="Knowledge graph construction using specialized sub-agents.", # Crucial for delegation later
+        
+        instruction=instructions["just_cypher_v1"],
+        tools=[], # Make the tool available to this agent
+        sub_agents=[cypher_agent],
+        before_agent_callback=setup_before_agent_call,
+    )
 
-kg_agent = Agent(
-    name="kg_agent_v1",
-    model=LiteLlm(model=model_roles["chat"]),
-    description="General purpose chatting, tool use, and delegation to sub-agents.", # Crucial for delegation later
-    
-    instruction=return_instructions_root(),
-    tools=[], # Make the tool available to this agent
-    sub_agents=[cypher_agent, file_agent],
-    before_agent_callback=setup_before_agent_call,
-)
+def cypher_and_files_agent():
+    return Agent(
+        name="kg_agent_v2",
+        model=LiteLlm(model=model_roles["chat"]),
+        description="Knowledge graph construction using specialized sub-agents.", # Crucial for delegation later
+        
+        instruction=instructions["cypher_and_files_v1"],
+        tools=[], # Make the tool available to this agent
+        sub_agents=[cypher_agent, file_agent],
+        before_agent_callback=setup_before_agent_call,
+    )
 
 # Export the root agent so adk can find it
-root_agent = kg_agent
+root_agent = just_cypher_agent()
