@@ -41,7 +41,7 @@ def list_data_files(tool_context:ToolContext) -> dict:
     if data_dir_result["status"] == "error": return data_dir_result
     data_dir = Path(data_dir_result["value"])
 
-    file_names = [str(x) for x in data_dir.glob("**/*") if x.is_file()]
+    file_names = [str(x) for x in data_dir.rglob("*") if x.is_file()]
 
     return {
         "status": "success",
@@ -64,7 +64,7 @@ def list_import_files(tool_context:ToolContext) -> dict:
     if import_dir_result["status"] == "error": return import_dir_result
     import_dir = Path(import_dir_result["value"])
 
-    file_names = [str(x) for x in import_dir.glob("**/*") if x.is_file()]
+    file_names = [str(x) for x in import_dir.rglob("*") if x.is_file()]
 
     return {
         "status": "success",

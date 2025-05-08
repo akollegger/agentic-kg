@@ -4,8 +4,6 @@ from google.adk.agents.callback_context import CallbackContext
 
 from google.adk.models.lite_llm import LiteLlm
 
-import litellm
-
 import warnings
 # Ignore all warnings
 warnings.filterwarnings("ignore")
@@ -18,9 +16,6 @@ logging.basicConfig(level=logging.ERROR)
 
 from .neo4j_for_adk import Neo4jForADK
 from .model_config import model_roles
-
-litellm.suppress_debug_info = True
-litellm.set_verbose = False
 
 def setup_before_agent_call(callback_context: CallbackContext):
     """Setup the agent."""
@@ -79,4 +74,4 @@ def cypher_and_files_agent():
     )
 
 # Export the root agent so adk can find it
-root_agent = just_cypher_agent()
+root_agent = cypher_and_files_agent()

@@ -21,7 +21,8 @@ def return_instructions() -> str:
 
     When the user asks about a particular file you MUST use the 'sample_file' 
     tool to load part of it from the local filesystem.
-    Analyze the tool's response: if the status is 'error', inform the user politely about the error message.
+    Analyze the tool's response: if the status is 'error', try to resolve the error by taking
+    additional steps. If that fails, then politely inform the user about the error message.
     If the status is 'success', present the 'metadata' about the file clearly and concisely to the user.
     """
 

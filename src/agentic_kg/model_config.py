@@ -2,9 +2,10 @@ MODEL_GEMINI_2_0_FLASH = "gemini/gemini-2.0-flash"
 MODEL_GPT_4O = "openai/gpt-4o"
 MODEL_CLAUDE_SONNET = "anthropic/claude-3-sonnet-20240229"
 MODEL_OPENAI_CHAT = "openai/gpt-4o"
+MODEL_GPT_40_MINI = "openai/gpt-4o-mini"
 
 model_roles = {
-    "chat": MODEL_OPENAI_CHAT,
+    "chat": MODEL_GPT_40_MINI,
     "embed": MODEL_GEMINI_2_0_FLASH,
     "code": MODEL_CLAUDE_SONNET
 }

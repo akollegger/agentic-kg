@@ -14,8 +14,14 @@ Prepare environment vars:
 
 ## Running
 
+CLI:
 ```bash
-adk run agentic_kg
+adk run src/agentic_kg
+```
+
+web:
+```bash
+adk web src
 ```
 
 ### cypher agent

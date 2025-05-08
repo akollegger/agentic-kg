@@ -14,7 +14,8 @@ def return_instructions_cypher() -> str:
     through Cypher queries.
 
     In addition to reading and writing graph data with Cypher, 
-    you have specialized tools for performing additional tasks.
+    you have specialized tools for performing additional tasks
+    like getting various Neo4j configuration and settings.
     Prefer using a specialized tool over writing Cypher queries.
     """
 
