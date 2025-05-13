@@ -2,7 +2,7 @@ from google.adk.agents import Agent
 
 from google.adk.models.lite_llm import LiteLlm
 
-from agentic_kg.model_config import model_roles
+from agentic_kg.common.config import model_roles
 
 from .tools import (
     neo4j_is_ready, 

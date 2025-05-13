@@ -45,6 +45,7 @@ def make_driver(neo4j_settings: Neo4jSettings) -> GraphDatabase | None:
     neo4j_uri = neo4j_settings["neo4j_uri"]
     neo4j_username = neo4j_settings["neo4j_username"]
     neo4j_password = neo4j_settings["neo4j_password"]
+
     # Initialize the driver
     driver_instance = GraphDatabase.driver(
         neo4j_uri,
@@ -118,6 +119,7 @@ class Neo4jForADK:
         if Neo4jForADK._settings:
             return
         self.driver = make_driver(neo4j_settings)
+        self.database_name = neo4j_settings["neo4j_database"]
         Neo4jForADK._settings = neo4j_settings
 
     @classmethod

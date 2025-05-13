@@ -1,5 +1,25 @@
+# Agentic KG
 
+A multi-agent project for knowledge graph construction.
 
+Learning goals:
+- multi-agent development workflow
+- agent specialization, encapsulating domain expertise
+
+## Project Structure
+
+The project has multiple agents, at two levels:
+
+1. coordinators are root-agents that frame the context for interaction
+2. sub_agents are specialized agents with tools
+
+- `src/agentic_kg` is the top-level module
+  - initializes the environment
+  - specifies which coordinator to use as root-agent
+- `src/coordinators` is a collection of root-agents
+  - high-level context in the prompt
+  - coordinates sub-agents to do things
+- `src/sub_agents` specialize 
 
 ## Setup
 

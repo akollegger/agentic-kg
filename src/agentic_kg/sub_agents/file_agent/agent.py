@@ -9,7 +9,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-from agentic_kg.model_config import model_roles
+from agentic_kg.common.config import model_roles
 
 from .prompts import return_instructions
 from .tools import list_data_files, list_import_files, copy_file, sample_file, annotate_sample, clear_import_dir

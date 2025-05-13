@@ -4,7 +4,7 @@ from google.adk.tools import ToolContext
 
 from neo4j_graphrag.schema import get_structured_schema
 
-from agentic_kg.neo4j_for_adk import (
+from agentic_kg.common.neo4j_for_adk import (
     Neo4jForADK,
     is_write_query,
     tool_success, tool_error,
@@ -30,12 +30,12 @@ async def get_physical_schema(
     The schema is returned as a JSON object containing a description
     of the node labels and relationship types.
     """
-    neo4j_database = tool_context.state["neo4j_settings"]["neo4j_database"]
     graphdb = Neo4jForADK.get_graphdb()
     driver = graphdb.get_driver()
+    database_name = graphdb.database_name
     
     try:
-        schema = get_structured_schema(driver, database=neo4j_database)
+        schema = get_structured_schema(driver, database=database_name)
         return tool_success(schema)
     except Exception as e:
         return tool_error(str(e))
