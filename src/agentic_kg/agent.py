@@ -1,10 +1,10 @@
 
-from .common.config import load_and_connect
+from .common.config import validate_env
 # from .coordinators.just_cypher.agent import just_cypher_agent
 from .coordinators.cypher_and_files.agent import cypher_and_files_agent
 
 # Load environmental config and connect to Neo4j
-load_and_connect()
+validate_env()
 
 # Instantiate the selected agent
 # root_agent = just_cypher_agent

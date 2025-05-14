@@ -10,6 +10,8 @@ from neo4j import (
     Result,
 )
 
+from .config import load_neo4j_env
+
 class ToolSuccessResult(TypedDict):
     status: str  # 'success'
     query_result: List[Dict[str, any]]
@@ -105,49 +107,36 @@ def to_python(value):
 
 class Neo4jForADK:
     """
-    A singleton interface for sending queries to Neo4j and getting
-    ADK-friendly responses.
-    Usage:
-        ADKfriendlyNeo4j.initialize(settings)
-        db = ADKfriendlyNeo4j.get_driver()
-        result = db.send_query("MATCH (n) RETURN n LIMIT 1")
+    A wrapper for querying Neo4j which returns ADK-friendly responses.
     """
-    _instance = None
-    _settings = None
+    _driver = None
+    settings = None
+    database_name = "neo4j"
 
-    def __init__(self, neo4j_settings):
-        if Neo4jForADK._settings:
-            return
-        self.driver = make_driver(neo4j_settings)
+    def __init__(self, neo4j_settings = None):
+        if neo4j_settings is None:
+            neo4j_settings = load_neo4j_env()
+        if neo4j_settings is None:
+            raise ValueError("Neo4j settings not provided and environment variables not set.")
+        self.settings = neo4j_settings
         self.database_name = neo4j_settings["neo4j_database"]
-        Neo4jForADK._settings = neo4j_settings
-
-    @classmethod
-    def initialize(cls, neo4j_settings):
-        if cls._instance is None:
-            cls._instance = cls(neo4j_settings)
-        return cls._instance
-
-    @classmethod
-    def get_graphdb(cls):
-        if cls._instance is None:
-            raise Exception("ADKfriendlyNeo4j must be initialized with settings before use.")
-        return cls._instance
-
+        self._driver = make_driver(neo4j_settings)
+    
     def get_driver(self):
-        return self.driver
+        return self._driver
     
     def send_query(self, cypher_query, parameters=None) -> ToolResult:
-        neo4j_database = self._settings["neo4j_database"]
-        session = self.driver.session()
+        session = self._driver.session()
         try:
             result = session.run(
                 cypher_query, 
                 parameters or {},
-                database_=neo4j_database
+                database_=self.database_name
             )
             return result_to_adk(result)
         except Exception as e:
             return tool_error(str(e))
         finally:
             session.close()
+
+graphdb = Neo4jForADK()

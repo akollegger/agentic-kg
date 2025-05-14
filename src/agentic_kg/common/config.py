@@ -1,8 +1,6 @@
 import os 
 from openai import OpenAI
 
-from agentic_kg.common.neo4j_for_adk import Neo4jForADK
-
 MODEL_GEMINI_2_0_FLASH = "gemini/gemini-2.0-flash"
 MODEL_GPT_4O = "openai/gpt-4o"
 MODEL_CLAUDE_SONNET = "anthropic/claude-3-sonnet-20240229"
@@ -15,33 +13,29 @@ model_roles = {
     "code": MODEL_CLAUDE_SONNET
 }
 
-def load_and_connect():
+def load_neo4j_env():
+    return {
+        "neo4j_uri": os.getenv("NEO4J_URI"),
+        "neo4j_username": os.getenv("NEO4J_USERNAME") or "neo4j",
+        "neo4j_password": os.getenv("NEO4J_PASSWORD"),
+        "neo4j_database": os.getenv("NEO4J_DATABASE") or os.getenv("NEO4J_USERNAME") or "neo4j"
+    }
+
+def validate_env():
     """Load environmental configuration and establish connection to Neo4j."""
 
-    # Configure and  OpenAI
-    print(f"OpenAI API Key set: {'Yes' if os.environ.get('OPENAI_API_KEY') and os.environ['OPENAI_API_KEY'] != 'YOUR_OPENAI_API_KEY' else 'No (REPLACE PLACEHOLDER!)'}")
-    client = OpenAI()
-
-    response = client.responses.create(
-        model="gpt-4o-mini",
-        instructions="You are a terse but friendly assistant.",
-        input="Hello OpenAI!",
-    )
-    print("OpenAI says: ", response.output_text)
+    # Validate OpenAI settings
+    valid_openai_api_key = os.environ.get('OPENAI_API_KEY') and os.environ['OPENAI_API_KEY'] != 'YOUR_OPENAI_API_KEY'
+    print(f"OpenAI API Key set: {'Yes' if valid_openai_api_key else 'No (REPLACE PLACEHOLDER!)'}")
+    if not valid_openai_api_key:
+        raise ValueError("OpenAI API Key not set or placeholder not replaced.")
 
 
-    # Configure and set up Neo4j
-    neo4j_uri = os.getenv("NEO4J_URI")
-    neo4j_username = os.getenv("NEO4J_USERNAME") or "neo4j"
-    neo4j_password = os.getenv("NEO4J_PASSWORD")
-    neo4j_database = os.getenv("NEO4J_DATABASE") or neo4j_username
+    # Validate Neo4j settings
+    neo4j_settings = load_neo4j_env()
+    print("Neo4j expected at: " + f"{neo4j_settings['neo4j_username']}@{neo4j_settings['neo4j_uri']}/{neo4j_settings['neo4j_database']}" )
 
-    print("Neo4j expected at: " + f"{neo4j_username}@{neo4j_uri}/{neo4j_database}" )
+    if not neo4j_settings['neo4j_uri'] or not neo4j_settings['neo4j_password']:
+        raise ValueError("Neo4j URI or password not set.")
 
-    Neo4jForADK.initialize({
-        "neo4j_uri": neo4j_uri,
-        "neo4j_username": neo4j_username,
-        "neo4j_password": neo4j_password,
-        "neo4j_database": neo4j_database
-    })
 

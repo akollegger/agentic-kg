@@ -5,10 +5,9 @@ from google.adk.tools import ToolContext
 from neo4j_graphrag.schema import get_structured_schema
 
 from agentic_kg.common.neo4j_for_adk import (
-    Neo4jForADK,
+    graphdb,
     is_write_query,
-    tool_success, tool_error,
-    ToolResult
+    tool_success, tool_error
 )
 
 
@@ -17,7 +16,6 @@ async def neo4j_is_ready(
     """Tool to check that the Neo4j database is ready.
     Replies with either a positive message about the database being ready or an error message.
     """
-    graphdb = Neo4jForADK.get_graphdb()
     results = graphdb.send_query("RETURN 'Neo4j is Ready!' as message")
     return results
 
@@ -30,7 +28,6 @@ async def get_physical_schema(
     The schema is returned as a JSON object containing a description
     of the node labels and relationship types.
     """
-    graphdb = Neo4jForADK.get_graphdb()
     driver = graphdb.get_driver()
     database_name = graphdb.database_name
     
@@ -44,7 +41,7 @@ async def get_physical_schema(
 async def read_neo4j_cypher(
     query: str,
     params: Optional[Dict[str, Any]] = None
-) -> ToolResult:
+) -> Dict[str, Any]:
     """Submits a Cypher query to read from a Neo4j database.
 
     Args:
@@ -59,14 +56,13 @@ async def read_neo4j_cypher(
     if is_write_query(query):
         return tool_error("Only MATCH queries are allowed for read-query")
 
-    graphdb = Neo4jForADK.get_graphdb()
     results = graphdb.send_query(query, params)
     return results
 
 async def write_neo4j_cypher(
     query: str,
     params: Optional[Dict[str, Any]] = None
-) -> ToolResult:
+) -> Dict[str, Any]:
     """Submits a Cypher query to write to a Neo4j database.
     Make sure you have permission to write before calling this.
 
@@ -78,11 +74,10 @@ async def write_neo4j_cypher(
         A list of dictionaries containing the results of the query.
         Returns an empty list "[]" if no results are found.
     """
-    graphdb = Neo4jForADK.get_graphdb()
     results = graphdb.send_query(query, params)
     return results
 
-async def reset_neo4j_data() -> ToolResult:
+async def reset_neo4j_data() -> Dict[str, Any]:
     """Removes all data, indexes and constraints from the
     Neo4j database. Use with caution! Confirm with the user
     that they know this will completely reset the database.
@@ -90,7 +85,6 @@ async def reset_neo4j_data() -> ToolResult:
     Returns:
         Success or an error.
     """
-    graphdb = Neo4jForADK.get_graphdb()
     # First, remove all nodes and relationships in batches
     data_removed = graphdb.send_query("""MATCH (n) CALL { WITH n DETACH DELETE n } IN TRANSACTIONS OF 10000 ROWS""")
     if (data_removed["status"] == "error") :
@@ -120,7 +114,7 @@ async def reset_neo4j_data() -> ToolResult:
         if (dropped_index["status"] == "error"):
             return dropped_index
 
-async def get_neo4j_import_directory(tool_context:ToolContext) -> dict:
+async def get_neo4j_import_directory(tool_context:ToolContext) -> Dict[str, Any]:
     """Queries Neo4j to find the location of the server's import directory,
        which is where files need to be located in order to be used by LOAD CSV.
     """
@@ -129,8 +123,6 @@ async def get_neo4j_import_directory(tool_context:ToolContext) -> dict:
     WHERE name CONTAINS 'server.directories.import'
     RETURN value as import_dir
     """
-    graphdb = Neo4jForADK.get_graphdb()
-
     results = graphdb.send_query(find_neo4j_data_dir_cypher)
 
     if results["status"] == "success":
