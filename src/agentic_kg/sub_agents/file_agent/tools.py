@@ -8,6 +8,10 @@ import clevercsv
 from itertools import islice
 
 from google.adk.tools import ToolContext
+from typing import Dict, Any
+
+from agentic_kg.common.neo4j_for_adk import graphdb
+from agentic_kg.common.util import tool_success, tool_error
 
 logger = logging.getLogger(__name__)
 
@@ -16,16 +20,29 @@ def get_state_value_or_else(key:str, error_message:str, tool_context:ToolContext
     Both the success and error values are returned as an ADK-friendly dict.
     """
     if key in tool_context.state:
-        return {
-            "status": "success",
-            "value": tool_context.state[key]
-        }
+        return tool_success(key,tool_context.state[key])
     else:
-        return {
-            "status": "error",
-            "error_message": error_message
-        }
+        return tool_error(error_message)
 
+
+def get_neo4j_import_directory(tool_context:ToolContext) -> Dict[str, Any]:
+    """Queries Neo4j to find the location of the server's import directory,
+       which is where files need to be located in order to be used by LOAD CSV.
+    """
+    find_neo4j_data_dir_cypher = """
+    Call dbms.listConfig() YIELD name, value
+    WHERE name CONTAINS 'server.directories.import'
+    RETURN value as import_dir
+    """
+    if "neo4j_import_dir" in tool_context.state:
+        return tool_success("neo4j_import_dir",tool_context.state["neo4j_import_dir"])
+        
+    results = graphdb.send_query(find_neo4j_data_dir_cypher)
+    if results["status"] == "success":
+        tool_context.state["neo4j_import_dir"] = results["query_result"][0]["import_dir"]
+        return tool_success("neo4j_import_dir",results["query_result"][0]["import_dir"])
+    else:
+        return tool_error(results["error_message"])
 
 def list_data_files(tool_context:ToolContext) -> dict:
     """Lists files available in the configured data directory
@@ -39,14 +56,11 @@ def list_data_files(tool_context:ToolContext) -> dict:
     """
     data_dir_result = get_state_value_or_else("data_dir", "data_dir has not been configured, please check the .env",tool_context)
     if data_dir_result["status"] == "error": return data_dir_result
-    data_dir = Path(data_dir_result["value"])
+    data_dir = Path(data_dir_result["data_dir"])
 
     file_names = [str(x) for x in data_dir.rglob("*") if x.is_file()]
 
-    return {
-        "status": "success",
-        "files": file_names
-    }
+    return tool_success("files", file_names)
 
 def list_import_files(tool_context:ToolContext) -> dict:
     """Lists files available in the configured Neo4j import directory
@@ -60,16 +74,13 @@ def list_import_files(tool_context:ToolContext) -> dict:
                 If 'error', includes an 'error_message' key.
                 The 'error_message' may have instructions about how to handle the error.
     """
-    import_dir_result = get_state_value_or_else("neo4j_import_dir", "Neo4j import directory not yet known.", tool_context)
+    import_dir_result = get_neo4j_import_directory(tool_context) # chain tool call
     if import_dir_result["status"] == "error": return import_dir_result
-    import_dir = Path(import_dir_result["value"])
+    import_dir = Path(import_dir_result["neo4j_import_dir"])
 
     file_names = [str(x) for x in import_dir.rglob("*") if x.is_file()]
 
-    return {
-        "status": "success",
-        "files": file_names
-    }
+    return tool_success("files", file_names)
 
 def clear_import_dir(tool_context:ToolContext) -> dict:
     """Removes all files from the Neo4j import directory, leaving the directory itself in place.
@@ -82,25 +93,19 @@ def clear_import_dir(tool_context:ToolContext) -> dict:
               If 'error', includes an 'error_message' key.
               The 'error_message' may have instructions about how to handle the error.
     """
-    import_dir_result = get_state_value_or_else("neo4j_import_dir", "Neo4j import directory not yet known.",tool_context)
+    import_dir_result = get_neo4j_import_directory(tool_context)
     if import_dir_result["status"] == "error": return import_dir_result
-    import_dir = Path(import_dir_result["value"])
+    import_dir = Path(import_dir_result["neo4j_import_dir"])
 
     if not os.path.isdir(import_dir):
-        return {
-            "status":"error",
-            "error_message": f"{import_dir} is not a directory."
-        }
+        return tool_error(f"{import_dir} is not a directory.")
     sub_paths = [ f for f in import_dir.iterdir()]
     for sub_path in sub_paths:
         if sub_path.is_dir():
             shutil.rmtree(sub_path)
         else:
             os.remove(sub_path)
-    return {
-        "status": "success",
-        "paths": [str(p.name) for p in sub_paths]
-    }
+    return tool_success("paths", [str(p.name) for p in sub_paths])
 
 def copy_file(source_path: str, destination_path: str, tool_context: ToolContext) -> dict:
     """Copies a file using the python shutil.copy2() method.
@@ -120,18 +125,12 @@ def copy_file(source_path: str, destination_path: str, tool_context: ToolContext
     import shutil
     try:
         shutil.copy2(source_path, destination_path)
-        return {
-            "status": "success",
-            "metadata": {
+        return tool_success("metadata", {
                 "source_path": source_path,
                 "destination_path": destination_path
-            }
-        }
+        })
     except Exception as e:
-        return {
-            "status": "error",
-            "error_message": str(e)
-        }
+        return tool_error(str(e))
 
 
 def sample_file(path: str, size: int, tool_context: ToolContext) -> dict:
@@ -152,7 +151,7 @@ def sample_file(path: str, size: int, tool_context: ToolContext) -> dict:
     """
     p = Path(path)
     if not (p.exists()):
-        raise ValueError(f"Path does not exist: {path}")
+        return tool_error(f"Path does not exist: {path}")
 
     data = []
     with open(p, newline='') as csvfile:
@@ -162,7 +161,6 @@ def sample_file(path: str, size: int, tool_context: ToolContext) -> dict:
         data = list(islice(reader, size))
 
     result = {
-        "status": "success",
         "metadata": {
             "path": path,
             "mimetype": "text/csv"
@@ -176,7 +174,7 @@ def sample_file(path: str, size: int, tool_context: ToolContext) -> dict:
 
     tool_context.state["samples"][str(p)] = result
 
-    return result
+    return tool_success("samples", result)
 
 
 def show_sample(path: str, tool_context: ToolContext) -> dict:
@@ -195,24 +193,15 @@ def show_sample(path: str, tool_context: ToolContext) -> dict:
               If 'error', includes an 'error_message' key.
     """
     if not "samples" in tool_context.state:
-        return {
-            "status": "error",
-            "error_message": "No samples have been taken."
-        }
+        return tool_error("No samples have been taken.")
 
     if not sampled_path in tool_context.state["samples"]:
-        return {
-            "status": "error",
-            "error_message": f"No sample found for {sampled_path}"
-        }
+        return tool_error(f"No sample found for {sampled_path}")
 
     sample = tool_context.state["samples"][sampled_path]
 
     if not sample:
-        return {
-            "status": "error",
-            "error_message": f"No sample available for {sampled_path}"
-        }
+        return tool_error(f"No sample available for {sampled_path}")
 
     return sample
 
@@ -233,24 +222,15 @@ def annotate_sample(sampled_path: str, annotation: str, tool_context: ToolContex
     """
     
     if not "samples" in tool_context.state:
-        return {
-            "status": "error",
-            "error_message": "No samples have been taken."
-        }
+        return tool_error("No samples have been taken.")
 
     if not sampled_path in tool_context.state["samples"]:
-        return {
-            "status": "error",
-            "error_message": f"No sample found for {sampled_path}"
-        }
+        return tool_error(f"No sample found for {sampled_path}")
 
     samples = tool_context.state["samples"]
 
     if not samples[sampled_path]:
-        return {
-            "status": "error",
-            "error_message": f"No sample available for {sampled_path}"
-        }
+        return tool_error(f"No sample available for {sampled_path}")
     
     samples[sampled_path]["annotations"].append(annotation)
 

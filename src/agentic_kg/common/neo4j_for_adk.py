@@ -11,28 +11,7 @@ from neo4j import (
 )
 
 from .config import load_neo4j_env
-
-class ToolSuccessResult(TypedDict):
-    status: str  # 'success'
-    query_result: List[Dict[str, any]]
-
-class ToolErrorResult(TypedDict):
-    status: str  # 'error'
-    error_message: str
-
-ToolResult = Union[ToolSuccessResult, ToolErrorResult]
-
-def tool_success(result: List[Dict[str, Any]]) -> ToolSuccessResult:
-    return {
-        'status': 'success',
-        'query_result': result
-    }
-
-def tool_error(message: str) -> ToolErrorResult:
-    return {
-        'status': 'error',
-        'error_message': message
-    }
+from .util import tool_success, tool_error
 
 class Neo4jSettings(TypedDict):
     neo4j_uri: str
@@ -66,7 +45,7 @@ def is_write_query(query: str) -> bool:
 def result_to_adk(result: Result) -> Dict[str, Any]:
     eager_result = result.to_eager_result()
     records = [to_python(record.data()) for record in eager_result.records]
-    return tool_success(records)
+    return tool_success("query_result",records)
 
 def to_python(value):
     from neo4j.graph import Node, Relationship, Path
@@ -125,7 +104,7 @@ class Neo4jForADK:
     def get_driver(self):
         return self._driver
     
-    def send_query(self, cypher_query, parameters=None) -> ToolResult:
+    def send_query(self, cypher_query, parameters=None) -> Dict[str, Any]:
         session = self._driver.session()
         try:
             result = session.run(

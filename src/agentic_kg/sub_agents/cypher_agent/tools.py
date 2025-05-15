@@ -25,15 +25,18 @@ async def get_physical_schema(
 ) -> Dict[str, Any]:
     """Tool to get the physical schema of a Neo4j graph database.
 
-    The schema is returned as a JSON object containing a description
-    of the node labels and relationship types.
+    Returns:
+        A dictionary containingL
+        - "status": "success" or "error"
+        - "schema": the schema as a JSON object if "success"
+        - "error_message": the error message if "error"
     """
     driver = graphdb.get_driver()
     database_name = graphdb.database_name
     
     try:
         schema = get_structured_schema(driver, database=database_name)
-        return tool_success(schema)
+        return tool_success("schema", schema)
     except Exception as e:
         return tool_error(str(e))
 
@@ -114,19 +117,4 @@ async def reset_neo4j_data() -> Dict[str, Any]:
         if (dropped_index["status"] == "error"):
             return dropped_index
 
-async def get_neo4j_import_directory(tool_context:ToolContext) -> Dict[str, Any]:
-    """Queries Neo4j to find the location of the server's import directory,
-       which is where files need to be located in order to be used by LOAD CSV.
-    """
-    find_neo4j_data_dir_cypher = """
-    Call dbms.listConfig() YIELD name, value
-    WHERE name CONTAINS 'server.directories.import'
-    RETURN value as import_dir
-    """
-    results = graphdb.send_query(find_neo4j_data_dir_cypher)
-
-    if results["status"] == "success":
-        tool_context.state["neo4j_import_dir"] = results["query_result"][0]["import_dir"]
-    
-    return results
 
