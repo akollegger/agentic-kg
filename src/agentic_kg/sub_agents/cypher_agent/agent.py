@@ -1,8 +1,6 @@
 from google.adk.agents import Agent
 
-from google.adk.models.lite_llm import LiteLlm
-
-from agentic_kg.common.config import model_roles
+from agentic_kg.common.config import llm
 
 from .tools import (
     neo4j_is_ready, 
@@ -14,11 +12,10 @@ from .tools import (
 
 from .prompts import return_instructions_cypher
 
-
 # Export the root agent so adk can find it
 cypher_agent = Agent(
     name="cypher_agent_v1",
-    model=LiteLlm(model=model_roles["chat"]),
+    model=llm,
     description="Provides acccess to a Neo4j database through Cypher queries. Able to read/write data and answer configuration questions like the location of the import directory.", # Crucial for delegation later
     instruction=return_instructions_cypher(),
 

@@ -6,16 +6,21 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "clevercsv[full]>=0.8.3",
-    "google-adk>=0.1.0",
-    "litellm>=1.66.0",
+    "google-adk>=0.5.0",
+    "litellm>=1.69.2",
     "neo4j>=5.28.1",
-    "neo4j-graphrag>=1.6.1",
-    "openai>=1.0.0",
+    "neo4j-graphrag>=1.7.0",
+    "openai>=1.75.0",
     "python-dotenv>=1.0.0",
-    "click>=8.0.0",
+    "click>=8.2.0",
     "csvkit>=2.1.0",
-    "faker>=18.0.0",
+    "faker>=37.3.0",
     "nanoid>=2.0.0",
     "inflect>=6.0.0",
     "spacy>=3.7.0",
+]
+
+[dependency-groups]
+dev = [
+    "uv-bump>=0.1.2",
 ]
