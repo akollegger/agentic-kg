@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 from agentic_kg.common.config import llm
 
 from .prompts import return_instructions
-from .tools import list_data_files, list_import_files, copy_file, sample_file, annotate_sample, clear_import_dir
+from .tools import list_data_files, list_import_files, copy_to_import_dir, sample_file, annotate_sample, clear_import_dir
 
 def setup_before_agent_call(callback_context: CallbackContext):
     """Setup the agent."""
@@ -29,16 +29,16 @@ def setup_before_agent_call(callback_context: CallbackContext):
     callback_context.state["data_dir"] = str(data_dir_path)
 
 
-file_agent = Agent(
-    name="file_agent_v1",
+dataprep_agent = Agent(
+    name="dataprep_agent_v1",
     model=llm,
     description="Manages reading local files and providing metadata about them.", # Crucial for delegation later
     instruction=return_instructions(),
     tools=[
-        list_data_files, list_import_files, copy_file, sample_file, clear_import_dir, annotate_sample
+        list_data_files, list_import_files, copy_to_import_dir, sample_file, clear_import_dir, annotate_sample
     ], 
     before_agent_callback=setup_before_agent_call,
 )
 
 # Export the root agent so adk can find it
-root_agent = file_agent
+root_agent = dataprep_agent

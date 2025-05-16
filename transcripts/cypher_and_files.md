@@ -24,7 +24,7 @@
 
 - user: what data is available?
 
-- [file_agent_v1]: Here are the files available in the data directory that have gone through data preparation:
+- [dataprep_agent_v1]: Here are the files available in the data directory that have gone through data preparation:
 
     1. **Movie Fans:**
     - movie_fans_us.csv
@@ -58,11 +58,11 @@
 
 - user: list the files in the import directory
 
-- [file_agent_v1]: The import directory is currently empty; there are no files available for import to Neo4j. If you would like to upload files or need assistance with anything else, feel free to ask!
+- [dataprep_agent_v1]: The import directory is currently empty; there are no files available for import to Neo4j. If you would like to upload files or need assistance with anything else, feel free to ask!
 
 - user: tell me more about the some_*.csv files that have been prepared
 
-- [file_agent_v1]: Here are the details about the `some_*.csv` files:
+- [dataprep_agent_v1]: Here are the details about the `some_*.csv` files:
 
     1. **File: `some_actors_with_bios.csv`**
     - **Type:** CSV

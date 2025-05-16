@@ -8,7 +8,7 @@ import warnings
 # Ignore all warnings
 warnings.filterwarnings("ignore")
 
-from agentic_kg.sub_agents import cypher_agent, file_agent
+from agentic_kg.sub_agents import cypher_agent, dataprep_agent
 from agentic_kg.common.config import llm
 
 from .prompts import instructions
@@ -20,7 +20,7 @@ cypher_and_files_agent = Agent(
         
         instruction=instructions["cypher_and_files_v1"],
         tools=[], # Make the tool available to this agent
-        sub_agents=[cypher_agent, file_agent],
+        sub_agents=[cypher_agent, dataprep_agent],
     )
 
 # Export the root agent so adk can find it
