@@ -9,7 +9,8 @@ from .tools import (
     get_physical_schema, 
     read_neo4j_cypher,
     write_neo4j_cypher,
-    reset_neo4j_data
+    reset_neo4j_data,
+    create_uniqueness_constraint
 )
 
 from .prompts import return_instructions_cypher
@@ -19,10 +20,15 @@ from .prompts import return_instructions_cypher
 cypher_agent = Agent(
     name="cypher_agent_v1",
     model=LiteLlm(model=model_roles["chat"]),
-    description="Provides acccess to a Neo4j database through Cypher queries. Able to read/write data and answer configuration questions like the location of the import directory.", # Crucial for delegation later
+    description="Provides acccess to a Neo4j database through Cypher queries. Able to read/write data, create indexes and constraints.", 
     instruction=return_instructions_cypher(),
 
-    tools=[neo4j_is_ready, get_physical_schema, read_neo4j_cypher, write_neo4j_cypher, reset_neo4j_data], # Make the tool available to this agent
+    tools=[neo4j_is_ready, 
+        get_physical_schema, 
+        read_neo4j_cypher, write_neo4j_cypher, 
+        reset_neo4j_data,
+        create_uniqueness_constraint
+        ], 
 )
 
 # Export the root agent so adk can find it

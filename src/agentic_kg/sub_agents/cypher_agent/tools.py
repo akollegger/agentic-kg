@@ -118,3 +118,21 @@ async def reset_neo4j_data() -> Dict[str, Any]:
             return dropped_index
 
 
+async def create_uniqueness_constraint(
+    label: str,
+    unique_property_key: str,
+) -> Dict[str, Any]:
+    """Creates a uniqueness constraint for a node label and property key.
+    A uniqueness constraint ensures that no two nodes with the same label and property key have the same value.
+    This improves the performance and integrity of data import and later queries.
+
+    Args:
+        label: The label of the node to create a constraint for.
+        unique_property_key: The property key to create a constraint for.
+
+    Returns:
+        A dictionary with a status key ('success' or 'error').
+        On error, includes an 'error_message' key.
+    """    
+    results = graphdb.send_query("""CREATE CONSTRAINT IF NOT EXISTS ON (n:$label) ASSERT n.$unique_property_key IS UNIQUE""", {"label": label, "unique_property_key": unique_property_key})
+    return results
