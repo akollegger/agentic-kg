@@ -14,7 +14,7 @@ instructions = {
 
         When appropriate, delegate tasks to sub-agents.
 
-        - For help with file operations, like sampling data and making files available for import, use the file_agent.
+        - For help with file operations, like sampling data and making files available for import, use the dataprep_agent.
         - For direct execution of cypher queries, use the cypher_agent. The cypher agent can also be used to find out Neo4j database settings.
 
         Always plan ahead:

@@ -1,17 +1,23 @@
 import os 
-from openai import OpenAI
+
+from google.adk.models.lite_llm import LiteLlm
 
 MODEL_GEMINI_2_0_FLASH = "gemini/gemini-2.0-flash"
 MODEL_GPT_4O = "openai/gpt-4o"
 MODEL_CLAUDE_SONNET = "anthropic/claude-3-sonnet-20240229"
 MODEL_OPENAI_CHAT = "openai/gpt-4o"
-MODEL_GPT_40_MINI = "openai/gpt-4o-mini"
+MODEL_GPT_4O_MINI = "openai/gpt-4o-mini"
 
-model_roles = {
-    "chat": MODEL_GPT_40_MINI,
-    "embed": MODEL_GEMINI_2_0_FLASH,
-    "code": MODEL_CLAUDE_SONNET
-}
+LM_STUDIO_MODEL = "hosted_vllm/qwen2.5-7b-instruct"
+LM_STUDIO_BASE_URL = "http://localhost:1234/v1"
+
+OLLAMA_MODEL = "openai/qwen3:4b"
+OLLAMA_BASE_URL = "http://localhost:11434/v1"
+
+llm = LiteLlm(
+    model=MODEL_GPT_4O_MINI,
+    # api_base=OLLAMA_BASE_URL,
+)
 
 def load_neo4j_env():
     return {

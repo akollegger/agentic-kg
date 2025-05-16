@@ -1,5 +1,5 @@
 
-from .file_agent.agent import root_agent as file_agent
+from .dataprep_agent.agent import root_agent as dataprep_agent
 from .cypher_agent.agent import root_agent as cypher_agent
 
-__all__ = ["file_agent", "cypher_agent"]
+__all__ = ["dataprep_agent", "cypher_agent"]

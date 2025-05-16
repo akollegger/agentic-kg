@@ -58,7 +58,7 @@ def list_data_files(tool_context:ToolContext) -> dict:
     if data_dir_result["status"] == "error": return data_dir_result
     data_dir = Path(data_dir_result["data_dir"])
 
-    file_names = [str(x) for x in data_dir.rglob("*") if x.is_file()]
+    file_names = [str(x.relative_to(data_dir)) for x in data_dir.rglob("*") if x.is_file()]
 
     return tool_success("files", file_names)
 
@@ -78,7 +78,7 @@ def list_import_files(tool_context:ToolContext) -> dict:
     if import_dir_result["status"] == "error": return import_dir_result
     import_dir = Path(import_dir_result["neo4j_import_dir"])
 
-    file_names = [str(x) for x in import_dir.rglob("*") if x.is_file()]
+    file_names = [str(x.relative_to(import_dir)) for x in import_dir.rglob("*") if x.is_file()]
 
     return tool_success("files", file_names)
 
@@ -107,13 +107,11 @@ def clear_import_dir(tool_context:ToolContext) -> dict:
             os.remove(sub_path)
     return tool_success("paths", [str(p.name) for p in sub_paths])
 
-def copy_file(source_path: str, destination_path: str, tool_context: ToolContext) -> dict:
-    """Copies a file using the python shutil.copy2() method.
+def copy_to_import_dir(source_filename: str, tool_context: ToolContext) -> dict:
+    """Copies a file from the data directory into the import directory.
 
     Args:
-      source_path: file to copy from.
-      destination_path: destination to copy the file to.
-      tool_context: ToolContext object.
+      source_path: relative path of file to copy from the data_directory
 
     Returns:
         dict: A dictionary indicating the success of the operation, or an error.
@@ -123,11 +121,25 @@ def copy_file(source_path: str, destination_path: str, tool_context: ToolContext
               If 'error', includes an 'error_message' key.
     """
     import shutil
+
+
+    data_dir_result = get_state_value_or_else("data_dir", "data_dir has not been configured, please check the .env",tool_context)
+    if data_dir_result["status"] == "error": return data_dir_result
+    data_dir = Path(data_dir_result["data_dir"])
+
+    import_dir_result = get_neo4j_import_directory(tool_context)
+    if import_dir_result["status"] == "error": return import_dir_result
+    import_dir = Path(import_dir_result["neo4j_import_dir"])
+
+    source_path = Path(source_filename) 
+    full_source_path = data_dir / source_path # only allow subpaths of data_dir
+    full_destination_path = import_dir / source_path.name # copy to a flat location
+
     try:
-        shutil.copy2(source_path, destination_path)
+        destination_path = shutil.copy2(full_source_path, full_destination_path)
         return tool_success("metadata", {
-                "source_path": source_path,
-                "destination_path": destination_path
+                "source_path": str(source_path),
+                "destination_path": str(destination_path)
         })
     except Exception as e:
         return tool_error(str(e))
