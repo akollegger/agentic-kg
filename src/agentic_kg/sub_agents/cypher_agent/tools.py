@@ -134,5 +134,19 @@ async def create_uniqueness_constraint(
         A dictionary with a status key ('success' or 'error').
         On error, includes an 'error_message' key.
     """    
-    results = graphdb.send_query("""CREATE CONSTRAINT IF NOT EXISTS ON (n:$label) ASSERT n.$unique_property_key IS UNIQUE""", {"label": label, "unique_property_key": unique_property_key})
+    from agentic_kg.common.neo4j_for_adk import is_symbol
+    
+    # Validate input to prevent injection attacks
+    if not is_symbol(label):
+        return tool_error(f"Invalid label: '{label}'. Labels cannot contain spaces or be Cypher keywords.")
+        
+    if not is_symbol(unique_property_key):
+        return tool_error(f"Invalid property key: '{unique_property_key}'. Property keys cannot contain spaces or be Cypher keywords.")
+    
+    # Use string formatting since Neo4j doesn't support parameterization of labels and property keys
+    constraint_name = f"{label}_{unique_property_key}_constraint"
+    query = f"""CREATE CONSTRAINT {constraint_name} IF NOT EXISTS
+    FOR (n:{label})
+    REQUIRE n.{unique_property_key} IS UNIQUE"""
+    results = graphdb.send_query(query)
     return results

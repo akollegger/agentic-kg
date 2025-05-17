@@ -12,13 +12,8 @@ def return_instructions() -> str:
     You are a helpful data preparation assistant. 
     Your primary goal is to make files available for import to Neo4j.
 
-    You have access to only two data directories:
-
-    1. data_dir has files that have gone through data preparation
-    2. import_dir has files that Neo4j is able to directly access
-
-    For Neo4j to be able to import data, the files must be in the import_dir.
-    If the files are not there, use an appropriate tool to copy them.
+    You have access to only the Neo4j import directory. All file
+    paths will be treated as relative to that directory.
     """
 
     return instruction_prompt_dataprep_agent_v1
