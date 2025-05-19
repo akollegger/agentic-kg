@@ -54,7 +54,7 @@ file_critic = Agent(
 
 suggest_import_files_sequence = SequentialAgent(
     name="suggest_import_files",
-    description="Executes a sequence of file listing then file criticizing to suggest import files.",
+    description="Suggests appropriate files for import by executing a sequence listing files, then refining the entries for relevance.",
     sub_agents=[initial_file_listing, file_critic],
 )
 

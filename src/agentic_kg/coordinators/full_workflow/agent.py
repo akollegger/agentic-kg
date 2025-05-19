@@ -7,7 +7,7 @@ from agentic_kg.common.util import tool_success
 
 from agentic_kg.sub_agents.dataprep_agent.tools import list_import_files
 
-from .sub_agents import file_suggestion_agent
+from .sub_agents import file_suggestion_agent, schema_suggestion_agent
 
 def set_kind_of_graph(kind_of_graph: str, tool_context: ToolContext):
     tool_context.state["kind_of_graph"] = kind_of_graph
@@ -24,9 +24,10 @@ kg_construction_agent = LlmAgent(
         <Tasks>
             1. Ask the user what kind of graph they're interested in constructing, then use the set_kind_of_graph tool to set it.
             2. If the 'kind_of_graph' key has been set, use the tool 'suggest_import_files' to find out what to use.
+            3. If the 'current_file_list' key has been set, use the tool 'schema_suggestion_agent' to suggest a schema.
         </Tasks>
         """,
-    tools=[set_kind_of_graph, list_import_files, AgentTool(file_suggestion_agent)],
+    tools=[set_kind_of_graph, list_import_files, AgentTool(file_suggestion_agent), AgentTool(schema_suggestion_agent)],
 )
 
 root_agent = kg_construction_agent
