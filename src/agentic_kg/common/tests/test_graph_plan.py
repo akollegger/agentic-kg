@@ -5,7 +5,7 @@ Unit tests for the graph_plan module.
 import pytest
 from pydantic import ValidationError
 
-from ..graph_plan import GraphPlan, Entity, Relation, Annotation
+from ..graph_plan import GraphPlan, Entity, Relation, ConstructionAnnotation, RetrievalAnnotation
 
 
 class TestGraphPlan:
@@ -108,33 +108,34 @@ class TestGraphPlan:
         graph_plan.add_entity(person)
         
         # Create an annotation for the entity
-        source_annotation = Annotation(
+        source_annotation = ConstructionAnnotation(
             annotation_name="Source",
             annotation_description="Data source for this entity",
-            properties={"file": "people.csv"},
-            annotates=person
+            annotates=person,
+            source_file="people.csv",
+            transformation="direct_import"
         )
         
         person.add_annotation(source_annotation)
         
         assert len(person.annotations) == 1
         assert person.annotations[0] == source_annotation
-        assert person.annotations[0].properties["file"] == "people.csv"
+        # Annotation no longer has property_type_map
         
         # Create an annotation for the graph plan
-        metadata_annotation = Annotation(
+        metadata_annotation = RetrievalAnnotation(
             annotation_name="Metadata",
-            annotation_description="Additional metadata for the graph plan",
-            properties={"version": "1.0", "author": "Test User"},
-            annotates=graph_plan
+            annotation_description="Retrieval pattern for the graph plan",
+            annotates=graph_plan,
+            query_pattern="MATCH (n:GraphPlan) RETURN n",
+            access_method="cypher"
         )
         
         graph_plan.add_annotation(metadata_annotation)
         
         assert len(graph_plan.annotations) == 1
         assert graph_plan.annotations[0] == metadata_annotation
-        assert graph_plan.annotations[0].properties["version"] == "1.0"
-        assert graph_plan.annotations[0].properties["author"] == "Test User"
+        # Annotation no longer has property_type_map
 
     def test_entity_properties(self):
         """Test adding properties to entities."""
@@ -146,9 +147,9 @@ class TestGraphPlan:
         person.add_property("name", "String")
         person.add_property("age", "Integer")
         
-        assert len(person.properties) == 2
-        assert person.properties["name"] == "String"
-        assert person.properties["age"] == "Integer"
+        assert len(person.property_type_map) == 2
+        assert person.property_type_map["name"] == "String"
+        assert person.property_type_map["age"] == "Integer"
 
     def test_relation_properties(self):
         """Test adding properties to relations."""
@@ -172,9 +173,9 @@ class TestGraphPlan:
         works_for.add_property("since", "Date")
         works_for.add_property("role", "String")
         
-        assert len(works_for.properties) == 2
-        assert works_for.properties["since"] == "Date"
-        assert works_for.properties["role"] == "String"
+        assert len(works_for.property_type_map) == 2
+        assert works_for.property_type_map["since"] == "Date"
+        assert works_for.property_type_map["role"] == "String"
 
     def test_serialization(self):
         """Test serializing and deserializing a graph plan."""
@@ -224,10 +225,10 @@ class TestGraphPlan:
         # Verify entity properties were preserved
         person_entity = new_graph_plan.get_entity_by_name("Person")
         assert person_entity is not None
-        assert person_entity.properties["name"] == "String"
+        assert person_entity.property_type_map["name"] == "String"
         
         # Verify relation properties were preserved
         relations = new_graph_plan.get_relations_for_entity(person_entity)
         assert len(relations) == 1
         assert relations[0].relation_name == "WORKS_FOR"
-        assert relations[0].properties["since"] == "Date"
+        assert relations[0].property_type_map["since"] == "Date"

@@ -149,4 +149,16 @@ class Neo4jForADK:
         finally:
             session.close()
 
+    def get_import_directory(self):
+        results = self.send_query("""
+            Call dbms.listConfig() YIELD name, value
+            WHERE name CONTAINS 'server.directories.import'
+            RETURN value as import_dir
+            """)
+        if results["status"] == "success":
+            return tool_success("neo4j_import_dir",results["query_result"][0]["import_dir"])
+        else:
+            return tool_error(results["error_message"])
+
+
 graphdb = Neo4jForADK()

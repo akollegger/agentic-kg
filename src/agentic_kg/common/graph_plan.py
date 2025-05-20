@@ -10,200 +10,296 @@ what the graph should look like, how it should be built, and how
 it should be accessed.
 
 The graph plan is itself a graph, with primary elements that are lightweight.
-Annotation elements can be attached to primary elements to provide additional
-information for particular tasks. For example, an `Entity` indicates a node type
-definition, which may have a `Source` annotation to indicate the file it can
+Rules can be attached to elements to provide additional
+information for particular tasks. For example, an `EntityPlan` indicates a node type
+definition, which may have a `construction_rule` to indicate the file it can
 be constructed from. 
-
-## Design
-
-The graph plan has the following primary elements (using Pydantic type specifications):
-
-```python
-class GraphPlan(BaseModel):
-    graph_plan_id: str
-    graph_plan_name: str
-    graph_plan_description: str
-    entities: Dict[str, Entity] = {}
-    relations: Dict[str, Relation] = {}
-    annotations: List[Annotation] = []
-
-class Entity(BaseModel):
-    entity_id: str
-    entity_name: str
-    entity_description: str
-    properties: Dict[str, str] = {}
-    annotations: List[Annotation] = []
-
-class Relation(BaseModel):
-    relation_id: str
-    relation_name: str
-    relation_description: str
-    properties: Dict[str, str] = {}
-    from_entity: Entity
-    to_entity: Entity
-    annotations: List[Annotation] = []
-
-class Annotation(BaseModel):
-    annotation_id: str
-    annotation_name: str
-    annotation_description: str
-    properties: Dict[str, str] = {}
-    annotates: Union[GraphPlan, Entity, Relation]
-```
 """
 
 import uuid
-from typing import Dict, List, Optional, Set, Union, ForwardRef
+from typing import Dict, List, Optional
+from enum import Enum   
 from pydantic import BaseModel, Field
 
-# Forward references for type hints
-GraphPlanRef = ForwardRef('GraphPlan')
-EntityRef = ForwardRef('Entity')
-RelationRef = ForwardRef('Relation')
 
-
-class Annotation(BaseModel):
-    """
-    Represents an annotation that can be attached to a GraphPlan, Entity, or Relation.
+class FileSource(BaseModel):
+    """Represents a file source which has been prepared and analyzed for import.
     
     Attributes:
-        annotation_id: Unique identifier for the annotation
-        annotation_name: Name of the annotation
-        annotation_description: Description of what this annotation represents
-        properties: Dictionary of property names to their values
-        annotates: The element this annotation is attached to
+        file_path: The path to the file
+        mime_type: The MIME type of the file
+        header: The column names of the file, if it is a CSV file
+        sample: A sample of the file, if it is a CSV file
     """
-    annotation_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    annotation_name: str
-    annotation_description: str
-    properties: Dict[str, str] = Field(default_factory=dict)
-    annotates: Union[GraphPlanRef, EntityRef, RelationRef]
+    file_path: str
+    mime_type: str
+    header: Optional[List[str]] = None
+    sample: Optional[List[List[str]]] = None
+
+    def __str__(self):
+        return f"FileSource(file_path={self.file_path}, mime_type={self.mime_type}, header={self.header}, sample={self.sample})"
+
+class BasePlan(BaseModel):
+    """
+    Base class for all plan elements in the graph plan.
+    
+    Attributes:
+        id: Unique identifier for the plan element
+        name: Name of the plan element
+        description: Description of what this plan element represents
+    """
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    name: str
+    description: str
 
 
-class Entity(BaseModel):
+class RuleKind(str, Enum):
+    """Enum representing the different kinds of rules."""
+    CONSTRUCTION = "construction"
+    RETRIEVAL = "retrieval"
+
+
+class Rule(BasePlan):
+    """
+    Rule that can be attached to a GraphPlan, EntityPlan, or RelationPlan.
+    Rules define how to construct or retrieve elements of the knowledge graph.
+    
+    Attributes:
+        id: Unique identifier for the rule
+        name: Name of the rule
+        description: Description of what this rule does
+        kind: The kind of rule (construction or retrieval)
+        tool: Name of the tool to call for executing the rule
+        args: Arguments to pass to the tool
+    """
+    kind: RuleKind
+    tool: str
+    args: Dict[str, str] = Field(default_factory=dict)
+    
+    @classmethod
+    def construction(cls, name: str, description: str, tool: str, args: Dict[str, str] = None) -> 'Rule':
+        """Factory method to create a construction rule.
+        
+        For construction rules, it's common to include a source_file in the args dictionary.
+        """
+        args = args or {}
+        return cls(
+            name=name,
+            description=description,
+            kind=RuleKind.CONSTRUCTION,
+            tool=tool,
+            args=args
+        )
+    
+    @classmethod
+    def retrieval(cls, name: str, description: str, tool: str, args: Dict[str, str] = None) -> 'Rule':
+        """Factory method to create a retrieval rule."""
+        return cls(
+            name=name,
+            description=description,
+            kind=RuleKind.RETRIEVAL,
+            tool=tool,
+            args=args or {}
+        )
+        
+    def is_construction(self) -> bool:
+        """Check if this is a construction rule."""
+        return self.kind == RuleKind.CONSTRUCTION
+        
+    def is_retrieval(self) -> bool:
+        """Check if this is a retrieval rule."""
+        return self.kind == RuleKind.RETRIEVAL
+
+
+class EntityPlan(BasePlan):
     """
     Represents a node type definition in a knowledge graph.
     
     Attributes:
-        entity_id: Unique identifier for the entity
-        entity_name: Name of the entity (used as label in the graph)
-        entity_description: Description of what this entity represents
-        properties: Dictionary of property names to their types
-        annotations: List of annotations attached to this entity
+        id: Unique identifier for the entity
+        name: Name of the entity (used as label in the graph)
+        description: Description of what this entity represents
+        property_keys: List of property keys for this entity
+        rules: List of rules attached to this entity
     """
-    entity_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    entity_name: str
-    entity_description: str
-    properties: Dict[str, str] = Field(default_factory=dict)
-    annotations: List[Annotation] = Field(default_factory=list)
+    property_keys: List[str] = Field(default_factory=list)
+    rules: List[Rule] = Field(default_factory=list)
     
-    def add_property(self, name: str, property_type: str) -> None:
-        """Add a property to this entity definition."""
-        self.properties[name] = property_type
+    def add_property(self, name: str) -> None:
+        """Add a property key to this entity definition."""
+        if name not in self.property_keys:
+            self.property_keys.append(name)
     
-    def add_annotation(self, annotation: Annotation) -> None:
-        """Add an annotation to this entity."""
-        annotation.annotates = self
-        self.annotations.append(annotation)
+    def add_rule(self, rule: Rule) -> None:
+        """Add a rule to this entity."""
+        self.rules.append(rule)
 
 
-class Relation(BaseModel):
+class RelationPlan(BasePlan):
     """
     Represents a relationship type definition in a knowledge graph.
     
     Attributes:
-        relation_id: Unique identifier for the relation
-        relation_name: Name of the relation (used as relationship type in the graph)
-        relation_description: Description of what this relation represents
-        from_entity: The source entity for this relation
-        to_entity: The target entity for this relation
-        properties: Dictionary of property names to their types
-        annotations: List of annotations attached to this relation
+        id: Unique identifier for the relation
+        name: Name of the relation (used as relationship type in the graph)
+        description: Description of what this relation represents
+        property_keys: List of property keys for this relation
+        from_entity: Source entity for this relation
+        to_entity: Target entity for this relation
+        rules: List of rules attached to this relation
     """
-    relation_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    relation_name: str
-    relation_description: str
-    properties: Dict[str, str] = Field(default_factory=dict)
-    from_entity: Entity
-    to_entity: Entity
-    annotations: List[Annotation] = Field(default_factory=list)
+    property_keys: List[str] = Field(default_factory=list)
+    from_entity: 'EntityPlan'
+    to_entity: 'EntityPlan'
+    rules: List[Rule] = Field(default_factory=list)
     
-    def add_property(self, name: str, property_type: str) -> None:
-        """Add a property to this relation definition."""
-        self.properties[name] = property_type
+    def add_property(self, name: str) -> None:
+        """Add a property key to this relation definition."""
+        if name not in self.property_keys:
+            self.property_keys.append(name)
     
-    def add_annotation(self, annotation: Annotation) -> None:
-        """Add an annotation to this relation."""
-        annotation.annotates = self
-        self.annotations.append(annotation)
+    def add_rule(self, rule: Rule) -> None:
+        """Add a rule to this relation."""
+        self.rules.append(rule)
 
 
-class GraphPlan(BaseModel):
+class GraphPlan(BasePlan):
     """
     A blueprint for a knowledge graph, describing what the graph should look like,
     how it should be built, and how it should be accessed.
     
     Attributes:
-        graph_plan_id: Unique identifier for the graph plan
-        graph_plan_name: Name of the graph plan
-        graph_plan_description: Description of what this graph plan represents
-        entities: Dictionary of entity_id to Entity objects
-        relations: Dictionary of relation_id to Relation objects
-        annotations: List of annotations attached to this graph plan
+        id: Unique identifier for the graph plan
+        name: Name of the graph plan
+        description: Description of what this graph plan represents
+        entities: Dictionary of entity id to EntityPlan objects
+        relations: Dictionary of relation id to RelationPlan objects
     """
-    graph_plan_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    graph_plan_name: str
-    graph_plan_description: str
-    entities: Dict[str, Entity] = Field(default_factory=dict)
-    relations: Dict[str, Relation] = Field(default_factory=dict)
-    annotations: List[Annotation] = Field(default_factory=list)
+    entities: Dict[str, EntityPlan] = Field(default_factory=dict)
+    relations: Dict[str, RelationPlan] = Field(default_factory=dict)
     
-    def add_entity(self, entity: Entity) -> None:
+    def add_entity(self, entity: EntityPlan) -> None:
         """Add an entity to this graph plan."""
-        self.entities[entity.entity_id] = entity
+        self.entities[entity.id] = entity
     
-    def add_relation(self, relation: Relation) -> None:
+    def add_relation(self, relation: RelationPlan) -> None:
         """Add a relation to this graph plan."""
-        self.relations[relation.relation_id] = relation
+        self.relations[relation.id] = relation
     
-    def add_annotation(self, annotation: Annotation) -> None:
-        """Add an annotation to this graph plan."""
-        annotation.annotates = self
-        self.annotations.append(annotation)
-    
-    def get_entity_by_name(self, name: str) -> Optional[Entity]:
-        """Get an entity by its name."""
+    def find_entity_by_name(self, name: str) -> Optional[EntityPlan]:
+        """Find an entity by its name.
+        
+        Note: This returns the first entity with a matching name. Names are not guaranteed
+        to be unique, so multiple entities could have the same name.
+        """
         for entity in self.entities.values():
-            if entity.entity_name == name:
+            if entity.name == name:
                 return entity
         return None
+        
+    # Keep the old method name for backward compatibility
+    def get_entity_by_name(self, name: str) -> Optional[EntityPlan]:
+        """Get an entity by its name (deprecated, use find_entity_by_name instead)."""
+        return self.find_entity_by_name(name)
     
-    def get_entity_by_id(self, entity_id: str) -> Optional[Entity]:
+    def get_entity_by_id(self, id: str) -> Optional[EntityPlan]:
         """Get an entity by its ID."""
-        return self.entities.get(entity_id)
+        return self.entities.get(id)
+        
+    def find_relation_by_name(self, name: str) -> Optional[RelationPlan]:
+        """Find a relation by its name.
+        
+        Note: This returns the first relation with a matching name. Names are not guaranteed
+        to be unique, so multiple relations could have the same name.
+        
+        Args:
+            name: Name of the relation to find
+            
+        Returns:
+            The relation if found, None otherwise
+        """
+        for relation in self.relations.values():
+            if relation.name == name:
+                return relation
+        return None
+        
+    # Keep the old method name for backward compatibility
+    def get_relation_by_name(self, name: str) -> Optional[RelationPlan]:
+        """Get a relation by its name (deprecated, use find_relation_by_name instead)."""
+        return self.find_relation_by_name(name)
+        
+    def create_relation(self, name: str, description: str, 
+                       from_name: str, to_name: str) -> RelationPlan:
+        """Create a relation between two entities by their names.
+        
+        Args:
+            name: Name of the relation
+            description: Description of the relation
+            from_name: Name of the source entity
+            to_name: Name of the target entity
+            
+        Returns:
+            The created relation
+            
+        Raises:
+            ValueError: If either the from_name or to_name cannot be found by name
+        """
+        from_entity = self.find_entity_by_name(from_name)
+        to_entity = self.find_entity_by_name(to_name)
+        
+        if from_entity is None:
+            raise ValueError(f"Source entity with name '{from_name}' not found")
+        if to_entity is None:
+            raise ValueError(f"Target entity with name '{to_name}' not found")
+            
+        relation = RelationPlan(
+            name=name,
+            description=description,
+            from_entity=from_entity,
+            to_entity=to_entity
+        )
+        
+        self.add_relation(relation)
+        return relation
     
-    def get_relations_for_entity(self, entity: Entity) -> List[Relation]:
+    def get_relations_for_entity(self, entity: EntityPlan) -> List[RelationPlan]:
         """Get all relations where the given entity is either the source or target."""
         return [r for r in self.relations.values() if r.from_entity == entity or r.to_entity == entity]
     
     def to_dict(self) -> Dict:
         """Convert the graph plan to a dictionary representation."""
-        # Use Pydantic's model_dump method but exclude circular references
-        data = self.model_dump(exclude={'annotations': {'__all__': {'annotates'}}})
+        # Create a copy of the data to avoid modifying the original
+        data = {
+            'id': self.id,
+            'name': self.name,
+            'description': self.description,
+            'entities': [],
+            'relations': []
+        }
         
-        # Convert entities and relations from dict to list for serialization
-        if 'entities' in data:
-            data['entities'] = list(data['entities'].values())
-        if 'relations' in data:
-            data['relations'] = list(data['relations'].values())
-            
-            # Replace entity references with entity IDs
-            for relation in data['relations']:
-                if 'from_entity' in relation:
-                    relation['from_entity'] = relation['from_entity']['entity_id']
-                if 'to_entity' in relation:
-                    relation['to_entity'] = relation['to_entity']['entity_id']
+        # Add entities as a list
+        for entity in self.entities.values():
+            entity_dict = {
+                'id': entity.id,
+                'name': entity.name,
+                'description': entity.description,
+                'property_keys': entity.property_keys,
+                'rules': [rule.model_dump() for rule in entity.rules]
+            }
+            data['entities'].append(entity_dict)
+        
+        # Add relations as a list with entity references as IDs
+        for relation in self.relations.values():
+            relation_dict = {
+                'id': relation.id,
+                'name': relation.name,
+                'description': relation.description,
+                'property_keys': relation.property_keys,
+                'from_entity': relation.from_entity.id,  # Just store the ID
+                'to_entity': relation.to_entity.id,      # Just store the ID
+                'rules': [rule.model_dump() for rule in relation.rules]
+            }
+            data['relations'].append(relation_dict)
         
         return data
     
@@ -212,22 +308,22 @@ class GraphPlan(BaseModel):
         """Create a graph plan from a dictionary representation."""
         # Create a new graph plan
         graph_plan = cls(
-            graph_plan_id=data['graph_plan_id'],
-            graph_plan_name=data['graph_plan_name'],
-            graph_plan_description=data['graph_plan_description']
+            id=data.get('id', data.get('graph_plan_id', str(uuid.uuid4()))),
+            name=data.get('name', data.get('graph_plan_name', 'Unnamed Graph Plan')),
+            description=data.get('description', data.get('graph_plan_description', ''))
         )
         
         # Create entities first
         entity_map = {}
         for entity_data in data.get('entities', []):
-            entity = Entity(
-                entity_id=entity_data['entity_id'],
-                entity_name=entity_data['entity_name'],
-                entity_description=entity_data['entity_description'],
-                properties=entity_data.get('properties', {})
+            entity = EntityPlan(
+                id=entity_data.get('id', entity_data.get('entity_id')),
+                name=entity_data.get('name', entity_data.get('entity_name')),
+                description=entity_data.get('description', entity_data.get('entity_description')),
+                property_type_map=entity_data.get('property_type_map', {})
             )
             graph_plan.add_entity(entity)
-            entity_map[entity.entity_id] = entity
+            entity_map[entity.id] = entity
         
         # Create relations
         for relation_data in data.get('relations', []):
@@ -239,29 +335,62 @@ class GraphPlan(BaseModel):
             to_entity = entity_map.get(to_entity_id)
             
             if from_entity and to_entity:
-                relation = Relation(
-                    relation_id=relation_data['relation_id'],
-                    relation_name=relation_data['relation_name'],
-                    relation_description=relation_data['relation_description'],
+                relation = RelationPlan(
+                    id=relation_data.get('id', relation_data.get('relation_id')),
+                    name=relation_data.get('name', relation_data.get('relation_name')),
+                    description=relation_data.get('description', relation_data.get('relation_description')),
                     from_entity=from_entity,
                     to_entity=to_entity,
-                    properties=relation_data.get('properties', {})
+                    property_type_map=relation_data.get('property_type_map', {})
                 )
                 graph_plan.add_relation(relation)
         
-        # Add annotations
-        if 'annotations' in data:
-            for annotation_data in data['annotations']:
-                annotation = Annotation(
-                    annotation_id=annotation_data['annotation_id'],
-                    annotation_name=annotation_data['annotation_name'],
-                    annotation_description=annotation_data['annotation_description'],
-                    properties=annotation_data.get('properties', {})
-                )
-                graph_plan.add_annotation(annotation)
+        # Add rules
+        if 'rules' in data:
+            for rule_data in data['rules']:
+                # Create rule based on its kind
+                if 'kind' in rule_data and rule_data['kind'] in [RuleKind.CONSTRUCTION, RuleKind.RETRIEVAL]:
+                    # New format rule
+                    args = rule_data.get('args', {})
+                    # Handle legacy source_file field by moving it to args
+                    if 'source_file' in rule_data and rule_data['kind'] == RuleKind.CONSTRUCTION:
+                        args = args.copy()
+                        args['source_file'] = rule_data['source_file']
+                    
+                    rule = Rule(
+                        id=rule_data.get('id', rule_data.get('rule_id', str(uuid.uuid4()))),
+                        name=rule_data.get('name', rule_data.get('rule_name')),
+                        description=rule_data.get('description', rule_data.get('rule_description')),
+                        kind=rule_data['kind'],
+                        tool=rule_data['tool'],
+                        args=args
+                    )
+                    graph_plan.add_rule(rule)
+                # Legacy format rules
+                elif 'source_file' in rule_data and 'tool' in rule_data:
+                    # Construction rule
+                    args = rule_data.get('args', {}).copy()
+                    args['source_file'] = rule_data['source_file']
+                    
+                    rule = Rule.construction(
+                        name=rule_data.get('name', rule_data.get('rule_name')),
+                        description=rule_data.get('description', rule_data.get('rule_description')),
+                        tool=rule_data['tool'],
+                        args=args
+                    )
+                    if 'rule_id' in rule_data or 'id' in rule_data:
+                        rule.id = rule_data.get('id', rule_data.get('rule_id'))
+                    graph_plan.add_rule(rule)
+                elif 'tool' in rule_data:
+                    # Retrieval rule
+                    rule = Rule.retrieval(
+                        name=rule_data.get('name', rule_data.get('rule_name')),
+                        description=rule_data.get('description', rule_data.get('rule_description')),
+                        tool=rule_data['tool'],
+                        args=rule_data.get('args', {})
+                    )
+                    if 'rule_id' in rule_data or 'id' in rule_data:
+                        rule.id = rule_data.get('id', rule_data.get('rule_id'))
+                    graph_plan.add_rule(rule)
         
         return graph_plan
-
-
-# Resolve forward references
-Annotation.model_rebuild()

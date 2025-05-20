@@ -29,20 +29,14 @@ def get_neo4j_import_directory(tool_context:ToolContext) -> Dict[str, Any]:
     """Queries Neo4j to find the location of the server's import directory,
        which is where files need to be located in order to be used by LOAD CSV.
     """
-    find_neo4j_import_dir_cypher = """
-    Call dbms.listConfig() YIELD name, value
-    WHERE name CONTAINS 'server.directories.import'
-    RETURN value as import_dir
-    """
     if "neo4j_import_dir" in tool_context.state:
         return tool_success("neo4j_import_dir",tool_context.state["neo4j_import_dir"])
         
-    results = graphdb.send_query(find_neo4j_import_dir_cypher)
+    results = graphdb.get_import_directory() # use the helper available in Neo4jForADK
+    
     if results["status"] == "success":
-        tool_context.state["neo4j_import_dir"] = results["query_result"][0]["import_dir"]
-        return tool_success("neo4j_import_dir",results["query_result"][0]["import_dir"])
-    else:
-        return tool_error(results["error_message"])
+        tool_context.state["neo4j_import_dir"] = results["neo4j_import_dir"]
+    return results
 
 def list_import_files(tool_context:ToolContext) -> dict:
     """Lists files available in the configured Neo4j import directory

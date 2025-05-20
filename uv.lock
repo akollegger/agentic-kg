@@ -68,7 +68,7 @@ wheels = [
 [[package]]
 name = "agentic-kg"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "clevercsv", extra = ["full"] },
     { name = "click" },
@@ -87,6 +87,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "agentic-kg" },
     { name = "pytest" },
     { name = "uv-bump" },
 ]
@@ -110,6 +111,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "agentic-kg", editable = "." },
     { name = "pytest", specifier = ">=8.3.5" },
     { name = "uv-bump", specifier = ">=0.1.2" },
 ]
