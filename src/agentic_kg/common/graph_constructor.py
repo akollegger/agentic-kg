@@ -89,7 +89,7 @@ def construct_graph(graph_plan: GraphPlan):
     """
     results = []
     
-        # 1. Process entity construction rules to create nodes
+    # 1. Process entity construction rules to create nodes
     for entity in graph_plan.entities.values():
         for rule in entity.rules:
             if rule.is_construction():
