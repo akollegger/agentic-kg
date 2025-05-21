@@ -128,7 +128,7 @@ async def create_uniqueness_constraint(
 
     Args:
         label: The label of the node to create a constraint for.
-        unique_property_key: The property key to create a constraint for.
+        unique_property_key: The property key that should have a unique value.
 
     Returns:
         A dictionary with a status key ('success' or 'error').
@@ -143,7 +143,7 @@ async def create_uniqueness_constraint(
     if not is_symbol(unique_property_key):
         return tool_error(f"Invalid property key: '{unique_property_key}'. Property keys cannot contain spaces or be Cypher keywords.")
     
-    # Use string formatting since Neo4j doesn't support parameterization of labels and property keys
+    # Use string formatting since Neo4j doesn't support parameterization of labels and property keys when creating a constraint
     constraint_name = f"{label}_{unique_property_key}_constraint"
     query = f"""CREATE CONSTRAINT {constraint_name} IF NOT EXISTS
     FOR (n:{label})

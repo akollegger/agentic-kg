@@ -9,7 +9,7 @@ A "graph plan" is like a blueprint for a knowledge graph, describing
 what the graph should look like, how it should be built, and how
 it should be accessed.
 
-The graph plan is itself a graph, with primary elements that are lightweight.
+The graph plan is itself a graph, with primary elements representing the schema of the graph.
 Rules can be attached to elements to provide additional
 information for particular tasks. For example, an `EntityPlan` indicates a node type
 definition, which may have a `construction_rule` to indicate the file it can
@@ -172,11 +172,17 @@ class GraphPlan(BasePlan):
         id: Unique identifier for the graph plan
         name: Name of the graph plan
         description: Description of what this graph plan represents
+        sources: Dictionary of filename to FileSource objects
         entities: Dictionary of entity id to EntityPlan objects
         relations: Dictionary of relation id to RelationPlan objects
     """
-    entities: Dict[str, EntityPlan] = Field(default_factory=dict)
-    relations: Dict[str, RelationPlan] = Field(default_factory=dict)
+    sources: Dict[str, FileSource] = Field(default_factory=dict, description="Map from filename to FilesSource")
+    entities: Dict[str, EntityPlan] = Field(default_factory=dict, description="Map from entity id to EntityPlan")
+    relations: Dict[str, RelationPlan] = Field(default_factory=dict, description="Map from relation id to RelationPlan")
+    
+    def add_source(self, source: FileSource) -> None:
+        """Add a file source to this graph plan."""
+        self.sources[source.file_path] = source
     
     def add_entity(self, entity: EntityPlan) -> None:
         """Add an entity to this graph plan."""
@@ -196,11 +202,6 @@ class GraphPlan(BasePlan):
             if entity.name == name:
                 return entity
         return None
-        
-    # Keep the old method name for backward compatibility
-    def get_entity_by_name(self, name: str) -> Optional[EntityPlan]:
-        """Get an entity by its name (deprecated, use find_entity_by_name instead)."""
-        return self.find_entity_by_name(name)
     
     def get_entity_by_id(self, id: str) -> Optional[EntityPlan]:
         """Get an entity by its ID."""
@@ -222,11 +223,6 @@ class GraphPlan(BasePlan):
             if relation.name == name:
                 return relation
         return None
-        
-    # Keep the old method name for backward compatibility
-    def get_relation_by_name(self, name: str) -> Optional[RelationPlan]:
-        """Get a relation by its name (deprecated, use find_relation_by_name instead)."""
-        return self.find_relation_by_name(name)
         
     def create_relation(self, name: str, description: str, 
                        from_name: str, to_name: str) -> RelationPlan:
@@ -274,7 +270,8 @@ class GraphPlan(BasePlan):
             'name': self.name,
             'description': self.description,
             'entities': [],
-            'relations': []
+            'relations': [],
+            'sources': {}
         }
         
         # Add entities as a list
@@ -300,6 +297,10 @@ class GraphPlan(BasePlan):
                 'rules': [rule.model_dump() for rule in relation.rules]
             }
             data['relations'].append(relation_dict)
+            
+        # Add sources as a dictionary with file_path as key
+        for file_path, source in self.sources.items():
+            data['sources'][file_path] = source.model_dump()
         
         return data
     
@@ -312,6 +313,12 @@ class GraphPlan(BasePlan):
             name=data.get('name', data.get('graph_plan_name', 'Unnamed Graph Plan')),
             description=data.get('description', data.get('graph_plan_description', ''))
         )
+        
+        # Add sources if present
+        if 'sources' in data:
+            for file_path, source_data in data['sources'].items():
+                source = FileSource(**source_data)
+                graph_plan.add_source(source)
         
         # Create entities first
         entity_map = {}
