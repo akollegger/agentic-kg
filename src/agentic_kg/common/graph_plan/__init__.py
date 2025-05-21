@@ -23,6 +23,7 @@ from .rule import Rule, RuleKind
 from .entity_plan import EntityPlan
 from .relation_plan import RelationPlan
 from .graph_plan import GraphPlan
+from .serialization import graph_plan_to_dict, graph_plan_from_dict
 
 __all__ = [
     'BasePlan',
@@ -32,4 +33,6 @@ __all__ = [
     'EntityPlan',
     'RelationPlan',
     'GraphPlan',
+    'graph_plan_to_dict',
+    'graph_plan_from_dict',
 ]

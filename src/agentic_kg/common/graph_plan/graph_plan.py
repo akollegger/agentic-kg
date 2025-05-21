@@ -122,139 +122,29 @@ class GraphPlan(BasePlan):
         return [r for r in self.relations.values() if r.from_entity == entity or r.to_entity == entity]
     
     def to_dict(self) -> Dict:
-        """Convert the graph plan to a dictionary representation."""
-        # Create a copy of the data to avoid modifying the original
-        data = {
-            'id': self.id,
-            'name': self.name,
-            'description': self.description,
-            'entities': [],
-            'relations': [],
-            'sources': {},
-            'rules': []
-        }
+        """Convert the graph plan to a dictionary representation.
         
-        # Add entities as a list
-        for entity in self.entities.values():
-            entity_dict = {
-                'id': entity.id,
-                'name': entity.name,
-                'description': entity.description,
-                'property_keys': entity.property_keys,
-                'rules': [rule.model_dump() for rule in entity.rules]
-            }
-            data['entities'].append(entity_dict)
+        This method delegates to the serialization module to avoid cluttering
+        the GraphPlan class with serialization logic.
         
-        # Add relations as a list with entity references as IDs
-        for relation in self.relations.values():
-            relation_dict = {
-                'id': relation.id,
-                'name': relation.name,
-                'description': relation.description,
-                'property_keys': relation.property_keys,
-                'from_entity': relation.from_entity.id,  # Just store the ID
-                'to_entity': relation.to_entity.id,      # Just store the ID
-                'rules': [rule.model_dump() for rule in relation.rules]
-            }
-            data['relations'].append(relation_dict)
-            
-        # Add sources as a dictionary with file_path as key
-        for file_path, source in self.sources.items():
-            data['sources'][file_path] = source.model_dump()
-            
-        # Add rules attached to the graph plan
-        for rule in self.rules:
-            data['rules'].append(rule.model_dump())
-        
-        return data
+        Returns:
+            A dictionary representation of the graph plan
+        """
+        from .serialization import graph_plan_to_dict
+        return graph_plan_to_dict(self)
     
     @classmethod
     def from_dict(cls, data: Dict) -> 'GraphPlan':
-        """Create a graph plan from a dictionary representation."""
-        # Create a new graph plan
-        graph_plan = cls(
-            id=data.get('id', data.get('graph_plan_id', str(uuid.uuid4()))),
-            name=data.get('name', data.get('graph_plan_name', 'Unnamed Graph Plan')),
-            description=data.get('description', data.get('graph_plan_description', ''))
-        )
+        """Create a graph plan from a dictionary representation.
         
-        # Add sources if present
-        if 'sources' in data:
-            for file_path, source_data in data['sources'].items():
-                source = FileSource(**source_data)
-                graph_plan.add_source(source)
+        This method delegates to the serialization module to avoid cluttering
+        the GraphPlan class with deserialization logic.
         
-        # Create entities first
-        entity_map = {}
-        for entity_data in data.get('entities', []):
-            entity = EntityPlan(
-                id=entity_data.get('id', entity_data.get('entity_id')),
-                name=entity_data.get('name', entity_data.get('entity_name')),
-                description=entity_data.get('description', entity_data.get('entity_description')),
-                property_keys=entity_data.get('property_keys', [])
-            )
-            graph_plan.add_entity(entity)
-            entity_map[entity.id] = entity
-        
-        # Create relations
-        for relation_data in data.get('relations', []):
-            # Get the from and to entities by ID
-            from_entity_id = relation_data.get('from_entity')
-            to_entity_id = relation_data.get('to_entity')
+        Args:
+            data: The dictionary representation of the graph plan
             
-            from_entity = entity_map.get(from_entity_id)
-            to_entity = entity_map.get(to_entity_id)
-            
-            if from_entity and to_entity:
-                relation = RelationPlan(
-                    id=relation_data.get('id', relation_data.get('relation_id')),
-                    name=relation_data.get('name', relation_data.get('relation_name')),
-                    description=relation_data.get('description', relation_data.get('relation_description')),
-                    from_entity=from_entity,
-                    to_entity=to_entity,
-                    property_keys=relation_data.get('property_keys', [])
-                )
-                graph_plan.add_relation(relation)
-                
-                # Add rules to the relation
-                for rule_data in relation_data.get('rules', []):
-                    rule = Rule(
-                        id=rule_data.get('id', rule_data.get('rule_id', str(uuid.uuid4()))),
-                        name=rule_data.get('name', rule_data.get('rule_name')),
-                        description=rule_data.get('description', rule_data.get('rule_description')),
-                        kind=rule_data.get('kind', RuleKind.CONSTRUCTION),
-                        tool=rule_data.get('tool', ''),
-                        args=rule_data.get('args', {})
-                    )
-                    relation.add_rule(rule)
-        
-        # Add rules to entities
-        for entity_data in data.get('entities', []):
-            entity_id = entity_data.get('id', entity_data.get('entity_id'))
-            entity = graph_plan.entities.get(entity_id)
-            
-            if entity:
-                for rule_data in entity_data.get('rules', []):
-                    rule = Rule(
-                        id=rule_data.get('id', rule_data.get('rule_id', str(uuid.uuid4()))),
-                        name=rule_data.get('name', rule_data.get('rule_name')),
-                        description=rule_data.get('description', rule_data.get('rule_description')),
-                        kind=rule_data.get('kind', RuleKind.CONSTRUCTION),
-                        tool=rule_data.get('tool', ''),
-                        args=rule_data.get('args', {})
-                    )
-                    entity.add_rule(rule)
-        
-        # Add rules to the graph plan
-        for rule_data in data.get('rules', []):
-            rule = Rule(
-                id=rule_data.get('id', rule_data.get('rule_id', str(uuid.uuid4()))),
-                name=rule_data.get('name', rule_data.get('rule_name')),
-                description=rule_data.get('description', rule_data.get('rule_description')),
-                kind=rule_data.get('kind', RuleKind.CONSTRUCTION),
-                tool=rule_data.get('tool', ''),
-                args=rule_data.get('args', {})
-            )
-            graph_plan.add_rule(rule)
-        
-        return graph_plan
+        Returns:
+            A new GraphPlan instance
+        """
+        from .serialization import graph_plan_from_dict
+        return graph_plan_from_dict(data)
