@@ -7,7 +7,8 @@ files, not just the ones used in this example. That plan can be shared with
 the user, then used to construct the graph.
 """
 
-from agentic_kg.common.graph_plan import GraphPlan, EntityPlan, RelationPlan, Rule
+from agentic_kg.common.graph_plan import GraphPlan, EntityPlan, Rule
+from agentic_kg.common.graph_plan.persistence import store_graph_plan
 from agentic_kg.common.graph_constructor import construct_graph
 
 def add_entities(graph_plan: GraphPlan):
@@ -22,16 +23,10 @@ def add_entities(graph_plan: GraphPlan):
         description="An actor",
         property_keys=["name", "birth_date", "birth_place", "bio"],
     )
-    director = EntityPlan(
-        name="Director",
-        description="A director",
-        property_keys=["name", "birth_date", "birth_place", "bio"],
-    )
 
     # Add entities to the graph plan
     graph_plan.add_entity(movie)
     graph_plan.add_entity(actor)
-    graph_plan.add_entity(director)
 
     return graph_plan
 
@@ -46,8 +41,6 @@ def add_relations(graph_plan: GraphPlan):
 def add_construction_rules(graph_plan: GraphPlan):
     movie = graph_plan.find_entity_by_name("Movie")
     movie.add_rule(Rule.construction(
-        name="LoadMovies",
-        description="Construction of the movie entity",
         tool="load_csv_nodes",
         args={
             "file_name": "movies.csv",
@@ -58,8 +51,6 @@ def add_construction_rules(graph_plan: GraphPlan):
 
     actor = graph_plan.find_entity_by_name("Actor")
     actor.add_rule(Rule.construction(
-        name="LoadActors",
-        description="Construction of the actor entity",
         tool="load_csv_nodes",
         args={
             "file_name": "actors.csv",
@@ -70,8 +61,6 @@ def add_construction_rules(graph_plan: GraphPlan):
 
     acted_in = graph_plan.find_relation_by_name("ACTED_IN")
     acted_in.add_rule(Rule.construction(
-        name="LoadActedInRelationships",
-        description="Construction of the ACTED_IN relationships between Actors and Movies",
         tool="load_csv_relationships",
         args={
             "file_name": "acting_roles.csv",
@@ -86,12 +75,16 @@ def add_construction_rules(graph_plan: GraphPlan):
 if __name__ == "__main__":
     print("Planning the knowledge graph...")
     graph_plan = GraphPlan(
+        id="movie_kg_1",
         name="Movie Knowledge Graph",
         description="A knowledge graph for movies and their relationships"
     )
     add_entities(graph_plan)
     add_relations(graph_plan)
     add_construction_rules(graph_plan)
+
+    # store the graph plan in Neo4j
+    store_graph_plan(graph_plan)
 
     print("Constructing the knowledge graph...")
     result = construct_graph(graph_plan)

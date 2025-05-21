@@ -93,14 +93,14 @@ def construct_graph(graph_plan: GraphPlan):
     for entity in graph_plan.entities.values():
         for rule in entity.rules:
             if rule.is_construction():
-                print(f"Executing construction rule '{rule.name}' for entity {entity.name}")
+                print(f"Executing construction rule '{rule.tool}' for entity {entity.name}")
                 if rule.tool in TOOL_MAP:
                     result = TOOL_MAP[rule.tool](**rule.args)
                     if result["status"] == "error":
                         return result
                     results.append({
                         "entity": entity.name,
-                        "rule": rule.name,
+                        "rule": rule.tool,
                         "result": result
                     })
                 else:
@@ -110,14 +110,14 @@ def construct_graph(graph_plan: GraphPlan):
     for relation in graph_plan.relations.values():
         for rule in relation.rules:
             if rule.is_construction():
-                print(f"Executing construction rule '{rule.name}' for relation {relation.name}")
+                print(f"Executing construction rule '{rule.tool}' for relation {relation.name}")
                 if rule.tool in TOOL_MAP:
                     result = TOOL_MAP[rule.tool](**rule.args)
                     if result["status"] == "error":
                         return result
                     results.append({
                         "relation": relation.name,
-                        "rule": rule.name,
+                        "rule": rule.tool,
                         "result": result
                     })
                 else:
