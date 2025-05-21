@@ -1,166 +1,19 @@
 """
-# Graph Plan
+Graph plan module for the graph plan system.
 
-A module for defining and managing knowledge graph plans containing schema along with instructions for knowledge graph construction, import and retrieval.
-
-## Overview
-
-A "graph plan" is like a blueprint for a knowledge graph, describing 
-what the graph should look like, how it should be built, and how
-it should be accessed.
-
-The graph plan is itself a graph, with primary elements representing the schema of the graph.
-Rules can be attached to elements to provide additional
-information for particular tasks. For example, an `EntityPlan` indicates a node type
-definition, which may have a `construction_rule` to indicate the file it can
-be constructed from. 
+This module contains the GraphPlan class which serves as a blueprint for a knowledge graph,
+describing what the graph should look like, how it should be built, and how it should be accessed.
 """
 
 import uuid
 from typing import Dict, List, Optional
-from enum import Enum   
-from pydantic import BaseModel, Field
+from pydantic import Field
 
-
-class FileSource(BaseModel):
-    """Represents a file source which has been prepared and analyzed for import.
-    
-    Attributes:
-        file_path: The path to the file
-        mime_type: The MIME type of the file
-        header: The column names of the file, if it is a CSV file
-        sample: A sample of the file, if it is a CSV file
-    """
-    file_path: str
-    mime_type: str
-    header: Optional[List[str]] = None
-    sample: Optional[List[List[str]]] = None
-
-    def __str__(self):
-        return f"FileSource(file_path={self.file_path}, mime_type={self.mime_type}, header={self.header}, sample={self.sample})"
-
-class BasePlan(BaseModel):
-    """
-    Base class for all plan elements in the graph plan.
-    
-    Attributes:
-        id: Unique identifier for the plan element
-        name: Name of the plan element
-        description: Description of what this plan element represents
-    """
-    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    name: str
-    description: str
-
-
-class RuleKind(str, Enum):
-    """Enum representing the different kinds of rules."""
-    CONSTRUCTION = "construction"
-    RETRIEVAL = "retrieval"
-
-
-class Rule(BasePlan):
-    """
-    Rule that can be attached to a GraphPlan, EntityPlan, or RelationPlan.
-    Rules define how to construct or retrieve elements of the knowledge graph.
-    
-    Attributes:
-        id: Unique identifier for the rule
-        name: Name of the rule
-        description: Description of what this rule does
-        kind: The kind of rule (construction or retrieval)
-        tool: Name of the tool to call for executing the rule
-        args: Arguments to pass to the tool
-    """
-    kind: RuleKind
-    tool: str
-    args: Dict[str, str] = Field(default_factory=dict)
-    
-    @classmethod
-    def construction(cls, name: str, description: str, tool: str, args: Dict[str, str] = None) -> 'Rule':
-        """Factory method to create a construction rule.
-        
-        For construction rules, it's common to include a source_file in the args dictionary.
-        """
-        args = args or {}
-        return cls(
-            name=name,
-            description=description,
-            kind=RuleKind.CONSTRUCTION,
-            tool=tool,
-            args=args
-        )
-    
-    @classmethod
-    def retrieval(cls, name: str, description: str, tool: str, args: Dict[str, str] = None) -> 'Rule':
-        """Factory method to create a retrieval rule."""
-        return cls(
-            name=name,
-            description=description,
-            kind=RuleKind.RETRIEVAL,
-            tool=tool,
-            args=args or {}
-        )
-        
-    def is_construction(self) -> bool:
-        """Check if this is a construction rule."""
-        return self.kind == RuleKind.CONSTRUCTION
-        
-    def is_retrieval(self) -> bool:
-        """Check if this is a retrieval rule."""
-        return self.kind == RuleKind.RETRIEVAL
-
-
-class EntityPlan(BasePlan):
-    """
-    Represents a node type definition in a knowledge graph.
-    
-    Attributes:
-        id: Unique identifier for the entity
-        name: Name of the entity (used as label in the graph)
-        description: Description of what this entity represents
-        property_keys: List of property keys for this entity
-        rules: List of rules attached to this entity
-    """
-    property_keys: List[str] = Field(default_factory=list)
-    rules: List[Rule] = Field(default_factory=list)
-    
-    def add_property(self, name: str) -> None:
-        """Add a property key to this entity definition."""
-        if name not in self.property_keys:
-            self.property_keys.append(name)
-    
-    def add_rule(self, rule: Rule) -> None:
-        """Add a rule to this entity."""
-        self.rules.append(rule)
-
-
-class RelationPlan(BasePlan):
-    """
-    Represents a relationship type definition in a knowledge graph.
-    
-    Attributes:
-        id: Unique identifier for the relation
-        name: Name of the relation (used as relationship type in the graph)
-        description: Description of what this relation represents
-        property_keys: List of property keys for this relation
-        from_entity: Source entity for this relation
-        to_entity: Target entity for this relation
-        rules: List of rules attached to this relation
-    """
-    property_keys: List[str] = Field(default_factory=list)
-    from_entity: 'EntityPlan'
-    to_entity: 'EntityPlan'
-    rules: List[Rule] = Field(default_factory=list)
-    
-    def add_property(self, name: str) -> None:
-        """Add a property key to this relation definition."""
-        if name not in self.property_keys:
-            self.property_keys.append(name)
-    
-    def add_rule(self, rule: Rule) -> None:
-        """Add a rule to this relation."""
-        self.rules.append(rule)
+from .base import BasePlan
+from .file_source import FileSource
+from .entity_plan import EntityPlan
+from .relation_plan import RelationPlan
+from .rule import Rule, RuleKind
 
 
 class GraphPlan(BasePlan):
@@ -175,10 +28,12 @@ class GraphPlan(BasePlan):
         sources: Dictionary of filename to FileSource objects
         entities: Dictionary of entity id to EntityPlan objects
         relations: Dictionary of relation id to RelationPlan objects
+        rules: List of rules attached to this graph plan
     """
-    sources: Dict[str, FileSource] = Field(default_factory=dict, description="Map from filename to FilesSource")
+    sources: Dict[str, FileSource] = Field(default_factory=dict, description="Map from filename to FileSource")
     entities: Dict[str, EntityPlan] = Field(default_factory=dict, description="Map from entity id to EntityPlan")
     relations: Dict[str, RelationPlan] = Field(default_factory=dict, description="Map from relation id to RelationPlan")
+    rules: List[Rule] = Field(default_factory=list, description="Rules attached to this graph plan")
     
     def add_source(self, source: FileSource) -> None:
         """Add a file source to this graph plan."""
@@ -191,6 +46,10 @@ class GraphPlan(BasePlan):
     def add_relation(self, relation: RelationPlan) -> None:
         """Add a relation to this graph plan."""
         self.relations[relation.id] = relation
+        
+    def add_rule(self, rule: Rule) -> None:
+        """Add a rule to this graph plan."""
+        self.rules.append(rule)
     
     def find_entity_by_name(self, name: str) -> Optional[EntityPlan]:
         """Find an entity by its name.
@@ -271,7 +130,8 @@ class GraphPlan(BasePlan):
             'description': self.description,
             'entities': [],
             'relations': [],
-            'sources': {}
+            'sources': {},
+            'rules': []
         }
         
         # Add entities as a list
@@ -301,6 +161,10 @@ class GraphPlan(BasePlan):
         # Add sources as a dictionary with file_path as key
         for file_path, source in self.sources.items():
             data['sources'][file_path] = source.model_dump()
+            
+        # Add rules attached to the graph plan
+        for rule in self.rules:
+            data['rules'].append(rule.model_dump())
         
         return data
     
@@ -327,7 +191,7 @@ class GraphPlan(BasePlan):
                 id=entity_data.get('id', entity_data.get('entity_id')),
                 name=entity_data.get('name', entity_data.get('entity_name')),
                 description=entity_data.get('description', entity_data.get('entity_description')),
-                property_type_map=entity_data.get('property_type_map', {})
+                property_keys=entity_data.get('property_keys', [])
             )
             graph_plan.add_entity(entity)
             entity_map[entity.id] = entity
@@ -348,56 +212,49 @@ class GraphPlan(BasePlan):
                     description=relation_data.get('description', relation_data.get('relation_description')),
                     from_entity=from_entity,
                     to_entity=to_entity,
-                    property_type_map=relation_data.get('property_type_map', {})
+                    property_keys=relation_data.get('property_keys', [])
                 )
                 graph_plan.add_relation(relation)
-        
-        # Add rules
-        if 'rules' in data:
-            for rule_data in data['rules']:
-                # Create rule based on its kind
-                if 'kind' in rule_data and rule_data['kind'] in [RuleKind.CONSTRUCTION, RuleKind.RETRIEVAL]:
-                    # New format rule
-                    args = rule_data.get('args', {})
-                    # Handle legacy source_file field by moving it to args
-                    if 'source_file' in rule_data and rule_data['kind'] == RuleKind.CONSTRUCTION:
-                        args = args.copy()
-                        args['source_file'] = rule_data['source_file']
-                    
+                
+                # Add rules to the relation
+                for rule_data in relation_data.get('rules', []):
                     rule = Rule(
                         id=rule_data.get('id', rule_data.get('rule_id', str(uuid.uuid4()))),
                         name=rule_data.get('name', rule_data.get('rule_name')),
                         description=rule_data.get('description', rule_data.get('rule_description')),
-                        kind=rule_data['kind'],
-                        tool=rule_data['tool'],
-                        args=args
-                    )
-                    graph_plan.add_rule(rule)
-                # Legacy format rules
-                elif 'source_file' in rule_data and 'tool' in rule_data:
-                    # Construction rule
-                    args = rule_data.get('args', {}).copy()
-                    args['source_file'] = rule_data['source_file']
-                    
-                    rule = Rule.construction(
-                        name=rule_data.get('name', rule_data.get('rule_name')),
-                        description=rule_data.get('description', rule_data.get('rule_description')),
-                        tool=rule_data['tool'],
-                        args=args
-                    )
-                    if 'rule_id' in rule_data or 'id' in rule_data:
-                        rule.id = rule_data.get('id', rule_data.get('rule_id'))
-                    graph_plan.add_rule(rule)
-                elif 'tool' in rule_data:
-                    # Retrieval rule
-                    rule = Rule.retrieval(
-                        name=rule_data.get('name', rule_data.get('rule_name')),
-                        description=rule_data.get('description', rule_data.get('rule_description')),
-                        tool=rule_data['tool'],
+                        kind=rule_data.get('kind', RuleKind.CONSTRUCTION),
+                        tool=rule_data.get('tool', ''),
                         args=rule_data.get('args', {})
                     )
-                    if 'rule_id' in rule_data or 'id' in rule_data:
-                        rule.id = rule_data.get('id', rule_data.get('rule_id'))
-                    graph_plan.add_rule(rule)
+                    relation.add_rule(rule)
+        
+        # Add rules to entities
+        for entity_data in data.get('entities', []):
+            entity_id = entity_data.get('id', entity_data.get('entity_id'))
+            entity = graph_plan.entities.get(entity_id)
+            
+            if entity:
+                for rule_data in entity_data.get('rules', []):
+                    rule = Rule(
+                        id=rule_data.get('id', rule_data.get('rule_id', str(uuid.uuid4()))),
+                        name=rule_data.get('name', rule_data.get('rule_name')),
+                        description=rule_data.get('description', rule_data.get('rule_description')),
+                        kind=rule_data.get('kind', RuleKind.CONSTRUCTION),
+                        tool=rule_data.get('tool', ''),
+                        args=rule_data.get('args', {})
+                    )
+                    entity.add_rule(rule)
+        
+        # Add rules to the graph plan
+        for rule_data in data.get('rules', []):
+            rule = Rule(
+                id=rule_data.get('id', rule_data.get('rule_id', str(uuid.uuid4()))),
+                name=rule_data.get('name', rule_data.get('rule_name')),
+                description=rule_data.get('description', rule_data.get('rule_description')),
+                kind=rule_data.get('kind', RuleKind.CONSTRUCTION),
+                tool=rule_data.get('tool', ''),
+                args=rule_data.get('args', {})
+            )
+            graph_plan.add_rule(rule)
         
         return graph_plan
