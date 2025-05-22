@@ -1,17 +1,11 @@
-from google.adk.agents import Agent, LlmAgent
-from google.adk.tools import ToolContext
+from google.adk.agents import LlmAgent
 from google.adk.tools.agent_tool import AgentTool
 
 from agentic_kg.common.config import llm
-from agentic_kg.common.util import tool_success
 
-from agentic_kg.sub_agents.dataprep_agent.tools import list_import_files
-
+from agentic_kg.tools import set_kind_of_graph, list_import_files
 from .sub_agents import file_suggestion_agent, schema_suggestion_agent
 
-def set_kind_of_graph(kind_of_graph: str, tool_context: ToolContext):
-    tool_context.state["kind_of_graph"] = kind_of_graph
-    return tool_success("kind_of_graph", "Kind of graph set to: " + kind_of_graph)
 
 kg_construction_agent = LlmAgent(
     name="kg_construction_agent_v1",

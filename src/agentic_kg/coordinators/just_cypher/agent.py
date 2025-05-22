@@ -2,7 +2,7 @@ from google.adk.agents import Agent
 
 from agentic_kg.common.config import llm
 from agentic_kg.sub_agents import cypher_agent
-
+from agentic_kg.tools import set_kind_of_graph
 from .prompts import instructions
 
 just_cypher_agent = Agent(
@@ -10,8 +10,8 @@ just_cypher_agent = Agent(
         model=llm,
         description="Knowledge graph construction using Neo4j and cypher.", # Crucial for delegation later
         
-        instruction=instructions["just_cypher_v1"],
-        tools=[], # Make the tool available to this agent
+        instruction=instructions["just_cypher_v2"],
+        tools=[set_kind_of_graph], # Make the tool available to this agent
         sub_agents=[cypher_agent]
     )
 

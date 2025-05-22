@@ -1,9 +1,6 @@
-import os, shutil
-
 import logging
 
 from pathlib import Path
-# import csv
 import clevercsv
 from itertools import islice
 
@@ -14,15 +11,6 @@ from agentic_kg.common.neo4j_for_adk import graphdb
 from agentic_kg.common.util import tool_success, tool_error
 
 logger = logging.getLogger(__name__)
-
-def get_state_value_or_else(key:str, error_message:str, tool_context:ToolContext) -> dict:
-    """Gets a state value or else returns an error.
-    Both the success and error values are returned as an ADK-friendly dict.
-    """
-    if key in tool_context.state:
-        return tool_success(key,tool_context.state[key])
-    else:
-        return tool_error(error_message)
 
 
 def get_neo4j_import_directory(tool_context:ToolContext) -> Dict[str, Any]:
