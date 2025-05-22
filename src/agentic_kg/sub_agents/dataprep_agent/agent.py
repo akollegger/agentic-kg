@@ -2,20 +2,23 @@ from google.adk.agents import Agent
 
 import logging
 
+from agentic_kg.tools import get_user_goal, finished
+
 logger = logging.getLogger(__name__)
 
 from agentic_kg.common.config import llm
 
-from .prompts import return_instructions
+from .prompts import instructions
 from agentic_kg.tools.file_tools import list_import_files, sample_file
 
+AGENT_NAME = "dataprep_agent_v2"
 dataprep_agent = Agent(
-    name="dataprep_agent_v1",
+    name=AGENT_NAME,
     model=llm,
     description="Manages reading files and providing metadata about them.",
-    instruction=return_instructions(),
+    instruction=instructions[AGENT_NAME],
     tools=[
-        list_import_files, sample_file
+        get_user_goal, list_import_files, sample_file, finished
     ], 
 )
 

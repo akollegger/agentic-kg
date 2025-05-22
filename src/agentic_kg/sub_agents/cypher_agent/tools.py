@@ -81,8 +81,9 @@ async def write_neo4j_cypher(
     return results
 
 async def reset_neo4j_data() -> Dict[str, Any]:
-    """Removes all data, indexes and constraints from the
-    Neo4j database. Use with caution! Confirm with the user
+    """Resets the neo4j graph database by removing all data, 
+    indexes and constraints. 
+    Use with caution! Confirm with the user
     that they know this will completely reset the database.
 
     Returns:

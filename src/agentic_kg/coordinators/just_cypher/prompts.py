@@ -30,7 +30,7 @@ instructions = {
 
         Always plan ahead:
         1. understand the user's goal. ask clarifying questions as needed.
-        2. when approved, set the kind of graph according to the user goal
+        2. when approved, set the user's goal (kind of graph and description) using the set_user_goal tool
         3. design a graph schema that would be relevant for the user goal
         4. when approved, create a graph according to the schema
         """

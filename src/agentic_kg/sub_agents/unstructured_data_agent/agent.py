@@ -6,14 +6,14 @@ from .tools import (
     sample_markdown_file,
 )
 
-from .prompts import return_instructions_unstructured_data
+from .prompts import instructions   
 
-# Export the root agent so adk can find it
+AGENT_NAME = "unstructured_data_agent_v1"
 unstructured_data_agent = Agent(
-    name="unstructured_data_agent_v1",
+    name=AGENT_NAME,
     model=llm,
     description="Analyzes unstructured data and creates a knowledge graph.", # Crucial for delegation later
-    instruction=return_instructions_unstructured_data(),
+    instruction=instructions[AGENT_NAME],
 
     tools=[sample_markdown_file], 
 )
