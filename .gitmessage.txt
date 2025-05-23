@@ -1,0 +1,21 @@
+(component) Concise description of the change
+
+# Detailed explanation (if needed):
+# - What was changed
+# - Why it was changed
+# - Any implications or notes
+
+# Component should be one of:
+# - file_tools: Changes to file manipulation tools
+# - agent: Changes to agent implementation
+# - kg: Changes to knowledge graph functionality
+# - dataprep: Changes to data preparation
+# - docs: Documentation changes
+# - tests: Test-related changes
+# - infra: Infrastructure or build system changes
+# - misc: Miscellaneous changes
+
+# Examples:
+# (file_tools) Add search functionality for markdown files
+# (agent) Improve error handling in dataprep agent
+# (tests) Add comprehensive tests for search_file function

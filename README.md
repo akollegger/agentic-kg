@@ -15,6 +15,22 @@ This project is primarily **instructional** in nature. It aims to teach the fund
 - Agent specialization, encapsulating domain expertise
 - Knowledge graph construction from structured and semi-structured data
 
+## Contributing
+
+Contributions to this project are welcome! We follow a structured approach to maintain code quality and consistency.
+
+### Commit Message Format
+
+We use a standardized commit message format:
+
+```
+(component) Concise description of the change
+```
+
+Where `component` identifies the part of the codebase being modified (e.g., `file_tools`, `agent`, `kg`).
+
+For more details, please see the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
 ## Project Structure
 
 The project has multiple agents, at two levels:
