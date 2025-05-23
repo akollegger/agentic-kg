@@ -1,7 +1,8 @@
 from .file_tools import (
     get_neo4j_import_directory,
     list_import_files,
-    sample_file,
+    sample_csv_file,
+    search_csv_file,
     sample_markdown_file,
     show_sample,
     annotate_sample,
@@ -12,7 +13,8 @@ from .flow_tools import finished
 __all__ = [
     "get_neo4j_import_directory",
     "list_import_files",
-    "sample_file",
+    "sample_csv_file",
+    "search_csv_file",
     "sample_markdown_file",
     "show_sample",
     "annotate_sample",

@@ -72,3 +72,7 @@ The system uses a three-phase approach for KG construction:
 3. **Construct Knowledge Graph**: Execute the plan to build the graph
 
 The `graph_plan` module provides the core abstractions for this declarative approach to KG construction.
+
+## Project Tracking
+
+- This project tracks TODOs with TODO.md and also TODO comments in the code
