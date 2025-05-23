@@ -5,7 +5,7 @@ This module defines functions that return instruction prompts for the cypher age
 These instructions guide the agent's behavior, workflow, and tool usage.
 """
 
-from agentic_kg.tools import get_user_goal, list_import_files, sample_csv_file, search_csv_file, sample_markdown_file, finished
+from agentic_kg.tools import get_user_goal, list_import_files, sample_csv_file, search_file, sample_markdown_file, finished
 
 variants = {    
     "dataprep_agent_v1":
@@ -42,8 +42,8 @@ variants = {
                 get_user_goal,
                 list_import_files,
                 sample_csv_file,
-                search_csv_file,
                 sample_markdown_file,
+                search_file,
                 finished
             ]
         }

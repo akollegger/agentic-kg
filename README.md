@@ -2,9 +2,18 @@
 
 A multi-agent project for knowledge graph construction.
 
-Learning goals:
-- multi-agent development workflow
-- agent specialization, encapsulating domain expertise
+## Design Philosophy
+
+This project is primarily **instructional** in nature. It aims to teach the fundamentals of building a multi-agent system that can construct a knowledge graph from CSV and markdown files. The design prioritizes:
+
+- **Simplicity over comprehensiveness**: We make simplifying assumptions where appropriate to keep the code clear and approachable.
+- **Educational value**: Each component should demonstrate a concept clearly rather than trying to handle every edge case.
+- **Practical examples**: The system should provide working examples that can be extended by learners.
+
+## Learning Goals
+- Multi-agent development workflow
+- Agent specialization, encapsulating domain expertise
+- Knowledge graph construction from structured and semi-structured data
 
 ## Project Structure
 

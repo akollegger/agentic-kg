@@ -16,7 +16,10 @@
 - [x] include markdown in file listing
 - [x] sample markdown with support for yaml frontmatter
 - [x] add search_csv tool for searching csv files for rows that match a given value using a simple grep-like, line-oriented function
-- [x] add search_csv to the dataprep_agent and try it out
+- [x] add search_csv to the dataprep_agent and try it out using the agent
+- [x] add search_markdown tool for searching markdown files for a line that contains a given value using a simple grep-like query
+- [x] add search_markdown to the dataprep_agent and try it out using the agent
+- [x] simplify the search tools by using a single tool for any text file (which includes csv) that runs like grep, returning an array of lines that match the search query.
 
 ## graph_plan data structure
 - [ ] Add support for markdown construction rule

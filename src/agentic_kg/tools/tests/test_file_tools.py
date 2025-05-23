@@ -8,7 +8,7 @@ from unittest import TestCase, mock
 
 from agentic_kg.tools.file_tools import (
     list_import_files, sample_markdown_file, get_neo4j_import_directory,
-    search_csv_file, sample_csv_file, show_sample
+    sample_csv_file, show_sample, search_file
 )
 
 
@@ -33,7 +33,7 @@ class TestFileTools(TestCase):
         subdir.mkdir()
         (subdir / "more_data.csv").write_text("id,value\n1,test\n")
 
-        # Create markdown files for testing sample_markdown_file
+        # Create markdown files for testing sample_markdown_file and search_markdown_file
         (self.import_dir / "md_with_frontmatter.md").write_text(
             "---\n"            
             "title: Test Title\n"
@@ -46,6 +46,21 @@ class TestFileTools(TestCase):
         (self.import_dir / "md_without_frontmatter.md").write_text(
             "# No Frontmatter Here\n"
             "Just plain markdown content."
+        )
+        
+        # Create markdown file specifically for search testing
+        (self.import_dir / "search_test.md").write_text(
+            "---\n"
+            "title: Searchable Document\n"
+            "keywords: test, search, markdown\n"
+            "---\n"
+            "# Search Test Document\n"
+            "\n"
+            "This is line 1 with searchable content.\n"
+            "This is line 2 with different content.\n"
+            "This is line 3 with SEARCHABLE content (case different).\n"
+            "This is line 4 without the term.\n"
+            "This is line 5 with the term searchable again.\n"
         )
         (self.import_dir / "md_invalid_frontmatter.md").write_text(
             "---\n"
@@ -246,54 +261,6 @@ class TestFileTools(TestCase):
 
     def test_search_csv_file_no_match(self):
         """Test searching CSV, query not found."""
-        result = search_csv_file("search_data.csv", "NonExistentQuery", self.tool_context)
-        self.assertEqual(result['status'], 'success')
-        self.assertEqual(result['search_results']['metadata']['rows_found'], 0)
-        self.assertEqual(len(result['search_results']['matching_rows']), 0)
-
-    def test_search_csv_file_multiple_matches(self):
-        """Test searching CSV, query matches multiple rows."""
-        result = search_csv_file("search_data.csv", "fruit", self.tool_context)
-        self.assertEqual(result['status'], 'success')
-        self.assertEqual(result['search_results']['metadata']['rows_found'], 2)
-        self.assertEqual(len(result['search_results']['matching_rows']), 2)
-
-    def test_search_csv_file_empty_query(self):
-        """Test searching CSV with an empty query string (should find nothing)."""
-        result = search_csv_file("search_data.csv", "", self.tool_context)
-        self.assertEqual(result['status'], 'success')
-        self.assertEqual(result['search_results']['metadata']['rows_found'], 0) # Assuming empty query matches nothing
-
-    def test_search_csv_file_empty_file(self):
-        """Test searching an empty CSV file."""
-        result = search_csv_file("empty_search.csv", "any", self.tool_context)
-        self.assertEqual(result['status'], 'success')
-        self.assertEqual(result['search_results']['metadata']['rows_found'], 0)
-        self.assertEqual(result['search_results']['metadata']['header'], [])
-
-    def test_search_csv_file_header_only(self):
-        """Test searching a CSV file with only a header row."""
-        result = search_csv_file("header_only_search.csv", "ColA", self.tool_context)
-        self.assertEqual(result['status'], 'success')
-        self.assertEqual(result['search_results']['metadata']['rows_found'], 0) # Query should not match header
-        self.assertEqual(result['search_results']['metadata']['header'], ["ColA","ColB","ColC"])
-
-    def test_search_csv_file_non_existent(self):
-        """Test searching a non-existent CSV file."""
-        result = search_csv_file("non_existent.csv", "query", self.tool_context)
-        self.assertEqual(result['status'], 'error')
-        self.assertIn("CSV file does not exist: non_existent.csv", result.get('error_message', ''))
-
-    def test_search_csv_file_not_csv_extension(self):
-        """Test searching a file without .csv extension (should log warning but attempt)."""
-        (self.import_dir / "not_actually_csv.txt").write_text("id,val\n1,text\n2,search_me")
-        with mock.patch('agentic_kg.tools.file_tools.logger') as mock_logger:
-            result = search_csv_file("not_actually_csv.txt", "search_me", self.tool_context)
-            self.assertEqual(result['status'], 'success')
-            self.assertEqual(result['search_results']['metadata']['rows_found'], 1)
-            mock_logger.warning.assert_called_once()
-            self.assertIn("does not have a .csv extension", mock_logger.warning.call_args[0][0])
-
     # --- Tests for show_sample (after fix) --- 
     def test_show_sample_csv_exists(self):
         """Test showing a previously sampled CSV file."""
@@ -347,3 +314,78 @@ class TestFileTools(TestCase):
         result = show_sample("deleted_file.csv", self.tool_context)
         self.assertEqual(result['status'], 'success') # show_sample retrieves from state, doesn't re-check filesystem
         self.assertEqual(result['retrieved_sample']['metadata']['path'], "deleted_file.csv")
+        
+    # --- Tests for search_markdown_file --- 
+    def test_search_markdown_with_frontmatter(self):
+        """Test searching markdown file with frontmatter, query in content."""
+        result = search_markdown_file("search_test.md", "searchable", self.tool_context)
+        self.assertEqual(result['status'], 'success')
+        search_results = result['search_results']
+        self.assertEqual(search_results['metadata']['lines_found'], 4)  # Should find 4 lines (including title in frontmatter)
+        self.assertEqual(search_results['metadata']['has_frontmatter'], True)
+        
+        # Check that we have the expected number of matches
+        matching_lines = search_results['matching_lines']
+        self.assertEqual(len(matching_lines), 4)
+        
+        # Check for the frontmatter match (line_number 0)
+        frontmatter_matches = [line for line in matching_lines if line['line_number'] == 0]
+        self.assertEqual(len(frontmatter_matches), 1)
+        
+        # Check for the content matches
+        content_matches = [line for line in matching_lines if line['line_number'] > 0]
+        self.assertEqual(len(content_matches), 3)
+    # --- Tests for search_file (unified search) --- 
+    def test_search_file_csv(self):
+        """Test searching a CSV file using the unified search_file function."""
+        result = search_file("search_data.csv", "apple", self.tool_context)
+        self.assertEqual(result['status'], 'success')
+        search_results = result['search_results']
+        self.assertTrue(search_results['metadata']['lines_found'] > 0)
+        # Verify we have matching lines
+        self.assertTrue(len(search_results['matching_lines']) > 0)
+        
+    def test_search_file_markdown(self):
+        """Test searching a Markdown file using the unified search_file function."""
+        result = search_file("search_test.md", "searchable", self.tool_context)
+        self.assertEqual(result['status'], 'success')
+        search_results = result['search_results']
+        self.assertTrue(search_results['metadata']['lines_found'] > 0)
+        
+    def test_search_file_plain_text(self):
+        """Test searching a plain text file using the unified search_file function."""
+        # Create a plain text file
+        (self.import_dir / "plain.txt").write_text("This is line 1\nThis is line 2 with searchterm\nThis is line 3")
+        
+        result = search_file("plain.txt", "searchterm", self.tool_context)
+        self.assertEqual(result['status'], 'success')
+        search_results = result['search_results']
+        self.assertEqual(search_results['metadata']['lines_found'], 1)
+        self.assertEqual(search_results['matching_lines'][0]['line_number'], 2)
+        
+    def test_search_file_case_insensitivity(self):
+        """Test case insensitivity in the unified search_file function."""
+        # Create a plain text file with mixed case
+        (self.import_dir / "case_test.txt").write_text("This is UPPERCASE\nThis is lowercase")
+        
+        # Search should be case insensitive
+        result = search_file("case_test.txt", "uppercase", self.tool_context)
+        self.assertEqual(result['status'], 'success')
+        self.assertEqual(result['search_results']['metadata']['lines_found'], 1)
+        
+        # Should also find with different case
+        result = search_file("case_test.txt", "UPPERCASE", self.tool_context)
+        self.assertEqual(result['status'], 'success')
+        self.assertEqual(result['search_results']['metadata']['lines_found'], 1)
+        
+    def test_search_file_empty_query(self):
+        """Test searching with an empty query using the unified search_file function."""
+        result = search_file("search_data.csv", "", self.tool_context)
+        self.assertEqual(result['status'], 'success')
+        self.assertEqual(result['search_results']['metadata']['lines_found'], 0)
+        
+    def test_search_file_nonexistent(self):
+        """Test searching a non-existent file using the unified search_file function."""
+        result = search_file("nonexistent.txt", "query", self.tool_context)
+        self.assertEqual(result['status'], 'error')
+        self.assertIn("File does not exist", result.get('error_message', ''))

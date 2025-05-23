@@ -284,11 +284,124 @@ def show_sample(path: str, tool_context: ToolContext) -> dict:
         return tool_error(f"No sample found for path: {path}")
 
     sample_data = tool_context.state["samples"][absolute_path_str]
-
-    # Samples are stored directly, so they should exist if the key exists.
-    # A check for 'if not sample_data:' might be redundant unless samples can be None/empty dict.
-    # Assuming sample_data is the actual content dictionary.
+    
+    # Return the sample data
     return tool_success("retrieved_sample", sample_data)
+
+
+def search_file(file_path: str, query: str, tool_context: ToolContext) -> dict:
+    """
+    Searches any text file (markdown, csv, txt)for lines containing the given query string.
+    Simple grep-like functionality that works with any text file.
+    Search is always case insensitive.
+
+    Args:
+      file_path: Path to the file, relative to the Neo4j import directory.
+      query: The string to search for.
+      tool_context: The ToolContext object.
+
+    Returns:
+        dict: A dictionary with 'status' ('success' or 'error').
+              If 'success', includes 'search_results' containing 'matching_lines'
+              (a list of dictionaries with 'line_number' and 'content' keys)
+              and basic metadata about the search.
+              If 'error', includes an 'error_message'.
+    """
+    import_dir_result = get_neo4j_import_directory(tool_context)
+    if import_dir_result["status"] == "error":
+        return import_dir_result
+    import_dir = Path(import_dir_result["neo4j_import_dir"])
+    p = import_dir / file_path
+
+    if not p.exists():
+        return tool_error(f"File does not exist: {file_path}")
+    if not p.is_file():
+        return tool_error(f"Path is not a file: {file_path}")
+
+    # Check if file has an acceptable extension
+    file_ext = p.suffix.lower()
+    supported_extensions = {".csv", ".md", ".txt"}
+    if file_ext not in supported_extensions:
+        logger.warning(f"File {file_path} has an unsupported extension {file_ext}, but attempting to search anyway.")
+
+    # Handle empty query - return no results
+    if not query:
+        return tool_success("search_results", {
+            "metadata": {
+                "path": file_path,
+                "query": query,
+                "lines_found": 0
+            },
+            "matching_lines": []
+        })
+
+    matching_lines = []
+    search_query = query.lower()
+    
+    try:
+        with open(p, 'r', encoding='utf-8') as file:
+            # Process the file line by line
+            for i, line in enumerate(file, 1):
+                line_to_check = line.lower()
+                if search_query in line_to_check:
+                    matching_lines.append({
+                        "line_number": i,
+                        "content": line.strip()  # Remove trailing newlines
+                    })
+                        
+    except Exception as e:
+        return tool_error(f"Error reading or searching file {file_path}: {e}")
+
+    # Prepare basic metadata
+    metadata = {
+        "path": file_path,
+        "query": query,
+        "lines_found": len(matching_lines)
+    }
+    
+    result_data = {
+        "metadata": metadata,
+        "matching_lines": matching_lines
+    }
+    return tool_success("search_results", result_data)
+
+
+# Keep these functions for backward compatibility, but implement them using search_file
+def search_markdown_file(file_path: str, query: str, tool_context: ToolContext, case_sensitive: bool = False) -> dict:
+    """
+    Searches a Markdown file for lines containing the given query string.
+    This is a wrapper around search_file for backward compatibility.
+    Note: case_sensitive parameter is ignored, search is always case insensitive.
+
+    Args:
+      file_path: Path to the Markdown file, relative to the Neo4j import directory.
+      query: The string to search for.
+      tool_context: The ToolContext object.
+      case_sensitive: Whether the search should be case-sensitive (ignored).
+
+    Returns:
+        dict: See search_file for details.
+    """
+    return search_file(file_path, query, tool_context)
+
+
+def search_csv_file(file_path: str, query: str, tool_context: ToolContext, case_sensitive: bool = False) -> dict:
+    """
+    Searches a CSV file for rows containing the given query string.
+    This is a wrapper around search_file for backward compatibility.
+    Note: case_sensitive parameter is ignored, search is always case insensitive.
+
+    Args:
+      file_path: Path to the CSV file, relative to the Neo4j import directory.
+      query: The string to search for.
+      tool_context: The ToolContext object.
+      case_sensitive: Whether the search should be case-sensitive (ignored).
+
+    Returns:
+        dict: See search_file for details.
+    """
+    return search_file(file_path, query, tool_context)
+
 
 def annotate_sample(sampled_path: str, annotation: str, tool_context: ToolContext) -> dict:
     """Annotates a sampled file to provide descriptive information.
@@ -312,13 +425,14 @@ def annotate_sample(sampled_path: str, annotation: str, tool_context: ToolContex
     if not sampled_path in tool_context.state["samples"]:
         return tool_error(f"No sample found for {sampled_path}")
 
-    samples = tool_context.state["samples"]
+    sample = tool_context.state["samples"][sampled_path]
 
-    if not samples[sampled_path]:
+    if not sample:
         return tool_error(f"No sample available for {sampled_path}")
-    
-    samples[sampled_path]["annotations"].append(annotation)
 
-    tool_context.state["samples"] = samples
+    if not "annotations" in sample:
+        sample["annotations"] = []
 
-    return samples[sampled_path]
+    sample["annotations"].append(annotation)
+
+    return tool_success("annotations", sample["annotations"])
