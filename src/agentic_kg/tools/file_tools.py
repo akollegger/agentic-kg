@@ -366,41 +366,7 @@ def search_file(file_path: str, query: str, tool_context: ToolContext) -> dict:
     return tool_success("search_results", result_data)
 
 
-# Keep these functions for backward compatibility, but implement them using search_file
-def search_markdown_file(file_path: str, query: str, tool_context: ToolContext, case_sensitive: bool = False) -> dict:
-    """
-    Searches a Markdown file for lines containing the given query string.
-    This is a wrapper around search_file for backward compatibility.
-    Note: case_sensitive parameter is ignored, search is always case insensitive.
-
-    Args:
-      file_path: Path to the Markdown file, relative to the Neo4j import directory.
-      query: The string to search for.
-      tool_context: The ToolContext object.
-      case_sensitive: Whether the search should be case-sensitive (ignored).
-
-    Returns:
-        dict: See search_file for details.
-    """
-    return search_file(file_path, query, tool_context)
-
-
-def search_csv_file(file_path: str, query: str, tool_context: ToolContext, case_sensitive: bool = False) -> dict:
-    """
-    Searches a CSV file for rows containing the given query string.
-    This is a wrapper around search_file for backward compatibility.
-    Note: case_sensitive parameter is ignored, search is always case insensitive.
-
-    Args:
-      file_path: Path to the CSV file, relative to the Neo4j import directory.
-      query: The string to search for.
-      tool_context: The ToolContext object.
-      case_sensitive: Whether the search should be case-sensitive (ignored).
-
-    Returns:
-        dict: See search_file for details.
-    """
-    return search_file(file_path, query, tool_context)
+# No backward compatibility wrappers - using only search_file throughout the project
 
 
 def annotate_sample(sampled_path: str, annotation: str, tool_context: ToolContext) -> dict:
