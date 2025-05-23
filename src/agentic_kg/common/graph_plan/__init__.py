@@ -25,7 +25,7 @@ from .relation_plan import RelationPlan
 from .graph_plan import GraphPlan
 from .serialization import graph_plan_to_dict, graph_plan_from_dict
 from .persistence import store_graph_plan, retrieve_graph_plan
-from .planning import file_source_from_file, suggest_entities_from_files, create_initial_graph_plan
+from .helpers import file_source_from_file, create_initial_graph_plan
 
 __all__ = [
     'BasePlan',
@@ -40,6 +40,5 @@ __all__ = [
     'store_graph_plan',
     'retrieve_graph_plan',
     'file_source_from_file',
-    'suggest_entities_from_files',
     'create_initial_graph_plan',
 ]

@@ -2,7 +2,7 @@ from google.adk.tools import ToolContext
 from agentic_kg.common.util import tool_success, tool_error
 
 def set_user_goal(kind_of_graph: str, graph_description:str, tool_context: ToolContext):
-    """Sets the user's goal, including the kind of graph and its description, based on approval from the user.
+    """Sets the user's goal, including the kind of graph and its description.
     
     Args:
         kind_of_graph: 2-3 word definition of the kind of graph, for example "recent US patents"
@@ -10,6 +10,7 @@ def set_user_goal(kind_of_graph: str, graph_description:str, tool_context: ToolC
     """
     user_goal_data = {"kind_of_graph": kind_of_graph, "graph_description": graph_description}
     tool_context.state["user_goal"] = user_goal_data
+    tool_context.state["user_goal_approved"] = True
     return tool_success("user_goal", user_goal_data)
 
 def get_user_goal(tool_context: ToolContext):

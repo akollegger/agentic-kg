@@ -8,16 +8,15 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from agentic_kg.common.graph_plan.planning import (
+from agentic_kg.common.graph_plan.helpers import (
     file_source_from_file,
-    suggest_entities_from_files,
     create_initial_graph_plan
 )
 from agentic_kg.common.graph_plan import FileSource
 
 
-class TestPlanning(unittest.TestCase):
-    """Test cases for the planning module."""
+class TestHelpers(unittest.TestCase):
+    """Test cases for the helpers module."""
     
     def setUp(self):
         """Set up test fixtures."""
@@ -63,23 +62,6 @@ class TestPlanning(unittest.TestCase):
         """Test creating a FileSource from a non-existent file."""
         with self.assertRaises(FileNotFoundError):
             file_source_from_file("/path/to/nonexistent/file.csv")
-    
-    def test_suggest_entities_from_files(self):
-        """Test suggesting entities from file sources."""
-        # Create file sources
-        csv_source = file_source_from_file(self.csv_path)
-        txt_source = file_source_from_file(self.txt_path)
-        
-        # Suggest entities
-        entities = suggest_entities_from_files([csv_source, txt_source])
-        
-        # Should only suggest an entity for the CSV file
-        self.assertEqual(len(entities), 1)
-        
-        # Check the entity properties
-        entity = entities[0]
-        self.assertEqual(entity.name, "People")
-        self.assertEqual(entity.property_keys, ["id", "name", "age", "email"])
     
     def test_create_initial_graph_plan(self):
         """Test creating an initial graph plan."""

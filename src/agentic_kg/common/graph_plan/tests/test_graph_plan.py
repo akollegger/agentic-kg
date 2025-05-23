@@ -109,8 +109,6 @@ class TestGraphPlan:
         
         # Create a construction rule for the entity
         source_rule = Rule.construction(
-            name="LoadPeople",
-            description="Data source for this entity",
             tool="load_csv",
             args={"source_file": "people.csv"}
         )
@@ -123,8 +121,6 @@ class TestGraphPlan:
         
         # Create a retrieval rule for the graph plan
         metadata_rule = Rule.retrieval(
-            name="GetMetadata",
-            description="Retrieval pattern for the graph plan",
             tool="cypher_query",
             args={"query": "MATCH (n:GraphPlan) RETURN n"}
         )

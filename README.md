@@ -19,7 +19,8 @@ The project has multiple agents, at two levels:
 - `src/coordinators` is a collection of root-agents
   - high-level context in the prompt
   - coordinates sub-agents to do things
-- `src/sub_agents` specialize 
+- `src/sub_agents` specialized agents (some with custom tools)
+- `src/tools` for tools that any agent can use
 
 ## Setup
 
@@ -27,6 +28,8 @@ The project has multiple agents, at two levels:
 uv venv
 uv sync
 ```
+
+**NOTE**:Don't forget to source the venv, for example: `source .venv/bin/activate`
 
 Prepare environment vars:
 - `cp .env.template .env`
@@ -42,6 +45,11 @@ adk run src/agentic_kg
 web:
 ```bash
 adk web src
+```
+
+Test:
+```bash
+uv run pytest
 ```
 
 ### cypher agent

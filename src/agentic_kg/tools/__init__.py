@@ -2,6 +2,7 @@ from .file_tools import (
     get_neo4j_import_directory,
     list_import_files,
     sample_file,
+    sample_markdown_file,
     show_sample,
     annotate_sample,
 )
@@ -12,6 +13,7 @@ __all__ = [
     "get_neo4j_import_directory",
     "list_import_files",
     "sample_file",
+    "sample_markdown_file",
     "show_sample",
     "annotate_sample",
     "set_user_goal",

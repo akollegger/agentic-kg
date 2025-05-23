@@ -187,7 +187,7 @@ def store_graph_plan(graph_plan: GraphPlan) -> None:
         
 
     with graphdb.get_driver().session() as session:
-        session.write_transaction(store_graph_plan_tx, graph_plan)
+        session.execute_write(store_graph_plan_tx, graph_plan)
         
 
         
@@ -359,7 +359,7 @@ def retrieve_graph_plan(id: str) -> Optional[GraphPlan]:
     
     # Execute the transaction
     with graphdb.get_driver().session() as session:
-        data = session.read_transaction(retrieve_graph_plan_tx, id)
+        data = session.execute_read(retrieve_graph_plan_tx, id)
         if not data:
             return None
         

@@ -1,6 +1,7 @@
 
 from typing import Any, Dict, List, TypedDict, Union
 import re
+import atexit
 
 from google.adk.tools import ToolContext
 
@@ -135,6 +136,9 @@ class Neo4jForADK:
     def get_driver(self):
         return self._driver
     
+    def close(self):
+        return self._driver.close()
+    
     def send_query(self, cypher_query, parameters=None) -> Dict[str, Any]:
         session = self._driver.session()
         try:
@@ -162,3 +166,6 @@ class Neo4jForADK:
 
 
 graphdb = Neo4jForADK()
+
+# Register cleanup function to close database connection on exit
+atexit.register(graphdb.close)

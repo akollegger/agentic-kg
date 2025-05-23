@@ -92,6 +92,36 @@ def sample_file(path: str, size: int, tool_context: ToolContext) -> dict:
 
     return tool_success("samples", result)
 
+def sample_markdown_file(file_path: str, tool_context: ToolContext):
+    """Reads the content of a markdown file.
+    """
+
+    import_dir_result = get_neo4j_import_directory(tool_context) # chain tool call
+    if import_dir_result["status"] == "error": return import_dir_result
+    import_dir = Path(import_dir_result["neo4j_import_dir"])
+    p = import_dir / file_path
+    if not (p.exists()):
+        return tool_error(f"Path does not exist: {file_path}")
+
+    text = ""
+    with open(p, 'r') as mdfile:
+        text = mdfile.read()
+
+    result = {
+        "metadata": {
+            "path": file_path,
+            "mimetype": "text/markdown"
+        },
+        "text": text,
+        "annotations": []
+    }
+
+    if not "samples" in tool_context.state:
+        tool_context.state["samples"] = {}
+
+    tool_context.state["samples"][str(p)] = result
+
+    return tool_success("samples", result)
 
 def show_sample(path: str, tool_context: ToolContext) -> dict:
     """Shows the sample taken from a sample of file along with any

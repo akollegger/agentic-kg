@@ -1,5 +1,5 @@
 """
-Planning module for the graph plan system.
+Helper functions for the graph plan system.
 
 This module contains helper functions for creating and managing graph plans,
 following the process described in the README.md file.
