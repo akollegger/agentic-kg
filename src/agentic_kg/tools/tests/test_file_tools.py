@@ -27,28 +27,15 @@ class TestFileTools(TestCase):
         (self.import_dir / "notes.md").write_text("# Test\n\nMarkdown content")
         (self.import_dir / "config.txt").write_text("key=value")
         (self.import_dir / "unsupported.log").write_text("log entry")
-        
+        (self.import_dir / "md_empty.md").write_text("")
+
         # Create a subdirectory with more files
         subdir = self.import_dir / "subdir"
         subdir.mkdir()
         (subdir / "more_data.csv").write_text("id,value\n1,test\n")
 
-        # Create markdown files for testing sample_markdown_file and search_file
-        (self.import_dir / "md_with_frontmatter.md").write_text(
-            "---\n"            
-            "title: Test Title\n"
-            "author: Test Author\n"
-            "tags:\n  - one\n  - two\n"
-            "---\n"
-            "# Markdown Header\n"
-            "This is the actual content."
-        )
-        (self.import_dir / "md_without_frontmatter.md").write_text(
-            "# No Frontmatter Here\n"
-            "Just plain markdown content."
-        )
-        
         # Create markdown file specifically for search testing
+        # Note: search_file does not parse frontmatter, so it's treated as plain text.
         (self.import_dir / "search_test.md").write_text(
             "---\n"
             "title: Searchable Document\n"
@@ -62,22 +49,6 @@ class TestFileTools(TestCase):
             "This is line 4 without the term.\n"
             "This is line 5 with the term searchable again.\n"
         )
-        (self.import_dir / "md_invalid_frontmatter.md").write_text(
-            "---\n"
-            "title: Test Title\n"
-            "author: Test Author\n"
-            "invalid_yaml: [unterminated string\n"
-            "---\n"
-            "Content after invalid frontmatter."
-        )
-        (self.import_dir / "md_non_dict_frontmatter.md").write_text(
-            "---\n"
-            "- item1\n"
-            "- item2\n"
-            "---\n"
-            "Content after non-dict frontmatter."
-        )
-        (self.import_dir / "md_empty.md").write_text("")
 
         # Create CSV files for testing search_csv_file and sample_csv_file
         (self.import_dir / "search_data.csv").write_text(
@@ -150,76 +121,24 @@ class TestFileTools(TestCase):
         self.assertIn('error_message', result)
         self.assertEqual(result['error_message'], 'Directory not found')
 
-    def test_sample_markdown_with_frontmatter(self):
-        """Test sampling a markdown file with valid YAML frontmatter."""
-        result = sample_markdown_file("md_with_frontmatter.md", self.tool_context)
+    def test_sample_markdown_file(self):
+        """Test sampling a markdown file."""
+        result = sample_markdown_file("notes.md", self.tool_context)
         self.assertEqual(result['status'], 'success')
         self.assertIn('samples', result)
         sample = result['samples']
-        self.assertEqual(sample['metadata']['path'], "md_with_frontmatter.md")
+        self.assertEqual(sample['metadata']['path'], "notes.md")
         self.assertEqual(sample['metadata']['mimetype'], "text/markdown")
-        expected_frontmatter = {
-            'title': 'Test Title',
-            'author': 'Test Author',
-            'tags': ['one', 'two']
-        }
-        self.assertEqual(sample['frontmatter'], expected_frontmatter)
-        expected_content = "# Markdown Header\nThis is the actual content."
+        self.assertNotIn('frontmatter', sample) # Ensure frontmatter key is removed
+        expected_content = "# Test\n\nMarkdown content"
         self.assertEqual(sample['content'], expected_content)
-
-    def test_sample_markdown_without_frontmatter(self):
-        """Test sampling a markdown file without any frontmatter."""
-        result = sample_markdown_file("md_without_frontmatter.md", self.tool_context)
-        self.assertEqual(result['status'], 'success')
-        sample = result['samples']
-        self.assertEqual(sample['frontmatter'], {})
-        expected_content = "# No Frontmatter Here\nJust plain markdown content."
-        self.assertEqual(sample['content'], expected_content)
-
-    def test_sample_markdown_invalid_frontmatter(self):
-        """Test sampling a markdown file with invalid YAML frontmatter."""
-        # Expect a warning to be logged, and the whole file treated as content
-        with mock.patch('agentic_kg.tools.file_tools.logger') as mock_logger:
-            result = sample_markdown_file("md_invalid_frontmatter.md", self.tool_context)
-            self.assertEqual(result['status'], 'success')
-            sample = result['samples']
-            self.assertEqual(sample['frontmatter'], {})
-            expected_content = (
-                "---\n"
-                "title: Test Title\n"
-                "author: Test Author\n"
-                "invalid_yaml: [unterminated string\n"
-                "---\n"
-                "Content after invalid frontmatter."
-            )
-            self.assertEqual(sample['content'], expected_content)
-            mock_logger.warning.assert_called_once()
-            self.assertIn("Could not parse YAML frontmatter", mock_logger.warning.call_args[0][0])
-
-    def test_sample_markdown_non_dict_frontmatter(self):
-        """Test sampling a markdown file where frontmatter is not a dictionary."""
-        with mock.patch('agentic_kg.tools.file_tools.logger') as mock_logger:
-            result = sample_markdown_file("md_non_dict_frontmatter.md", self.tool_context)
-            self.assertEqual(result['status'], 'success')
-            sample = result['samples']
-            self.assertEqual(sample['frontmatter'], {})
-            expected_content = (
-                "---\n"
-                "- item1\n"
-                "- item2\n"
-                "---\n"
-                "Content after non-dict frontmatter."
-            )
-            self.assertEqual(sample['content'], expected_content)
-            mock_logger.warning.assert_called_once()
-            self.assertIn("Frontmatter in md_non_dict_frontmatter.md is not a dictionary", mock_logger.warning.call_args[0][0])
 
     def test_sample_markdown_empty_file(self):
         """Test sampling an empty markdown file."""
         result = sample_markdown_file("md_empty.md", self.tool_context)
         self.assertEqual(result['status'], 'success')
         sample = result['samples']
-        self.assertEqual(sample['frontmatter'], {})
+        self.assertNotIn('frontmatter', sample) # Ensure frontmatter key is removed
         self.assertEqual(sample['content'], "")
 
     def test_sample_markdown_file_not_exists(self):
@@ -244,18 +163,19 @@ class TestFileTools(TestCase):
         # The first row is the header row
         self.assertEqual(retrieved_sample['data'][0], ['id', 'name'])
 
-    def test_show_sample_markdown_exists(self):
-        """Test showing a previously sampled Markdown file."""
-        # First, sample the file
-        sample_markdown_file("md_with_frontmatter.md", self.tool_context)
+    def test_show_sample(self):
+        """Test showing a previously sampled file."""
+        # First, sample a file (using notes.md as it's simpler)
+        sample_markdown_file("notes.md", self.tool_context)
         
-        result = show_sample("md_with_frontmatter.md", self.tool_context)
+        result = show_sample("notes.md", self.tool_context)
         self.assertEqual(result['status'], 'success')
         retrieved_sample = result['retrieved_sample']
-        self.assertEqual(retrieved_sample['metadata']['path'], "md_with_frontmatter.md")
-        self.assertEqual(retrieved_sample['metadata']['mimetype'], "text/markdown")
-        self.assertIn('frontmatter', retrieved_sample)
+        self.assertEqual(retrieved_sample['metadata']['path'], "notes.md")
+        # Check some expected keys, actual content checked in sample_markdown_file test
+        self.assertNotIn('frontmatter', retrieved_sample) # Ensure frontmatter key is removed
         self.assertIn('content', retrieved_sample)
+        self.assertIn('annotations', retrieved_sample)
 
     def test_show_sample_path_not_sampled(self):
         """Test showing a sample for a path that has not been sampled."""

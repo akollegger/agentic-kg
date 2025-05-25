@@ -46,14 +46,14 @@ Examples:
   # This will create 'data/movies/some/actors.csv' in the import directory
 
 \b
-  # Copy an entire directory recursively
+  # Copy an entire directory recursively (preserves directory structure by default)
   $ python -m cli.copy_to_import data/movies/some
-  # This will copy all files in the directory to the import directory
+  # This will recreate the directory structure in the import directory
 
 \b
-  # Copy a directory with mirror mode to preserve structure
-  $ python -m cli.copy_to_import --mirror data/movies/some
-  # This will recreate the directory structure in the import directory
+  # Flatten directory structure when copying
+  $ python -m cli.copy_to_import --flatten data/movies/some
+  # This will copy all files to the root of the import directory
 
 \b
   # Clear the import directory before copying
@@ -69,10 +69,10 @@ def format_timestamp(timestamp):
 
 @click.command(epilog=USAGE_EXAMPLES)
 @click.option('--verbose', '-v', is_flag=True, help='Show detailed information about file operations')
-@click.option('--mirror', '-m', is_flag=True, help='Preserve directory structure in the import directory')
+@click.option('--flatten', '-f', is_flag=True, help='Flatten directory structure (copy all files to root of import directory)')
 @click.option('--clear', '-c', is_flag=True, help='Clear the import directory before copying files')
 @click.argument('sources', nargs=-1, required=True, type=str)
-def copy_to_import(verbose: bool, mirror: bool, clear: bool, sources: List[str]):
+def copy_to_import(verbose: bool, flatten: bool, clear: bool, sources: List[str]):
     """
     Copy files or directories to the Neo4j import directory.
     
@@ -82,10 +82,13 @@ def copy_to_import(verbose: bool, mirror: bool, clear: bool, sources: List[str])
     SOURCE can be a file or directory path. For files, you can use the format:
     original_path:new_name to rename the file in the destination.
     
-    By default, files are copied to the root of the import directory (flat structure).
-    Use --mirror to preserve the relative path structure in the import directory.
+    When copying directories, the source directory and its contents are copied to a
+    subdirectory with the same name in the import directory by default.
     
-    When copying directories, all files within the directory will be copied.
+    Use --flatten to copy all files directly to the root of the import directory.
+    
+    When copying directories, all files within the directory will be copied
+    recursively.
     """
     try:
         # Get the Neo4j import directory
@@ -171,16 +174,20 @@ def copy_to_import(verbose: bool, mirror: bool, clear: bool, sources: List[str])
                 files_copied = 0
                 for file_path in source_path.glob('**/*'):
                     if file_path.is_file():
-                        # Calculate relative path from the source directory
-                        rel_path = file_path.relative_to(source_path.parent if mirror else source_path)
-                        
-                        # Determine destination path
-                        if mirror:
-                            # In mirror mode, preserve full path structure
-                            dest_file_path = Path(import_dir) / rel_path
-                        else:
-                            # In flat mode, just use the filename
+                        if flatten:
+                            # In flatten mode, just use the filename
                             dest_file_path = Path(import_dir) / file_path.name
+                        else:
+                            # By default, preserve the source directory structure
+                            # Calculate path relative to the source directory's parent
+                            if source_path.is_relative_to(Path.cwd()):
+                                # If source is relative to CWD, include the source dir name in the path
+                                rel_path = file_path.relative_to(source_path.parent)
+                            else:
+                                # If source is already an absolute path, just use the filename
+                                rel_path = file_path.relative_to(source_path)
+                                rel_path = Path(source_path.name) / rel_path
+                            dest_file_path = Path(import_dir) / rel_path
                         
                         # Create parent directories if they don't exist
                         dest_file_path.parent.mkdir(parents=True, exist_ok=True)

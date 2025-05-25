@@ -100,7 +100,7 @@ import re
 import yaml
 
 def sample_markdown_file(file_path: str, tool_context: ToolContext):
-    """Reads the content of a markdown file, parsing optional YAML frontmatter.
+    """Reads the content of a markdown file.
 
     Args:
       file_path: file to sample, relative to the import directory
@@ -121,33 +121,13 @@ def sample_markdown_file(file_path: str, tool_context: ToolContext):
     if not (p.exists()):
         return tool_error(f"Path does not exist: {file_path}")
 
-    frontmatter = {}
     content = ""
 
     try:
         with open(p, 'r', encoding='utf-8') as mdfile:
             full_text = mdfile.read()
 
-        # Regex to find YAML frontmatter (---...---)
-        # It must be at the very beginning of the file.
-        fm_match = re.match(r'^---\s*\n(.*?)\n---\s*\n(.*)', full_text, re.DOTALL | re.MULTILINE)
-
-        if fm_match:
-            fm_string = fm_match.group(1)
-            content = fm_match.group(2).strip()
-            try:
-                frontmatter = yaml.safe_load(fm_string)
-                if not isinstance(frontmatter, dict):
-                    # If YAML is valid but not a dict (e.g. a list or a string), treat as no frontmatter
-                    logger.warning(f"Frontmatter in {file_path} is not a dictionary. Treating as plain content.")
-                    frontmatter = {}
-                    content = full_text # Revert to full text if frontmatter is not a dict
-            except yaml.YAMLError as e:
-                logger.warning(f"Could not parse YAML frontmatter in {file_path}: {e}. Treating as plain content.")
-                # If YAML is invalid, treat the whole thing as content
-                content = full_text
-        else:
-            content = full_text
+        content = full_text
 
     except Exception as e:
         return tool_error(f"Error reading or processing markdown file {file_path}: {e}")
@@ -157,7 +137,6 @@ def sample_markdown_file(file_path: str, tool_context: ToolContext):
             "path": file_path,
             "mimetype": "text/markdown"
         },
-        "frontmatter": frontmatter,
         "content": content,
         "annotations": []
     }
@@ -365,40 +344,51 @@ def search_file(file_path: str, query: str, tool_context: ToolContext) -> dict:
     }
     return tool_success("search_results", result_data)
 
-
-# No backward compatibility wrappers - using only search_file throughout the project
-
-
-def annotate_sample(sampled_path: str, annotation: str, tool_context: ToolContext) -> dict:
-    """Annotates a sampled file to provide descriptive information.
+async def import_markdown_file(source_file: str, label_name: str, tool_context: ToolContext):
+    """Reads the content of a markdown file then creates a text node in Neo4j.
+    The node will only have two properties:
+    - content: the entire content of the markdown file
 
     Args:
-      sampled_path: previously sampled file.
-      annotation: information to annotate on the sample.
+      source_file: path to the markdown file, relative to the import directory
+      label_name: the label applied to the created node
       tool_context: ToolContext object.
 
     Returns:
-        dict: A dictionary containing metadata about the content,
-              along with a sampling of the file.
+        dict: A dictionary indicating success or failure.
               Includes a 'status' key ('success' or 'error').
-              If 'success', includes a 'metadata' key with content details.
               If 'error', includes an 'error_message' key.
     """
+    from agentic_kg.sub_agents.cypher_agent.tools import create_uniqueness_constraint, write_neo4j_cypher
     
-    if not "samples" in tool_context.state:
-        return tool_error("No samples have been taken.")
-
-    if not sampled_path in tool_context.state["samples"]:
-        return tool_error(f"No sample found for {sampled_path}")
-
-    sample = tool_context.state["samples"][sampled_path]
-
-    if not sample:
-        return tool_error(f"No sample available for {sampled_path}")
-
-    if not "annotations" in sample:
-        sample["annotations"] = []
-
-    sample["annotations"].append(annotation)
-
-    return tool_success("annotations", sample["annotations"])
+    # 1. Ensure that a property constraint has been created for label/source_file
+    constraint_result = await create_uniqueness_constraint(label_name, "source_file")
+    if constraint_result["status"] == "error":
+        return constraint_result
+    
+    # 2. Read the content of the markdown
+    import_dir_result = get_neo4j_import_directory(tool_context)
+    if import_dir_result["status"] == "error":
+        return import_dir_result
+    
+    import_dir = Path(import_dir_result["neo4j_import_dir"])
+    file_path = import_dir / source_file
+    
+    if not file_path.exists():
+        return tool_error(f"Markdown file does not exist: {source_file}")
+    
+    try:
+        with open(file_path, 'r', encoding='utf-8') as mdfile:
+            content = mdfile.read()
+    except Exception as e:
+        return tool_error(f"Error reading markdown file {source_file}: {e}")
+    
+    # 3. Create a node for the markdown using a parameterized cypher query
+    query = f"MERGE (t:$($label_name) {source_file: $source_file}) SET t.content = $content"
+    properties = {
+        "label_name": label_name,
+        "source_file": source_file,
+        "content": content
+    }
+    return await write_neo4j_cypher(query, properties)
+    
