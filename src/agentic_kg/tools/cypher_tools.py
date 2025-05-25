@@ -11,7 +11,7 @@ from agentic_kg.common.neo4j_for_adk import (
 )
 
 
-async def neo4j_is_ready(
+def neo4j_is_ready(
 ):
     """Tool to check that the Neo4j database is ready.
     Replies with either a positive message about the database being ready or an error message.
@@ -20,7 +20,7 @@ async def neo4j_is_ready(
     return results
 
 
-async def get_physical_schema(
+def get_physical_schema(
     tool_context: ToolContext,
 ) -> Dict[str, Any]:
     """Tool to get the physical schema of a Neo4j graph database.
@@ -41,7 +41,7 @@ async def get_physical_schema(
         return tool_error(str(e))
 
 
-async def read_neo4j_cypher(
+def read_neo4j_cypher(
     query: str,
     params: Optional[Dict[str, Any]] = None
 ) -> Dict[str, Any]:
@@ -62,7 +62,7 @@ async def read_neo4j_cypher(
     results = graphdb.send_query(query, params)
     return results
 
-async def write_neo4j_cypher(
+def write_neo4j_cypher(
     query: str,
     params: Optional[Dict[str, Any]] = None
 ) -> Dict[str, Any]:
@@ -80,7 +80,7 @@ async def write_neo4j_cypher(
     results = graphdb.send_query(query, params)
     return results
 
-async def reset_neo4j_data() -> Dict[str, Any]:
+def reset_neo4j_data() -> Dict[str, Any]:
     """Resets the neo4j graph database by removing all data, 
     indexes and constraints. 
     Use with caution! Confirm with the user
@@ -119,7 +119,7 @@ async def reset_neo4j_data() -> Dict[str, Any]:
             return dropped_index
 
 
-async def create_uniqueness_constraint(
+def create_uniqueness_constraint(
     label: str,
     unique_property_key: str,
 ) -> Dict[str, Any]:
@@ -151,3 +151,27 @@ async def create_uniqueness_constraint(
     REQUIRE n.{unique_property_key} IS UNIQUE"""
     results = graphdb.send_query(query)
     return results
+
+def merge_node_into_graph(label_name:str, id_property_name:str, properties: Dict[str, Any], tool_context:ToolContext) -> Dict[str, Any]:
+    """Merges a node into the graph. The label_name/id_property_name pair will
+    be used for the MERGE pattern to ensure uniqueness. 
+    The properties dictionary will be used in a SET to set all properties of the node.
+
+    Args:
+        label_name: the label of the node to create
+        id_property_name: the name of the property that will be used to set the id of the node
+        properties: a dictionary of properties to set on the node
+        tool_context: ToolContext object.
+
+    Returns:
+        dict: A dictionary indicating success or failure.
+              Includes a 'status' key ('success' or 'error').
+              If 'error', includes an 'error_message' key.
+    """
+    query = "MERGE (t:$($label_name) {id: $props[$id_property_name]}) SET t += $props"
+    properties = {
+        "label_name": label_name,
+        "id_property_name": id_property_name,
+        "props": properties
+    }
+    return write_neo4j_cypher(query, properties)

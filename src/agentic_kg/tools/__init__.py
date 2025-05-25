@@ -15,6 +15,7 @@ from .cypher_tools import (
     write_neo4j_cypher,
     reset_neo4j_data,
     create_uniqueness_constraint,
+    merge_node_into_graph,
 )
 from .user_goal_tools import set_user_goal, get_user_goal
 from .flow_tools import finished
@@ -35,5 +36,6 @@ __all__ = [
     "write_neo4j_cypher",
     "reset_neo4j_data",
     "create_uniqueness_constraint",
+    "merge_node_into_graph"
     "finished",
 ]

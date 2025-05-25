@@ -10,7 +10,8 @@ from agentic_kg.tools import (
     read_neo4j_cypher,
     write_neo4j_cypher,
     reset_neo4j_data,
-    create_uniqueness_constraint
+    create_uniqueness_constraint,
+    merge_node_into_graph,
 )
 from agentic_kg.tools import finished
 
@@ -81,6 +82,7 @@ variants = {
             read_neo4j_cypher,
             write_neo4j_cypher,
             create_uniqueness_constraint,
+            merge_node_into_graph,
             finished
         ]
     }

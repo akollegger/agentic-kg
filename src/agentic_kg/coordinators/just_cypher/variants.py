@@ -8,12 +8,12 @@ These instructions guide the agent's behavior, workflow, and tool usage.
 from agentic_kg.tools import set_user_goal, get_user_goal
 
 variants = {
-    # just_cypher_v1
+    # just_cypher_agent_v1
     # Benefits:
     # - simple workflow
     # Challenges:
     # - does not need approval, so may go wild
-    "just_cypher_v1": {
+    "just_cypher_agent_v1": {
         "instruction": """
         You are an expert at property graph data modeling. 
         Your primary goal is to help the user create a knowledge graph. 
@@ -28,12 +28,12 @@ variants = {
         """,
         "tools": []
     },
-    # just_cypher_v2
+    # just_cypher_agent_v2
     # Benefits:
     # - explicit user goal with approval workflow
     # Challenges:
     # - tends to use CREATE clause instead of MERGE, meaning repeated imports of the same datawill fail
-    "just_cypher_v2": {
+    "just_cypher_agent_v2": {
         "instruction": """
         You are an expert at property graph data modeling. 
         Your primary goal is to help the user create a knowledge graph. 
