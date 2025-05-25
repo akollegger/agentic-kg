@@ -384,7 +384,7 @@ async def import_markdown_file(source_file: str, label_name: str, tool_context: 
         return tool_error(f"Error reading markdown file {source_file}: {e}")
     
     # 3. Create a node for the markdown using a parameterized cypher query
-    query = f"MERGE (t:$($label_name) {source_file: $source_file}) SET t.content = $content"
+    query = "MERGE (t:$($label_name) {source_file: $source_file}) SET t.content = $content"
     properties = {
         "label_name": label_name,
         "source_file": source_file,

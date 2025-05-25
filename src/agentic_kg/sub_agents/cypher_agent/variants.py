@@ -4,7 +4,7 @@
 This module defines functions that return instruction prompts for the cypher agent.
 These instructions guide the agent's behavior, workflow, and tool usage.
 """
-from .tools import (
+from agentic_kg.tools import (
     neo4j_is_ready, 
     get_physical_schema, 
     read_neo4j_cypher,
