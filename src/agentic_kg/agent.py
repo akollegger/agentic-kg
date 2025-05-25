@@ -8,9 +8,17 @@ validate_env()
 
 # Import and instantiate only one agent (comment out the rest)
 
-from .coordinators.just_cypher.agent import just_cypher_agent
-root_agent = just_cypher_agent
+## just cypher - a single agent that can read/write arbitrary cypher
+# Agents:
+#   - sub_agents/cypher_agent as `cypher_root_agent`
+from .sub_agents import cypher_agent
+root_agent = cypher_agent
 
+## cypher and files - a single agent that can read/write arbitrary cypher and files
+# Agents:
+#   - coordinators/cypher_and_files.agent as `cypher_and_files_agent`
+#   - sub_agents/dataprep_agent as `dataprep_agent_v1`
+#   - sub_agents/cypher_agent as `cypher_agent_v1`
 # from .coordinators.cypher_and_files.agent import cypher_and_files_agent
 # root_agent = cypher_and_files_agent
 

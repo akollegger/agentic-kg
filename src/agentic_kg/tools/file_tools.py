@@ -5,13 +5,16 @@ import clevercsv
 from itertools import islice
 
 from google.adk.tools import ToolContext
-from typing import Dict, Any
+from typing import Dict, Any, List
 
 from agentic_kg.common.neo4j_for_adk import graphdb
 from agentic_kg.common.util import tool_success, tool_error
 
 logger = logging.getLogger(__name__)
 
+CURRENT_FILES = "current_file_list"
+SUGGESTED_FILES = "suggested_file_list"
+ACCEPTED_FILES = "accepted_file_list"
 
 def get_neo4j_import_directory(tool_context:ToolContext) -> Dict[str, Any]:
     """Queries Neo4j to find the location of the server's import directory,
@@ -27,8 +30,10 @@ def get_neo4j_import_directory(tool_context:ToolContext) -> Dict[str, Any]:
     return results
 
 def list_import_files(tool_context:ToolContext) -> dict:
-    """Lists files available in the configured Neo4j import directory
+    f"""Lists files available in the configured Neo4j import directory
     that are ready for import by Neo4j.
+
+    Saves the list to {CURRENT_FILES} in state.
 
     Returns:
         dict: A dictionary containing metadata about the content.
@@ -47,7 +52,21 @@ def list_import_files(tool_context:ToolContext) -> dict:
                  for x in import_dir.rglob("*") 
                  if x.is_file() and x.suffix.lower() in supported_extensions]
 
+    tool_context.state[CURRENT_FILES] = file_names
+
     return tool_success("files", file_names)
+
+def set_suggested_files(suggest_files:List[str]) -> Dict[str, Any]:
+    tool_context.state[SUGGESTED_FILES] = suggest_files
+    return tool_success("suggested_files", suggest_files)
+
+def accept_suggested_file_list(tool_context:ToolContext) -> Dict[str, Any]:
+    f"""Accepts the {SUGGESTED_FILES} in state for further processing."""
+    
+    if SUGGESTED_FILES not in tool_context.state:
+        return tool_error("Current files have not been set. Take no action other than to inform user.")
+
+    tool_context.state[ACCEPTED_FILES] = tool_context.state[SUGGESTED_FILES]
 
 
 def sample_csv_file(path: str, size: int, tool_context: ToolContext) -> dict:

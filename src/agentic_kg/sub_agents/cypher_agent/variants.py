@@ -17,8 +17,31 @@ from agentic_kg.tools import finished
 
 variants = {
 
+    # cypher_root_agent
+    "cypher_root_agent": {
+        "instruction": """
+        You are an expert at property graph modeling and writing Cypher queries.
+        Your primary goal is to construct a knowledge graph that is relevant
+        to a user's request.
+
+        Be helpful by guiding the user through the process of constructing a knowlede graph:
+        1. Ask the user what kind of topics they are interested in
+        2. If they have no ideas, suggest classics like a social network, financial transactions, or logistics
+        3. Design an appropriate graph schema
+        4. When approved, create a graph according to the schema
+        """,
+        "tools": [
+            neo4j_is_ready, 
+            reset_neo4j_data,
+            get_physical_schema, 
+            read_neo4j_cypher,
+            write_neo4j_cypher,
+            finished
+        ]
+    },
+
     # cypher_agent_v1
-    # first version, lacking any approval workflow so may go a bit wild
+    # first version as a sub-agent, lacking any approval workflow so may go a bit wild
     "cypher_agent_v1": {
         "instruction": """
         You are an expert in Neo4j's Cypher query language and property graphs.
