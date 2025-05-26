@@ -6,7 +6,7 @@ These instructions guide the agent's behavior, workflow, and tool usage.
 """
 
 
-from agentic_kg.tools.file_tools import import_markdown_file, list_import_files, sample_markdown_file
+from agentic_kg.tools.file_tools import import_markdown_file, list_import_files, sample_file
 from agentic_kg.tools.user_goal_tools import get_user_goal
 
 variants = {
@@ -27,6 +27,6 @@ variants = {
             - Entity nodes that are extracted from the markdown content
             - Relationships between entities, based on the markdown content
             """,
-        "tools": [get_user_goal, list_import_files, sample_markdown_file, import_markdown_file]
+        "tools": [get_user_goal, list_import_files, sample_file, import_markdown_file]
     }   
 }

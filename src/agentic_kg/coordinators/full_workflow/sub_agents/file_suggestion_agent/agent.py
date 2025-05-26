@@ -2,7 +2,7 @@ from google.adk.agents import Agent, SequentialAgent, LoopAgent
 
 from agentic_kg.common.config import llm
 
-from agentic_kg.tools import list_import_files, sample_csv_file, sample_markdown_file
+from agentic_kg.tools import list_import_files, sample_file
 
 from pydantic import BaseModel, Field
 
@@ -41,7 +41,7 @@ file_critic = Agent(
     When no qualifier is given, assume a modest strictness that includes directly related entities 
     like people, places, organizations, and events.
 
-    For any file that you're not sure about, use the 'sample_csv_file' or 'sample_markdown_file' tool to get 
+    For any file that you're not sure about, use the 'sample_file' tool to get 
     a better understanding of the file contents. 
     Do not need sample every file. Assume markdown files in the same directory have similar features.
 
@@ -52,7 +52,7 @@ file_critic = Agent(
 
     Do not add explanations. Output only the file list.
     """,
-    tools=[list_import_files, sample_csv_file, sample_markdown_file],
+    tools=[list_import_files, sample_file],
     input_schema=FileSuggestionsInput,
     output_key=STATE_SUGGESTED_FILES,
 )

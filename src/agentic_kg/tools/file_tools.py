@@ -69,62 +69,15 @@ def accept_suggested_file_list(tool_context:ToolContext) -> Dict[str, Any]:
     tool_context.state[ACCEPTED_FILES] = tool_context.state[SUGGESTED_FILES]
 
 
-def sample_csv_file(path: str, size: int, tool_context: ToolContext) -> dict:
-    """Retrieves a sample of a csv file content that is enough for understanding
-      what it contains.
-
-    Args:
-      path: file to sample, relative to the import directory
-      size: number of csv rows to sample.
-      tool_context: ToolContext object.
-
-    Returns:
-        dict: A dictionary containing metadata about the content,
-              along with a sampling of the file.
-              Includes a 'status' key ('success' or 'error').
-              If 'success', includes a 'metadata' key with content details.
-              If 'error', includes an 'error_message' key.
-    """
-    import_dir_result = get_neo4j_import_directory(tool_context) # chain tool call
-    if import_dir_result["status"] == "error": return import_dir_result
-    import_dir = Path(import_dir_result["neo4j_import_dir"])
-    p = import_dir / path
-    if not (p.exists()):
-        return tool_error(f"Path does not exist: {path}")
-
-    data = []
-    with open(p, newline='') as csvfile:
-        dialect = clevercsv.Sniffer().sniff(csvfile.read(2048))
-        csvfile.seek(0)
-        reader = clevercsv.reader(csvfile, dialect)
-        data = list(islice(reader, size))
-
-    result = {
-        "metadata": {
-            "path": path,
-            "mimetype": "text/csv"
-        },
-        "data": data,
-        "annotations": []
-    }
-
-    if not "samples" in tool_context.state:
-        tool_context.state["samples"] = {}
-
-    tool_context.state["samples"][str(p)] = result
-
-    return tool_success("samples", result)
-
-import re
-import yaml
-
-def sample_markdown_file(file_path: str, tool_context: ToolContext):
-    """Reads the content of a markdown file.
-
+def sample_file(file_path: str, tool_context: ToolContext) -> dict:
+    """Samples a file by reading its content as text.
+    
+    Treats any file as text and reads up to a maximum of 100 lines.
+    
     Args:
       file_path: file to sample, relative to the import directory
-      tool_context: ToolContext object.
-
+      tool_context: ToolContext object
+      
     Returns:
         dict: A dictionary containing metadata about the content,
               along with a sampling of the file.
@@ -132,40 +85,43 @@ def sample_markdown_file(file_path: str, tool_context: ToolContext):
               If 'success', includes a 'metadata' key with content details.
               If 'error', includes an 'error_message' key.
     """
-
     import_dir_result = get_neo4j_import_directory(tool_context) # chain tool call
     if import_dir_result["status"] == "error": return import_dir_result
     import_dir = Path(import_dir_result["neo4j_import_dir"])
     p = import_dir / file_path
-    if not (p.exists()):
+    
+    if not p.exists():
         return tool_error(f"Path does not exist: {file_path}")
-
-    content = ""
-
-    try:
-        with open(p, 'r', encoding='utf-8') as mdfile:
-            full_text = mdfile.read()
-
-        content = full_text
-
-    except Exception as e:
-        return tool_error(f"Error reading or processing markdown file {file_path}: {e}")
-
+    
+    # Set basic metadata
     result = {
         "metadata": {
             "path": file_path,
-            "mimetype": "text/markdown"
         },
-        "content": content,
         "annotations": []
     }
-
-    if not "samples" in tool_context.state:
-        tool_context.state["samples"] = {}
-
-    tool_context.state["samples"][str(p)] = result
-
-    return tool_success("samples", result)
+    
+    # Set mimetype based on extension
+    file_extension = p.suffix.lower()
+    if file_extension == '.csv':
+        result["metadata"]["mimetype"] = "text/csv"
+    elif file_extension == '.md':
+        result["metadata"]["mimetype"] = "text/markdown"
+    else:
+        result["metadata"]["mimetype"] = "text/plain"
+    
+    try:
+        # Treat all files as text
+        with open(p, 'r', encoding='utf-8') as file:
+            # Read up to 100 lines
+            lines = list(islice(file, 100))
+            content = ''.join(lines)
+            result["content"] = content
+    
+    except Exception as e:
+        return tool_error(f"Error reading or processing file {file_path}: {e}")
+    
+    return tool_success("sample", result)
 
 
 def search_csv_file(file_path: str, query: str, tool_context: ToolContext, case_sensitive: bool = False) -> dict:
@@ -253,38 +209,6 @@ def search_csv_file(file_path: str, query: str, tool_context: ToolContext, case_
         "matching_rows": matching_rows
     }
     return tool_success("search_results", result_data)
-
-
-def show_sample(path: str, tool_context: ToolContext) -> dict:
-    """Shows the sample taken from a file along with any recorded annotations.
-
-    Args:
-      path: file to fetch, relative to the import directory.
-      tool_context: ToolContext object.
-
-    Returns:
-        dict: A dictionary containing the sample data.
-              Includes a 'status' key ('success' or 'error').
-              If 'success', includes 'retrieved_sample' with the sample details.
-              If 'error', includes an 'error_message' key.
-    """
-    import_dir_result = get_neo4j_import_directory(tool_context)
-    if import_dir_result["status"] == "error":
-        return import_dir_result
-    import_dir = Path(import_dir_result["neo4j_import_dir"])
-    
-    absolute_path_str = str(import_dir / path)
-
-    if "samples" not in tool_context.state:
-        return tool_error("No samples have been taken yet.")
-
-    if absolute_path_str not in tool_context.state["samples"]:
-        return tool_error(f"No sample found for path: {path}")
-
-    sample_data = tool_context.state["samples"][absolute_path_str]
-    
-    # Return the sample data
-    return tool_success("retrieved_sample", sample_data)
 
 
 def search_file(file_path: str, query: str, tool_context: ToolContext) -> dict:

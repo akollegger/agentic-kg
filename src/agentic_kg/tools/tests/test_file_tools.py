@@ -7,8 +7,8 @@ from pathlib import Path
 from unittest import TestCase, mock
 
 from agentic_kg.tools.file_tools import (
-    list_import_files, sample_markdown_file, get_neo4j_import_directory,
-    sample_csv_file, show_sample, search_file
+    list_import_files, get_neo4j_import_directory,
+    sample_file, search_file
 )
 
 
@@ -123,10 +123,10 @@ class TestFileTools(TestCase):
 
     def test_sample_markdown_file(self):
         """Test sampling a markdown file."""
-        result = sample_markdown_file("notes.md", self.tool_context)
+        result = sample_file("notes.md", self.tool_context)
         self.assertEqual(result['status'], 'success')
-        self.assertIn('samples', result)
-        sample = result['samples']
+        self.assertIn('sample', result)
+        sample = result['sample']
         self.assertEqual(sample['metadata']['path'], "notes.md")
         self.assertEqual(sample['metadata']['mimetype'], "text/markdown")
         self.assertNotIn('frontmatter', sample) # Ensure frontmatter key is removed
@@ -135,75 +135,19 @@ class TestFileTools(TestCase):
 
     def test_sample_markdown_empty_file(self):
         """Test sampling an empty markdown file."""
-        result = sample_markdown_file("md_empty.md", self.tool_context)
+        result = sample_file("md_empty.md", self.tool_context)
         self.assertEqual(result['status'], 'success')
-        sample = result['samples']
+        sample = result['sample']
         self.assertNotIn('frontmatter', sample) # Ensure frontmatter key is removed
         self.assertEqual(sample['content'], "")
 
     def test_sample_markdown_file_not_exists(self):
         """Test sampling a non-existent markdown file."""
-        result = sample_markdown_file("non_existent.md", self.tool_context)
+        result = sample_file("non_existent.md", self.tool_context)
         self.assertEqual(result['status'], 'error')
         self.assertIn("Path does not exist: non_existent.md", result.get('error_message', ''))
 
     # Tests for search_csv_file removed - using only search_file
-    # --- Tests for show_sample (after fix) --- 
-    def test_show_sample_csv_exists(self):
-        """Test showing a previously sampled CSV file."""
-        # First, sample the file
-        sample_csv_file("data.csv", 1, self.tool_context) # Sample 1 row
-        
-        result = show_sample("data.csv", self.tool_context)
-        self.assertEqual(result['status'], 'success')
-        retrieved_sample = result['retrieved_sample']
-        self.assertEqual(retrieved_sample['metadata']['path'], "data.csv")
-        self.assertEqual(retrieved_sample['metadata']['mimetype'], "text/csv")
-        self.assertEqual(len(retrieved_sample['data']), 1) # We sampled 1 row
-        # The first row is the header row
-        self.assertEqual(retrieved_sample['data'][0], ['id', 'name'])
-
-    def test_show_sample(self):
-        """Test showing a previously sampled file."""
-        # First, sample a file (using notes.md as it's simpler)
-        sample_markdown_file("notes.md", self.tool_context)
-        
-        result = show_sample("notes.md", self.tool_context)
-        self.assertEqual(result['status'], 'success')
-        retrieved_sample = result['retrieved_sample']
-        self.assertEqual(retrieved_sample['metadata']['path'], "notes.md")
-        # Check some expected keys, actual content checked in sample_markdown_file test
-        self.assertNotIn('frontmatter', retrieved_sample) # Ensure frontmatter key is removed
-        self.assertIn('content', retrieved_sample)
-        self.assertIn('annotations', retrieved_sample)
-
-    def test_show_sample_path_not_sampled(self):
-        """Test showing a sample for a path that has not been sampled."""
-        # Initialize the samples dictionary to test the specific case where samples exist but not for this path
-        self.tool_context.state["samples"] = {"some_other_path": {"data": "dummy_data"}}
-        result = show_sample("search_data.csv", self.tool_context) # This file exists but hasn't been 'sampled'
-        self.assertEqual(result['status'], 'error')
-        self.assertIn("No sample found for path: search_data.csv", result.get('error_message', ''))
-
-    def test_show_sample_no_samples_in_context(self):
-        """Test showing a sample when tool_context.state['samples'] is not initialized."""
-        self.tool_context.state = {} # Reset state to ensure 'samples' key is missing
-        result = show_sample("data.csv", self.tool_context)
-        self.assertEqual(result['status'], 'error')
-        self.assertIn("No samples have been taken yet.", result.get('error_message', ''))
-
-    def test_show_sample_file_does_not_exist_in_filesystem(self):
-        """Test showing a sample for a path that does not exist in the filesystem (but could have been sampled)."""
-        # Simulate a sample was taken for a file that was later deleted
-        sample_path_abs = str(self.import_dir / "deleted_file.csv")
-        self.tool_context.state["samples"] = {
-            sample_path_abs: {"metadata": {"path": "deleted_file.csv"}, "data": ["some_data"]}
-        }
-        result = show_sample("deleted_file.csv", self.tool_context)
-        self.assertEqual(result['status'], 'success') # show_sample retrieves from state, doesn't re-check filesystem
-        self.assertEqual(result['retrieved_sample']['metadata']['path'], "deleted_file.csv")
-        
-    # Tests for search_markdown_file removed - using only search_file
     # --- Tests for search_file (unified search) --- 
     def test_search_file_csv(self):
         """Test searching a CSV file using the unified search_file function."""

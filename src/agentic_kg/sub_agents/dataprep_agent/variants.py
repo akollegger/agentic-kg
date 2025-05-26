@@ -5,7 +5,7 @@ This module defines functions that return instruction prompts for the cypher age
 These instructions guide the agent's behavior, workflow, and tool usage.
 """
 
-from agentic_kg.tools import get_user_goal, list_import_files, sample_csv_file, search_file, sample_markdown_file, finished
+from agentic_kg.tools import get_user_goal, list_import_files, sample_file, search_file, finished
 
 variants = {    
     "dataprep_agent_v1":
@@ -18,7 +18,7 @@ variants = {
         You have access to only the Neo4j import directory. All file
         paths will be treated as relative to that directory.
         """,
-            "tools": [get_user_goal, list_import_files, sample_csv_file, finished]
+            "tools": [get_user_goal, list_import_files, sample_file, finished]
         },
     "dataprep_agent_v2":
         {
@@ -41,8 +41,7 @@ variants = {
             "tools": [
                 get_user_goal,
                 list_import_files,
-                sample_csv_file,
-                sample_markdown_file,
+                sample_file,
                 search_file,
                 finished
             ]
