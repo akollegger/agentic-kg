@@ -1,12 +1,13 @@
 from google.adk.agents import Agent
 
-from agentic_kg.sub_agents import cypher_agent, dataprep_agent
 from agentic_kg.common.config import llm
+
+from .sub_agents import cypher_agent, dataprep_agent
 
 # variants are pairs of instructions with tools
 from .variants import variants
 
-AGENT_NAME = "cypher_and_files_agent_v1"
+AGENT_NAME = "cypher_and_files_agent_v2"
 cypher_and_files_agent = Agent(
         name=AGENT_NAME,
         model=llm,

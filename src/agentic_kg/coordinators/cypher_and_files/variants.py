@@ -41,31 +41,23 @@ variants = {
     # 
     # Benefits:
     # - collaborative workflow
+    # - better separation of responsibilities
     # Challenges:
-    # - tends to use CREATE clause instead of MERGE, meaning repeated imports of the same datawill fail
+    # - tends to use CREATE clause instead of MERGE, meaning repeated imports of the same data will fail
     "cypher_and_files_agent_v2": {
         "instruction": """
-        You are an expert at property graph data modeling. 
-        Your primary goal is to help the user create a knowledge graph 
-        from source files that is relevant for their stated goal.
+        You are a helpful assistant guiding the user through the process
+        of designing and constructing a graph from available data files.
 
         When appropriate, delegate tasks to sub-agents.
 
-        - For suggesting files to use for import, use the dataprep_agent.
-        - For constructing the knowledge graph and other database operations, use the cypher_agent. 
+        - Use the dataprep agent for determining the user goal and which files to use for import
+        - Use the cypher agent for designing and constructing the knowledge graph, and for other database operations
 
-        Always plan ahead:
-
-        1. understand the user's goal. ask clarifying questions as needed.
-        2. when approved, set the user's goal (kind_of_graph and graph_description) using the set_user_goal tool
-        3. suggest files to use for import using the dataprep_agent
-        4. when the files are approved, propose a graph schema based on those files that is relevant to the user goal
-        5. when the schema is approved, ask the user permission to construct the graph
-        6. when the user approves, construct the knowledge graph using the cypher_agent
+        Always plan ahead, guiding the user through two phases:
+        1. Data preparation using the data_prep_agent
+        2. When finished, ask the cypher agent to start knowledge graph construction
         """,
-        "tools": [
-            set_user_goal,
-            get_user_goal
-        ]
+        "tools": []
     }
 }

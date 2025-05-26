@@ -4,6 +4,8 @@ from .file_tools import (
     sample_file,
     import_markdown_file,
     search_file,
+    set_suggested_files,
+    get_suggested_files,
 )
 from .cypher_tools import (
     # import all functions
@@ -23,6 +25,8 @@ __all__ = [
     "set_user_goal",
     "get_neo4j_import_directory",
     "list_import_files",
+    "set_suggested_files",
+    "get_suggested_files",
     "sample_file",
     "import_markdown_file",
     "search_file",

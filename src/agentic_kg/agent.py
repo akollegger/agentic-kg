@@ -12,16 +12,16 @@ validate_env()
 # Agents:
 #   - coordinators/just_cypher/agent
 #   - coordinators/just_cypher/sub_agents/cypher_agent
-from .coordinators.just_cypher.agent import cypher_agent
-root_agent = cypher_agent
+# from .coordinators.just_cypher.agent import cypher_agent
+# root_agent = cypher_agent
 
 ## cypher and files - a single agent that can read/write arbitrary cypher and files
 # Agents:
-#   - coordinators/cypher_and_files.agent as `cypher_and_files_agent`
-#   - sub_agents/dataprep_agent as `dataprep_agent_v1`
-#   - sub_agents/cypher_agent as `cypher_agent_v1`
-# from .coordinators.cypher_and_files.agent import cypher_and_files_agent
-# root_agent = cypher_and_files_agent
+#   - coordinators/cypher_and_files.agent 
+#   - coordinators/cypher_and_files/sub_agents/dataprep_agent 
+#   - coordinators/cypher_and_files/sub_agents/cypher_agent 
+from .coordinators.cypher_and_files.agent import cypher_and_files_agent
+root_agent = cypher_and_files_agent
 
 ## full workflow - full multi-agent system
 # Agents:

@@ -56,9 +56,25 @@ def list_import_files(tool_context:ToolContext) -> dict:
 
     return tool_success("files", file_names)
 
-def set_suggested_files(suggest_files:List[str]) -> Dict[str, Any]:
+def set_suggested_files(suggest_files:List[str], tool_context:ToolContext) -> Dict[str, Any]:
+    """Set the files to be used for data import.
+    """
     tool_context.state[SUGGESTED_FILES] = suggest_files
     return tool_success("suggested_files", suggest_files)
+
+def get_suggested_files(tool_context:ToolContext) -> Dict[str, Any]:
+    """Get the suggested files to be used for import.
+
+    Returns:
+        dict: A dictionary containing success or failure information.
+              Includes a 'status' key ('success' or 'error').
+              If 'success', includes a 'suggested_files' key with list of files.
+              If 'error', includes an 'error_message' key.
+
+    """
+    if SUGGESTED_FILES not in tool_context.state:
+        return tool_error("Suggested files have not been set. Take no action other than to inform user.")
+    return tool_success("suggested_files", tool_context.state[SUGGESTED_FILES])
 
 def accept_suggested_file_list(tool_context:ToolContext) -> Dict[str, Any]:
     f"""Accepts the {SUGGESTED_FILES} in state for further processing."""
