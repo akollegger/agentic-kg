@@ -1,0 +1,5 @@
+**Review of "Extraordinary Measures"**  
+**Rating: 4 - great**
+
+As a devoted fan of both movies and real-life stories that resonate with the human spirit, I found "Extraordinary Measures" to be a compelling and heartfelt drama. The film beautifully captures the lengths to which a father will go for his children, which hit home for me as I often think about the future we'd like to create for our own families—no matter how many political hurdles we face. The performances were strong, making the emotional moments truly impactful. While I usually enjoy a good distraction from my gardening and fashion pursuits, this movie reminded me of the importance of perseverance and taking action, themes that we can all relate to as we navigate our own challenges in life. Would definitely recommend it to friends who appreciate a warm, motivational watch!  
+— @ndidonna_360

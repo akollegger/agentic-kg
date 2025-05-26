@@ -1,0 +1,3 @@
+**Rating: 4 - great**
+
+@dhaden_55: "Extraordinary Measures" is a deeply moving drama that strikes a chord with anyone who cares about social issues and the power of perseverance. The film tells the true story of John Crowley and his relentless quest to find a cure for his children's rare disease, highlighting the challenges of navigating the business side of medical research. As a movie fan with an interest in activism, I found the portrayal of both the emotional and entrepreneurial struggles to be incredibly compelling. The performances were heartfelt and resonated with my passion for stories that inspire change. I would definitely recommend this film to friends, especially those who appreciate stories that blend family love with social cause activism.
