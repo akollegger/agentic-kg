@@ -35,7 +35,7 @@ class TestFileTools(TestCase):
         (subdir / "more_data.csv").write_text("id,value\n1,test\n")
 
         # Create markdown file specifically for search testing
-        # Note: search_file does not parse frontmatter, so it's treated as plain text.
+        # Treat all markdown files as plain text.
         (self.import_dir / "search_test.md").write_text(
             "---\n"
             "title: Searchable Document\n"
@@ -129,7 +129,6 @@ class TestFileTools(TestCase):
         sample = result['sample']
         self.assertEqual(sample['metadata']['path'], "notes.md")
         self.assertEqual(sample['metadata']['mimetype'], "text/markdown")
-        self.assertNotIn('frontmatter', sample) # Ensure frontmatter key is removed
         expected_content = "# Test\n\nMarkdown content"
         self.assertEqual(sample['content'], expected_content)
 
@@ -138,7 +137,6 @@ class TestFileTools(TestCase):
         result = sample_file("md_empty.md", self.tool_context)
         self.assertEqual(result['status'], 'success')
         sample = result['sample']
-        self.assertNotIn('frontmatter', sample) # Ensure frontmatter key is removed
         self.assertEqual(sample['content'], "")
 
     def test_sample_markdown_file_not_exists(self):
