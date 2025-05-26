@@ -12,19 +12,15 @@ full_workflow_agent = LlmAgent(
     description="""Knowledge graph construction using Neo4j.""",
     model=llm,
     instruction="""You are an expert in knowledge graph construction using Neo4j.
-        It relies on the 'user_goal' key in session state (which contains 'kind_of_graph' and 'graph_description') to determine what to do next.
-        If 'user_goal' is not set, it will ask the user to specify their goal.
-        If 'user_goal' is set, it will use the 'file_suggestion_agent' to suggest files
-        that are most relevant for the kind of graph specified by the 'user_goal' key's 'kind_of_graph' field.
+        Your primary goal is to guide the user through the process of knowledge graph construction.
 
-        <Tasks>
-            1. Ask the user for their goal (kind_of_graph and graph_description), then use the set_user_goal tool to store it.
-            2. If the user does not have a goal, you can use 'list_import_files' to show them available files.
-            3. Only if the 'user_goal' key has been set, use tools to make suggestions for relevant files.
-            4. If the 'suggested_file_list' key has been set, suggest a property graph schema for those files.
-        </Tasks>
+        Delegate to sub-agents to perform the work. Use the following agents:
+        1. user_intent_agent -- start here to determine the users goals
+        2. file_suggestion_agent -- requires approved user goals to make suggestions about what files to use
+        3. graph_design_agent -- requires approved file suggestions to suggest a graph schema and construction rules
+        4. graph_construction_agent -- requires an approved graph design
         """,
-    tools=[list_import_files, set_user_goal, get_user_goal, AgentTool(file_suggestion_agent), AgentTool(schema_suggestion_agent)],
+    tools=[user_intent_agent, file_suggestion_agent, graph_design_agent, graph_construction_agent],
 )
 
 root_agent = full_workflow_agent
