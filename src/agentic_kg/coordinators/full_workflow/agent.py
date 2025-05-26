@@ -3,11 +3,11 @@ from google.adk.tools.agent_tool import AgentTool
 
 from agentic_kg.common.config import llm
 
-from agentic_kg.tools import set_user_goal, list_import_files
+from agentic_kg.tools import set_user_goal, get_user_goal, list_import_files
 from .sub_agents import file_suggestion_agent, schema_suggestion_agent
 
 
-kg_construction_agent = LlmAgent(
+full_workflow_agent = LlmAgent(
     name="kg_construction_agent_v1",
     description="""Knowledge graph construction using Neo4j.""",
     model=llm,
@@ -19,11 +19,12 @@ kg_construction_agent = LlmAgent(
 
         <Tasks>
             1. Ask the user for their goal (kind_of_graph and graph_description), then use the set_user_goal tool to store it.
-            2. If the 'user_goal' key has been set, use the tool 'suggest_import_files' to find out what to use.
-            3. If the 'current_file_list' key has been set, use the tool 'schema_suggestion_agent' to suggest a schema.
+            2. If the user does not have a goal, you can use 'list_import_files' to show them available files.
+            3. Only if the 'user_goal' key has been set, use tools to make suggestions for relevant files.
+            4. If the 'suggested_file_list' key has been set, suggest a property graph schema for those files.
         </Tasks>
         """,
-    tools=[set_user_goal, list_import_files, AgentTool(file_suggestion_agent), AgentTool(schema_suggestion_agent)],
+    tools=[list_import_files, set_user_goal, get_user_goal, AgentTool(file_suggestion_agent), AgentTool(schema_suggestion_agent)],
 )
 
-root_agent = kg_construction_agent
+root_agent = full_workflow_agent

@@ -3,8 +3,14 @@ Neo4j utility functions for CLI tools.
 """
 import os
 from typing import Dict, Any, Optional
+from pathlib import Path
 
+from dotenv import load_dotenv
 from neo4j import GraphDatabase
+
+# Load environment variables from .env file
+dotenv_path = Path(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))) / '.env'
+load_dotenv(dotenv_path=dotenv_path)
 
 
 def load_neo4j_env() -> Dict[str, Any]:

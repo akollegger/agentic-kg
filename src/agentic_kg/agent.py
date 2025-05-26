@@ -11,8 +11,8 @@ validate_env()
 ## just cypher - a single agent that can read/write arbitrary cypher
 # Agents:
 #   - sub_agents/cypher_agent as `cypher_root_agent`
-from .sub_agents import cypher_agent
-root_agent = cypher_agent
+# from .sub_agents import cypher_agent
+# root_agent = cypher_agent
 
 ## cypher and files - a single agent that can read/write arbitrary cypher and files
 # Agents:
@@ -22,8 +22,14 @@ root_agent = cypher_agent
 # from .coordinators.cypher_and_files.agent import cypher_and_files_agent
 # root_agent = cypher_and_files_agent
 
-# from .coordinators.full_workflow.agent import kg_construction_agent
-# root_agent = kg_construction_agent
+## full workflow - full multi-agent system
+# Agents:
+#   - coordinators/full_workflow.agent as `full_workflow_agent_v1`
+#   - coordinators/full_workflow/sub_agents/file_suggestion_agent.agent as `file_suggestion_agent_v1`
+#   - coordinators/full_workflow/sub_agents/schema_suggestion_agent.agent as `schema_suggestion_agent_v1`
+#   - sub_agents/cypher_agent as `cypher_agent_v1`
+from .coordinators.full_workflow.agent import full_workflow_agent
+root_agent = full_workflow_agent
 
 # from .sub_agents.unstructured_data_agent.agent import unstructured_data_agent
 # root_agent = unstructured_data_agent

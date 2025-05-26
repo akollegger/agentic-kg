@@ -207,11 +207,11 @@ def copy_to_import(verbose: bool, flatten: bool, clear: bool, sources: List[str]
                 # Handle single file copy
                 # Determine destination path
                 if dest_filename is None:
-                    if mirror:
-                        # Preserve the relative path structure (mirror mode)
+                    if not flatten:
+                        # Preserve the relative path structure (mirror mode - default)
                         destination_path = Path(import_dir) / source_path
                     else:
-                        # Flat structure (default mode)
+                        # Flat structure (flatten mode)
                         destination_path = Path(import_dir) / source_path.name
                 else:
                     # When renaming, just use the new filename at the root of import dir
