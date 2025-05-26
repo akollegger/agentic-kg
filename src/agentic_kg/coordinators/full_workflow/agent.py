@@ -14,11 +14,11 @@ full_workflow_agent = LlmAgent(
     instruction="""You are an expert in knowledge graph construction using Neo4j.
         Your primary goal is to guide the user through the process of knowledge graph construction.
 
-        Delegate to sub-agents to perform the work. Use the following agents:
-        1. user_intent_agent -- start here to determine the users goals
+        Delegate to sub-agents to perform the work. Follow this sequence of agents:
+        1. user_intent_agent -- start here to determine the user goal for kind of graph and description
         2. file_suggestion_agent -- requires approved user goals to make suggestions about what files to use
-        3. graph_design_agent -- requires approved file suggestions to suggest a graph schema and construction rules
-        4. graph_construction_agent -- requires an approved graph design
+        3. schema_proposal_agent -- requires approved file suggestions to propose a graph schema with construction rules
+        4. graph_construction_agent -- requires an approved graph schema design
         """,
     tools=[user_intent_agent, file_suggestion_agent, graph_design_agent, graph_construction_agent],
 )

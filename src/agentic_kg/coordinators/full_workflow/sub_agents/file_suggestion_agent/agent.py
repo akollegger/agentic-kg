@@ -54,13 +54,12 @@ file_critic = Agent(
     """,
     tools=[list_import_files, sample_file],
     input_schema=FileSuggestionsInput,
-    output_key=STATE_SUGGESTED_FILES,
 )
 
-suggest_import_files_sequence = SequentialAgent(
+file_suggestion_agent = SequentialAgent(
     name="suggest_import_files",
     description="Suggests appropriate files for import by executing a sequence that lists all files, then refines the entries for relevance.",
     sub_agents=[initial_file_listing, file_critic],
 )
 
-root_agent = suggest_import_files_sequence
+root_agent = file_suggestion_agent
