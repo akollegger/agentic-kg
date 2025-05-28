@@ -4,7 +4,7 @@ from google.adk.tools.agent_tool import AgentTool
 from agentic_kg.common.config import llm
 
 from agentic_kg.tools import set_user_goal, get_user_goal, list_import_files
-from .sub_agents import file_suggestion_agent, schema_suggestion_agent
+from .sub_agents import user_intent_agent, file_suggestion_agent, schema_proposal_agent, graph_construction_agent
 
 
 full_workflow_agent = LlmAgent(
@@ -20,7 +20,7 @@ full_workflow_agent = LlmAgent(
         3. schema_proposal_agent -- requires approved file suggestions to propose a graph schema with construction rules
         4. graph_construction_agent -- requires an approved graph schema design
         """,
-    tools=[user_intent_agent, file_suggestion_agent, graph_design_agent, graph_construction_agent],
+    sub_agents=[user_intent_agent, file_suggestion_agent, schema_proposal_agent, graph_construction_agent],
 )
 
 root_agent = full_workflow_agent

@@ -20,8 +20,8 @@ validate_env()
 #   - coordinators/cypher_and_files.agent 
 #   - coordinators/cypher_and_files/sub_agents/dataprep_agent 
 #   - coordinators/cypher_and_files/sub_agents/cypher_agent 
-from .coordinators.cypher_and_files.agent import cypher_and_files_agent
-root_agent = cypher_and_files_agent
+# from .coordinators.cypher_and_files.agent import cypher_and_files_agent
+# root_agent = cypher_and_files_agent
 
 ## full workflow - full multi-agent system
 # Agents:
@@ -29,8 +29,8 @@ root_agent = cypher_and_files_agent
 #   - coordinators/full_workflow/sub_agents/file_suggestion_agent.agent as `file_suggestion_agent_v1`
 #   - coordinators/full_workflow/sub_agents/schema_suggestion_agent.agent as `schema_suggestion_agent_v1`
 #   - sub_agents/cypher_agent as `cypher_agent_v1`
-# from .coordinators.full_workflow.agent import full_workflow_agent
-# root_agent = full_workflow_agent
+from .coordinators.full_workflow.agent import full_workflow_agent
+root_agent = full_workflow_agent
 
 # from .sub_agents.unstructured_data_agent.agent import unstructured_data_agent
 # root_agent = unstructured_data_agent

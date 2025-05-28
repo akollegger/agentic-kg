@@ -1,7 +1,6 @@
 from google.adk.agents import Agent
 
 from agentic_kg.common.config import llm
-from .sub_agents import cypher_agent
 
 # variants are pairs of instructions with tools
 from .variants import variants

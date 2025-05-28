@@ -12,9 +12,9 @@ from agentic_kg.common.util import tool_success, tool_error
 
 logger = logging.getLogger(__name__)
 
-CURRENT_FILES = "current_file_list"
+ALL_AVAILABLE_FILES = "all_available_file_list"
 SUGGESTED_FILES = "suggested_file_list"
-ACCEPTED_FILES = "accepted_file_list"
+APPROVED_FILES = "approved_file_list"
 
 def get_neo4j_import_directory(tool_context:ToolContext) -> Dict[str, Any]:
     """Queries Neo4j to find the location of the server's import directory,
@@ -33,7 +33,7 @@ def list_import_files(tool_context:ToolContext) -> dict:
     f"""Lists files available in the configured Neo4j import directory
     that are ready for import by Neo4j.
 
-    Saves the list to {CURRENT_FILES} in state.
+    Saves the list to {ALL_AVAILABLE_FILES} in state.
 
     Returns:
         dict: A dictionary containing metadata about the content.
@@ -52,15 +52,15 @@ def list_import_files(tool_context:ToolContext) -> dict:
                  for x in import_dir.rglob("*") 
                  if x.is_file() and x.suffix.lower() in supported_extensions]
 
-    tool_context.state[CURRENT_FILES] = file_names
+    tool_context.state[ALL_AVAILABLE_FILES] = file_names
 
-    return tool_success("files", file_names)
+    return tool_success(ALL_AVAILABLE_FILES, file_names)
 
 def set_suggested_files(suggest_files:List[str], tool_context:ToolContext) -> Dict[str, Any]:
     """Set the files to be used for data import.
     """
     tool_context.state[SUGGESTED_FILES] = suggest_files
-    return tool_success("suggested_files", suggest_files)
+    return tool_success(SUGGESTED_FILES, suggest_files)
 
 def get_suggested_files(tool_context:ToolContext) -> Dict[str, Any]:
     """Get the suggested files to be used for import.
@@ -74,16 +74,24 @@ def get_suggested_files(tool_context:ToolContext) -> Dict[str, Any]:
     """
     if SUGGESTED_FILES not in tool_context.state:
         return tool_error("Suggested files have not been set. Take no action other than to inform user.")
-    return tool_success("suggested_files", tool_context.state[SUGGESTED_FILES])
+    return tool_success(SUGGESTED_FILES, tool_context.state[SUGGESTED_FILES])
 
-def accept_suggested_file_list(tool_context:ToolContext) -> Dict[str, Any]:
-    f"""Accepts the {SUGGESTED_FILES} in state for further processing."""
+def approve_suggested_files(tool_context:ToolContext) -> Dict[str, Any]:
+    f"""Approves the {SUGGESTED_FILES} in state for further processing as {APPROVED_FILES}."""
     
     if SUGGESTED_FILES not in tool_context.state:
         return tool_error("Current files have not been set. Take no action other than to inform user.")
 
-    tool_context.state[ACCEPTED_FILES] = tool_context.state[SUGGESTED_FILES]
+    tool_context.state[APPROVED_FILES] = tool_context.state[SUGGESTED_FILES]
 
+
+def get_approved_files(tool_context:ToolContext) -> Dict[str, Any]:
+    f"""Get the files that have been approved for importing into a knowledge graph."""
+    
+    if APPROVED_FILES not in tool_context.state:
+        return tool_error("Approved files have not been set.")
+
+    return tool_success(APPROVED_FILES, tool_context.state[APPROVED_FILES])
 
 def sample_file(file_path: str, tool_context: ToolContext) -> dict:
     """Samples a file by reading its content as text.
