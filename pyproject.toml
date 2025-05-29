@@ -19,6 +19,8 @@ dependencies = [
     "inflect>=6.0.0",
     "spacy>=3.7.0",
     "pyyaml>=6.0.2",
+    "ipykernel>=6.29.5",
+    "pip>=25.1.1",
 ]
 
 [dependency-groups]
