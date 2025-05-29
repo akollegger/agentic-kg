@@ -1,7 +1,9 @@
 import os
-from typing import Any, Dict, List, TypedDict, Union
-import re
+from typing import Any, Dict
 import atexit
+
+from dotenv import load_dotenv
+load_dotenv()
 
 from neo4j import (
     GraphDatabase,
@@ -21,57 +23,6 @@ def tool_error(message: str) -> Dict[str, Any]:
         'status': 'error',
         'error_message': message
     }
-
-
-class Neo4jSettings(TypedDict):
-    neo4j_uri: str
-    neo4j_username: str
-    neo4j_password: str
-    neo4j_database: str
-
-
-def is_symbol(symbol: str) -> bool:
-    """Validate that a string is a valid Neo4j symbol (no spaces, not a Cypher keyword).
-    
-    Args:
-        symbol: The string to validate
-        
-    Returns:
-        True if the string is a valid symbol, False otherwise
-    """
-    # Check for spaces
-    if ' ' in symbol:
-        return False
-        
-    # Common Cypher keywords that should not be used as identifiers
-    cypher_keywords = [
-        'MATCH', 'RETURN', 'WHERE', 'CREATE', 'DELETE', 'REMOVE', 'SET',
-        'ORDER', 'BY', 'SKIP', 'LIMIT', 'MERGE', 'ON', 'OPTIONAL', 'DETACH',
-        'WITH', 'DISTINCT', 'CASE', 'WHEN', 'THEN', 'ELSE', 'END', 'AS',
-        'UNION', 'ALL', 'LOAD', 'CSV', 'FROM', 'START', 'YIELD', 'CALL',
-        'CONSTRAINT', 'ASSERT', 'INDEX', 'UNIQUE', 'DROP', 'EXISTS', 'USING',
-        'PERIODIC', 'COMMIT', 'FOREACH', 'TRUE', 'FALSE', 'NULL', 'NOT', 'AND', 'OR', 'XOR',
-        'IS', 'IN', 'STARTS', 'ENDS', 'CONTAINS'
-    ]
-    
-    # Check if the symbol is a Cypher keyword (case-insensitive)
-    if symbol.upper() in cypher_keywords:
-        return False
-        
-    return True
-
-
-def is_write_query(query: str) -> bool:
-    """Check if the Cypher query performs any write operations."""
-    return (
-        re.search(r"\b(MERGE|CREATE|SET|DELETE|REMOVE|ADD)\b", query, re.IGNORECASE)
-        is not None
-    )
-
-def result_to_adk(result: Result) -> Dict[str, Any]:
-    eager_result = result.to_eager_result()
-    records = [to_python(record.data()) for record in eager_result.records]
-    return tool_success("query_result",records)
 
 def to_python(value):
     from neo4j.graph import Node, Relationship, Path
@@ -108,6 +59,12 @@ def to_python(value):
         return str(value)
     else:
         return value
+
+
+def result_to_adk(result: Result) -> Dict[str, Any]:
+    eager_result = result.to_eager_result()
+    records = [to_python(record.data()) for record in eager_result.records]
+    return tool_success("query_result",records)
 
 
 class Neo4jForADK:
