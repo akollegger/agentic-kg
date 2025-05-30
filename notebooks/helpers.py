@@ -42,7 +42,7 @@ class AgentCaller:
 
         self.session = self.runner.session_service.get_session(app_name=self.runner.app_name, user_id=self.user_id, session_id=self.session_id)
         if verbose:
-            print(f"\n  [Session State]: {self.session.state}")
+            print(f"  [Session State]: {self.session.state}")
 
         print(f"<<< Agent Response: {final_response_text}")
         return final_response_text
