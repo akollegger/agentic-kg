@@ -7,10 +7,9 @@ from typing import Optional, Dict, Any
 class AgentCaller:
     """A simple wrapper class for interacting with an ADK agent."""
     
-    def __init__(self, agent: Agent, session: Session, runner: Runner, user_id: str, session_id: str):
+    def __init__(self, agent: Agent, runner: Runner, user_id: str, session_id: str):
         """Initialize the AgentCaller with required components."""
         self.agent = agent
-        self.session = session
         self.runner = runner
         self.user_id = user_id
         self.session_id = session_id
@@ -40,9 +39,10 @@ class AgentCaller:
                     final_response_text = f"Agent escalated: {event.error_message or 'No specific message.'}"
                 break # Stop processing events once the final response is found
 
+
+        self.session = self.runner.session_service.get_session(app_name=self.runner.app_name, user_id=self.user_id, session_id=self.session_id)
         if verbose:
-            state = self.runner.session_service.get_session(app_name=self.runner.app_name, user_id=self.user_id, session_id=self.session_id).state
-            print(f"\n  [Session State]: {state}")
+            print(f"\n  [Session State]: {self.session.state}")
 
         print(f"<<< Agent Response: {final_response_text}")
         return final_response_text
@@ -54,7 +54,8 @@ def make_agent_caller(agent: Agent, initial_state: Optional[Dict[str, Any]] = {}
     user_id = agent.name + "_user"
     session_id = agent.name + "_session_01"
     
-    session = session_service.create_session(
+    # Initialize a session
+    session_service.create_session(
         app_name=app_name,
         user_id=user_id,
         session_id=session_id,
@@ -67,4 +68,4 @@ def make_agent_caller(agent: Agent, initial_state: Optional[Dict[str, Any]] = {}
         session_service=session_service
     )
     
-    return AgentCaller(agent, session, runner, user_id, session_id)
+    return AgentCaller(agent, runner, user_id, session_id)
