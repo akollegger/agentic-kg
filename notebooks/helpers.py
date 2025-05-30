@@ -1,27 +1,22 @@
 from google.genai import types # For creating message Content/Parts
 from google.adk.agents import Agent
-from google.adk.sessions import InMemorySessionService
+from google.adk.sessions import InMemorySessionService, Session
 from google.adk.runners import Runner
+from typing import Optional, Dict, Any
 
-def make_agent_caller(agent:Agent):
-    session_service = InMemorySessionService()
-    app_name = agent.name + "_app"
-    user_id = agent.name + "_user"
-    session_id = agent.name + "_session_01"
+class AgentCaller:
+    """A simple wrapper class for interacting with an ADK agent."""
     
-    session = session_service.create_session(
-        app_name=app_name,
-        user_id=user_id,
-        session_id=session_id
-    )
+    def __init__(self, agent: Agent, session: Session, runner: Runner, user_id: str, session_id: str):
+        """Initialize the AgentCaller with required components."""
+        self.agent = agent
+        self.session = session
+        self.runner = runner
+        self.user_id = user_id
+        self.session_id = session_id
     
-    runner = Runner(
-        agent=agent,
-        app_name=app_name,
-        session_service=session_service
-    )
-    
-    async def call_agent_async(query: str, verbose: bool = False):
+    async def call(self, query: str, verbose: bool = False):
+        """Call the agent with a query and return the response."""
         print(f"\n>>> User Query: {query}")
 
         # Prepare the user's message in ADK format
@@ -31,7 +26,7 @@ def make_agent_caller(agent:Agent):
 
         # Key Concept: run_async executes the agent logic and yields Events.
         # We iterate through events to find the final answer.
-        async for event in runner.run_async(user_id=user_id, session_id=session_id, new_message=content):
+        async for event in self.runner.run_async(user_id=self.user_id, session_id=self.session_id, new_message=content):
             # You can uncomment the line below to see *all* events during execution
             if verbose:
                 print(f"  [Event] Author: {event.author}, Type: {type(event).__name__}, Final: {event.is_final_response()}, Content: {event.content}")
@@ -45,7 +40,31 @@ def make_agent_caller(agent:Agent):
                     final_response_text = f"Agent escalated: {event.error_message or 'No specific message.'}"
                 break # Stop processing events once the final response is found
 
+        if verbose:
+            state = self.runner.session_service.get_session(app_name=self.runner.app_name, user_id=self.user_id, session_id=self.session_id).state
+            print(f"\n  [Session State]: {state}")
+
         print(f"<<< Agent Response: {final_response_text}")
         return final_response_text
 
-    return call_agent_async
+def make_agent_caller(agent: Agent, initial_state: Optional[Dict[str, Any]] = {}) -> AgentCaller:
+    """Create and return an AgentCaller instance for the given agent."""
+    session_service = InMemorySessionService()
+    app_name = agent.name + "_app"
+    user_id = agent.name + "_user"
+    session_id = agent.name + "_session_01"
+    
+    session = session_service.create_session(
+        app_name=app_name,
+        user_id=user_id,
+        session_id=session_id,
+        state=initial_state
+    )
+    
+    runner = Runner(
+        agent=agent,
+        app_name=app_name,
+        session_service=session_service
+    )
+    
+    return AgentCaller(agent, session, runner, user_id, session_id)
