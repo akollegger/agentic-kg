@@ -1,0 +1,9 @@
+component_name,quantity,part_number,parent_part_number
+Top Panel,1,A-1066,P-1007
+Side Panels,2,A-1067,P-1007
+Bottom Panel,1,A-1068,P-1007
+Back Panel,1,A-1069,P-1007
+Drawers,4,A-1070,P-1007
+Drawer Handles,4,A-1071,P-1007
+Screws,36,A-1072,P-1007
+Allen Key,1,A-1073,P-1007

@@ -1,0 +1,31 @@
+supplier_part_number,customer_part_number,description,category,unit_price,minimum_order,stock_quantity,lead_time_days
+017-GIRTFX,,Power Button,Electronics,91.39,55,8293,23
+017-R3VJUC,,Bluetooth Module,Electronics,97.15,58,4178,14
+017-QTZ9WG,,Power Cord,Electronics,10.74,197,3994,18
+017-Y7QUUR,,WiFi Module,Electronics,87.53,128,4092,20
+017-STO53W,,Audio Jack,Electronics,90.41,187,1198,4
+017-KBY8NS,,Battery Pack,Electronics,62.92,83,5409,20
+017-9X1G4U,,Light Sensor,Electronics,85.78,102,3267,30
+017-6XV20L,,HDMI Port,Electronics,97.19,47,1834,24
+017-VFEXP2,,Cable Clip,Electronics,96.76,163,7615,28
+017-NL8Y40,,Wire Connector,Electronics,3.53,38,4045,8
+017-ELELEQ,,Remote Control,Electronics,31.08,36,2706,11
+017-5BD87P,,Dimmer Switch,Electronics,86.10,153,9164,11
+017-HAUX7J,,Cable Organizer,Electronics,84.39,148,9752,20
+017-BKVX44,,Circuit Board,Electronics,11.28,184,7184,9
+017-0T08YL,,Motion Sensor,Electronics,51.26,194,1045,14
+017-JYBJO8,,Touch Sensor,Electronics,32.41,140,8522,25
+017-11C9WX,,Charging Port,Electronics,53.87,107,6598,7
+017-UG561D,,Wireless Charger,Electronics,5.05,141,8904,6
+017-TJ2JQT,,Display Screen,Electronics,32.14,52,1756,10
+017-AK7BTD,,Microphone,Electronics,49.42,65,506,30
+017-RLA8C6,,Camera Module,Electronics,11.35,146,4571,25
+017-JDYSAL,,Control Panel,Electronics,38.19,200,9625,23
+017-CXKFKZ,,LED Strip,Electronics,81.32,50,1975,26
+017-APYTKM,,Power Supply,Electronics,79.80,155,4208,8
+017-9IZ81T,,Light Socket,Electronics,29.86,183,1166,7
+017-RLYOS1,,USB Port,Electronics,38.75,31,9530,30
+017-4WBHYV,,LED Light,Electronics,76.70,45,4870,3
+017-7G3RI3,,Cooling Fan,Electronics,98.65,128,9419,9
+017-R4BBDP,,Heat Sink,Electronics,40.23,84,2056,27
+017-5AP6EV,,Speaker Unit,Electronics,9.43,32,6342,21

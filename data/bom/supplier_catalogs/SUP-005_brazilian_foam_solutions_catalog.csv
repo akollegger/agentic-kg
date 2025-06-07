@@ -1,0 +1,35 @@
+supplier_part_number,customer_part_number,description,category,unit_price,minimum_order,stock_quantity,lead_time_days
+005-NTP5RZ,S-1093,Foam Padding,Foam,7.43,100,9598,20
+005-SNXT8M,S-1097,Foam Insert,Foam,22.06,71,3873,18
+005-7E3FLL,S-1108,Foam Padding,Foam,14.41,50,9820,20
+005-86WTDV,S-1112,Foam Insert,Foam,24.71,99,830,30
+005-WSJTBL,,Foam Padding,Foam,5.56,127,3457,29
+005-CL29M3,,Latex Foam,Foam,5.85,42,1146,27
+005-EKGMMF,,Foam Sheet,Foam,73.43,26,8473,23
+005-3QB4O9,,Foam Cube,Foam,67.79,25,8575,22
+005-KDAOKZ,,Polyurethane Foam,Foam,62.03,78,6207,22
+005-HE3FX7,,Foam Cylinder,Foam,87.14,190,1410,5
+005-PZM7SQ,,Convoluted Foam,Foam,69.14,18,345,19
+005-95Q7OK,,Foam Block,Foam,49.36,85,2120,11
+005-VNGK9P,,Outdoor Foam,Foam,28.70,187,4137,4
+005-242DY1,,Foam Gasket,Foam,26.16,94,1168,22
+005-I2BWE0,,Foam Insulation,Foam,31.11,69,7064,5
+005-A7QNQL,,Foam Filter,Foam,6.78,183,3720,29
+005-6Z7BUM,,Rebond Foam,Foam,53.99,87,2907,11
+005-LK2Q0R,,Foam Cushion,Foam,76.48,19,3875,21
+005-4V9ZZ3,,High-Density Foam,Foam,17.46,92,1245,15
+005-F53ZX4,,Marine Foam,Foam,3.64,106,2775,14
+005-MKFEHB,,Foam Wedge,Foam,10.37,66,3972,10
+005-XPP37R,,Foam Seal,Foam,0.88,164,9678,5
+005-4VMI7R,,Waterproof Foam,Foam,36.49,167,8944,15
+005-4OQBGV,,Memory Foam,Foam,78.40,169,8594,3
+005-HY0IZ0,,Egg Crate Foam,Foam,42.65,33,6638,27
+005-GVQWM2,,Foam Insert,Foam,24.45,130,8262,25
+005-OWMF94,,Foam Strip,Foam,1.90,133,9273,28
+005-5V62PG,,Anti-Static Foam,Foam,87.94,133,7473,21
+005-1K4FHI,,Foam Topper,Foam,4.09,65,5090,5
+005-0IMX5G,,Fire Retardant Foam,Foam,72.22,200,2866,11
+005-CX5RVH,,Open Cell Foam,Foam,2.02,133,1758,15
+005-P7WU6R,,Acoustic Foam,Foam,82.25,137,5207,5
+005-P0EQBM,,Closed Cell Foam,Foam,98.07,107,2420,28
+005-4P4M7G,,Foam Tape,Foam,89.67,151,6640,15

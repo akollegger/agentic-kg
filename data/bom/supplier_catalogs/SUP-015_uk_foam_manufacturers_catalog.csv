@@ -1,0 +1,35 @@
+supplier_part_number,customer_part_number,description,category,unit_price,minimum_order,stock_quantity,lead_time_days
+015-7N088Z,S-1093,Foam Padding,Foam,40.06,45,9206,28
+015-9BV3BI,S-1097,Foam Insert,Foam,10.71,11,9226,14
+015-6P55KC,S-1108,Foam Padding,Foam,11.09,32,7396,25
+015-DT5TRB,S-1112,Foam Insert,Foam,7.01,59,7995,23
+015-KV41KG,,Anti-Static Foam,Foam,44.11,105,9385,22
+015-S18MEH,,Rebond Foam,Foam,87.02,15,163,26
+015-QW4PPF,,Foam Seal,Foam,74.17,102,5448,6
+015-4FXGWR,,Foam Cushion,Foam,92.09,104,4125,20
+015-YLCO0C,,Marine Foam,Foam,56.68,57,2469,9
+015-LC1VBK,,Foam Insulation,Foam,93.38,163,2919,22
+015-A38PIS,,Foam Strip,Foam,34.99,93,1771,17
+015-G1YL7G,,Fire Retardant Foam,Foam,94.49,47,6166,3
+015-EIZY7J,,Foam Filter,Foam,52.01,45,2099,7
+015-X4XSWI,,Latex Foam,Foam,51.78,45,7167,15
+015-HU8OIT,,Memory Foam,Foam,77.17,169,6739,22
+015-IN7WHM,,Acoustic Foam,Foam,82.76,102,466,21
+015-0PMOVD,,Egg Crate Foam,Foam,42.10,103,4045,18
+015-98CAGA,,Waterproof Foam,Foam,57.22,115,3180,22
+015-KCFZ4Y,,Foam Gasket,Foam,28.88,137,8751,27
+015-35WMK6,,Foam Insert,Foam,78.94,137,4104,9
+015-U56WS5,,Foam Sheet,Foam,18.21,125,7384,19
+015-U0QYGC,,Foam Padding,Foam,84.04,187,6962,12
+015-NFO0B0,,Foam Block,Foam,46.36,181,519,9
+015-U3LUGV,,Closed Cell Foam,Foam,14.35,133,1121,3
+015-SMXVYM,,Open Cell Foam,Foam,33.50,184,4443,6
+015-XYR8XE,,Foam Topper,Foam,24.90,116,6749,21
+015-7EO8MB,,Polyurethane Foam,Foam,55.55,20,197,11
+015-R1RFGO,,Outdoor Foam,Foam,74.65,90,8168,13
+015-7LG3CS,,Foam Cylinder,Foam,37.12,172,1157,4
+015-7XHKO0,,Foam Tape,Foam,66.67,83,7203,10
+015-S9ODP3,,Foam Wedge,Foam,18.18,129,6909,12
+015-EATXGL,,High-Density Foam,Foam,29.91,136,896,6
+015-G92EVQ,,Foam Cube,Foam,59.37,11,6923,19
+015-9J9S50,,Convoluted Foam,Foam,2.51,40,7467,15

@@ -1,0 +1,7 @@
+part_name,quantity,part_number,parent_part_number
+Base Frame,1,S-1101,A-1012
+Back Frame,1,S-1102,A-1012
+Side Frames,2,S-1103,A-1012
+Support Slats,12,S-1104,A-1012
+Corner Brackets,4,S-1105,A-1012
+Screws,32,S-1106,A-1012

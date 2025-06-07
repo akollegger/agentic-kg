@@ -1,0 +1,37 @@
+supplier_part_number,customer_part_number,description,category,unit_price,minimum_order,stock_quantity,lead_time_days
+006-OTQM09,S-1099,Zipper,Hardware,18.64,54,805,16
+006-R5A7DY,S-1114,Zipper,Hardware,23.78,24,7150,6
+006-RCREJ3,S-1118,Shelf Support Holes,Hardware,23.44,62,5349,17
+006-E3S6JI,S-1120,Wood Panels,Hardware,39.17,11,6525,13
+006-C8P0C5,S-1127,Cable Clips,Hardware,30.92,95,9083,12
+006-WGO2VE,S-1128,Zip Ties,Hardware,38.37,27,6335,16
+006-0URL10,,Furniture Spacer,Hardware,38.52,79,8694,25
+006-5WCLFG,,Touch Latch,Hardware,30.47,124,7493,17
+006-92V2MJ,,Furniture Strap,Hardware,72.42,52,5129,19
+006-04I11W,,Door Handle,Hardware,96.74,21,6712,13
+006-0Z74B6,,Furniture Tack,Hardware,76.10,200,4036,11
+006-A0NEGK,,Leveling Foot,Hardware,49.94,124,5522,3
+006-78ZTBV,,Furniture Hook,Hardware,19.53,61,9632,5
+006-NRAU3E,,Furniture Lock,Hardware,12.92,53,987,17
+006-5U9LLS,,Furniture Leg,Hardware,69.51,104,1245,8
+006-URW83C,,Furniture Plate,Hardware,37.33,109,4827,25
+006-UD6C71,,Furniture Wedge,Hardware,67.60,119,3586,22
+006-VZ8PS0,,Cabinet Knob,Hardware,53.08,38,6172,19
+006-UQKC66,,Drawer Slide,Hardware,73.03,128,2447,27
+006-YSF06S,,Drawer Pull,Hardware,20.39,168,726,8
+006-AK5BC1,,Corner Bracket,Hardware,82.84,142,676,11
+006-UA717J,,Caster Wheel,Hardware,83.82,81,2539,11
+006-SOLOOZ,,Furniture Tie,Hardware,18.79,33,9224,13
+006-IC411H,,Cable Grommet,Hardware,96.08,21,7468,25
+006-JBJY5C,,Magnetic Catch,Hardware,38.60,20,1108,6
+006-2ALA8H,,Furniture Cap,Hardware,61.71,139,7666,10
+006-D8YVLT,,Door Hinge,Hardware,79.40,20,163,27
+006-8YD3YB,,Door Stop,Hardware,98.57,35,707,18
+006-GP8XAX,,Furniture Clip,Hardware,63.88,198,9211,4
+006-MGTO25,,Shelf Support,Hardware,75.48,135,9545,28
+006-Q0JAIO,,Furniture Nail,Hardware,31.66,16,5035,20
+006-VY1HVF,,Furniture Staple,Hardware,38.57,90,9770,29
+006-1QDG9M,,Furniture Bumper,Hardware,17.73,188,8042,26
+006-9ALDBJ,,Furniture Glide,Hardware,66.28,131,9248,7
+006-ZMZ7XS,,Furniture Bolt,Hardware,51.12,158,7024,28
+006-ICY10C,,Furniture Connector,Hardware,7.99,154,3955,30

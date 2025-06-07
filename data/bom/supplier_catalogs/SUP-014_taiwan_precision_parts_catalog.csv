@@ -1,0 +1,37 @@
+supplier_part_number,customer_part_number,description,category,unit_price,minimum_order,stock_quantity,lead_time_days
+014-LGT033,S-1080,Screws,Fasteners,24.58,11,6348,23
+014-F5I1E0,S-1086,Screws,Fasteners,23.66,49,1546,10
+014-XGYKX5,S-1091,Screws,Fasteners,29.78,32,5048,24
+014-IH05L9,S-1096,Screws,Fasteners,29.43,89,391,19
+014-0UGV4G,S-1106,Screws,Fasteners,33.52,96,1701,19
+014-W9CO83,S-1111,Screws,Fasteners,8.14,14,2227,19
+014-G1AD5O,,Rivet Nut,Fasteners,51.18,109,2053,4
+014-B5TDU7,,Wing Nut,Fasteners,61.05,72,3056,27
+014-LIW55V,,Threaded Rod,Fasteners,40.24,28,6267,23
+014-NYL3II,,Set Screw,Fasteners,93.02,74,3378,3
+014-9EY4F1,,Carriage Bolt,Fasteners,17.72,148,1683,3
+014-55XQ19,,Flat Washer,Fasteners,73.02,105,6498,11
+014-U86LQ4,,Concrete Anchor,Fasteners,78.48,20,2946,19
+014-E6Y86B,,T-Nut,Fasteners,4.91,155,7916,5
+014-N2O72I,,Coupling Nut,Fasteners,57.45,49,9384,3
+014-BQEMPL,,Drywall Screw,Fasteners,4.41,95,1315,11
+014-DMIGFM,,Thumb Screw,Fasteners,82.15,157,7240,25
+014-KMMJKG,,Cap Nut,Fasteners,52.56,32,9472,20
+014-AUYW4E,,Shoulder Bolt,Fasteners,2.49,25,8186,9
+014-1VGBVA,,Confirmat Screw,Fasteners,92.54,186,678,3
+014-8X2AOW,,U-Bolt,Fasteners,1.48,72,7229,20
+014-QDMHQ5,,Dowel Screw,Fasteners,2.31,114,6748,10
+014-FR5MFW,,Toggle Bolt,Fasteners,58.65,24,5858,6
+014-8F5QWB,,Eye Bolt,Fasteners,41.88,53,3627,12
+014-XEH76L,,Machine Bolt,Fasteners,11.30,64,9259,11
+014-1O4U95,,J-Bolt,Fasteners,61.76,132,9920,6
+014-YIF12O,,Hex Nut,Fasteners,66.71,148,7561,9
+014-6V9Z9O,,Self-Tapping Screw,Fasteners,37.28,192,9184,16
+014-00JGFT,,Deck Screw,Fasteners,19.23,25,4733,14
+014-HL8CRJ,,Anchor Bolt,Fasteners,3.30,32,2860,23
+014-MGVFIP,,Security Screw,Fasteners,73.23,51,6392,6
+014-2SPHBA,,Lag Bolt,Fasteners,96.02,82,974,13
+014-MTO0NW,,Expansion Anchor,Fasteners,53.86,86,9349,27
+014-JLLXBT,,Lock Washer,Fasteners,56.56,197,276,28
+014-LI2Y30,,Hanger Bolt,Fasteners,68.26,123,1493,7
+014-N1H131,,Wood Screw,Fasteners,55.93,157,2025,18

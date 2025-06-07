@@ -1,0 +1,33 @@
+supplier_part_number,customer_part_number,description,category,unit_price,minimum_order,stock_quantity,lead_time_days
+009-A86V22,S-1123,Wood Glue,Adhesives,44.74,75,339,11
+009-O9BYV2,S-1129,Adhesive Pads,Adhesives,8.65,75,4287,28
+009-G6GNB2,,Contact Cement,Adhesives,51.42,117,9320,25
+009-JUOFPV,,Hot Melt Glue,Adhesives,50.94,117,7402,9
+009-A40G2D,,Weather Stripping,Adhesives,51.38,110,4051,28
+009-434CO2,,Masking Tape,Adhesives,5.17,182,6394,13
+009-7NSN3R,,Construction Adhesive,Adhesives,71.56,34,3679,17
+009-KRWOU8,,Mounting Tape,Adhesives,22.60,51,8430,9
+009-HMW80A,,Polyurethane Adhesive,Adhesives,74.41,64,8606,6
+009-T22REK,,Adhesive Tape,Adhesives,97.24,159,1737,6
+009-G82VIW,,Glass Adhesive,Adhesives,4.59,96,3181,21
+009-4MRTJA,,Fabric Glue,Adhesives,57.03,15,9306,9
+009-8KCAQ3,,Silicone Sealant,Adhesives,12.88,40,6649,30
+009-BNFY5F,,Super Glue,Adhesives,24.13,123,1237,12
+009-LLBMQD,,Electrical Tape,Adhesives,27.85,145,3332,22
+009-NTBFCV,,Plastic Cement,Adhesives,70.54,170,5686,18
+009-QJFBPD,,Spray Adhesive,Adhesives,19.97,156,5105,19
+009-57L8SX,,Leather Adhesive,Adhesives,15.35,29,7300,11
+009-1H1A6T,,Adhesive Dots,Adhesives,56.63,51,7937,26
+009-FT6UA2,,Velcro Tape,Adhesives,7.66,33,7303,29
+009-JW8T9Y,,Double-Sided Tape,Adhesives,36.31,114,7161,8
+009-KQ4NKZ,,Carpet Adhesive,Adhesives,10.14,91,6579,7
+009-QLAGV1,,Epoxy Resin,Adhesives,53.30,176,6691,12
+009-6YPKS4,,Vinyl Adhesive,Adhesives,69.34,68,2185,17
+009-WPX1KR,,Duct Tape,Adhesives,13.83,34,2554,11
+009-MC3AWW,,Metal Epoxy,Adhesives,46.50,126,9273,18
+009-IVAHWY,,Rubber Cement,Adhesives,83.15,141,6436,26
+009-WU3DK7,,Tile Adhesive,Adhesives,48.33,183,3186,30
+009-G33YBE,,Wallpaper Paste,Adhesives,36.26,113,4065,29
+009-GVA978,,Foam Tape,Adhesives,4.12,45,9292,14
+009-5A49QD,,Foam Adhesive,Adhesives,50.82,166,8179,30
+009-8APUWX,,Wood Glue,Adhesives,71.40,111,155,24

@@ -1,0 +1,31 @@
+supplier_part_number,customer_part_number,description,category,unit_price,minimum_order,stock_quantity,lead_time_days
+007-GJEAIS,,Wireless Charger,Electronics,81.62,129,9031,4
+007-TEMWDT,,Heat Sink,Electronics,3.72,88,3788,24
+007-LIPSCL,,Light Sensor,Electronics,50.66,108,3755,30
+007-89I3QS,,Cooling Fan,Electronics,4.02,72,3489,4
+007-P6E2Q6,,Touch Sensor,Electronics,1.72,22,3946,24
+007-0OBRFT,,Power Supply,Electronics,90.53,39,6009,22
+007-MA97MN,,Audio Jack,Electronics,18.92,183,3351,17
+007-4FS5RM,,LED Light,Electronics,79.45,66,3570,11
+007-6DHM51,,Power Button,Electronics,96.42,123,8911,13
+007-C91JJ8,,Cable Clip,Electronics,49.85,187,9832,14
+007-EGGU8X,,Circuit Board,Electronics,73.88,82,2730,13
+007-AGS3RK,,WiFi Module,Electronics,74.45,52,2403,24
+007-OC136P,,Cable Organizer,Electronics,46.07,113,9127,20
+007-HLQ0CQ,,Dimmer Switch,Electronics,71.57,43,8493,24
+007-SDKUD8,,Camera Module,Electronics,64.31,31,2541,20
+007-AD5TH6,,USB Port,Electronics,2.30,10,2822,27
+007-F7314V,,Display Screen,Electronics,55.70,13,3249,24
+007-LBMPDF,,Speaker Unit,Electronics,63.41,165,9997,14
+007-U7JP57,,Charging Port,Electronics,58.35,136,7544,25
+007-ZMEBDY,,Control Panel,Electronics,23.40,64,5102,24
+007-2I3KBZ,,HDMI Port,Electronics,68.37,162,2385,16
+007-2L3M09,,Light Socket,Electronics,22.44,139,8592,8
+007-NFQCRP,,Bluetooth Module,Electronics,39.30,115,8873,16
+007-BGWJNA,,Microphone,Electronics,73.15,43,1711,15
+007-DJ8SXW,,LED Strip,Electronics,20.41,179,9707,20
+007-U9P17Q,,Power Cord,Electronics,96.51,150,7050,11
+007-00LPE8,,Battery Pack,Electronics,59.72,17,5558,5
+007-D3OE9X,,Wire Connector,Electronics,10.74,193,942,29
+007-CUO5JK,,Remote Control,Electronics,72.79,152,295,11
+007-TTQQ33,,Motion Sensor,Electronics,44.76,12,8330,23

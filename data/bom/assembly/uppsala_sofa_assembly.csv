@@ -1,0 +1,8 @@
+component_name,quantity,part_number,parent_part_number
+Seat Cushion,3,A-1010,P-1003
+Back Cushion,3,A-1011,P-1003
+Frame,1,A-1012,P-1003
+Armrest,2,A-1013,P-1003
+Legs,4,A-1014,P-1003
+Cover,1,A-1015,P-1003
+Screws,24,A-1016,P-1003

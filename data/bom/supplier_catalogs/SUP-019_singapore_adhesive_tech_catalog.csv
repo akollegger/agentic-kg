@@ -1,0 +1,33 @@
+supplier_part_number,customer_part_number,description,category,unit_price,minimum_order,stock_quantity,lead_time_days
+019-DTJ1D6,S-1123,Wood Glue,Adhesives,41.28,90,7630,4
+019-COQG2N,S-1129,Adhesive Pads,Adhesives,3.04,17,1479,18
+019-FLB7S4,,Carpet Adhesive,Adhesives,89.36,34,4748,6
+019-I51CTQ,,Double-Sided Tape,Adhesives,33.92,44,7256,3
+019-4UM5L9,,Hot Melt Glue,Adhesives,55.39,192,2328,15
+019-Q45DWJ,,Spray Adhesive,Adhesives,79.95,141,5802,22
+019-2HT8AX,,Construction Adhesive,Adhesives,23.42,107,3363,5
+019-EAX0YU,,Glass Adhesive,Adhesives,96.01,95,8602,28
+019-OKJVT8,,Masking Tape,Adhesives,52.57,139,5677,9
+019-Q61V9G,,Duct Tape,Adhesives,68.07,51,4829,3
+019-28TDZN,,Epoxy Resin,Adhesives,90.71,103,1729,28
+019-NC6UMG,,Foam Tape,Adhesives,77.39,12,4761,6
+019-MVSJ4R,,Silicone Sealant,Adhesives,32.85,104,7443,7
+019-HQT9A7,,Rubber Cement,Adhesives,18.89,127,7687,21
+019-ZCO0OP,,Weather Stripping,Adhesives,38.11,196,4726,22
+019-PDPT4L,,Tile Adhesive,Adhesives,64.59,85,6646,7
+019-2G2PVO,,Metal Epoxy,Adhesives,23.19,104,160,27
+019-B8S6C5,,Contact Cement,Adhesives,6.43,126,7288,5
+019-M7VA9D,,Adhesive Tape,Adhesives,4.06,26,4632,26
+019-38KG4N,,Plastic Cement,Adhesives,79.93,128,9444,18
+019-WQI6XF,,Foam Adhesive,Adhesives,2.56,21,2304,23
+019-GBTNZY,,Wallpaper Paste,Adhesives,23.98,108,6592,3
+019-QY8MHH,,Leather Adhesive,Adhesives,54.31,191,4706,6
+019-5ZPL1X,,Vinyl Adhesive,Adhesives,97.09,21,2191,11
+019-47T8VW,,Adhesive Dots,Adhesives,18.20,172,7512,11
+019-W6FSXA,,Electrical Tape,Adhesives,90.78,200,4031,18
+019-NUNB5H,,Wood Glue,Adhesives,61.44,193,3346,10
+019-M0SELO,,Velcro Tape,Adhesives,42.61,79,4338,21
+019-F1QY2H,,Mounting Tape,Adhesives,85.61,48,4995,10
+019-FNP9IR,,Super Glue,Adhesives,73.84,131,8806,26
+019-1JDSYV,,Polyurethane Adhesive,Adhesives,6.12,80,986,10
+019-JOJF5G,,Fabric Glue,Adhesives,89.11,184,2134,6

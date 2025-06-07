@@ -1,0 +1,32 @@
+supplier_part_number,customer_part_number,description,category,unit_price,minimum_order,stock_quantity,lead_time_days
+008-BLGPVV,S-1132,Diffuser,Glass,6.63,48,6019,20
+008-XRLQR0,,Glass Mosaic,Glass,61.49,154,3173,19
+008-GNETLA,,Mirror Glass,Glass,42.58,53,4483,24
+008-5VLOWA,,Glass Pendant,Glass,64.36,88,3990,8
+008-3DKUXB,,Glass Knob,Glass,39.25,111,2722,20
+008-57KHNB,,Glass Vase,Glass,69.89,52,7207,13
+008-KSVRG2,,Laminated Glass,Glass,30.94,162,8129,21
+008-YELRW1,,Glass Cabochon,Glass,46.52,59,1697,9
+008-ES5WEB,,Glass Bowl,Glass,75.50,105,8655,25
+008-IX7KT6,,Glass Block,Glass,74.96,63,4866,20
+008-FAJ9GT,,Glass Handle,Glass,27.95,94,5334,10
+008-ELAMEF,,Frosted Glass,Glass,58.09,85,8588,21
+008-QWVE0W,,Glass Tube,Glass,45.49,162,6719,13
+008-TYMAIT,,Glass Rod,Glass,34.83,81,827,28
+008-2XW6XS,,Glass Ornament,Glass,58.02,52,1621,18
+008-LD6G84,,Glass Shelf,Glass,90.92,183,6338,16
+008-HTDNVT,,Glass Panel,Glass,67.18,35,9791,21
+008-PNO97O,,Glass Insert,Glass,49.03,103,6401,18
+008-UZW0EE,,Glass Plate,Glass,4.69,72,6315,10
+008-UEZ6M1,,Glass Tile,Glass,76.70,25,7230,3
+008-A3LPN0,,Clear Glass,Glass,63.82,68,7091,6
+008-WIULJK,,Glass Lens,Glass,38.27,57,1192,8
+008-S5TGLA,,Glass Cup,Glass,18.00,56,2169,4
+008-78G212,,Tinted Glass,Glass,24.74,115,1807,24
+008-IMV2ID,,Glass Bead,Glass,82.19,40,2159,8
+008-VL5WYI,,Tempered Glass,Glass,11.25,82,8636,30
+008-Z4C2C3,,Glass Door,Glass,26.24,37,1604,30
+008-2M417Z,,Glass Filter,Glass,53.57,152,4709,27
+008-DM48UF,,Glass Prism,Glass,80.23,29,3040,20
+008-E5FDZO,,Glass Dome,Glass,1.34,17,8890,29
+008-27B226,,Glass Shade,Glass,78.51,137,9670,12
