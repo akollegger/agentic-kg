@@ -19,12 +19,18 @@ from .cypher_tools import (
     create_uniqueness_constraint,
     merge_node_into_graph,
 )
-from .user_goal_tools import set_user_goal, get_user_goal
+from .user_goal_tools import set_user_goal, get_user_goal, set_perceived_user_goal, approve_perceived_user_goal, get_approved_user_goal
 from .flow_tools import finished
-from .schema_tools import set_proposed_schema, get_proposed_schema, approve_proposed_schema, get_approved_schema
+from .schema_tools import (
+    set_proposed_schema, get_proposed_schema, approve_proposed_schema, get_approved_schema,
+    propose_node_construction, propose_relationship_construction, approve_proposed_construction_plan
+)
 __all__ = [
     "get_user_goal",
     "set_user_goal",
+    "get_approved_user_goal",
+    "set_perceived_user_goal",
+    "approve_perceived_user_goal",
     "get_neo4j_import_directory",
     "list_import_files",
     "set_suggested_files",
@@ -45,5 +51,8 @@ __all__ = [
     "get_proposed_schema",
     "approve_proposed_schema",
     "get_approved_schema",
+    "propose_node_construction",
+    "propose_relationship_construction",
+    "approve_proposed_construction_plan",
     "finished",
 ]

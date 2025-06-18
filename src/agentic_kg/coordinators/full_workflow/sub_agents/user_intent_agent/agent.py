@@ -5,7 +5,7 @@ from agentic_kg.common.config import llm
 # variants are pairs of instructions with tools
 from .variants import variants
 
-AGENT_NAME = "user_intent_agent_v1"
+AGENT_NAME = "user_intent_agent_v2"
 user_intent_agent = Agent(
         name=AGENT_NAME,
         model=llm,
