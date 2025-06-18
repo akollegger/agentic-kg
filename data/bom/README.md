@@ -20,12 +20,12 @@ This directory contains the data structure for furniture products used in the ag
 - `assemblies.csv`: Consolidated file of all product assemblies
 - `components.csv`: Consolidated file of all individual parts that make up assemblies and sub-assemblies
 - `part_supplier_details.csv`: Supplier information for parts including lead times, costs, and minimum order quantities
-- `part_number_mapping.csv`: Mapping between internal part numbers and supplier-specific part numbers
 
 ### Supplier Data
 
 - `suppliers.csv`: List of all suppliers with contact information
-- `supplier_catalogs/*.csv`: Individual supplier catalogs with their proprietary part numbers and pricing
+- `supplier_catalogs/part_number_mapping.csv`: Mapping between internal part numbers and supplier-specific part numbers
+- `supplier_catalogs/*.csv`: Individual supplier catalogs with their proprietary part numbers and pricing (excluding the main mapping file)
 
 ### Unstructured Data
 

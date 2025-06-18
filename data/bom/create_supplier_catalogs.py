@@ -182,7 +182,7 @@ for supplier in suppliers:
     print(f"Created catalog for {supplier['name']} with {len(catalog)} items")
 
 # Create a mapping file that connects our part numbers to supplier part numbers
-with open('data/bom/part_number_mapping.csv', 'w', newline='') as f:
+with open('data/bom/supplier_catalogs/part_number_mapping.csv', 'w', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(['part_number', 'supplier_id', 'supplier_part_number', 'description'])
     

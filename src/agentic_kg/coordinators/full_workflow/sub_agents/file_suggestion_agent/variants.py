@@ -7,7 +7,8 @@ These instructions guide the agent's behavior, workflow, and tool usage.
 
 from agentic_kg.tools import (
     get_user_goal, get_approved_user_goal,
-    list_import_files, sample_file, set_suggested_files, approve_suggested_files, 
+    list_import_files, sample_file, search_file,
+    set_suggested_files, approve_suggested_files, 
     finished
 )
 
@@ -53,20 +54,29 @@ variants = {
                 like people, places, organizations, and events.
 
                 For any file that you're not sure about, use the 'sample_file' tool to get 
-                a better understanding of the file contents. 
+                a better understanding of the file contents.
+
+                To understand relationships across the files, take advantage of the 'search_file' tool. 
+                For example, you can search for references in one file that are found in another file. This helps establish relationships between files.
+                
                 You do not need to sample every file. Assume markdown files in the same directory have similar features.
                 Sample only a few markdown files, and if they are relevant suggest every markdown file in the directory.
 
                 Think carefull, repeating these steps until finished:
                 1. list available files
-                2. evaluate the relevance of each file
+                2. evaluate the relevance of each file, using the sample_file or search_file tools
                 3. use the set_suggested_files tool to save the list of files
                 3. Ask the user to approve the set of suggested files
                 4. If the user has feedback, go back to step 1 with that feedback in mind
                 5. If approved, use the approve_suggested_files tool to record the approval
                 6. When the file approval has been recorded, use the 'finished' tool
                 """,
-            "tools": [get_approved_user_goal, list_import_files, sample_file, set_suggested_files, approve_suggested_files, finished]
+            "tools": [
+                get_approved_user_goal, 
+                list_import_files, sample_file, search_file,
+                search_fileset_suggested_files, approve_suggested_files, 
+                finished
+            ]
         },
 
 }
