@@ -4,15 +4,15 @@ import csv
 import glob
 
 # Create the output file with headers
-output_file = "/Users/akollegger/Developer/genai/dlai/agentic-kg/data/bom/sub_assemblies.csv"
+output_file = "/Users/akollegger/Developer/genai/dlai/agentic-kg/data/bom/components.csv"
 with open(output_file, 'w', newline='') as f_out:
     writer = csv.writer(f_out)
     writer.writerow(['sub_assembly_name', 'part_name', 'quantity', 'part_number', 'parent_part_number'])
 
-# Get all sub-assembly CSV files
-sub_assembly_dir = "/Users/akollegger/Developer/genai/dlai/agentic-kg/data/bom/sub_assembly"
+# Get all component CSV files
+component_dir = "/Users/akollegger/Developer/genai/dlai/agentic-kg/data/bom/sub_assembly"
 csv_files = []
-for root, dirs, files in os.walk(sub_assembly_dir):
+for root, dirs, files in os.walk(component_dir):
     for file in files:
         if file.endswith('.csv'):
             csv_files.append(os.path.join(root, file))

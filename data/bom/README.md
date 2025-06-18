@@ -6,7 +6,7 @@ This directory contains the data structure for furniture products used in the ag
 
 1. **Products (P-xxxx)**: Swedish town + furniture type combinations
 2. **Assemblies (A-xxxx)**: Major components for each product
-3. **Sub-assemblies (S-xxxx)**: Detailed breakdown of components
+3. **Components (S-xxxx)**: Individual parts that make up assemblies and sub-assemblies
 4. **Supplier data**: 20 global suppliers with specialties (wood, metal, fabric, etc.)
 5. **Multiple supplier options per part**: For pricing competition and supply chain resiliency
 6. **Supplier-specific catalogs**: With proprietary part numbers (e.g., 001-H21RG4)
@@ -18,7 +18,7 @@ This directory contains the data structure for furniture products used in the ag
 
 - `products.csv`: Master list of products with descriptions and pricing
 - `assemblies.csv`: Consolidated file of all product assemblies
-- `sub_assemblies.csv`: Consolidated file of all component sub-assemblies
+- `components.csv`: Consolidated file of all individual parts that make up assemblies and sub-assemblies
 - `part_supplier_details.csv`: Supplier information for parts including lead times, costs, and minimum order quantities
 - `part_number_mapping.csv`: Mapping between internal part numbers and supplier-specific part numbers
 
@@ -37,7 +37,7 @@ This directory contains the data structure for furniture products used in the ag
 The data structure has been streamlined by:
 
 1. Consolidating individual assembly files into `assemblies.csv`
-2. Consolidating individual sub-assembly files into `sub_assemblies.csv`
+2. Consolidating individual part files into `components.csv`
 3. Consolidating supplier information into `part_supplier_details.csv`
 4. Removing temporary reference files used for initial data generation
 
