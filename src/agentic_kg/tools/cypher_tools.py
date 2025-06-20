@@ -175,3 +175,30 @@ def merge_node_into_graph(label_name:str, id_property_name:str, properties: Dict
         "props": properties
     }
     return write_neo4j_cypher(query, properties)
+
+
+def merge_singleton_node_into_graph(label_name:str, properties: Dict[str, Any], tool_context:ToolContext) -> Dict[str, Any]:
+    """Merges a singleton node into the graph. The label_name will be used for the MERGE pattern,
+    ensuring a singleton by having no either qualifying properties.
+    The properties dictionary will be used in a SET to set all properties of the node.
+
+    Args:
+        label_name: the label of the node to create
+        id_property_name: the name of the property that will be used to set the id of the node
+        properties: a dictionary of properties to set on the node
+        tool_context: ToolContext object.
+
+    Returns:
+        dict: A dictionary indicating success or failure.
+              Includes a 'status' key ('success' or 'error').
+              If 'error', includes an 'error_message' key.
+    """
+    query = "MERGE (t:$($label_name)) SET t += $props"
+    properties = {
+        "label_name": label_name,
+        "props": properties
+    }
+    return write_neo4j_cypher(query, properties)
+
+
+
