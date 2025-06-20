@@ -58,6 +58,7 @@ variants = {
 
                 To understand relationships across the files, take advantage of the 'search_file' tool. 
                 For example, you can search for references in one file that are found in another file. This helps establish relationships between files.
+                Every file must either be directly related somehow to at least one other file. That is required to form a graph.
                 
                 You do not need to sample every file. Assume markdown files in the same directory have similar features.
                 Sample only a few markdown files, and if they are relevant suggest every markdown file in the directory.
@@ -65,12 +66,13 @@ variants = {
                 Think carefull, repeating these steps until finished:
                 1. list available files
                 2. evaluate the relevance of each file, using the sample_file or search_file tools
-                3. use the set_suggested_files tool to save the list of files
-                4. Present the suggested files to the user, along with justification for the relevance of the file and how it related to other files. Don't guess, use tools to confirm your understanding.
-                5. Ask the user to approve the set of suggested files
-                6. If the user has feedback, go back to step 1 with that feedback in mind
-                7. If approved, use the approve_suggested_files tool to record the approval
-                8. When the file approval has been recorded, use the 'finished' tool
+                3. For structured data files (e.g. CSV, JSON), use the 'search_file' tool to understand the relationships between files
+                4. use the set_suggested_files tool to save the list of files
+                5. Present the suggested files to the user, along with justification for the relevance of the file and how it related to other files. Don't guess, use tools to confirm your understanding.
+                6. Ask the user to approve the set of suggested files
+                7. If the user has feedback, go back to step 1 with that feedback in mind
+                8. If approved, use the approve_suggested_files tool to record the approval
+                9. When the file approval has been recorded, use the 'finished' tool
                 """,
             "tools": [
                 get_approved_user_goal, 
