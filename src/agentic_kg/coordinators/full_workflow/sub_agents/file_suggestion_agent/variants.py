@@ -66,7 +66,7 @@ variants = {
                 Think carefull, repeating these steps until finished:
                 1. list available files
                 2. evaluate the relevance of each file, using the sample_file or search_file tools
-                3. For structured data files (e.g. CSV, JSON), use the 'search_file' tool to understand the relationships between files
+                3. For structured data files (e.g. CSV, JSON), use the 'search_file' tool to validate the relationships between files. each file should be related somehow
                 4. use the set_suggested_files tool to save the list of files
                 5. Present the suggested files to the user, along with justification for the relevance of the file and how it related to other files. Don't guess, use tools to confirm your understanding.
                 6. Ask the user to approve the set of suggested files
