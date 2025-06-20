@@ -66,15 +66,16 @@ variants = {
                 1. list available files
                 2. evaluate the relevance of each file, using the sample_file or search_file tools
                 3. use the set_suggested_files tool to save the list of files
-                3. Ask the user to approve the set of suggested files
-                4. If the user has feedback, go back to step 1 with that feedback in mind
-                5. If approved, use the approve_suggested_files tool to record the approval
-                6. When the file approval has been recorded, use the 'finished' tool
+                4. Present the suggested files to the user, along with justification for the relevance of the file and how it related to other files. Don't guess, use tools to confirm your understanding.
+                5. Ask the user to approve the set of suggested files
+                6. If the user has feedback, go back to step 1 with that feedback in mind
+                7. If approved, use the approve_suggested_files tool to record the approval
+                8. When the file approval has been recorded, use the 'finished' tool
                 """,
             "tools": [
                 get_approved_user_goal, 
                 list_import_files, sample_file, search_file,
-                search_fileset_suggested_files, approve_suggested_files, 
+                set_suggested_files, approve_suggested_files, 
                 finished
             ]
         },
