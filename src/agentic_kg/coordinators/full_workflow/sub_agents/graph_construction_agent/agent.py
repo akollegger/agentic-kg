@@ -5,7 +5,7 @@ from agentic_kg.common.config import llm
 # variants are pairs of instructions with tools
 from .variants import variants
 
-AGENT_NAME = "graph_construction_agent_v2"
+AGENT_NAME = "graph_construction_agent_v3"
 graph_construction_agent = Agent(
         name=AGENT_NAME,
         model=llm,

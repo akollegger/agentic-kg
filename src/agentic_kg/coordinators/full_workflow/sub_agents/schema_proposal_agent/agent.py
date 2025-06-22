@@ -8,13 +8,21 @@ from typing import AsyncGenerator
 from google.adk.events import Event, EventActions
 
 from agentic_kg.common.config import llm
-from agentic_kg.tools import get_proposed_schema, get_proposed_construction_plan, approve_proposed_schema, finished
+from agentic_kg.tools import (
+    get_proposed_schema, get_proposed_construction_plan, 
+    approve_proposed_schema, approve_proposed_construction_plan,
+    finished
+)
 
 from .variants import variants
 
 # initialize context for schema_proposal_agent with blank feedback, which may get filled later by the schema_critic_agent
 def initialize_feedback(callback_context: CallbackContext) -> None:
     callback_context.state["feedback"] = ""
+
+def initialize_schema_and_construction_plan(callback_context: CallbackContext) -> None:
+    callback_context.state["proposed_schema"] = ""
+    callback_context.state["proposed_construction_plan"] = []
 
 AGENT_NAME = "schema_proposal_agent_v2"
 schema_proposal_agent = LlmAgent(
@@ -45,7 +53,8 @@ class CheckStatusAndEscalate(BaseAgent):
 refinement_loop = LoopAgent(
     name="schema_refinement_loop",
     max_iterations=2,
-    sub_agents=[schema_proposal_agent, schema_critic_agent, CheckStatusAndEscalate(name="StopChecker")]
+    sub_agents=[schema_proposal_agent, schema_critic_agent, CheckStatusAndEscalate(name="StopChecker")],
+    before_agent_callback=initialize_schema_and_construction_plan
 )
 
 root_agent = LlmAgent(
@@ -61,13 +70,14 @@ root_agent = LlmAgent(
     - Use the 'schema_refinement_loop' tool to determine a schema with construction rules
     - Use the 'get_proposed_schema' tool to get the proposed schema
     - Use the 'get_proposed_construction_plan' tool to get the construction rules for transforming approved files into the schema
-    - Present the proposed schema and state['construction_rules'] to the user for approval
+    - Present the proposed schema and construction rules to the user for approval
     - If they disapprove, consider their feedback and go back to step 1
-    - If the user approves, use the 'approve_proposed_schema' tool to record the approval
-    - When the schema approval has been recorded, use the 'finished' tool
+    - If the user approves, use the 'approve_proposed_schema' tool and the 'approve_proposed_construction_plan' tool to record the approval
+    - Finally, use the 'finished' tool to signal that schema proposal is complete and construction can begin
     """,
     tools=[agent_tool.AgentTool(refinement_loop), 
-        get_proposed_schema, get_proposed_construction_plan, approve_proposed_schema, 
+        get_proposed_schema, get_proposed_construction_plan, 
+        approve_proposed_schema, approve_proposed_construction_plan,
         finished
     ]
 )

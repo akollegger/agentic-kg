@@ -66,7 +66,7 @@ variants = {
         3. When you think you understand their goal, use the 'set_perceived_user_goal' tool to record it
         4. Verify with the user that the perceived user goal matches their expectations
         5. If the user agrees, use the 'approve_perceived_user_goal' tool to approve the user goal. This will save the goal in state under the 'approved_user_goal' key.
-        6. If the user is ready to continue, use the 'finished' tool        
+        6. Finall, use the 'finished' tool to signal completion of the user intent agent.
         """,
         "tools": [set_perceived_user_goal, approve_perceived_user_goal, finished]
     }

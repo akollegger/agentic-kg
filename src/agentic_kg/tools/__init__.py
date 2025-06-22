@@ -24,8 +24,10 @@ from .flow_tools import finished
 from .schema_tools import (
     set_proposed_schema, get_proposed_schema, approve_proposed_schema, get_approved_schema,
     propose_node_construction, propose_relationship_construction, approve_proposed_construction_plan,
-    get_proposed_construction_plan
+    get_proposed_construction_plan, get_approved_construction_plan
 )
+from .construction_tools import build_graph_from_construction_rules
+
 __all__ = [
     "get_user_goal",
     "set_user_goal",
@@ -56,5 +58,7 @@ __all__ = [
     "propose_relationship_construction",
     "approve_proposed_construction_plan",
     "get_proposed_construction_plan",
+    "get_approved_construction_plan",
+    "build_graph_from_construction_rules",
     "finished",
 ]

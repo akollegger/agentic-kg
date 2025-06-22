@@ -3,7 +3,6 @@ from google.adk.tools.agent_tool import AgentTool
 
 from agentic_kg.common.config import llm
 
-from agentic_kg.tools import set_user_goal, get_user_goal, list_import_files
 from .sub_agents import user_intent_agent, file_suggestion_agent, schema_proposal_agent, graph_construction_agent
 
 
@@ -24,7 +23,7 @@ full_workflow_agent = LlmAgent(
         user_intent_agent, 
         file_suggestion_agent, 
         schema_proposal_agent, 
-        # graph_construction_agent
+        graph_construction_agent
     ],
 )
 

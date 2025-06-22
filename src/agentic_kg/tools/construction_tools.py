@@ -2,29 +2,67 @@
 from google.adk.tools import ToolContext
 from typing import Dict, Any, List
 
+from agentic_kg.common.neo4j_for_adk import (
+    graphdb,
+    is_write_query
+)
+
 from agentic_kg.common.util import tool_success, tool_error
 
-CONSTRUCTION_RULES = "construction_rules"
-def add_construction_rule(rule_name:str, file_name: str, tool_context: ToolContext) -> Dict[str, Any]:
-    f"""Adds a construction rule to the {CONSTRUCTION_RULES}
+APPROVED_CONSTRUCTION_PLAN = "approved_construction_plan"
 
-    Args:
-        rule_name: The name of the rule to add
-        file_name: The name of the file to which the rule applies
 
-    Returns:
-        dict: A dictionary containing success or failure information.
-              Includes a 'status' key ('success' or 'error').
-              If 'success', includes a {CONSTRUCTION_RULES} key with list of rules.
-              If 'error', includes an 'error_message' key.
+def construct_node(construction_rule: dict, tool_context: ToolContext) -> Dict[str, Any]:
+    """Construct a node from the construction rule."""
+    batch_load_nodes_cypher = """
+    LOAD CSV WITH HEADERS FROM "file:///" + $import_file AS row
+    MERGE (n:$($label) {id: row[$unique_column_name]})
+    SET n += row
     """
-    if not CONSTRUCTION_RULES in tool_context.state:
-        construction_rules = []
-    else: 
-        construction_rules = tool_context.state[CONSTRUCTION_RULES]
+    return graphdb.send_query(batch_load_nodes_cypher, {
+        "import_file": construction_rule["source_file"],
+        "label": construction_rule["label"],
+        "unique_column_name": construction_rule["unique_column_name"],
+        "properties": construction_rule["properties"]
+    })
 
-    construction_rules.append({"rule_name": rule_name, "file_name": file_name})
+def construct_relationship(construction_rule: dict, tool_context: ToolContext) -> Dict[str, Any]:
+    """Construct a relationship from the construction rule."""
+    batch_load_relationships_cypher = """
+    LOAD CSV WITH HEADERS FROM "file:///" + $import_file AS row
+    MATCH (from_node:$($from_node_label) {id: row[$from_node_column]})
+    MATCH (to_node:$($to_node_label) {id: row[$to_node_column]})
+    MERGE (from_node)-[r:$($relationship_type)]->(to_node)
+    SET r += row
+    """
+    return graphdb.send_query(batch_load_relationships_cypher, {
+        "import_file": construction_rule["source_file"],
+        "from_node_label": construction_rule["from_node_label"],
+        "to_node_label": construction_rule["to_node_label"],
+        "from_node_column": construction_rule["from_node_column"],
+        "to_node_column": construction_rule["to_node_column"],
+        "relationship_type": construction_rule["relationship_type"],
+        "properties": construction_rule["properties"]
+    })
 
-    tool_context.state[CONSTRUCTION_RULES] = construction_rules
+def build_graph_from_construction_rules(tool_context: ToolContext) -> Dict[str, Any]:
+    """Build a graph from the approved construction rules."""
+    if not APPROVED_CONSTRUCTION_PLAN in tool_context.state:
+        return tool_error(f"{APPROVED_CONSTRUCTION_PLAN} not set.")  
 
-    return tool_success(CONSTRUCTION_RULES, tool_context.state[CONSTRUCTION_RULES])
+    approved_construction_plan = tool_context.state[APPROVED_CONSTRUCTION_PLAN]
+
+    print(f"Approved construction plan: {approved_construction_plan}")
+    
+    for construction_rule in approved_construction_plan:
+        if construction_rule["construction_type"] == "node":
+            node_results = construct_node(construction_rule, tool_context)
+            if node_results["status"] == "error":
+                return node_results # break out early if any node construction has an error
+        elif construction_rule["construction_type"] == "relationship":
+            relationship_results = construct_relationship(construction_rule, tool_context)
+            if relationship_results["status"] == "error":
+                return relationship_results # break out early if any relationship construction has an error
+        else:
+            return tool_error(f"Invalid construction type: {construction_rule['construction_type']}")
+            

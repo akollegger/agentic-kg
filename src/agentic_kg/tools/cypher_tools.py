@@ -7,9 +7,9 @@ from neo4j_graphrag.schema import get_structured_schema
 from agentic_kg.common.neo4j_for_adk import (
     graphdb,
     is_write_query,
-    tool_success, tool_error
 )
 
+from agentic_kg.common.util import tool_success, tool_error
 
 def neo4j_is_ready(
 ):

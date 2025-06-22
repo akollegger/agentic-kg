@@ -91,13 +91,14 @@ variants = {
 
         The resulting schema should be a connected graph, with no isolated components.
 
-        Think carefully and collaborate with the user:
+        Think carefully, using tools to perform actions and reconsidering your actions when a tool returns an error:
         1. For each approved file, consider whether it represents a node or relationship. Check the content for potential unique identifiers using the 'sample_file' tool.
         2. For each identifier, verify that it is unique by using the 'search_file' tool.
         3. Use the node vs relationship guidance for deciding whether the file represents a node or a relationship.
-        4. For a node file, propose a node construction using the 'propose_node_construction' tool
-        5. For a relationship file, propose a relationship construction using the 'propose_relationship_construction' tool
-        6. After proposing a construction for each file, use the 'set_proposed_schema' tool to save the schema description
+        4. For a node file, propose a node construction using the 'propose_node_construction' tool. 
+        5. If the node contains a reference relationship, use the 'propose_relationship_construction' tool to propose a relationship construction. 
+        6. For a relationship file, propose a relationship construction using the 'propose_relationship_construction' tool
+        7. Finally, after proposing a construction for each file, use the 'set_proposed_schema' tool to save the schema description
         """,
         "tools": [get_approved_user_goal, get_approved_files, 
             sample_file, search_file,
@@ -117,6 +118,7 @@ variants = {
         - user the 'sample_file' and 'search_file' tools to validate the schema design
 
         Criticize the proposed schema for relevance and correctness:
+        - Are unique identifiers actually unique? Use the 'search_file' tool to validate. Composite identifier are not acceptable.
         - Could any nodes be relationships instead? Double-check that unique identifiers are unique and not references to other nodes. Use the 'search_file' tool to validate
         - Can you manually trace through the source data to find the necessary information for anwering a hypothetical question?
         - Is the schema connected? What relationships could be missing? Every node should connect to at least one other node.
@@ -124,7 +126,7 @@ variants = {
         - Are any relationships redundant? A relationship between two nodes is redundant if it is semantically equivalent to or the inverse of another relationship between those two nodes.
 
         If the schema looks good, respond with 'valid'.
-        If the schema has problems, respond with 'retry' and provide feedback explaining possible improvements.
+        If the schema has problems, respond with 'retry' and provide feedback explaining problems.
         """,
         "tools": [get_approved_user_goal, get_approved_files, get_proposed_schema,
             get_proposed_construction_plan,
