@@ -1,9 +1,9 @@
 from google.adk.agents import LlmAgent
-from google.adk.tools.agent_tool import AgentTool
 
 from agentic_kg.common.config import llm
+from agentic_kg.tools import get_physical_schema
 
-from .sub_agents import user_intent_agent, file_suggestion_agent, schema_proposal_agent, graph_construction_agent
+from .sub_agents import user_intent_agent, file_suggestion_agent, schema_proposal_agent, graph_construction_agent, graphrag_agent
 
 
 full_workflow_agent = LlmAgent(
@@ -18,13 +18,18 @@ full_workflow_agent = LlmAgent(
         2. file_suggestion_agent -- requires approved user goals to make suggestions about what files to use
         3. schema_proposal_agent -- requires approved file suggestions to propose a graph schema with construction rules
         4. graph_construction_agent -- requires an approved graph schema design
+        5. graphrag_agent -- used to interact with the knowledge graph.only available if 'get_physical_schema' tool shows that a graph exists
         """,
     sub_agents=[
         user_intent_agent, 
         file_suggestion_agent, 
         schema_proposal_agent, 
-        graph_construction_agent
+        graph_construction_agent,
+        graphrag_agent
     ],
+    tools=[
+        get_physical_schema
+    ]
 )
 
 root_agent = full_workflow_agent
