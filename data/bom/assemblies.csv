@@ -1,4 +1,4 @@
-assembly_name,component_name,quantity,part_number,parent_part_number
+assembly_name,component_name,quantity,assembly_id,product_id
 uppsala_sofa_assembly,Seat Cushion,3,A-1010,P-1003
 uppsala_sofa_assembly,Back Cushion,3,A-1011,P-1003
 uppsala_sofa_assembly,Frame,1,A-1012,P-1003

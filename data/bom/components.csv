@@ -1,4 +1,4 @@
-sub_assembly_name,part_name,quantity,part_number,parent_part_number
+sub_assembly_name,part_name,quantity,part_id,assembly_id
 drawer_unit_subassembly,Drawer Front,1,S-1074,A-1062
 drawer_unit_subassembly,Drawer Bottom,1,S-1075,A-1062
 drawer_unit_subassembly,Drawer Sides,2,S-1076,A-1062

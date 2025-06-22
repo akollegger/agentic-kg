@@ -6,7 +6,7 @@ from typing import Optional
 from agentic_kg.common.config import llm
 
 from agentic_kg.tools import get_approved_user_goal, get_physical_schema, get_approved_files, get_approved_schema
-from .sub_agents import unstructured_files_agent, schema_proposal_agent, graph_construction_agent
+from .sub_agents import unstructured_files_agent, schema_extension_agent, graph_construction_agent
 
 def preset_context_state(callback_context: CallbackContext, llm_request: LlmRequest) -> Optional[LlmResponse]:
     callback_context.state["approved_user_goal"] = {
@@ -34,7 +34,7 @@ unstructured_extension_agent = LlmAgent(
         3. Once you have approved files, delegate to the schema_proposal_agent to design an extended graph schema that incorporates the unstructured data
         4. Once you have approved the schema, delegate to the graph_construction_agent to construct the graph
         """,
-    sub_agents=[unstructured_files_agent, schema_proposal_agent, graph_construction_agent],
+    sub_agents=[unstructured_files_agent, schema_extension_agent, graph_construction_agent],
     tools=[get_approved_user_goal, get_physical_schema, get_approved_files, get_approved_schema],
     before_model_callback=preset_context_state
 )
