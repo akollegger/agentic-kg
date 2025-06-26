@@ -13,7 +13,7 @@ from .variants import variants
 AGENT_NAME = "schema_extension_agent_v1"
 schema_extension_agent = LlmAgent(
     name=AGENT_NAME,
-    description="Proposes a knowledge graph schema based on the user goal and approved file list, taking into consideration state['feedback'] if available.",
+    description="Proposes a knowledge graph schema based on the user goal and approved file list, taking into consideration feedback if available.",
     model=llm,
     instruction=variants[AGENT_NAME]["instruction"],
     tools=variants[AGENT_NAME]["tools"], 

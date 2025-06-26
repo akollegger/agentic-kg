@@ -11,6 +11,7 @@ from agentic_kg.tools import (
     get_approved_user_goal, get_approved_files, sample_file, search_file,
     set_proposed_schema, get_proposed_schema, approve_proposed_schema, 
     propose_node_construction, propose_relationship_construction,
+    remove_node_construction, remove_relationship_construction,
     get_proposed_construction_plan,
     finished
 )
@@ -56,6 +57,7 @@ variants = {
         Prepare for the task:
         - get the user goal using the 'get_approved_user_goal' tool
         - get the list of approved files using the 'get_approved_files' tool
+        - get the current construction plan using the 'get_proposed_construction_plan' tool
 
         Every file in the approved files list will become either a node or a relationship.
         Determining whether a file likely represents a node or a relationship is based
@@ -98,11 +100,14 @@ variants = {
         4. For a node file, propose a node construction using the 'propose_node_construction' tool. 
         5. If the node contains a reference relationship, use the 'propose_relationship_construction' tool to propose a relationship construction. 
         6. For a relationship file, propose a relationship construction using the 'propose_relationship_construction' tool
-        7. Finally, after proposing a construction for each file, use the 'set_proposed_schema' tool to save the schema description
+        7. If you need to remove a construction, use the 'remove_node_construction' or 'remove_relationship_construction' tool
+        8. Finally, after proposing a construction for each file, use the 'set_proposed_schema' tool to save the schema description
         """,
-        "tools": [get_approved_user_goal, get_approved_files, 
+        "tools": [
+            get_approved_user_goal, get_approved_files, get_proposed_construction_plan,
             sample_file, search_file,
-            propose_node_construction, propose_relationship_construction, set_proposed_schema
+            propose_node_construction, propose_relationship_construction, remove_node_construction, remove_relationship_construction,
+            set_proposed_schema
         ]
     },
     "schema_critic_agent_v1":
@@ -121,12 +126,12 @@ variants = {
         - Are unique identifiers actually unique? Use the 'search_file' tool to validate. Composite identifier are not acceptable.
         - Could any nodes be relationships instead? Double-check that unique identifiers are unique and not references to other nodes. Use the 'search_file' tool to validate
         - Can you manually trace through the source data to find the necessary information for anwering a hypothetical question?
-        - Is the schema connected? What relationships could be missing? Every node should connect to at least one other node.
+        - Is every node in the schema connected? What relationships could be missing? Every node should connect to at least one other node.
         - Are hierarchical container relationships missing? 
         - Are any relationships redundant? A relationship between two nodes is redundant if it is semantically equivalent to or the inverse of another relationship between those two nodes.
 
-        If the schema looks good, respond with 'valid'.
-        If the schema has problems, respond with 'retry' and provide feedback explaining problems.
+        If the schema looks good, respond with a one word reply: 'valid'.
+        If the schema has problems, respond with 'retry' and provide feedback as a concise list of problems
         """,
         "tools": [get_approved_user_goal, get_approved_files, get_proposed_schema,
             get_proposed_construction_plan,

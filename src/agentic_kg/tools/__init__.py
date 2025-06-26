@@ -23,10 +23,24 @@ from .user_goal_tools import set_user_goal, get_user_goal, set_perceived_user_go
 from .flow_tools import finished
 from .schema_tools import (
     set_proposed_schema, get_proposed_schema, approve_proposed_schema, get_approved_schema,
-    propose_node_construction, propose_relationship_construction, approve_proposed_construction_plan,
+    propose_node_construction, propose_relationship_construction, 
+    remove_node_construction, remove_relationship_construction,
+    approve_proposed_construction_plan,
     get_proposed_construction_plan, get_approved_construction_plan
 )
 from .construction_tools import build_graph_from_construction_rules
+
+from .unstructured_tools import (
+    propose_entity_extraction,
+    remove_entity_extraction,
+    approve_proposed_extension_plan,
+    approve_proposed_schema_extension,
+    set_proposed_schema_extension,
+    get_proposed_schema_extension,
+    get_approved_schema_extension,
+    get_proposed_extension_plan,
+    get_approved_extension_plan
+)
 
 __all__ = [
     "get_user_goal",
@@ -56,9 +70,20 @@ __all__ = [
     "get_approved_schema",
     "propose_node_construction",
     "propose_relationship_construction",
+    "remove_node_construction",
+    "remove_relationship_construction",
     "approve_proposed_construction_plan",
     "get_proposed_construction_plan",
     "get_approved_construction_plan",
     "build_graph_from_construction_rules",
+    "propose_entity_extraction",
+    "remove_entity_extraction",
+    "approve_proposed_extension_plan",
+    "approve_proposed_schema_extension",
+    "set_proposed_schema_extension",
+    "get_proposed_schema_extension",
+    "get_approved_schema_extension",
+    "get_proposed_extension_plan",
+    "get_approved_extension_plan",
     "finished",
 ]

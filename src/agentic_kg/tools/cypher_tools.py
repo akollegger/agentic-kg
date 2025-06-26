@@ -40,7 +40,6 @@ def get_physical_schema(
     except Exception as e:
         return tool_error(str(e))
 
-
 def read_neo4j_cypher(
     query: str,
     params: Optional[Dict[str, Any]] = None
@@ -90,7 +89,7 @@ def reset_neo4j_data() -> Dict[str, Any]:
         Success or an error.
     """
     # First, remove all nodes and relationships in batches
-    data_removed = graphdb.send_query("""MATCH (n) CALL { WITH n DETACH DELETE n } IN TRANSACTIONS OF 10000 ROWS""")
+    data_removed = graphdb.send_query("""MATCH (n) CALL (n) { DETACH DELETE n } IN TRANSACTIONS OF 10000 ROWS""")
     if (data_removed["status"] == "error") :
         return data_removed
 
@@ -117,6 +116,8 @@ def reset_neo4j_data() -> Dict[str, Any]:
         dropped_index = graphdb.send_query("""DROP INDEX $index_name""", {"index_name": index_name})
         if (dropped_index["status"] == "error"):
             return dropped_index
+
+    return tool_success("message", "Neo4j database has been reset.")
 
 
 def create_uniqueness_constraint(

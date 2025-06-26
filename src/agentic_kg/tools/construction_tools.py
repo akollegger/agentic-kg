@@ -54,7 +54,7 @@ def build_graph_from_construction_rules(tool_context: ToolContext) -> Dict[str, 
 
     print(f"Approved construction plan: {approved_construction_plan}")
     
-    for construction_rule in approved_construction_plan:
+    for construction_rule in approved_construction_plan.values():
         if construction_rule["construction_type"] == "node":
             node_results = construct_node(construction_rule, tool_context)
             if node_results["status"] == "error":

@@ -52,9 +52,10 @@ class CheckStatusAndEscalate(BaseAgent):
 
 refinement_loop = LoopAgent(
     name="schema_refinement_loop",
+    description="Analyzes approved files to propose a schema based on user intent andfeedback",
     max_iterations=2,
     sub_agents=[schema_proposal_agent, schema_critic_agent, CheckStatusAndEscalate(name="StopChecker")],
-    before_agent_callback=initialize_schema_and_construction_plan
+    # before_agent_callback=initialize_schema_and_construction_plan
 )
 
 root_agent = LlmAgent(
@@ -67,7 +68,7 @@ root_agent = LlmAgent(
     When the schema approval has been recorded, use the 'finished' tool.
 
     Guidance for tool use:
-    - Use the 'schema_refinement_loop' tool to determine a schema with construction rules
+    - Use the 'schema_refinement_loop' tool to produce or update a proposed schema with construction rules. 
     - Use the 'get_proposed_schema' tool to get the proposed schema
     - Use the 'get_proposed_construction_plan' tool to get the construction rules for transforming approved files into the schema
     - Present the proposed schema and construction rules to the user for approval

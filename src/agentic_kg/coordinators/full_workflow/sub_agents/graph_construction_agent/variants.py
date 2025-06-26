@@ -9,6 +9,7 @@ from agentic_kg.tools import (
     get_user_goal,  get_approved_user_goal, get_approved_construction_plan,
     read_neo4j_cypher, write_neo4j_cypher, create_uniqueness_constraint, 
     get_approved_schema, get_approved_files, build_graph_from_construction_rules,
+    get_physical_schema,
     finished
 )
 
@@ -68,7 +69,7 @@ variants = {
         1. check that the construction rules are valid by comparing the construction plan with the approved files and schema
         2. create appropriate constraints for every node construction using the 'create_uniqueness_constraint' tool
         3. use the 'build_graph_from_construction_rules' tool to build the graph
-        4. verify that the graph has been built using the 'read_neo4j_cypher' tool
+        4. verify that the graph has been built by comparing the physical schema with the approved schema using the 'read_neo4j_cypher' tool
         5. verify that the graph is reasonable by proposing a hypothetical question that reflects the user goal. try to answer it using the 'read_neo4j_cypher' tool
         6. summarize the state of the graph and your post-construction analysis to the user
         7. invite the user to try some questions that you'll answer using the 'read_neo4j_cypher' tool
@@ -78,7 +79,7 @@ variants = {
         "tools": [
             get_approved_user_goal, get_approved_files, get_approved_schema, get_approved_construction_plan,
             create_uniqueness_constraint, build_graph_from_construction_rules,
-            read_neo4j_cypher, 
+            get_physical_schema, read_neo4j_cypher, 
             finished]
     },
 }

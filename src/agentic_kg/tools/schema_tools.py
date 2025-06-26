@@ -47,17 +47,18 @@ NODE_CONSTRUCTION = "node_construction"
 def propose_node_construction(approved_file: str, proposed_label: str, unique_column_name: str, proposed_properties: list[str], tool_context:ToolContext) -> dict:
     f"""Propose a node construction for an approved file that supports the user goal.
 
-    The construction plan will be saved to {PROPOSED_CONSTRUCTION_PLAN} list of dictionaries.
-    Each dictionary will have the following keys:
-    - construction_type: "node"
+    The construction will be added to the plan {PROPOSED_CONSTRUCTION_PLAN} dictionary of construction entries.
+
+    The construction entry will have the following keys:
+    - construction_type: "{NODE_CONSTRUCTION}"
     - source_file: The approved file to propose a node construction for
-    - label: The label of the node
+    - label: The proposed label of the node
     - unique_column_name: The name of the column that will be used to uniquely identify constructed nodes
     - properties: A list of properties for the node
 
     Args:
         approved_file: The approved file to propose a node construction for
-        proposed_label: The proposed label for constructed nodes
+        proposed_label: The proposed label for constructed nodes (used as key in the construction plan)
         unique_column_name: The name of the column that will be used to uniquely identify constructed nodes
         tool_context: The tool context
 
@@ -75,7 +76,7 @@ def propose_node_construction(approved_file: str, proposed_label: str, unique_co
     if search_results["search_results"]["metadata"]["lines_found"] == 0:
         return tool_error(f"{approved_file} does not have the column {unique_column_name}. Check the file content and try again.")
 
-    construction_plan = tool_context.state.get(PROPOSED_CONSTRUCTION_PLAN, [])
+    construction_plan = tool_context.state.get(PROPOSED_CONSTRUCTION_PLAN, {})
     node_construction_rule = {
         "construction_type": "node",
         "source_file": approved_file,
@@ -83,9 +84,33 @@ def propose_node_construction(approved_file: str, proposed_label: str, unique_co
         "unique_column_name": unique_column_name,
         "properties": proposed_properties
     }   
-    construction_plan.append(node_construction_rule)
+    construction_plan[proposed_label] = node_construction_rule
     tool_context.state[PROPOSED_CONSTRUCTION_PLAN] = construction_plan
     return tool_success(NODE_CONSTRUCTION, node_construction_rule)
+
+
+def remove_node_construction(node_label: str, tool_context:ToolContext) -> dict:
+    """Remove a node construction from the proposed construction plan based on label.
+
+    Args:
+        node_label: The label of the node construction to remove
+        tool_context: The tool context
+
+    Returns:
+        dict: A dictionary containing metadata about the content.
+                Includes a 'status' key ('success' or 'error').
+                If 'success', includes a 'node_construction_removed' key with the label of the removed node construction
+                If 'error', includes an 'error_message' key.
+                The 'error_message' may have instructions about how to handle the error.
+    """
+    construction_plan = tool_context.state.get(PROPOSED_CONSTRUCTION_PLAN, {})
+    if node_label not in construction_plan:
+       return tool_success("node construction rule not found. removal not needed.")
+
+    construction_plan.pop(node_label)
+
+    tool_context.state[PROPOSED_CONSTRUCTION_PLAN] = construction_plan
+    return tool_success("node_construction_removed", node_label)
 
 #  Tool: Propose Relationship Construction
 
@@ -127,7 +152,7 @@ def propose_relationship_construction(approved_file: str, proposed_relationship_
     if search_results["status"] == "error" or search_results["search_results"]["metadata"]["lines_found"] == 0:
         return tool_error(f"{approved_file} does not have the to node column {to_node_column}. Check the content of the file and reconsider the relationship.")
 
-    construction_plan = tool_context.state.get(PROPOSED_CONSTRUCTION_PLAN, [])
+    construction_plan = tool_context.state.get(PROPOSED_CONSTRUCTION_PLAN, {})
     relationship_construction_rule = {
         "construction_type": "relationship",
         "source_file": approved_file,
@@ -138,9 +163,34 @@ def propose_relationship_construction(approved_file: str, proposed_relationship_
         "to_node_column": to_node_column,
         "properties": proposed_properties
     }   
-    construction_plan.append(relationship_construction_rule)
+    construction_plan[proposed_relationship_type] = relationship_construction_rule
     tool_context.state[PROPOSED_CONSTRUCTION_PLAN] = construction_plan
     return tool_success(RELATIONSHIP_CONSTRUCTION, relationship_construction_rule)
+
+
+def remove_relationship_construction(relationship_type: str, tool_context:ToolContext) -> dict:
+    """Remove a relationship construction from the proposed construction plan based on type.
+
+    Args:
+        relationship_type: The type of the relationship construction to remove
+        tool_context: The tool context
+
+    Returns:
+        dict: A dictionary containing metadata about the content.
+                Includes a 'status' key ('success' or 'error').
+                If 'success', includes a 'relationship_construction_removed' key with the type of the removed relationship construction
+                If 'error', includes an 'error_message' key.
+                The 'error_message' may have instructions about how to handle the error.
+    """
+    construction_plan = tool_context.state.get(PROPOSED_CONSTRUCTION_PLAN, {})
+
+    if relationship_type not in construction_plan:
+        return tool_success("relationship construction rule not found. removal not needed.")
+    
+    construction_plan.pop(relationship_type)
+    
+    tool_context.state[PROPOSED_CONSTRUCTION_PLAN] = construction_plan
+    return tool_success("relationship_construction_removed", relationship_type) 
 
 APPROVED_CONSTRUCTION_PLAN = "approved_construction_plan"
 
