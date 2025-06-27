@@ -5,7 +5,7 @@ This module defines functions that return instruction prompts for the cypher age
 These instructions guide the agent's behavior, workflow, and tool usage.
 """
 from google.adk.tools import agent_tool
-
+from google.adk.agents import SequentialAgent
 
 from agentic_kg.tools import (
     get_approved_user_goal, get_approved_files, get_physical_schema, sample_file, 
@@ -18,6 +18,7 @@ from agentic_kg.tools import (
 
 from .ner_agent.agent import root_agent as ner_agent
 from .relevant_fact_agent.agent import root_agent as relevant_fact_agent
+
 
 variants = {
     "schema_extension_agent_v1":
@@ -64,6 +65,39 @@ variants = {
         - facts should be triples that provide extra information about Subjects
         - the predicate should decribe how the subject relates to the object
         - for example, (:Subject { kind: "Person", name:"ABK"})-[:PREDICATE {predicate:"likes"}]->(:Object { kind: "beverage", name: "coffee"})
+
+        Prepare for the task:
+        - get the user goal using the 'get_approved_user_goal' tool
+        - get the current schema using the 'get_physical_schema' tool
+        - get the list of approved files using the 'get_approved_files' tool
+        - take a look at the contents of the approved files using the 'sample_file' tool
+
+        Think carefully and collaborate with the user:
+        1. Use the 'ner_schema_agent' to propose the kind of named entities that could be extracted from the text files.
+        2. Use the 'relevant_fact_agent' to propose the kind of facts that could be extracted from the text files.
+        3. When you're ready, present a proposed schema to the user for approval
+        """,
+        "tools": [
+            get_approved_user_goal, get_physical_schema, get_approved_files, 
+            agent_tool.AgentTool(ner_agent), agent_tool.AgentTool(relevant_fact_agent), 
+            set_proposed_schema_extension, get_proposed_schema_extension,
+            approve_proposed_schema_extension,
+            approve_proposed_extension_plan,
+            sample_file,
+            finished
+        ]
+    },
+        "schema_extension_agent_v2":
+    {
+        "instruction": """
+        You are an expert at knowledge graph modeling with property graphs. 
+        Given an existing knowledge graph and some unstructured text files
+        in markdown format, your goal is to propose an extension to the
+        knowledge graph schema that would incorporate the information in the files.
+
+        Extension is achieved through two natural language processing techniques:
+        1. named entity recognition to identify entities in the text files that seem to refer to existing nodes in the knowledge graph
+        2. fact extraction of subject,predicate,object triples that provide extra information about entities
 
         Prepare for the task:
         - get the user goal using the 'get_approved_user_goal' tool

@@ -10,7 +10,7 @@ from agentic_kg.tools import get_proposed_schema, approve_proposed_schema, finis
 
 from .variants import variants
 
-AGENT_NAME = "schema_extension_agent_v1"
+AGENT_NAME = "schema_extension_agent_v2"
 schema_extension_agent = LlmAgent(
     name=AGENT_NAME,
     description="Proposes a knowledge graph schema based on the user goal and approved file list, taking into consideration feedback if available.",
@@ -19,7 +19,7 @@ schema_extension_agent = LlmAgent(
     tools=variants[AGENT_NAME]["tools"], 
 )
 
-# CRITIC_NAME = "schema_critic_agent_v1"
+# CRITIC_NAME = "schema_critic_agent_v2"
 # schema_critic_agent = LlmAgent(
 #     name=CRITIC_NAME,
 #     description="Criticizes the proposed schema for relevance to the user goal and approved files.",
