@@ -9,10 +9,12 @@ from agentic_kg.tools import get_approved_user_goal, get_physical_schema, get_ap
 from .sub_agents import unstructured_files_agent, schema_extension_agent, graph_extension_agent
 
 def preset_context_state(callback_context: CallbackContext, llm_request: LlmRequest) -> Optional[LlmResponse]:
-    callback_context.state["approved_user_goal"] = {
-            "kind_of_graph": "bill of materials",
-            "graph_description": "A multi-level bill of materials for manufactured products, useful for root cause analysis."
-        }
+    # Only preset if the user goal does not already exist. This ensures initialization happens only once
+    if "approved_user_goal" not in callback_context.state:
+        callback_context.state["approved_user_goal"] = {
+                "kind_of_graph": "bill of materials",
+                "graph_description": "A multi-level bill of materials for manufactured products, useful for root cause analysis."
+            }
     return None # Allow the model call to proceed
 
 

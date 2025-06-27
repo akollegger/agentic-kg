@@ -137,3 +137,44 @@ def approved_proposed_entities(tool_context:ToolContext) -> dict:
 def get_approved_entities(tool_context:ToolContext) -> dict:
     """Get the approved list of kinds of entities."""
     return tool_context.state.get(APPROVED_ENTITIES, [])
+
+PROPOSED_PREDICATES = "proposed_predicates"
+APPROVED_PREDICATES = "approved_predicates"
+
+def add_proposed_predicate(label: str, from_label:str, to_label:str, properties: list[str], tool_context:ToolContext) -> dict:
+    """Add a proposed predicate to the proposed extension plan.
+
+    Args:
+        label: The label of the predicate. This is the kind of relationahip between two entities. For example, "LIKES"
+        from_label: The label of the entity that the predicate is from. For example, "Person"
+        to_label: The label of the entity that the predicate is to. For example, "Beverage"
+        properties: The properties of the predicate. For example, ["intensity"]
+    """
+    current_predicates = tool_context.state.get(PROPOSED_PREDICATES, {})
+    current_predicates[label] = {"label": label, "from_label": from_label, "to_label": to_label, "properties": properties}
+    tool_context.state[PROPOSED_PREDICATES] = current_predicates
+    return tool_success(PROPOSED_PREDICATES, current_predicates)
+
+
+def remove_proposed_predicate(label: str, tool_context:ToolContext) -> dict:
+    """Remove a proposed predicate from the proposed extension plan."""
+    current_predicates = tool_context.state.get(PROPOSED_PREDICATES, {})
+    if label not in current_predicates:
+        return tool_success("predicate_removed", f"Predicate {label} not found in proposed predicates. Removal not needed.")
+    current_predicates.pop(label)
+    tool_context.state[PROPOSED_PREDICATES] = current_predicates
+    return tool_success("predicate_removed", current_predicates)
+    
+def get_proposed_predicates(tool_context:ToolContext) -> dict:
+    """Get the proposed predicates."""
+    return tool_context.state.get(PROPOSED_PREDICATES, {})
+
+
+def approve_proposed_predicates(tool_context:ToolContext) -> dict:
+    """Approve the proposed predicates."""
+    tool_context.state[APPROVED_PREDICATES] = tool_context.state.get(PROPOSED_PREDICATES)
+    return tool_success(APPROVED_PREDICATES, tool_context.state[APPROVED_PREDICATES])
+    
+def get_approved_predicates(tool_context:ToolContext) -> dict:
+    """Get the approved predicates."""
+    return tool_context.state.get(APPROVED_PREDICATES, {})

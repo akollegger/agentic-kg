@@ -17,6 +17,7 @@ from agentic_kg.tools import (
 )
 
 from .ner_agent.agent import root_agent as ner_agent
+from .relevant_fact_agent.agent import root_agent as relevant_fact_agent
 
 variants = {
     "schema_extension_agent_v1":
@@ -72,12 +73,12 @@ variants = {
 
         Think carefully and collaborate with the user:
         1. Use the 'ner_schema_agent' to propose the kind of named entities that could be extracted from the text files.
-        2. For each kind of named entity, consider what facts can be extracted from the text
+        2. Use the 'relevant_fact_agent' to propose the kind of facts that could be extracted from the text files.
         3. When you're ready, present a proposed schema to the user for approval
         """,
         "tools": [
             get_approved_user_goal, get_physical_schema, get_approved_files, 
-            agent_tool.AgentTool(ner_agent), 
+            agent_tool.AgentTool(ner_agent), agent_tool.AgentTool(relevant_fact_agent), 
             set_proposed_schema_extension, get_proposed_schema_extension,
             approve_proposed_schema_extension,
             approve_proposed_extension_plan,

@@ -64,6 +64,9 @@ def extend_approved_user_goal(additional_goal: str, tool_context: ToolContext):
         return tool_error("approved_user_goal not set. Ask the user to clarify their goal (kind of graph and description).")  
     
     user_goal_data = tool_context.state[APPROVED_USER_GOAL]
-    user_goal_data["graph_description"] = user_goal_data["graph_description"] +"\n" + additional_goal
-    tool_context.state[APPROVED_USER_GOAL] = user_goal_data
-    return tool_success(APPROVED_USER_GOAL, user_goal_data)
+    extended_user_goal_data = {
+        "kind_of_graph": user_goal_data["kind_of_graph"],
+        "graph_description": user_goal_data["graph_description"] +"\n" + additional_goal
+    }
+    tool_context.state[APPROVED_USER_GOAL] = extended_user_goal_data
+    return tool_success(APPROVED_USER_GOAL, extended_user_goal_data)

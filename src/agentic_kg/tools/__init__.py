@@ -47,7 +47,11 @@ from .unstructured_tools import (
     set_proposed_entities,
     get_proposed_entities,
     approved_proposed_entities,
-    get_approved_entities
+    get_approved_entities,
+    add_proposed_predicate,
+    get_proposed_predicates,
+    get_approved_predicates,
+    approve_proposed_predicates,
 )
 
 __all__ = [
@@ -99,4 +103,8 @@ __all__ = [
     "get_approved_entities",
     "extend_approved_user_goal",
     "finished",
+    "add_proposed_predicate",
+    "get_proposed_predicates",
+    "get_approved_predicates",
+    "approve_proposed_predicates",
 ]
