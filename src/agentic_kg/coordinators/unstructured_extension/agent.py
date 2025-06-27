@@ -5,13 +5,13 @@ from typing import Optional
 
 from agentic_kg.common.config import llm
 
-from agentic_kg.tools import get_approved_user_goal, get_physical_schema, get_approved_files, get_approved_schema
+from agentic_kg.tools import get_approved_user_goal, get_physical_schema, get_approved_files, get_approved_schema, extend_approved_user_goal
 from .sub_agents import unstructured_files_agent, schema_extension_agent, graph_extension_agent
 
 def preset_context_state(callback_context: CallbackContext, llm_request: LlmRequest) -> Optional[LlmResponse]:
     callback_context.state["approved_user_goal"] = {
             "kind_of_graph": "bill of materials",
-            "description": "A multi-level bill of materials for manufactured products, useful for root cause analysis."
+            "graph_description": "A multi-level bill of materials for manufactured products, useful for root cause analysis."
         }
     return None # Allow the model call to proceed
 
@@ -29,13 +29,14 @@ unstructured_extension_agent = LlmAgent(
         - use the 'get_approved_user_goal' tool to understand the motivation of the graph that has been constructed
 
         Follow this sequence, delegating to sub-agents as appropriate:
-        1. Check that the requirements are met, and share your findings with the user
-        2. If the requirements are met, delegate to the unstructured_files_agent to suggest files to use for import
-        3. Once you have approved files, delegate to the schema_extension_agent to design an extended graph schema that incorporates the unstructured data
-        4. Once you have approved the schema, delegate to the graph_extension_agent to construct the graph
+        1. Extend the user's goal to include the purpose of adding unstructured data using the 'extend_approved_user_goal' tool
+        2. Check that the requirements are met, and share your findings with the user
+        3. If the requirements are met, delegate to the unstructured_files_agent to suggest files to use for import
+        4. Once you have approved files, delegate to the schema_extension_agent to design an extended graph schema that incorporates the unstructured data
+        5. Once you have approved the schema, delegate to the graph_extension_agent to construct the graph
         """,
     sub_agents=[unstructured_files_agent, schema_extension_agent, graph_extension_agent],
-    tools=[get_approved_user_goal, get_physical_schema, get_approved_files, get_approved_schema],
+    tools=[get_approved_user_goal, extend_approved_user_goal, get_physical_schema, get_approved_files, get_approved_schema],
     before_model_callback=preset_context_state
 )
 

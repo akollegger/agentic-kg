@@ -4,6 +4,7 @@
 This module defines functions that return instruction prompts for the cypher agent.
 These instructions guide the agent's behavior, workflow, and tool usage.
 """
+from google.adk.tools import agent_tool
 
 
 from agentic_kg.tools import (
@@ -14,6 +15,8 @@ from agentic_kg.tools import (
     approve_proposed_extension_plan,
     finished
 )
+
+from .ner_agent.agent import root_agent as ner_agent
 
 variants = {
     "schema_extension_agent_v1":
@@ -65,17 +68,18 @@ variants = {
         - get the user goal using the 'get_approved_user_goal' tool
         - get the current schema using the 'get_physical_schema' tool
         - get the list of approved files using the 'get_approved_files' tool
+        - take a look at the contents of the approved files using the 'sample_file' tool
 
         Think carefully and collaborate with the user:
-        1. For each approved file, use the 'sample_file' tool to get a better understanding of the file contents.
-        2. Based on the content of the file, decide which existing node labels can be extracted as kinds of named entities.
-        3. Then, for each kind of named entity, consider what facts can be extracted from the text
-        4. When you're ready, present a proposed schema to the user for approval
+        1. Use the 'ner_schema_agent' to propose the kind of named entities that could be extracted from the text files.
+        2. For each kind of named entity, consider what facts can be extracted from the text
+        3. When you're ready, present a proposed schema to the user for approval
         """,
         "tools": [
             get_approved_user_goal, get_physical_schema, get_approved_files, 
+            agent_tool.AgentTool(ner_agent), 
             set_proposed_schema_extension, get_proposed_schema_extension,
-            propose_entity_extraction, remove_entity_extraction,
+            approve_proposed_schema_extension,
             approve_proposed_extension_plan,
             sample_file,
             finished

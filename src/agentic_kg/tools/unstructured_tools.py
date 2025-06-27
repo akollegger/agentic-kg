@@ -4,10 +4,10 @@ from agentic_kg.common.util import tool_success, tool_error
 from .file_tools import search_file
 
 PROPOSED_SCHEMA_EXTENSION = "proposed_schema_extension"
-APPROVED_SCHEMA_EXTENSION_EXTENSION = "approved_schema_extension"
+APPROVED_SCHEMA_EXTENSION = "approved_schema_extension"
 
 def set_proposed_schema_extension(graph_schema: str, tool_context: ToolContext) -> Dict[str, Any]:
-    f"""Saves a proposed graph schema into state using key {PROPOSED_SCHEMA_EXTENSION_EXTENSION}
+    f"""Saves a proposed extension to an existing graph schema
 
     Args:
         graph_schema: a description of the proposed schema extension
@@ -20,7 +20,7 @@ def get_proposed_schema_extension(tool_context: ToolContext) -> Dict[str, Any]:
     if PROPOSED_SCHEMA_EXTENSION not in tool_context.state:
         return tool_error(f"{PROPOSED_SCHEMA_EXTENSION} not set.")  
 
-    return tool_success(PROPOSED_SCHEMA_EXTENSION, tool_context.state[PROPOSED_SCHEMA_EXTENSION])
+    return tool_success(PROPOSED_SCHEMA_EXTENSION, tool_context.state.get(PROPOSED_SCHEMA_EXTENSION, ""))
 
 
 def approve_proposed_schema_extension(tool_context:ToolContext) -> Dict[str, Any]:
@@ -115,3 +115,25 @@ def get_proposed_extension_plan(tool_context:ToolContext) -> dict:
 def get_approved_extension_plan(tool_context:ToolContext) -> dict:
     """Get the approved construction plan."""
     return tool_context.state.get(APPROVED_EXTENSION_PLAN, [])
+
+
+PROPOSED_ENTITIES = "proposed_entities"
+APPROVED_ENTITIES = "approved_entities"
+
+def set_proposed_entities(proposed_entities: list[str], tool_context:ToolContext) -> dict:
+    """Sets the list proposed entities to extract from unstructured text."""
+    tool_context.state[PROPOSED_ENTITIES] = proposed_entities
+    return tool_success(PROPOSED_ENTITIES, proposed_entities)
+
+def get_proposed_entities(tool_context:ToolContext) -> dict:
+    """Gets the list proposed entities to extract from unstructured text."""
+    return tool_context.state.get(PROPOSED_ENTITIES, [])
+
+def approved_proposed_entities(tool_context:ToolContext) -> dict:
+    """Approves the proposed entities to extract from unstructured text."""
+    tool_context.state[APPROVED_ENTITIES] = tool_context.state.get(PROPOSED_ENTITIES)
+    return tool_success(APPROVED_ENTITIES, tool_context.state[APPROVED_ENTITIES])
+
+def get_approved_entities(tool_context:ToolContext) -> dict:
+    """Get the approved list of kinds of entities."""
+    return tool_context.state.get(APPROVED_ENTITIES, [])

@@ -23,3 +23,15 @@
 - What suppliers contribute to making that chair?
 
 - 
+
+---
+
+## Extend with unstructured data
+
+- [user]:
+    I'd like to include product reviews into the graph to start root cause analysis from product issues reported by users
+
+...
+
+- [user]:
+    approve files

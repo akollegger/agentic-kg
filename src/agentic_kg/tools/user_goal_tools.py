@@ -37,20 +37,33 @@ def set_perceived_user_goal(kind_of_graph: str, graph_description:str, tool_cont
     print("User's goal set:", user_goal_data)
     return tool_success("perceived_user_goal", user_goal_data)
 
+APPROVED_USER_GOAL = "approved_user_goal"
+
 def approve_perceived_user_goal(tool_context: ToolContext):
     """Approves the user's goal, including the kind of graph and its description."""
     if "perceived_user_goal" not in tool_context.state:
         return tool_error("perceived_user_goal not set. Ask the user to clarify their goal (kind of graph and description).")
     
-    tool_context.state["approved_user_goal"] = tool_context.state["perceived_user_goal"]
+    tool_context.state[APPROVED_USER_GOAL] = tool_context.state["perceived_user_goal"]
 
-    return tool_success("approved_user_goal", tool_context.state["approved_user_goal"])
+    return tool_success(APPROVED_USER_GOAL, tool_context.state[APPROVED_USER_GOAL])
 
 def get_approved_user_goal(tool_context: ToolContext):
     """Returns the user's goal, which is a dictionary containing the kind of graph and its description."""
     if "approved_user_goal" not in tool_context.state:
         return tool_error("approved_user_goal not set. Ask the user to clarify their goal (kind of graph and description).")  
     
-    user_goal_data = tool_context.state["approved_user_goal"]
+    user_goal_data = tool_context.state[APPROVED_USER_GOAL]
 
-    return tool_success("approved_user_goal", user_goal_data)
+    return tool_success(APPROVED_USER_GOAL, user_goal_data)
+
+
+def extend_approved_user_goal(additional_goal: str, tool_context: ToolContext):
+    """Extends the user's goal with additional information describing the purpose of the graph."""
+    if APPROVED_USER_GOAL not in tool_context.state:
+        return tool_error("approved_user_goal not set. Ask the user to clarify their goal (kind of graph and description).")  
+    
+    user_goal_data = tool_context.state[APPROVED_USER_GOAL]
+    user_goal_data["graph_description"] = user_goal_data["graph_description"] +"\n" + additional_goal
+    tool_context.state[APPROVED_USER_GOAL] = user_goal_data
+    return tool_success(APPROVED_USER_GOAL, user_goal_data)

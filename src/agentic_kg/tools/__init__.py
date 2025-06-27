@@ -19,7 +19,11 @@ from .cypher_tools import (
     create_uniqueness_constraint,
     merge_node_into_graph,
 )
-from .user_goal_tools import set_user_goal, get_user_goal, set_perceived_user_goal, approve_perceived_user_goal, get_approved_user_goal
+from .user_goal_tools import (
+    set_user_goal, get_user_goal, 
+    set_perceived_user_goal, approve_perceived_user_goal, get_approved_user_goal,
+    extend_approved_user_goal
+)
 from .flow_tools import finished
 from .schema_tools import (
     set_proposed_schema, get_proposed_schema, approve_proposed_schema, get_approved_schema,
@@ -39,7 +43,11 @@ from .unstructured_tools import (
     get_proposed_schema_extension,
     get_approved_schema_extension,
     get_proposed_extension_plan,
-    get_approved_extension_plan
+    get_approved_extension_plan,
+    set_proposed_entities,
+    get_proposed_entities,
+    approved_proposed_entities,
+    get_approved_entities
 )
 
 __all__ = [
@@ -85,5 +93,10 @@ __all__ = [
     "get_approved_schema_extension",
     "get_proposed_extension_plan",
     "get_approved_extension_plan",
+    "set_proposed_entities",
+    "get_proposed_entities",
+    "approved_proposed_entities",
+    "get_approved_entities",
+    "extend_approved_user_goal",
     "finished",
 ]
