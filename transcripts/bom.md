@@ -29,7 +29,7 @@
 ## Extend with unstructured data
 
 - [user]:
-    I'd like to include product reviews into the graph to start root cause analysis from product issues reported by users
+    I'd like to include product reviews into the graph to start root cause analysis from product issues like quality, difficulty or durability
 
 ...
 

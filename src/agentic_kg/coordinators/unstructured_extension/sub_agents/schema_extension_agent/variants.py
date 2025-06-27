@@ -19,6 +19,11 @@ from agentic_kg.tools import (
 from .ner_agent.agent import root_agent as ner_agent
 from .relevant_fact_agent.agent import root_agent as relevant_fact_agent
 
+schema_extension_pipeline = SequentialAgent(
+    name="schema_extension_pipeline",
+    description="Proposes a knowledge graph schema extension based on the user goal and approved file list, taking into consideration feedback if available.",
+    sub_agents=[ner_agent, relevant_fact_agent]
+)
 
 variants = {
     "schema_extension_agent_v1":
@@ -113,6 +118,41 @@ variants = {
         "tools": [
             get_approved_user_goal, get_physical_schema, get_approved_files, 
             agent_tool.AgentTool(ner_agent), agent_tool.AgentTool(relevant_fact_agent), 
+            set_proposed_schema_extension, get_proposed_schema_extension,
+            approve_proposed_schema_extension,
+            approve_proposed_extension_plan,
+            sample_file,
+            finished
+        ]
+    },
+    "schema_extension_agent_v3":
+    {
+        "instruction": """
+        You are an expert at knowledge graph modeling with property graphs. 
+        Given an existing knowledge graph and some unstructured text files
+        in markdown format, your goal is to propose an extension to the
+        knowledge graph schema that would incorporate the information in the files.
+
+        Extension is achieved through two natural language processing techniques:
+        1. named entity recognition to identify entities in the text files that seem to refer to existing nodes in the knowledge graph
+        2. fact extraction of subject,predicate,object triples that provide extra information about entities
+
+        Prepare for the task:
+        - get the user goal using the 'get_approved_user_goal' tool
+        - get the current schema using the 'get_physical_schema' tool
+        - get the list of approved files using the 'get_approved_files' tool
+        - take a look at the contents of the approved files using the 'sample_file' tool
+
+        Think carefully and collaborate with the user:
+        1. Use the 'schema_extension_pipeline' to propose the kind of name entities and kinds of facts that could be extracted from the text files
+        2. When you're ready, present a proposed extension to the schema to the user for approval
+        3. If the user disapproves, consider their feedback and go back to step 1
+        4. If the user approves, use the 'approve_proposed_extension_plan' tool to record the approval
+        5. When the extension plan has been approved, use the 'finished' tool
+        """,
+        "tools": [
+            get_approved_user_goal, get_physical_schema, get_approved_files, 
+            agent_tool.AgentTool(schema_extension_pipeline), 
             set_proposed_schema_extension, get_proposed_schema_extension,
             approve_proposed_schema_extension,
             approve_proposed_extension_plan,
